@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>废楼交锋 · 术式与角色试作</title><link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="combat-lab.css"></head>
+<body>
+<main class="combat-lab">
+ <header class="lab-heading"><div><p class="eyebrow">轮回生存录 / 战斗试作 02</p><h1>废楼交锋</h1></div><a href="./">返回游戏</a></header>
+ <p><a href="combat-sample.html">进入新样板：虎杖 × 钉崎联合祓除 →</a></p>
+ <section class="lab-options" aria-label="试战配置"><label>玩家形象<select id="profile"></select></label><label>术式演出<select id="technique"></select></label><p id="techniqueNote"></p></section>
+ <section class="arena" aria-label="战斗场地">
+  <div id="stageMount"></div>
+  <div class="arena-caption"><span>咒力残秽 · 废弃大楼</span><span id="turnLabel">试战准备</span></div>
+  <button id="target" class="target" hidden aria-label="选择无名咒灵为攻击目标" aria-pressed="false"><span>无名咒灵</span><b aria-hidden="true">⌄</b></button>
+  <div id="damageLayer" aria-hidden="true"></div>
+  <div id="entry" class="entry"><p class="eyebrow">近身交锋</p><h2 id="entryTitle">试试这一拳</h2><p id="loadStatus" role="status">点选敌人，发起体术攻击；对手会在你归位后反击。</p><button id="start" class="primary">进入试战</button><p class="entry-note">独立试作 · 不读取或写入旅程存档</p></div>
+ </section>
+ <section class="battle-deck" aria-label="战斗指令">
+  <div class="fighter ally"><div class="fighter-name"><strong>你</strong><span id="profileLabel">少年 · 男</span></div><div class="hp-track"><div id="playerTrail" class="hp-trail"></div><div id="playerBar" class="hp-fill"></div></div><p><span>生命</span><b id="playerHp">100 / 100</b></p></div>
+  <div class="command"><p id="actionStatus" role="status" aria-live="polite">准备好后进入试战</p><button id="attack" class="primary" disabled>体术攻击 <small>Enter</small></button><button id="skill" class="skill-button" disabled>术式演出</button></div>
+  <div class="fighter enemy"><div class="fighter-name"><strong>无名咒灵</strong><span id="intent">行动预告 · 近身反击</span></div><div class="hp-track"><div id="enemyTrail" class="hp-trail"></div><div id="enemyBar" class="hp-fill"></div></div><p><span>生命</span><b id="enemyHp">126 / 126</b></p></div>
+ </section>
+ <details class="sound-audition" open><summary>音效试听与对比</summary><div class="audition-controls"><label>音效组<select id="audioBank"><option value="jrpg">日式 RPG 分层（当前）</option><option value="games">游戏原声直放（对照）</option><option value="previous">旧版通用素材（对照）</option></select></label><button id="previewMelee">试听体术</button><button id="previewSkill">试听当前术式</button><button id="stopPreview">停止试听</button><label class="volume-control">音量<input id="sfxVolume" type="range" min="0" max="100" value="55" aria-label="音效音量"><output id="volumeValue">55%</output></label></div><p id="audioStatus" role="status">点击试听即可播放，不需要进入战斗。</p><a href="combat-audio-sources.html" target="_blank" rel="noopener">音效来源与作者</a></details>
+ <footer class="lab-tools"><div><button id="sound" aria-pressed="true">音效 · 开</button><label><input id="reduced" type="checkbox">减少动态</label></div><button id="reset" disabled>重置试战</button></footer>
+ <p class="lab-note">36 种术式按作用分类试演；被动、恢复和增益不会造成试战伤害。领域沿用独立演出，召唤轮廓尚待专属素材。音效按蓄势、挥击、接触和余韵分层；原素材取自韦诺之战与 Flare。对照组仅供比较。</p>
+</main><script src="combat-presentation.js"></script><script src="combat-audio.js"></script><script src="combat-lab.js"></script></body></html>

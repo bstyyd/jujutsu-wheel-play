@@ -1,0 +1,93 @@
+.cinema{position:fixed;inset:0;z-index:150;isolation:isolate;overflow:hidden;background:var(--color-black);pointer-events:auto}.cinema-world{position:absolute;inset:0;background-image:linear-gradient(var(--color-shade),var(--color-shade)),url('assets/domains.webp');background-size:200% 200%;opacity:.78;animation:domain-unfold 2.2s var(--ease-out) both}.cinema[data-effect=void] .cinema-world{background-position:0 0}.cinema[data-effect=shrine] .cinema-world{background-position:100% 0}.cinema[data-effect=shadow] .cinema-world{background-position:0 100%}.cinema[data-effect=lava] .cinema-world{background-position:100% 100%}.cinema:not([data-effect=void]):not([data-effect=shrine]):not([data-effect=shadow]):not([data-effect=lava]) .cinema-world{background:radial-gradient(ellipse at 65% 40%,var(--color-paper-3),var(--color-black));opacity:1}.cinema:after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 160px var(--color-black);pointer-events:none}.cinema canvas{position:absolute;inset:0;z-index:2;width:100%;height:100%}.cinema-portrait{position:absolute;left:-3%;bottom:-10%;height:105%;width:55%;z-index:3;animation:portrait-cut .4s var(--ease-out) both;pointer-events:none}.cinema-portrait .sprite{width:100%;height:100%;aspect-ratio:1;background-size:200% 200%;filter:drop-shadow(8px 0 18px var(--color-black))}.cinema-portrait .sprite.core{background-size:200% 200%}.cinema-copy{position:absolute;left:45%;right:5%;top:42%;z-index:4;animation:skill-title .5s var(--ease-out) both;text-shadow:0 3px 12px var(--color-black)}.cinema-kicker{font:16px var(--font-display);letter-spacing:10px;color:var(--color-accent);margin-bottom:20px}.cinema-copy h2{font:clamp(34px,5vw,76px)/1.25 var(--font-display);letter-spacing:4px;color:var(--color-ink);margin:0}.cinema-actor{margin-top:22px;color:var(--color-muted);letter-spacing:5px;font-size:13px}.cinema-close{position:absolute;right:24px;top:24px;z-index:6;color:var(--color-muted);border:1px solid var(--color-rule);background:var(--color-veil);padding:10px 14px;font:12px var(--font-body);border-radius:4px;min-height:40px}.cinema.quote{background:var(--color-shade)}.cinema.quote .cinema-world,.cinema.quote canvas{display:none}.cinema.quote .cinema-portrait{height:65%;width:40%;bottom:0;left:0}.cinema.quote .cinema-copy{top:auto;bottom:12%;left:34%;right:8%;padding:25px;background:var(--color-veil);border-left:2px solid var(--color-accent)}.cinema.quote h2{font:clamp(16px,2vw,25px)/1.8 var(--font-body);letter-spacing:1px}.cinema.quote .cinema-kicker{display:none}.cinema.quote .cinema-actor{font-size:12px;margin-top:14px}.cinema-damage{position:absolute;z-index:20;color:var(--color-ink);font-weight:800;font-size:23px;text-shadow:0 2px 6px var(--color-black);pointer-events:none;animation:damage-rise .85s ease-out both}.cinema-damage.heal{color:var(--color-green)}.art-gallery{max-width:840px}.effect-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:20px}.effect-grid small{display:block;color:var(--color-muted);font-size:10px;margin-top:7px}.cast-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.cast-grid figure{margin:0;background:var(--color-paper-2);text-align:center;padding:8px}.cast-grid .sprite{width:100%;height:auto;aspect-ratio:1}.cast-grid figcaption{font-size:11px;padding:8px 0;color:var(--color-muted)}
+@keyframes domain-unfold{from{transform:scale(1.2);opacity:.1}to{transform:scale(1);opacity:.85}}@keyframes portrait-cut{from{transform:translateX(-50px);opacity:0}to{transform:none;opacity:1}}@keyframes skill-title{from{transform:translateX(30px);opacity:0}to{transform:none;opacity:1}}@keyframes damage-rise{0%{transform:translate(-50%,0);opacity:0}15%{opacity:1}100%{transform:translate(-50%,-60px);opacity:0}}
+@media(max-width:600px){.cinema-portrait{width:95%;height:auto;aspect-ratio:1;bottom:6%;left:-25%;opacity:.9}.cinema-portrait .sprite{aspect-ratio:1}.cinema-copy{left:15%;right:6%;top:22%;text-align:right}.cinema-copy h2{font-size:39px;letter-spacing:2px}.cinema-kicker{font-size:13px;letter-spacing:5px;margin-bottom:15px}.cinema-actor{font-size:11px;margin-top:14px}.cinema-close{top:16px;right:16px;font-size:10px}.cinema.quote .cinema-portrait{width:80%;height:auto;left:-16%;bottom:15%;aspect-ratio:1}.cinema.quote .cinema-copy{left:6%;right:6%;bottom:6%;padding:18px;text-align:left}.cinema.quote h2{font-size:15px}.effect-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cast-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){.cinema *{animation:none!important}}.reduced-motion .cinema *{animation:none!important}
+
+@media(min-width:601px){.cinema-portrait{width:min(62vw,95vh);height:auto;aspect-ratio:1;bottom:-6%;left:-8%}.cinema.quote .cinema-portrait{width:min(45vw,65vh);height:auto;aspect-ratio:1}}
+.cinema-portrait .sprite.silhouette{filter:brightness(0) drop-shadow(0 0 3px var(--color-cyan)) drop-shadow(0 6px 12px var(--color-black));}
+
+/* Domain v3: central invocation, then a timed domain-name reveal. */
+.cinema.domain{--domain-name-delay:1.25s;--domain-light:#d2e9ff}
+.cinema.domain[data-effect=shrine]{--domain-light:#ff665f}
+.cinema.domain[data-effect=lava]{--domain-light:#ffb669}
+.cinema.domain[data-effect=hands]{--domain-light:#c9a9ff}
+.cinema.domain[data-effect=court]{--domain-light:#ffe0a6}
+.cinema.domain .cinema-world{opacity:1;animation:domain-reveal 2s var(--ease-out) both;background-repeat:no-repeat}
+.cinema.domain:after{box-shadow:inset 0 0 110px #0009;background:radial-gradient(ellipse at center,#0005,transparent 65%),linear-gradient(#0006,transparent 25%,transparent 75%,#0008);z-index:2}
+.cinema.domain:before{content:'';position:absolute;z-index:4;left:8%;right:8%;top:50%;height:1px;background:linear-gradient(90deg,transparent,var(--domain-light),white,var(--domain-light),transparent);box-shadow:0 0 22px 3px var(--domain-light);pointer-events:none;opacity:0;animation:domain-flare .95s ease var(--domain-name-delay) both}
+.cinema.domain .cinema-copy{left:4%;right:4%;top:50%;bottom:auto;text-align:center;transform:translateY(-50%);animation:none;pointer-events:none;text-shadow:0 4px 10px #000,0 0 35px #000}
+.cinema.domain .cinema-kicker{position:absolute;top:50%;left:0;right:0;margin:0;font:700 clamp(48px,9.5vw,144px)/1.2 var(--font-display);letter-spacing:.22em;text-indent:.22em;color:#fff8ec;white-space:nowrap;transform:translateY(-50%);text-shadow:0 0 30px var(--domain-light),0 4px 18px #000;animation:domain-call-in .6s var(--ease-out) both,domain-call-away .75s var(--ease-out) var(--domain-name-delay) forwards}
+.cinema.domain .cinema-copy h2{font-size:clamp(34px,6vw,92px);letter-spacing:.18em;text-indent:.18em;margin:0;line-height:1.5;color:#fff9ee;animation:domain-name 1.2s var(--ease-out) var(--domain-name-delay) both}
+.cinema.domain .cinema-actor{margin:18px 0 0;color:#f7f2e9;letter-spacing:.4em;text-indent:.4em;font-size:14px;animation:domain-credit .7s ease calc(var(--domain-name-delay) + .6s) both}
+.cinema.domain .cinema-portrait{left:auto;right:-4%;bottom:0;width:min(34vw,54vh);height:82%;aspect-ratio:auto;animation:domain-caster 1.6s ease both}
+.cinema.domain .cinema-portrait .sprite{object-fit:contain}
+.cinema.domain[data-domain-art=false] .cinema-portrait{animation:portrait-cut .5s var(--ease-out) both;opacity:.58}
+.cinema.domain .cinema-close{background:rgba(4,7,11,.85);color:#f2efe5}
+@keyframes domain-reveal{0%{transform:scale(1.1);filter:brightness(.15);clip-path:inset(48% 0)}35%{clip-path:inset(0)}100%{transform:scale(1);filter:brightness(1);clip-path:inset(0)}}
+@keyframes domain-caster{0%{opacity:0;transform:translateX(24px)}20%,60%{opacity:.8;transform:none}100%{opacity:0;transform:translateX(12px)}}
+@keyframes domain-call-in{from{opacity:0;filter:blur(12px);transform:translateY(-50%) scale(1.25)}to{opacity:1;filter:blur(0);transform:translateY(-50%) scale(1)}}
+@keyframes domain-call-away{to{opacity:.8;transform:translateY(calc(-50% - clamp(65px,8vw,110px))) scale(.24);text-shadow:0 0 8px var(--domain-light),0 2px 4px #000}}
+@keyframes domain-name{0%{opacity:0;filter:blur(8px);clip-path:inset(0 50%);transform:scale(.93)}55%{opacity:1;filter:blur(0)}100%{opacity:1;filter:blur(0);clip-path:inset(0);transform:scale(1)}}
+@keyframes domain-flare{0%{opacity:0;transform:scaleX(.05)}20%{opacity:.75}100%{opacity:0;transform:scaleX(1)}}
+@keyframes domain-credit{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+@media(max-width:600px) and (orientation:portrait){
+ .cinema.domain .cinema-world{background-size:contain!important;background-position:center!important}
+ .cinema.domain .cinema-copy{left:5%;right:5%;top:50%;text-align:center}
+ .cinema.domain .cinema-kicker{font-size:clamp(42px,12vw,68px);letter-spacing:.12em;text-indent:.12em}
+ .cinema.domain .cinema-copy h2{font-size:clamp(25px,7.2vw,40px);letter-spacing:.08em;text-indent:.08em;overflow-wrap:anywhere}
+ .cinema.domain .cinema-portrait{width:64vw;height:65%;bottom:15%;right:-12%;left:auto}
+}
+@media(prefers-reduced-motion:reduce){.cinema.domain:before,.cinema.domain[data-domain-art=true] .cinema-portrait{display:none}.cinema.domain .cinema-kicker{font-size:18px;top:-40px;transform:none}.cinema.domain .cinema-world,.cinema.domain .cinema-copy h2,.cinema.domain .cinema-actor{opacity:1;filter:none;clip-path:none}}
+.reduced-motion .cinema.domain:before,.reduced-motion .cinema.domain[data-domain-art=true] .cinema-portrait{display:none}
+.reduced-motion .cinema.domain .cinema-kicker{font-size:18px;top:-40px;transform:none}
+
+/* Unshown/expanded domains: technique accents over the existing arena, never a fabricated interior. */
+.cinema-motif{position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none;mask-image:radial-gradient(ellipse at center,transparent 16%,#0009 44%,#000 80%)}
+.cinema-motif i{position:absolute;left:var(--x);top:var(--y);display:block;background:var(--domain-light);opacity:0;animation:motif-drift 3.6s ease calc(var(--i)*.025s) both}
+.cinema-motif[data-kind=blossom] i{width:18px;height:32px;border-radius:90% 12% 85% 18%;box-shadow:0 0 12px #e7dfa744;transform:rotate(var(--r))}
+.cinema-motif[data-kind=mass] i{width:clamp(14px,2vw,38px);height:26px;background:#827666;border:1px solid #e6cca6;clip-path:polygon(17% 0,90% 8%,100% 70%,55% 100%,0 78%);animation-name:motif-heavy}
+.cinema-motif[data-kind=sky] i{width:clamp(90px,16vw,260px);height:100px;background:linear-gradient(130deg,#a7dff344,transparent 65%);border-top:2px solid #d2f0f7aa;border-right:1px solid #c4eaff55;transform:skew(-24deg);animation-name:motif-pane}
+.cinema-motif[data-kind=output] i{width:2px;height:46vh;left:50%;top:50%;transform-origin:top;transform:rotate(var(--r)) translateY(16vh);background:linear-gradient(transparent,#e0c5ffbb,transparent);box-shadow:0 0 9px #d5abff;animation-name:motif-beam}
+.cinema-motif[data-kind=orbit] i{width:75vw;height:32vh;left:12%;top:38%;border:2px solid #ddcaa1aa;border-radius:50%;background:transparent;transform:rotate(-18deg);animation-name:motif-track}
+.cinema-motif[data-kind=orbit] i:nth-child(2){transform:rotate(22deg);top:27%}
+.cinema-motif[data-kind=orbit] i:nth-child(n+3){display:none}
+.cinema-motif[data-kind=frost] i{width:clamp(30px,6vw,100px);height:40vh;top:72%;background:linear-gradient(110deg,#e8faff99,#659ebd44 40%,#d4f7ffcc 42%,#7eaec233 66%);clip-path:polygon(45% 0,70% 36%,100% 100%,0 100%,20% 35%);animation-name:motif-ice}
+.cinema-motif[data-kind=swarm] i{width:22px;height:8px;border-radius:65% 25%;background:#303728;box-shadow:8px -4px 0 -1px #819461,-8px -3px 0 -1px #5f7045;animation-name:motif-swarm}
+.cinema-motif[data-kind=barrier] i{width:1px;height:24vh;background:linear-gradient(transparent,#a9cbd688,transparent);animation-name:motif-heavy}
+.cinema.domain[data-domain-art=false] .cinema-portrait{right:1%;width:min(46vw,64vh);opacity:.8;filter:drop-shadow(0 0 20px #000)}
+@keyframes motif-drift{0%{opacity:0;translate:0 60px;rotate:0deg}25%,75%{opacity:.58}100%{opacity:0;translate:60px -90px;rotate:60deg}}
+@keyframes motif-heavy{0%{opacity:0;translate:0 -45px}35%,70%{opacity:.65;translate:0 0}100%{opacity:0;translate:0 90px}}
+@keyframes motif-pane{0%{opacity:0;translate:-60px 30px}35%,80%{opacity:.65}100%{opacity:0;translate:40px -30px}}
+@keyframes motif-beam{0%,10%{opacity:0;scale:1 .4}35%,70%{opacity:.55;scale:1 1}100%{opacity:0;scale:1 1.2}}
+@keyframes motif-track{0%{opacity:0;scale:.55}35%,80%{opacity:.65;scale:1}100%{opacity:0;scale:1.1}}
+@keyframes motif-ice{0%{opacity:0;translate:0 30vh}35%,85%{opacity:.7;translate:0 0}100%{opacity:.35;translate:0 -5vh}}
+@keyframes motif-swarm{0%{opacity:0;translate:-100px 30px}25%,75%{opacity:.75}100%{opacity:0;translate:110px -60px}}
+@media(max-width:600px){.cinema.domain[data-domain-art=false] .cinema-portrait{width:80vw;height:68%;right:-10%;bottom:14%}}
+@media(prefers-reduced-motion:reduce){.cinema-motif{display:none}}
+.reduced-motion .cinema-motif{display:none}
+
+.cinema-motif[data-kind=frost] i{top:auto;bottom:-8%;height:calc(42vh * var(--size));width:calc(8vw * var(--size));transform:rotate(var(--tilt));transform-origin:bottom}
+.cinema-motif[data-kind=frost] i:nth-child(n+15){display:none}
+
+/* Illustrated expansions have their own entrance and camera movement. */
+.cinema.domain[data-effect=blossom] .cinema-world{animation:domain-meadow 3.6s ease-out both}
+.cinema.domain[data-effect=mass] .cinema-world{animation:domain-weight 3.6s ease-out both}
+.cinema.domain[data-effect=sky] .cinema-world{animation:domain-skyfold 3.6s ease-out both}
+.cinema.domain[data-effect=output] .cinema-world{animation:domain-discharge 3.6s ease-out both}
+.cinema.domain[data-effect=orbit] .cinema-world{animation:domain-territory 3.6s ease-out both}
+.cinema.domain[data-effect=frost] .cinema-world{animation:domain-freeze 3.6s ease-out both}
+.cinema.domain[data-effect=swarm] .cinema-world{animation:domain-infest 3.6s ease-out both}
+.cinema.domain[data-interpretation=true] .cinema-motif{opacity:.42}
+.cinema.domain[data-effect=frost] .cinema-motif i{width:3px;height:5px;top:var(--y);bottom:auto;clip-path:none;border-radius:40%;background:#e5faff;transform:rotate(var(--r));animation:motif-drift 3.6s ease calc(var(--i)*.025s) both}
+.cinema.domain[data-effect=sky] .cinema-motif i{opacity:0;animation-name:motif-pane;animation-duration:3.6s}
+.cinema.domain[data-effect=orbit] .cinema-motif{opacity:.18}
+.cinema.domain[data-effect=swarm] .cinema-motif{opacity:.6}
+@keyframes domain-meadow{0%{clip-path:circle(4% at 50% 65%);filter:brightness(1.8);transform:scale(1.12)}45%{clip-path:circle(90% at 50% 65%);filter:brightness(1)}100%{clip-path:circle(100%);filter:brightness(1);transform:scale(1)}}
+@keyframes domain-weight{0%{clip-path:inset(45% 0);filter:brightness(.1);transform:scale(1.18) translateY(-12px)}32%{clip-path:inset(0);filter:brightness(1);transform:scale(1.05) translateY(4px)}38%{transform:scale(1.05) translateY(-3px)}45%{transform:scale(1.04) translateY(0)}100%{clip-path:inset(0);filter:brightness(1);transform:scale(1)}}
+@keyframes domain-skyfold{0%{clip-path:polygon(42% 0,58% 0,51% 50%,58% 100%,42% 100%,49% 50%);transform:scale(1.12) skewX(3deg);filter:brightness(.3)}55%{clip-path:polygon(0 0,100% 0,100% 50%,100% 100%,0 100%,0 50%);filter:brightness(1);transform:scale(1.04) skewX(0)}100%{clip-path:polygon(0 0,100% 0,100% 50%,100% 100%,0 100%,0 50%);transform:scale(1);filter:brightness(1)}}
+@keyframes domain-discharge{0%{clip-path:inset(49% 0);filter:brightness(.2);transform:scale(1.1)}24%{clip-path:inset(0);filter:brightness(1.4)}36%{filter:brightness(.8)}58%,100%{filter:brightness(1);clip-path:inset(0);transform:scale(1)}}
+@keyframes domain-territory{0%{clip-path:circle(0% at 45% 75%);transform:scale(1.12) translateX(-1%);filter:brightness(.4)}60%{clip-path:circle(100% at 45% 75%);filter:brightness(1)}100%{clip-path:circle(100% at 45% 75%);transform:scale(1);filter:brightness(1)}}
+@keyframes domain-freeze{0%{clip-path:polygon(0 100%,15% 95%,30% 100%,45% 90%,60% 100%,75% 95%,100% 100%,100% 100%,0 100%);filter:brightness(1.4);transform:scale(1.1)}48%{clip-path:polygon(0 0,15% 0,30% 0,45% 0,60% 0,75% 0,100% 0,100% 100%,0 100%);filter:brightness(1)}100%{clip-path:inset(0);filter:brightness(1);transform:scale(1)}}
+@keyframes domain-infest{0%{clip-path:inset(0 46%);filter:brightness(.05);transform:scale(1.12)}40%{clip-path:inset(0);filter:brightness(.7)}100%{clip-path:inset(0);filter:brightness(1);transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){.cinema.domain .cinema-world{animation:none!important;transform:none!important;filter:none!important;clip-path:none!important}}
+.reduced-motion .cinema.domain .cinema-world{animation:none!important;transform:none!important;filter:none!important;clip-path:none!important}

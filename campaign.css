@@ -1,0 +1,27 @@
+/* Journey controls use the existing ink, brass and blue palette. */
+.journey-dialog{width:min(860px,calc(100vw - 24px));max-width:860px;max-height:calc(100dvh - 24px);padding:24px;overflow-y:auto}
+.journey-dialog h2{font-size:26px;margin:0}.journey-dialog .dialog-heading{margin-bottom:20px}
+.journey-top,.config-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.config-field{display:flex;flex-direction:column;gap:7px;min-width:0;color:var(--txt2);font-size:14px}
+.config-field select,.journey-dialog select{width:100%;min-width:0;max-width:100%;min-height:46px;padding:9px 10px;background:#1a2a35;color:#edf0ed;border:1px solid #43535d;border-radius:5px;font:inherit}
+.journey-dialog option{background:#172630;color:#f0f0eb}
+.custom-brief{padding:12px 14px;background:#182833;border-left:3px solid var(--gold);margin:16px 0;font-size:14px;line-height:1.65}
+.custom-brief p{margin:0}.custom-brief p+p{margin-top:8px}
+.custom-brief details{margin-top:8px}.custom-brief summary{cursor:pointer}
+.config-note{font-size:13px;color:var(--txt2);line-height:1.6;margin:12px 0}
+.config-extras{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin:16px 0}
+.config-extras label{display:flex;gap:8px;align-items:center;font-size:14px;min-height:44px}.config-extras select{width:auto}
+.config-extras input{width:18px;height:18px;accent-color:#d5b675}
+.journey-confirm{position:sticky;bottom:-24px;background:#101a23;border-top:1px solid #43535d;margin:18px -24px -24px;padding:14px 24px;display:flex;gap:16px;align-items:center;justify-content:space-between}
+.journey-confirm p{font-size:13px;line-height:1.5;margin:0;max-width:470px;color:var(--txt2)}.journey-confirm .btn{white-space:nowrap;flex-shrink:0;min-height:48px}
+#journeyMessage{color:#ffc1a6;font-size:14px}#journeyMessage:empty{display:none}
+.journey-status{font-size:13px;color:#c6d4da;padding:10px 0;border-bottom:1px solid #344650;margin-bottom:12px;line-height:1.6}
+.journey-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0 4px}
+.choice-card{min-height:100px;background:#1b2c37;border:1px solid #425763;border-radius:6px;color:var(--txt);padding:16px;text-align:left;cursor:pointer;font:inherit;display:flex;flex-direction:column;gap:8px}
+.choice-card small{font-size:14px;line-height:1.5;color:var(--txt2)}.choice-card:hover,.choice-card:focus-visible{border-color:var(--gold);background:#243641}
+.save-slot{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:10px;align-items:center;padding:13px 0;border-bottom:1px solid #334650}
+.save-slot.current{border-left:3px solid var(--gold);padding-left:12px}.save-slot>div{min-width:0}.save-slot b,.save-slot small{display:block}.save-slot b{font-size:15px}.save-slot small{color:var(--txt2);font-size:12px;line-height:1.5;margin-top:5px;overflow-wrap:anywhere}.save-slot .btn{min-height:44px}.slot-delete{color:#d5a9a6;padding:8px;min-height:44px}
+.mission-status{padding:10px 12px;border-left:3px solid var(--gold);background:#24343b;color:#eed6a9;font-size:14px;line-height:1.5;margin:10px 0}
+.enemy-intent{font-size:12px;line-height:1.5;margin-top:6px;color:#b5d6dc;overflow-wrap:anywhere}.enemy-intent.danger{color:#ffbba9}
+.journey-records{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0;text-align:left}.journey-records span{font-size:13px;color:var(--txt2);padding-bottom:10px;border-bottom:1px solid #3a4a54}.journey-records b{display:block;font-size:20px;color:var(--txt);margin-top:5px}
+@media(max-width:600px){.journey-dialog{padding:16px}.journey-dialog h2{font-size:22px}.journey-top,.config-grid{gap:10px}.config-field{font-size:12px}.journey-dialog select{font-size:13px;padding:8px 6px}.journey-confirm{bottom:-16px;margin:16px -16px -16px;padding:12px 16px;flex-direction:column;align-items:stretch;gap:8px}.journey-confirm .btn{width:100%}.journey-choices{gap:8px}.choice-card{padding:12px;min-height:110px;font-size:15px}.choice-card small{font-size:12px}.save-slot{gap:6px}.slot-delete{font-size:12px}.mission-status{font-size:12px}.enemy-intent{font-size:11px}.journey-records b{font-size:17px}}

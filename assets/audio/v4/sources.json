@@ -1,0 +1,45 @@
+[
+  {
+    "id": "dagon_domain_name",
+    "actor": 19,
+    "match": [
+      "荡蕴平线"
+    ],
+    "file": "assets/audio/v4/dagon_domain_name.mp3",
+    "durationMs": 4400,
+    "nameAtMs": 1290,
+    "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
+    "note": "动画原声，仅完整领域名；未拼接归属待核实的展开喊声。音色与混音待人工试听",
+    "raw": "references/audio-v2/compilation.m4a",
+    "startSeconds": 372.25,
+    "endSeconds": 376.65,
+    "recognizedSpeechEnd": 375.94,
+    "sourceTailMs": 710,
+    "verification": "Japanese ASR word timings plus source-frame Dagon close-up and domain-name subtitles; human listening pending. Invocation intentionally excluded because speaker attribution is uncertain.",
+    "sha256": "c2aa95a76e2e01986f6432b563a6f0ad9e6348003ebfb01ef6242c78c8b5eb5f",
+    "peak": 0.456787109375,
+    "decodedDurationMs": 4400,
+    "distribution": "Local game integration requested by user; no publication performed."
+  },
+  {
+    "id": "hanami_domain",
+    "actor": 18,
+    "match": [
+      "朵颐光海"
+    ],
+    "file": "assets/audio/v4/hanami_game_domain.mp3",
+    "durationMs": 8650,
+    "nameAtMs": 1500,
+    "source": "https://www.bilibili.com/video/BV1oc41167UZ/",
+    "note": "《幻影夜行》花御领域演出原音，含游戏音效；完整喊招台词未核实，按用户选择接入。领域名显字按画面定时，非台词对齐。",
+    "raw": "references/domain-voice-v4/hanami-game.m4a",
+    "startSeconds": 3.15,
+    "endSeconds": 11.8,
+    "nameTimingBasis": "Source domain visual starts around 4.65 seconds; not an ASR-verified spoken name",
+    "verification": "Source frames checked; speech is not verified. User explicitly requested including this game performance audio. Human listening pending.",
+    "sha256": "64517f51c50ad4a3765aea848c27d381f87dba90a4a9277e8298836e525cb357",
+    "peak": 0.25628662109375,
+    "decodedDurationMs": 8650,
+    "distribution": "User-requested local prototype only; no publication."
+  }
+]

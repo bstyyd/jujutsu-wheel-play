@@ -1,0 +1,57 @@
+[
+  {
+    "id": "gojo_void",
+    "file": "assets/audio/gojo_void.mp3",
+    "durationMs": 7100,
+    "source": "https://anime-soundboard.com/en/sound/gojo-domain-expansion-1013/",
+    "raw": "gojo-domain.mp3",
+    "startSeconds": 0.9,
+    "sha256": "bfc8eb4ef3e240dab0bfcc0bcded13e33796ddfe2193d5fb1f8e000ce495a321",
+    "verification": "Community source attribution plus Japanese ASR; human listening pending",
+    "distribution": "Local prototype testing; public redistribution permission not established"
+  },
+  {
+    "id": "sukuna_shrine",
+    "file": "assets/audio/sukuna_shrine.mp3",
+    "durationMs": 4150,
+    "source": "https://anime-soundboard.com/en/sound/ryomen-sukuna-domain-2233/",
+    "raw": "sukuna-domain.mp3",
+    "startSeconds": 0.35,
+    "sha256": "e1782f1508f95ec3615061128b5032865bba18d8524202b367b66749d781c76b",
+    "verification": "Community source attribution plus Japanese ASR; human listening pending",
+    "distribution": "Local prototype testing; public redistribution permission not established"
+  },
+  {
+    "id": "megumi_shadow",
+    "file": "assets/audio/megumi_shadow.mp3",
+    "durationMs": 2300,
+    "source": "https://tuna.voicemod.net/sound/2807b3d9-4648-4b85-a84c-2733ecdef9a3",
+    "raw": "megumi-domain.mp3",
+    "startSeconds": 0.15,
+    "sha256": "e2bc42221436b47fcb525599cbcd841edd1e18ab8bb3d4ddad18bd66c3fd4492",
+    "verification": "Community source attribution plus Japanese ASR; human listening pending",
+    "distribution": "Local prototype testing; public redistribution permission not established"
+  },
+  {
+    "id": "mahito_domain",
+    "file": "assets/audio/mahito_domain.mp3",
+    "durationMs": 5180,
+    "source": "https://tuna.voicemod.net/sound/eb815ab9-55b9-40ed-b80a-7434ce3fd246",
+    "raw": "mahito-domain.mp3",
+    "startSeconds": 0,
+    "sha256": "1044efe8acef3030e6fe3395d2ff9be9cfd823d44602e50d0d4cf7f5f0477b56",
+    "verification": "Community source attribution plus Japanese ASR; human listening pending",
+    "distribution": "Local prototype testing; public redistribution permission not established"
+  },
+  {
+    "id": "jogo_domain",
+    "file": "assets/audio/jogo_domain.mp3",
+    "durationMs": 2700,
+    "source": "https://tuna.voicemod.net/sound/a3f9ed16-5315-450a-9cca-ce2b1688115c",
+    "raw": "jogo-domain.mp3",
+    "startSeconds": 0.4,
+    "sha256": "a0e9c57762d280fa26cdfc393993b8212951655cfadd3794354b619eab5521e3",
+    "verification": "Community source attribution plus Japanese ASR; human listening pending",
+    "distribution": "Local prototype testing; public redistribution permission not established"
+  }
+]

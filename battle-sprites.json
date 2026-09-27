@@ -1,0 +1,4658 @@
+{
+  "version": 4,
+  "surfaceAtlas": "battle/v1/surfaces.webp",
+  "actors": {
+    "nobara": {
+      "file": "battle/v2/nobara.webp",
+      "label": "钉崎野蔷薇",
+      "artIndex": 3,
+      "facing": "right",
+      "height": 3.0,
+      "pixelStep": 1,
+      "frames": [
+        [
+          62,
+          24,
+          250,
+          491
+        ],
+        [
+          436,
+          35,
+          243,
+          481
+        ],
+        [
+          789,
+          43,
+          361,
+          472
+        ],
+        [
+          1247,
+          101,
+          251,
+          413
+        ],
+        [
+          37,
+          548,
+          312,
+          428
+        ],
+        [
+          479,
+          557,
+          216,
+          428
+        ],
+        [
+          822,
+          638,
+          253,
+          345
+        ],
+        [
+          1206,
+          664,
+          263,
+          301
+        ]
+      ],
+      "feet": [
+        0.997963,
+        0.997921,
+        0.997881,
+        0.997579,
+        0.997664,
+        0.997664,
+        0.997101,
+        0.996678
+      ],
+      "centers": [
+        0.812,
+        0.271605,
+        0.271468,
+        0.163347,
+        0.112179,
+        0.175926,
+        0.547431,
+        0.110266
+      ],
+      "frameScales": [
+        1.00409,
+        0.98364,
+        0.965235,
+        0.844581,
+        0.875256,
+        0.875256,
+        0.705521,
+        0.615542
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.25,
+        "end": 0.4,
+        "lunge": 0.2,
+        "castLunge": 0.12
+      },
+      "choreography": "Nobara Kugisaki, orange-brown bob, navy jacket and skirt, dark tights, brown loafers. RIGHT-facing. Hammer is a small carpenter hammer; steel nails and straw doll match reference. 0: cocky upright stance with hammer resting on shoulder and nails between left fingers; 1: flick nail-holding wrist near face, weight on one hip; 2: lean backward twisting shoulders while raising hammer high behind head, left hand aims nail; 3: sharp compact downward hammer strike onto an aimed nail, leading arm forward and feet narrow, NOT long boxing lunge; 4: Resonance: hold straw doll close in left hand and strike toward it with right hammer, intense grin; 5: side-on flinch one knee buckles but hammer stays tightly held at hip; 6: crouch behind raised hammer-bearing forearm with nails hand tucked inward; 7: seated sideways clutching hammer, legs folded to one side. Hammer/steel nails never become axe or sword."
+    },
+    "player": {
+      "file": "battle/v1/player.webp",
+      "facing": "right",
+      "height": 3.35,
+      "foot": 0.97,
+      "pixelStep": 2,
+      "frames": [
+        [
+          0,
+          0,
+          384,
+          512
+        ],
+        [
+          384,
+          0,
+          384,
+          512
+        ],
+        [
+          768,
+          0,
+          384,
+          512
+        ],
+        [
+          1152,
+          0,
+          384,
+          512
+        ],
+        [
+          0,
+          512,
+          384,
+          512
+        ],
+        [
+          384,
+          512,
+          384,
+          512
+        ],
+        [
+          768,
+          512,
+          384,
+          512
+        ],
+        [
+          1152,
+          512,
+          384,
+          512
+        ]
+      ],
+      "feet": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.865,
+        0.865,
+        0.865,
+        0.865
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      }
+    },
+    "curse": {
+      "file": "battle/v1/curse.webp",
+      "facing": "left",
+      "height": 4.15,
+      "foot": 0.935,
+      "pixelStep": 2,
+      "frames": [
+        [
+          0,
+          0,
+          390,
+          512
+        ],
+        [
+          394,
+          0,
+          382,
+          512
+        ],
+        [
+          776,
+          0,
+          354,
+          512
+        ],
+        [
+          1132,
+          0,
+          404,
+          512
+        ],
+        [
+          0,
+          512,
+          425,
+          512
+        ],
+        [
+          422,
+          512,
+          380,
+          512
+        ],
+        [
+          804,
+          512,
+          325,
+          512
+        ],
+        [
+          1132,
+          512,
+          404,
+          512
+        ]
+      ],
+      "feet": [
+        0.935,
+        0.935,
+        0.935,
+        0.935,
+        0.83,
+        0.83,
+        0.83,
+        0.845
+      ],
+      "reversed": [
+        3
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      }
+    },
+    "player-young-m": {
+      "file": "battle/players/male.webp",
+      "facing": "right",
+      "height": 3.25,
+      "foot": 0.97,
+      "pixelStep": 1,
+      "frames": [
+        [
+          0,
+          0,
+          314,
+          435
+        ],
+        [
+          314,
+          0,
+          313,
+          435
+        ],
+        [
+          627,
+          0,
+          313,
+          435
+        ],
+        [
+          940,
+          0,
+          314,
+          435
+        ]
+      ],
+      "feet": [
+        0.9701149425287356,
+        0.967816091954023,
+        0.9724137931034482,
+        0.9724137931034482
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 0,
+        "windup": 1,
+        "attack": 2,
+        "cast": 3,
+        "hit": 0,
+        "guard": 1,
+        "defeat": 0
+      },
+      "poseStatus": "four authored poses; hit and defeat use movement with idle frame"
+    },
+    "player-adult-m": {
+      "file": "battle/players/male.webp",
+      "facing": "right",
+      "height": 3.5,
+      "foot": 0.97,
+      "pixelStep": 1,
+      "frames": [
+        [
+          0,
+          435,
+          314,
+          397
+        ],
+        [
+          314,
+          435,
+          313,
+          397
+        ],
+        [
+          627,
+          435,
+          313,
+          397
+        ],
+        [
+          940,
+          435,
+          314,
+          397
+        ]
+      ],
+      "feet": [
+        0.982367758186398,
+        0.982367758186398,
+        0.982367758186398,
+        0.982367758186398
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 0,
+        "windup": 1,
+        "attack": 2,
+        "cast": 3,
+        "hit": 0,
+        "guard": 1,
+        "defeat": 0
+      },
+      "poseStatus": "four authored poses; hit and defeat use movement with idle frame"
+    },
+    "player-older-m": {
+      "file": "battle/players/male.webp",
+      "facing": "right",
+      "height": 3.2,
+      "foot": 0.97,
+      "pixelStep": 1,
+      "frames": [
+        [
+          0,
+          832,
+          314,
+          422
+        ],
+        [
+          314,
+          832,
+          313,
+          422
+        ],
+        [
+          627,
+          832,
+          313,
+          422
+        ],
+        [
+          940,
+          832,
+          314,
+          422
+        ]
+      ],
+      "feet": [
+        0.8767772511848341,
+        0.8767772511848341,
+        0.8767772511848341,
+        0.8791469194312796
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 0,
+        "windup": 1,
+        "attack": 2,
+        "cast": 3,
+        "hit": 0,
+        "guard": 1,
+        "defeat": 0
+      },
+      "poseStatus": "four authored poses; hit and defeat use movement with idle frame"
+    },
+    "player-young-f": {
+      "file": "battle/players/female.webp",
+      "facing": "right",
+      "height": 3.25,
+      "foot": 0.97,
+      "pixelStep": 1,
+      "frames": [
+        [
+          0,
+          0,
+          314,
+          430
+        ],
+        [
+          314,
+          0,
+          313,
+          430
+        ],
+        [
+          627,
+          0,
+          313,
+          430
+        ],
+        [
+          940,
+          0,
+          314,
+          430
+        ]
+      ],
+      "feet": [
+        0.9790697674418605,
+        0.9813953488372092,
+        0.9813953488372092,
+        0.9813953488372092
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 0,
+        "windup": 1,
+        "attack": 2,
+        "cast": 3,
+        "hit": 0,
+        "guard": 1,
+        "defeat": 0
+      },
+      "poseStatus": "four authored poses; hit and defeat use movement with idle frame"
+    },
+    "player-adult-f": {
+      "file": "battle/players/female.webp",
+      "facing": "right",
+      "height": 3.5,
+      "foot": 0.97,
+      "pixelStep": 1,
+      "frames": [
+        [
+          0,
+          430,
+          314,
+          407
+        ],
+        [
+          314,
+          430,
+          313,
+          407
+        ],
+        [
+          627,
+          430,
+          313,
+          407
+        ],
+        [
+          940,
+          430,
+          314,
+          407
+        ]
+      ],
+      "feet": [
+        0.9877149877149877,
+        0.9877149877149877,
+        0.9877149877149877,
+        0.9877149877149877
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 0,
+        "windup": 1,
+        "attack": 2,
+        "cast": 3,
+        "hit": 0,
+        "guard": 1,
+        "defeat": 0
+      },
+      "poseStatus": "four authored poses; hit and defeat use movement with idle frame"
+    },
+    "player-older-f": {
+      "file": "battle/players/female.webp",
+      "facing": "right",
+      "height": 3.2,
+      "foot": 0.97,
+      "pixelStep": 1,
+      "frames": [
+        [
+          0,
+          837,
+          314,
+          417
+        ],
+        [
+          314,
+          837,
+          313,
+          417
+        ],
+        [
+          627,
+          837,
+          313,
+          417
+        ],
+        [
+          940,
+          837,
+          314,
+          417
+        ]
+      ],
+      "feet": [
+        0.9328537170263789,
+        0.9328537170263789,
+        0.935251798561151,
+        0.9328537170263789
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 0,
+        "windup": 1,
+        "attack": 2,
+        "cast": 3,
+        "hit": 0,
+        "guard": 1,
+        "defeat": 0
+      },
+      "poseStatus": "four authored poses; hit and defeat use movement with idle frame"
+    },
+    "gojo": {
+      "file": "battle/v2/gojo.webp",
+      "label": "五条悟·前期",
+      "artIndex": 0,
+      "facing": "right",
+      "height": 3.55,
+      "pixelStep": 1,
+      "frames": [
+        [
+          76,
+          15,
+          197,
+          480
+        ],
+        [
+          488,
+          19,
+          143,
+          474
+        ],
+        [
+          837,
+          18,
+          210,
+          475
+        ],
+        [
+          1164,
+          24,
+          365,
+          469
+        ],
+        [
+          93,
+          512,
+          177,
+          489
+        ],
+        [
+          440,
+          527,
+          264,
+          465
+        ],
+        [
+          852,
+          513,
+          243,
+          485
+        ],
+        [
+          1236,
+          730,
+          276,
+          271
+        ]
+      ],
+      "feet": [
+        0.997917,
+        0.99789,
+        0.997895,
+        0.997868,
+        0.997955,
+        0.997849,
+        0.997938,
+        0.99631
+      ],
+      "centers": [
+        0.279188,
+        0.237762,
+        0.538095,
+        0.309589,
+        0.107345,
+        0.914773,
+        0.090535,
+        0.485507
+      ],
+      "frameScales": [
+        1.004184,
+        0.991632,
+        0.993724,
+        0.981172,
+        1.023013,
+        0.972803,
+        1.014644,
+        0.566946
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.06,
+        "contact": 0.18,
+        "end": 0.32,
+        "lunge": 0.25,
+        "castLunge": 0.06
+      },
+      "choreography": "Early adult Satoru Gojo, blindfold ON, white upright hair, violet-black high collar uniform, black shoes. Faces RIGHT. Character emotion playful unhurried. 0: tall relaxed stance left hand in pocket right loosely at side; 1: weight on one leg, head tilts with amused smile, hand still pocketed; 2: pivots hips and raises knee lightly for kick, one hand in pocket; 3: casual extended rightward high side kick, torso leans back, other leg firmly grounded, hand in pocket; 4: raised index/middle fingers beside face for Limitless, shoulders relaxed and small smile; 5: slight shoulder recoil with surprised head tilt, NOT exaggerated doubled-over pain; 6: upright feet close, one palm quietly held forward to stop attack with Infinity, other hand in pocket, NO boxing guard; 7: seated leaning forward exhausted, arms resting on bent knees, head tilted. Keep blindfold."
+    },
+    "gojo-shinjuku": {
+      "file": "battle/v2/gojo-shinjuku.webp",
+      "label": "五条悟·新宿",
+      "artIndex": 0,
+      "facing": "right",
+      "height": 3.55,
+      "pixelStep": 1,
+      "frames": [
+        [
+          57,
+          24,
+          289,
+          455
+        ],
+        [
+          428,
+          36,
+          306,
+          442
+        ],
+        [
+          810,
+          61,
+          301,
+          418
+        ],
+        [
+          1161,
+          92,
+          351,
+          387
+        ],
+        [
+          36,
+          511,
+          309,
+          464
+        ],
+        [
+          426,
+          674,
+          302,
+          300
+        ],
+        [
+          818,
+          501,
+          319,
+          474
+        ],
+        [
+          1247,
+          703,
+          237,
+          267
+        ]
+      ],
+      "feet": [
+        0.997802,
+        0.997738,
+        0.997608,
+        0.997416,
+        0.997845,
+        0.996667,
+        0.99789,
+        0.996255
+      ],
+      "centers": [
+        0.103806,
+        0.820261,
+        0.08804,
+        0.108262,
+        0.071197,
+        0.268212,
+        0.094044,
+        0.227848
+      ],
+      "frameScales": [
+        1.004415,
+        0.975717,
+        0.922737,
+        0.854305,
+        1.024283,
+        0.662252,
+        1.046358,
+        0.589404
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.08,
+        "contact": 0.21,
+        "end": 0.36,
+        "lunge": 0.48,
+        "castLunge": 0.06
+      },
+      "choreography": "Late Shinjuku Satoru Gojo. Manga reference use white-haired LEFT character, not Sukuna. Black fitted short-sleeved T-shirt, loose white martial pants, black sash/cloth shoes, blue eyes exposed, soft white hair, no blindfold or tattoos. Faces RIGHT. More intense athletic fighter than early Gojo. 0: upright advancing stance open hands, confident exposed blue eyes; 1: chest turns slightly with shoulders loose; 2: torso coils for elbow strike, leading elbow lifted and rear fist at chest; 3: short brutal forward elbow strike, low wide planted stance, NOT generic straight punch or palm; 4: precisely aimed index finger forward with other palm cupped beside wrist for spatial technique, no painted aura; 5: crouched skid back with one hand braced near ground and focused glare; 6: standing front palm out, rear hand held at ribs, calm Infinity stop; 7: sitting low on heels with forearms across thighs, head lowered, NO fatal injury or dismemberment."
+    },
+    "yuji": {
+      "file": "battle/v2/yuji.webp",
+      "label": "虎杖悠仁",
+      "artIndex": 1,
+      "facing": "right",
+      "height": 3.2,
+      "pixelStep": 1,
+      "frames": [
+        [
+          40,
+          71,
+          298,
+          406
+        ],
+        [
+          418,
+          78,
+          287,
+          399
+        ],
+        [
+          811,
+          210,
+          277,
+          267
+        ],
+        [
+          1141,
+          108,
+          385,
+          369
+        ],
+        [
+          31,
+          600,
+          364,
+          354
+        ],
+        [
+          463,
+          608,
+          263,
+          346
+        ],
+        [
+          799,
+          553,
+          314,
+          402
+        ],
+        [
+          1154,
+          694,
+          363,
+          267
+        ]
+      ],
+      "feet": [
+        0.997537,
+        0.997494,
+        0.996255,
+        0.99729,
+        0.997175,
+        0.99711,
+        0.997512,
+        0.996255
+      ],
+      "centers": [
+        0.758389,
+        0.749129,
+        0.241877,
+        0.784416,
+        0.777473,
+        0.155894,
+        0.742038,
+        0.774105
+      ],
+      "frameScales": [
+        1.00495,
+        0.987624,
+        0.660891,
+        0.913366,
+        0.876238,
+        0.856436,
+        0.99505,
+        0.660891
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.08,
+        "contact": 0.2,
+        "end": 0.35,
+        "lunge": 0.85,
+        "castLunge": 0.12
+      },
+      "choreography": "Yuji Itadori normal form, pink short hair, red hood/navy uniform/red sneakers, no tattoos. Faces RIGHT. 0: compact boxer stance left fist guarding chin and right low at ribs; 1: bounce onto front foot with subtle shoulder roll; 2: extremely low crouched coil, right fist tight behind hip, left hand protecting jaw; 3: explosive low driving right straight punch, torso twisted and rear heel raised; 4: Black Flash preparation/contact: forceful downward diagonal hook, jaw tucked and other fist protecting face, NO painted energy; 5: tight torso folding at abdomen from body blow, teeth clenched, fists still close; 6: elbows tight boxing shell protecting cheeks, upright rather than kneeling; 7: sitting exhausted on ground supported by one arm, one leg bent, stubborn raised gaze. No generic kneeling collapse."
+    },
+    "megumi": {
+      "file": "battle/v2/megumi.webp",
+      "label": "伏黑惠",
+      "artIndex": 2,
+      "facing": "right",
+      "height": 3.25,
+      "pixelStep": 1,
+      "frames": [
+        [
+          26,
+          64,
+          332,
+          440
+        ],
+        [
+          445,
+          42,
+          280,
+          465
+        ],
+        [
+          774,
+          34,
+          333,
+          470
+        ],
+        [
+          1160,
+          63,
+          363,
+          445
+        ],
+        [
+          41,
+          574,
+          318,
+          403
+        ],
+        [
+          439,
+          582,
+          320,
+          395
+        ],
+        [
+          804,
+          625,
+          328,
+          352
+        ],
+        [
+          1174,
+          701,
+          335,
+          275
+        ]
+      ],
+      "feet": [
+        0.997727,
+        0.997849,
+        0.997872,
+        0.997753,
+        0.997519,
+        0.997468,
+        0.997159,
+        0.996364
+      ],
+      "centers": [
+        0.099398,
+        0.1,
+        0.534535,
+        0.192837,
+        0.078616,
+        0.078125,
+        0.289634,
+        0.835821
+      ],
+      "frameScales": [
+        1.004566,
+        1.061644,
+        1.073059,
+        1.015982,
+        0.920091,
+        0.901826,
+        0.803653,
+        0.627854
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.12,
+        "contact": 0.25,
+        "end": 0.4,
+        "lunge": 0.5,
+        "castLunge": 0.12
+      },
+      "choreography": "Megumi Fushiguro navy high-collar uniform, tan boots, black spiky hair, both arms clearly drawn. Faces RIGHT. 0: side-on cautious low stance, open hands near waist; 1: shift weight backward with palms lifting toward each other; 2: lift one knee and lean back, preparing kick, arms balancing; 3: sharply extended horizontal side kick with torso leaning back, clearly different from punching; 4: torso lowered and BOTH hands overlap horizontally making dog-head shadow puppet silhouette, thumbs crossed and fingers forming snout/ears, NO index-up ninja sign, NO summoned dog in sheet; 5: sideways stagger, one hand on sore shoulder, other extends for balance; 6: deep side-slip with torso tilted and forearm close to neck; 7: collapsed on side seated with legs drawn in, one hand propping torso. No generic boxing guard."
+    },
+    "nanami": {
+      "file": "battle/v2/nanami.webp",
+      "label": "七海建人",
+      "artIndex": 4,
+      "facing": "right",
+      "height": 3.5,
+      "pixelStep": 1,
+      "frames": [
+        [
+          109,
+          15,
+          185,
+          471
+        ],
+        [
+          494,
+          15,
+          186,
+          471
+        ],
+        [
+          801,
+          53,
+          319,
+          433
+        ],
+        [
+          1201,
+          75,
+          314,
+          407
+        ],
+        [
+          46,
+          519,
+          327,
+          453
+        ],
+        [
+          463,
+          536,
+          295,
+          440
+        ],
+        [
+          840,
+          518,
+          276,
+          458
+        ],
+        [
+          1199,
+          661,
+          310,
+          315
+        ]
+      ],
+      "feet": [
+        0.997877,
+        0.997877,
+        0.997691,
+        0.997543,
+        0.997792,
+        0.997727,
+        0.997817,
+        0.996825
+      ],
+      "centers": [
+        0.578378,
+        0.569892,
+        0.269592,
+        0.753185,
+        0.11315,
+        0.125424,
+        0.108696,
+        0.483871
+      ],
+      "frameScales": [
+        1.004264,
+        1.004264,
+        0.923241,
+        0.867804,
+        0.965885,
+        0.938166,
+        0.976546,
+        0.671642
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.16,
+        "contact": 0.29,
+        "end": 0.45,
+        "lunge": 0.6,
+        "castLunge": 0.12
+      },
+      "choreography": "Kento Nanami tan suit, blue shirt, spotted ochre tie, green lens goggles, neat blond part. Short blunt fabric-wrapped spotted cleaver. RIGHT-facing. 0: very straight economical professional stance weapon low, spare hand adjusting tie; 1: lower adjusting hand and shift gaze without exaggerated bounce; 2: half-turn shoulders, cleaver held horizontally low behind waist, narrow precise footwork; 3: compact diagonally descending cleaver cut ending just across the forward hip, NOT extended generic straight punch; 4: precision 7:3 strike setup with blade angled at chest height and free hand measuring line, torso square; 5: one step back, shoulder compressed, other hand still controlling weapon; 6: brief one-handed cleaver parry across chest, spare forearm protecting neck, upright; 7: lowered onto one knee still supported by cleaver handle near floor, glasses remain on."
+    },
+    "maki": {
+      "file": "battle/v2/maki.webp",
+      "label": "禅院真希·前期",
+      "artIndex": 5,
+      "facing": "right",
+      "height": 3.05,
+      "pixelStep": 1,
+      "frames": [
+        [
+          34,
+          11,
+          477,
+          336
+        ],
+        [
+          587,
+          17,
+          484,
+          332
+        ],
+        [
+          39,
+          357,
+          469,
+          357
+        ],
+        [
+          553,
+          442,
+          525,
+          272
+        ],
+        [
+          79,
+          723,
+          386,
+          361
+        ],
+        [
+          623,
+          759,
+          280,
+          325
+        ],
+        [
+          34,
+          1108,
+          481,
+          323
+        ],
+        [
+          560,
+          1178,
+          504,
+          243
+        ]
+      ],
+      "feet": [
+        0.997024,
+        0.996988,
+        0.997199,
+        0.996324,
+        0.99723,
+        0.996923,
+        0.996904,
+        0.995885
+      ],
+      "centers": [
+        0.503145,
+        0.469008,
+        0.53838,
+        0.493333,
+        0.567358,
+        0.832143,
+        0.571726,
+        0.626984
+      ],
+      "frameScales": [
+        1.005988,
+        0.994012,
+        1.068862,
+        0.814371,
+        1.080838,
+        0.973054,
+        0.967066,
+        0.727545
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.18,
+        "contact": 0.32,
+        "end": 0.49,
+        "lunge": 0.68,
+        "castLunge": 0.12
+      },
+      "choreography": "Early Maki Zenin green ponytail, rectangular glasses, navy skirt uniform, dark tights and boots, red-shaft curved-blade polearm shown in reference. RIGHT-facing. VERY LONG weapon must FIT in cell: turn diagonal toward camera or foreshorten instead of clipping into another cell. 0: grounded wide two-hand polearm low diagonal stance; 1: rotate wrists moving pole across body with slight hip weight shift; 2: deep waist twist with blade swept behind shoulder, both hands spaced on shaft; 3: two-handed low sweeping polearm cut, knee bent, blade near ground toward front, NOT straight thrust; 4: overhead two-handed vertical polearm power-cut ready pose; 5: sideways stagger with pole shaft across body acting as balance bar; 6: very wide planted stance holding pole across head in strong two-handed block; 7: seated leaning on diagonal pole with one leg extended. Keep blade and feet 8% inside each cell."
+    },
+    "yuta": {
+      "file": "battle/v2/yuta.webp",
+      "label": "乙骨忧太",
+      "artIndex": 6,
+      "facing": "right",
+      "height": 3.2,
+      "pixelStep": 1,
+      "frames": [
+        [
+          42,
+          87,
+          368,
+          398
+        ],
+        [
+          431,
+          89,
+          363,
+          396
+        ],
+        [
+          840,
+          160,
+          262,
+          325
+        ],
+        [
+          1209,
+          28,
+          317,
+          457
+        ],
+        [
+          84,
+          529,
+          233,
+          440
+        ],
+        [
+          451,
+          560,
+          291,
+          407
+        ],
+        [
+          810,
+          581,
+          390,
+          377
+        ],
+        [
+          1268,
+          698,
+          240,
+          265
+        ]
+      ],
+      "feet": [
+        0.997487,
+        0.997475,
+        0.996923,
+        0.997812,
+        0.997727,
+        0.997543,
+        0.997347,
+        0.996226
+      ],
+      "centers": [
+        0.092391,
+        0.099174,
+        0.20229,
+        0.088328,
+        0.098712,
+        0.106529,
+        0.717949,
+        0.370833
+      ],
+      "frameScales": [
+        1.005051,
+        1.0,
+        0.820707,
+        1.15404,
+        1.111111,
+        1.027778,
+        0.95202,
+        0.669192
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.13,
+        "contact": 0.25,
+        "end": 0.42,
+        "lunge": 0.52,
+        "castLunge": 0.12
+      },
+      "choreography": "Yuta Okkotsu black side-fringe hair, white jacket, navy trousers, pale sneakers, katana and scabbard. RIGHT-facing. Quiet tense swordsman, not confident boxer. 0: low two-handed katana guard, blade angled down forward, shoulders slightly hunched; 1: grip tightens and blade tip lifts slightly; 2: close low iaido-like coil, sword near hip and torso tucked; 3: diagonal upward drawing slash with two hands, knees flexed and sword foreshortened inside cell; 4: raises ring-bearing hand close to face calling Rika, sword low in other hand, no monster drawn; 5: turns sideways with blade down and hand pressing shoulder; 6: TWO-HANDED katana across torso to receive blow, head behind blade; 7: sits on heels with katana laid safely across lap, head bowed. Do not reuse Nanami's short cleaver or large karate palm."
+    },
+    "todo": {
+      "file": "battle/v2/todo.webp",
+      "label": "东堂葵",
+      "artIndex": 7,
+      "facing": "right",
+      "height": 3.7,
+      "pixelStep": 1,
+      "frames": [
+        [
+          30,
+          20,
+          338,
+          469
+        ],
+        [
+          437,
+          23,
+          273,
+          468
+        ],
+        [
+          789,
+          41,
+          324,
+          448
+        ],
+        [
+          1161,
+          107,
+          349,
+          382
+        ],
+        [
+          81,
+          517,
+          204,
+          482
+        ],
+        [
+          400,
+          591,
+          339,
+          393
+        ],
+        [
+          796,
+          596,
+          350,
+          389
+        ],
+        [
+          1226,
+          705,
+          282,
+          284
+        ]
+      ],
+      "feet": [
+        0.997868,
+        0.997863,
+        0.997768,
+        0.997382,
+        0.997925,
+        0.997455,
+        0.997429,
+        0.996479
+      ],
+      "centers": [
+        0.130178,
+        0.159341,
+        0.858025,
+        0.200573,
+        0.637255,
+        0.087021,
+        0.111429,
+        0.361702
+      ],
+      "frameScales": [
+        1.004283,
+        1.002141,
+        0.959315,
+        0.817987,
+        1.03212,
+        0.841542,
+        0.832976,
+        0.608137
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.2,
+        "contact": 0.34,
+        "end": 0.52,
+        "lunge": 0.8,
+        "castLunge": 0.12
+      },
+      "choreography": "Aoi Todo big muscular body, bare torso, black topknot, left facial scar, white sash and dark purple baggy pants, black cloth shoes. Both hands intact. RIGHT-facing. 0: broad sumo-like heavy stance, open hands spread at waist; 1: roll shoulder and rotate neck proudly, arms loose; 2: turn entire back/hips partly toward camera, elbow pulled back and legs braced; 3: huge short-range shoulder/elbow body-check leaning forward with tucked fist rather than long punch; 4: both palms CLAP together clearly at sternum, expression clever, feet abruptly crossed as swap setup; 5: absorb hit in solid squat, one palm to abdomen, grin remains; 6: cross massive forearms in X at chest while planted low; 7: sits cross-legged exhausted with one hand on knee and chin lowered, never generic kneeling collapse."
+    },
+    "sukuna-yuji": {
+      "file": "battle/v2/sukuna-yuji.webp",
+      "label": "宿傩·虎杖容器",
+      "artIndex": 12,
+      "facing": "left",
+      "height": 3.3,
+      "pixelStep": 1,
+      "frames": [
+        [
+          100,
+          29,
+          204,
+          477
+        ],
+        [
+          460,
+          26,
+          243,
+          480
+        ],
+        [
+          825,
+          52,
+          308,
+          443
+        ],
+        [
+          1149,
+          67,
+          368,
+          425
+        ],
+        [
+          95,
+          531,
+          196,
+          475
+        ],
+        [
+          459,
+          539,
+          224,
+          467
+        ],
+        [
+          837,
+          535,
+          242,
+          471
+        ],
+        [
+          1251,
+          681,
+          252,
+          314
+        ]
+      ],
+      "feet": [
+        0.997904,
+        0.997917,
+        0.997743,
+        0.997647,
+        0.997895,
+        0.997859,
+        0.997877,
+        0.996815
+      ],
+      "centers": [
+        0.705882,
+        0.703704,
+        0.756494,
+        0.923913,
+        0.887755,
+        0.772321,
+        0.913223,
+        0.52381
+      ],
+      "frameScales": [
+        1.004211,
+        1.010526,
+        0.932632,
+        0.894737,
+        1.0,
+        0.983158,
+        0.991579,
+        0.661053
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.1,
+        "contact": 0.2,
+        "end": 0.36,
+        "lunge": 0.12,
+        "castLunge": 0.12
+      },
+      "choreography": "Ryomen Sukuna in Yuji body, facing LEFT. Manga robe form exactly as reference: pink swept spikes, black face marks, white full-length kimono with black edges, patterned dark obi, navy scarf, dark tabi and sandals. Arrogant upright posture. 0: one hand inside robe chest, other hangs loose. 1: chin lifted, wrist slightly raised. 2: loose leftward backhand windup with sleeve trailing. 3: snapping horizontal backhand slash with TWO extended fingers, feet almost still. 4: hands joined in shrine ritual seal at chest, shoulders relaxed. 5: leaning head/upper torso sideways with irritated expression, robe intact. 6: one raised forearm casually parrying, opposite hand inside robe. 7: one-knee lowered with hand on knee, still imperious. No boxing poses."
+    },
+    "sukuna-megumi": {
+      "file": "battle/v2/sukuna-megumi.webp",
+      "label": "十影宿傩",
+      "artIndex": 13,
+      "facing": "right",
+      "height": 3.3,
+      "pixelStep": 1,
+      "frames": [
+        [
+          78,
+          22,
+          199,
+          486
+        ],
+        [
+          449,
+          33,
+          187,
+          475
+        ],
+        [
+          769,
+          82,
+          318,
+          416
+        ],
+        [
+          1115,
+          133,
+          398,
+          374
+        ],
+        [
+          31,
+          537,
+          362,
+          443
+        ],
+        [
+          448,
+          561,
+          267,
+          429
+        ],
+        [
+          773,
+          522,
+          339,
+          466
+        ],
+        [
+          1192,
+          675,
+          308,
+          304
+        ]
+      ],
+      "feet": [
+        0.997942,
+        0.997895,
+        0.997596,
+        0.997326,
+        0.997743,
+        0.997669,
+        0.997854,
+        0.996711
+      ],
+      "centers": [
+        0.120603,
+        0.192513,
+        0.808176,
+        0.896985,
+        0.933702,
+        0.468165,
+        0.079646,
+        0.321429
+      ],
+      "frameScales": [
+        1.004132,
+        0.981405,
+        0.859504,
+        0.772727,
+        0.915289,
+        0.886364,
+        0.96281,
+        0.628099
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.08,
+        "contact": 0.2,
+        "end": 0.36,
+        "lunge": 0.35,
+        "castLunge": 0.12
+      },
+      "choreography": "Sukuna in Megumi body facing LEFT, lean athletic build, spiky swept black hair, black Sukuna facial and upper arm markings, sleeveless white crossover kimono, black sash, white hakama pants, black tabi sandals. Exact image3 costume. 0: arms hanging and cruel sideways smile. 1: hand resting on sash, chin lowered. 2: stepping across with low knife-hand drawn behind hip. 3: sharp low outward two-finger cutting gesture, other hand near chest, deep sideways lunge. 4: both hands crossing into shadow-summoning gesture at waist, knees bent. 5: off-balance sideways twist with arm protecting ribs. 6: half-turn evasive stance with elbow guarding jaw. 7: kneeling on one leg with one palm braced on ground. No extra arms, no halo wheel."
+    },
+    "sukuna-heian": {
+      "file": "battle/v2/sukuna-heian.webp",
+      "label": "宿傩·四臂真身",
+      "artIndex": 14,
+      "facing": "left",
+      "height": 4.0,
+      "pixelStep": 1,
+      "frames": [
+        [
+          34,
+          36,
+          299,
+          474
+        ],
+        [
+          411,
+          35,
+          329,
+          477
+        ],
+        [
+          787,
+          25,
+          335,
+          484
+        ],
+        [
+          1149,
+          68,
+          376,
+          439
+        ],
+        [
+          14,
+          532,
+          395,
+          464
+        ],
+        [
+          423,
+          547,
+          363,
+          447
+        ],
+        [
+          797,
+          548,
+          349,
+          444
+        ],
+        [
+          1175,
+          659,
+          342,
+          334
+        ]
+      ],
+      "feet": [
+        0.99789,
+        0.997904,
+        0.997934,
+        0.997722,
+        0.997845,
+        0.997763,
+        0.997748,
+        0.997006
+      ],
+      "centers": [
+        0.886288,
+        0.902736,
+        0.850746,
+        0.170213,
+        0.883544,
+        0.071625,
+        0.091691,
+        0.385965
+      ],
+      "frameScales": [
+        1.004237,
+        1.010593,
+        1.025424,
+        0.930085,
+        0.983051,
+        0.947034,
+        0.940678,
+        0.707627
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.2,
+        "contact": 0.36,
+        "end": 0.54,
+        "lunge": 0.6,
+        "castLunge": 0.12
+      },
+      "choreography": "True four-armed Sukuna facing LEFT in three-quarter view. Exactly FOUR arms attached at distinct upper and lower shoulder levels in EVERY frame. Huge muscular bare torso, pink short spikes, four red eyes with the asymmetric organic face plate from manga237, black symmetrical body tattoos, belly mouth, loose WHITE pants and black sash, bare feet. Reference3 colors only; omit the held weapon to keep hands clearly visible. 0: two upper arms folded, two lower hands hanging apart. 1: upper arms unfolding, lower pair near waist. 2: upper left fist draws back, upper right raised, lower hands form a compact seal. 3: upper left straight heavy punch to left, upper right guards head, lower pair retain compact seal. 4: upper pair palms together at chest in chanting seal, lower pair extended outward commanding, belly mouth open. 5: broad sideways recoil with all four forearms visibly separated. 6: upper forearms crossed high and lower forearms crossed low forming two separate guards. 7: kneels with two lower palms braced on ground and two upper arms resting on raised knee. All four hands fully drawn, no eight arms, no giant smiling belly teeth."
+    },
+    "mahito": {
+      "file": "battle/v2/mahito.webp",
+      "label": "真人",
+      "artIndex": 16,
+      "facing": "left",
+      "height": 3.4,
+      "pixelStep": 1,
+      "frames": [
+        [
+          59,
+          27,
+          243,
+          463
+        ],
+        [
+          469,
+          28,
+          200,
+          462
+        ],
+        [
+          794,
+          94,
+          309,
+          392
+        ],
+        [
+          1107,
+          136,
+          418,
+          350
+        ],
+        [
+          27,
+          531,
+          401,
+          440
+        ],
+        [
+          466,
+          527,
+          283,
+          442
+        ],
+        [
+          815,
+          554,
+          315,
+          415
+        ],
+        [
+          1164,
+          706,
+          354,
+          257
+        ]
+      ],
+      "feet": [
+        0.99784,
+        0.997835,
+        0.997449,
+        0.997143,
+        0.997727,
+        0.997738,
+        0.99759,
+        0.996109
+      ],
+      "centers": [
+        0.226337,
+        0.185,
+        0.919094,
+        0.325359,
+        0.314214,
+        0.812721,
+        0.91746,
+        0.132768
+      ],
+      "frameScales": [
+        1.004338,
+        1.002169,
+        0.850325,
+        0.759219,
+        0.954447,
+        0.958785,
+        0.900217,
+        0.557484
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.12,
+        "contact": 0.28,
+        "end": 0.44,
+        "lunge": 0.7,
+        "castLunge": 0.12
+      },
+      "choreography": "Mahito original human-shaped curse, long blue-gray hair in tied sections, stitch lines across face and limbs, patchwork dark asymmetrical short-sleeve top and dark navy trousers and pale split-toe shoes as reference. Faces LEFT. 0: playful slouch head cocked, one hand loosely reaching with splayed fingers; 1: hand touches own cheek and grin widens; 2: coil torso sideways, open palm withdrawn beside ear, predatory low shoulder; 3: darting OPEN PALM soul-touch toward LEFT with unsettling stretched reach, no fist and only two arms; 4: one forearm transformed into long organic pointed blade, other human hand open near chest, smooth non-gory transformation; 5: body bends elastically sideways, head stays oddly smiling, NOT boxer's pain pose; 6: forearms fused into thick organic shield slab in front of torso, still visibly attached, no weapon held; 7: slumps sitting against own bent arm with hair forward, stitched face visible. Keep patchwork clothing and stitches consistent."
+    },
+    "jogo": {
+      "file": "battle/v2/jogo.webp",
+      "label": "漏壶",
+      "artIndex": 17,
+      "facing": "left",
+      "height": 2.6,
+      "pixelStep": 1,
+      "frames": [
+        [
+          47,
+          155,
+          274,
+          331
+        ],
+        [
+          434,
+          107,
+          282,
+          379
+        ],
+        [
+          800,
+          89,
+          303,
+          397
+        ],
+        [
+          1141,
+          175,
+          377,
+          311
+        ],
+        [
+          62,
+          508,
+          291,
+          454
+        ],
+        [
+          421,
+          592,
+          323,
+          370
+        ],
+        [
+          820,
+          705,
+          273,
+          257
+        ],
+        [
+          1169,
+          736,
+          337,
+          235
+        ]
+      ],
+      "feet": [
+        0.996979,
+        0.997361,
+        0.997481,
+        0.996785,
+        0.997797,
+        0.997297,
+        0.996109,
+        0.995745
+      ],
+      "centers": [
+        0.846715,
+        0.868794,
+        0.722772,
+        0.880637,
+        0.261168,
+        0.467492,
+        0.388278,
+        0.646884
+      ],
+      "frameScales": [
+        1.006079,
+        1.151976,
+        1.206687,
+        0.945289,
+        1.379939,
+        1.12462,
+        0.781155,
+        0.714286
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.2,
+        "contact": 0.32,
+        "end": 0.5,
+        "lunge": 0.15,
+        "castLunge": 0.12
+      },
+      "choreography": "Jogo squat hunched cyclops curse. Gray skin, single central eye, bald volcano-shaped dark cranial cone, mustard spotted short cape over black clothing, pale scarf and brown mid-calf boots with reddish soles. Faces LEFT. Keep short stature but use consistent sprite scale. 0: hunched walking-stick-like stance with hands curled low, eye glaring; 1: shoulders rise and volcano head tilts, cape shifts; 2: leans far back with both fingers fanned beside volcanic head; 3: thrusts both spread hands low-forward as flame-launch pose, small grounded steps not boxer lunge, no painted fire; 4: raises one gnarled hand skyward to summon volcanic attack, other arm tucked, single eye wide; 5: short stumbling recoil, cape lifts and one foot raised; 6: crouches under cape with forearms protecting volcano head; 7: squats collapsed low with head sagging and legs out, no gore. Never add two eyes or human hair."
+    },
+    "hanami": {
+      "file": "battle/v2/hanami.webp",
+      "label": "花御",
+      "artIndex": 18,
+      "facing": "left",
+      "height": 4.1,
+      "pixelStep": 1,
+      "frames": [
+        [
+          36,
+          21,
+          336,
+          482
+        ],
+        [
+          419,
+          39,
+          333,
+          462
+        ],
+        [
+          774,
+          184,
+          365,
+          320
+        ],
+        [
+          1178,
+          10,
+          350,
+          495
+        ],
+        [
+          25,
+          629,
+          361,
+          356
+        ],
+        [
+          402,
+          533,
+          375,
+          454
+        ],
+        [
+          801,
+          546,
+          372,
+          439
+        ],
+        [
+          1192,
+          710,
+          299,
+          274
+        ]
+      ],
+      "feet": [
+        0.997925,
+        0.997835,
+        0.996875,
+        0.99798,
+        0.997191,
+        0.997797,
+        0.997722,
+        0.99635
+      ],
+      "centers": [
+        0.10119,
+        0.882883,
+        0.936986,
+        0.074286,
+        0.33518,
+        0.104,
+        0.107527,
+        0.349498
+      ],
+      "frameScales": [
+        1.004167,
+        0.9625,
+        0.666667,
+        1.03125,
+        0.741667,
+        0.945833,
+        0.914583,
+        0.570833
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.23,
+        "contact": 0.4,
+        "end": 0.6,
+        "lunge": 0.45,
+        "castLunge": 0.12
+      },
+      "choreography": "Hanami large broad pale wood-textured curse, branching wood growths instead of eyes, exact black body markings, dark baggy pants, white waist sash, clawed feet; LEFT anatomical arm is covered in a huge white cloth sling exactly as the official reference. Faces LEFT to attack from right side of battlefield, preserve anatomical sides not mirrored reference. 0: extremely heavy rooted wide stance with exposed right arm hanging and left sling held at chest, branch face calm; 1: slow torso turn, fingertips curl inward; 2: enormous body lowers with exposed right arm drawn behind, cloth sling remains across chest; 3: overhead rooted-arm hammer blow toward ground LEFT, heavy trunk leaning forward, NOT human punch; 4: exposed right palm spreads toward ground to control roots, left arm remains in its cloth sling, NO extra roots on sheet; 5: sturdy torso rotates from impact with feet still rooted; 6: exposed right forearm crossed in front of face, large white sling protecting chest; 7: knees buckled and exposed right hand planted on ground like heavy fallen tree, branch face lowered. Keep exactly two arms."
+    },
+    "dagon": {
+      "file": "battle/v2/dagon.webp",
+      "label": "陀艮",
+      "artIndex": 19,
+      "facing": "left",
+      "height": 3.8,
+      "pixelStep": 1,
+      "frames": [
+        [
+          22,
+          65,
+          329,
+          399
+        ],
+        [
+          394,
+          69,
+          351,
+          397
+        ],
+        [
+          805,
+          109,
+          332,
+          357
+        ],
+        [
+          1177,
+          113,
+          355,
+          352
+        ],
+        [
+          12,
+          537,
+          381,
+          419
+        ],
+        [
+          432,
+          558,
+          307,
+          392
+        ],
+        [
+          811,
+          604,
+          312,
+          352
+        ],
+        [
+          1175,
+          718,
+          346,
+          247
+        ]
+      ],
+      "feet": [
+        0.997494,
+        0.997481,
+        0.997199,
+        0.997159,
+        0.997613,
+        0.997449,
+        0.997159,
+        0.995951
+      ],
+      "centers": [
+        0.81459,
+        0.774929,
+        0.810241,
+        0.146479,
+        0.816273,
+        0.788274,
+        0.865385,
+        0.702312
+      ],
+      "frameScales": [
+        1.005038,
+        1.0,
+        0.899244,
+        0.88665,
+        1.055416,
+        0.987406,
+        0.88665,
+        0.622166
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.18,
+        "contact": 0.35,
+        "end": 0.54,
+        "lunge": 0.5,
+        "castLunge": 0.12
+      },
+      "choreography": "Dagon evolved red humanoid octopus curse EXACTLY reference, muscular red body, cephalopod head with multiple hanging face tentacles and single pair of arms, tan segmented organic chest and abdomen plates with central BLACK belly section, small dark membranous fins/wings as reference, NO clothes or waist wrap. Faces LEFT. 0: broad aquatic stance arms open and tentacles drooping; 1: palms rotate upward, tentacles sway slightly; 2: torso twists and both arms sweep backward like swimming stroke; 3: surging double-handed clawing sweep toward LEFT with full shoulder rotation, no fist; 4: spreads arms outward to command shikigami, fingers clawed, chest lifted, tentacles fan apart, no fish drawn in sheet; 5: head/torso recoil while tentacles curl upward, back foot skids; 6: BOTH thick forearms crossed protecting face while tentacles retract; 7: seated heavy torso slumped with one arm touching ground, tentacles slack. No extra arms, no cute baby-octopus form."
+    },
+    "yuji-melee": {
+      "file": "battle/v3/yuji-melee.webp",
+      "label": "虎杖悠仁",
+      "height": 3.2,
+      "facing": "right",
+      "pixelStep": 1,
+      "frames": [
+        [
+          55,
+          22,
+          255,
+          324
+        ],
+        [
+          431,
+          37,
+          256,
+          309
+        ],
+        [
+          804,
+          44,
+          313,
+          300
+        ],
+        [
+          1187,
+          41,
+          319,
+          304
+        ],
+        [
+          45,
+          374,
+          302,
+          306
+        ],
+        [
+          417,
+          374,
+          330,
+          307
+        ],
+        [
+          805,
+          376,
+          343,
+          307
+        ],
+        [
+          1210,
+          372,
+          275,
+          311
+        ],
+        [
+          35,
+          694,
+          278,
+          305
+        ],
+        [
+          439,
+          695,
+          272,
+          307
+        ],
+        [
+          824,
+          724,
+          258,
+          278
+        ],
+        [
+          1189,
+          769,
+          329,
+          230
+        ]
+      ],
+      "feet": [
+        0.9969135802469136,
+        0.9967637540453075,
+        0.9966666666666667,
+        0.9967105263157895,
+        0.9967320261437909,
+        0.996742671009772,
+        0.996742671009772,
+        0.9967845659163987,
+        0.9967213114754099,
+        0.996742671009772,
+        0.9964028776978417,
+        0.9956521739130435
+      ],
+      "centers": [
+        0.7333333333333333,
+        0.1015625,
+        0.8083067092651757,
+        0.16927899686520376,
+        0.7847682119205298,
+        0.7151515151515152,
+        0.7026239067055393,
+        0.7636363636363637,
+        0.762589928057554,
+        0.7371323529411765,
+        0.7015503875968992,
+        0.7720364741641338
+      ],
+      "frameScales": [
+        1.0062111801242235,
+        0.9596273291925466,
+        0.9316770186335404,
+        0.9440993788819876,
+        0.9503105590062112,
+        0.953416149068323,
+        0.953416149068323,
+        0.9658385093167702,
+        0.9472049689440993,
+        0.953416149068323,
+        0.8633540372670807,
+        0.7142857142857143
+      ],
+      "actionProfile": "yuji-strike",
+      "strikeReach": 0.9341614906832296,
+      "poses": {
+        "idle": 0,
+        "idle2": 0,
+        "windup": 1,
+        "run1": 2,
+        "run2": 3,
+        "release": 4,
+        "attack": 5,
+        "follow": 6,
+        "recover": 7,
+        "backstep": 8,
+        "guard": 9,
+        "hit": 10,
+        "defeat": 11,
+        "cast": 6
+      }
+    },
+    "kamo": {
+      "file": "battle/v4/kamo.webp",
+      "label": "加茂宪纪",
+      "artIndex": 8,
+      "facing": "right",
+      "height": 3.35,
+      "pixelStep": 1,
+      "frames": [
+        [
+          52,
+          29,
+          266,
+          485
+        ],
+        [
+          429,
+          29,
+          263,
+          485
+        ],
+        [
+          777,
+          1,
+          399,
+          511
+        ],
+        [
+          1177,
+          29,
+          351,
+          483
+        ],
+        [
+          73,
+          535,
+          229,
+          444
+        ],
+        [
+          462,
+          570,
+          272,
+          409
+        ],
+        [
+          795,
+          543,
+          310,
+          442
+        ],
+        [
+          1216,
+          600,
+          289,
+          370
+        ]
+      ],
+      "feet": [
+        0.997938,
+        0.997938,
+        0.998043,
+        0.99793,
+        0.997748,
+        0.997555,
+        0.997738,
+        0.997297
+      ],
+      "centers": [
+        0.25188,
+        0.250951,
+        0.729323,
+        0.732194,
+        0.120087,
+        0.141544,
+        0.083871,
+        0.475779
+      ],
+      "frameScales": [
+        1.004141,
+        1.004141,
+        1.057971,
+        1.0,
+        0.919255,
+        0.846791,
+        0.915114,
+        0.766046
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.27,
+        "end": 0.45,
+        "lunge": 0.1,
+        "castLunge": 0.08,
+        "idlePeriod": 2.13
+      },
+      "choreography": "Traditional navy Kyoto uniform and tied-back hair exactly as image. Bow held vertically at idle; idle2 shifts drawing hand; windup draws bow, attack releases arrow with bow still attached to hand, cast brings both palms together for blood manipulation. No generic punching."
+    },
+    "naoya": {
+      "file": "battle/v4/naoya.webp",
+      "label": "禅院直哉",
+      "artIndex": 9,
+      "facing": "right",
+      "height": 3.35,
+      "pixelStep": 1,
+      "frames": [
+        [
+          65,
+          23,
+          235,
+          484
+        ],
+        [
+          431,
+          27,
+          240,
+          480
+        ],
+        [
+          727,
+          139,
+          380,
+          366
+        ],
+        [
+          1139,
+          110,
+          367,
+          395
+        ],
+        [
+          66,
+          527,
+          258,
+          466
+        ],
+        [
+          437,
+          577,
+          266,
+          416
+        ],
+        [
+          764,
+          618,
+          356,
+          369
+        ],
+        [
+          1205,
+          699,
+          257,
+          284
+        ]
+      ],
+      "feet": [
+        0.997934,
+        0.997917,
+        0.997268,
+        0.997468,
+        0.997854,
+        0.997596,
+        0.99729,
+        0.996479
+      ],
+      "centers": [
+        0.246809,
+        0.254167,
+        0.063158,
+        0.106267,
+        0.158915,
+        0.323308,
+        0.890449,
+        0.521401
+      ],
+      "frameScales": [
+        1.004149,
+        0.995851,
+        0.759336,
+        0.819502,
+        0.966805,
+        0.863071,
+        0.76556,
+        0.589212
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.27,
+        "end": 0.45,
+        "lunge": 0.45,
+        "castLunge": 0.08,
+        "idlePeriod": 2.26
+      },
+      "choreography": "Human Naoya, blond hair with darker undercut, navy kimono over pale stand collar, light gray hakama. Loose confident idle hands at waist; windup low forward sprint lean, attack quick palm thrust, technique raises two fingers for projection sorcery. Keep human form."
+    },
+    "yuki": {
+      "file": "battle/v4/yuki.webp",
+      "label": "九十九由基",
+      "artIndex": 10,
+      "facing": "right",
+      "height": 3.5,
+      "pixelStep": 1,
+      "frames": [
+        [
+          54,
+          24,
+          262,
+          498
+        ],
+        [
+          417,
+          31,
+          276,
+          490
+        ],
+        [
+          784,
+          91,
+          350,
+          426
+        ],
+        [
+          1138,
+          68,
+          382,
+          449
+        ],
+        [
+          31,
+          581,
+          382,
+          405
+        ],
+        [
+          473,
+          569,
+          249,
+          417
+        ],
+        [
+          821,
+          588,
+          252,
+          402
+        ],
+        [
+          1198,
+          668,
+          274,
+          298
+        ]
+      ],
+      "feet": [
+        0.997992,
+        0.997959,
+        0.997653,
+        0.997773,
+        0.997531,
+        0.997602,
+        0.997512,
+        0.996644
+      ],
+      "centers": [
+        0.164122,
+        0.217391,
+        0.931429,
+        0.413613,
+        0.937173,
+        0.261044,
+        0.130952,
+        0.481752
+      ],
+      "frameScales": [
+        1.004032,
+        0.987903,
+        0.858871,
+        0.905242,
+        0.816532,
+        0.840726,
+        0.810484,
+        0.600806
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.2,
+        "contact": 0.34,
+        "end": 0.55,
+        "lunge": 0.45,
+        "castLunge": 0.08,
+        "idlePeriod": 2.39
+      },
+      "choreography": "Long blonde hair, purple sleeveless high neck top, gray pants and brown boots exactly reference. Confident hand-on-hip idle; idle2 loose fist and hair sway; windup pivots hip, attack powerful high side kick; technique compact heavy right fist ready to strike. No weapons."
+    },
+    "toji": {
+      "file": "battle/v4/toji.webp",
+      "label": "伏黑甚尔",
+      "artIndex": 11,
+      "facing": "right",
+      "height": 3.6,
+      "pixelStep": 1,
+      "frames": [
+        [
+          58,
+          9,
+          253,
+          496
+        ],
+        [
+          430,
+          9,
+          257,
+          496
+        ],
+        [
+          783,
+          117,
+          349,
+          382
+        ],
+        [
+          1173,
+          75,
+          339,
+          430
+        ],
+        [
+          8,
+          525,
+          396,
+          454
+        ],
+        [
+          455,
+          525,
+          262,
+          459
+        ],
+        [
+          789,
+          564,
+          327,
+          418
+        ],
+        [
+          1213,
+          676,
+          299,
+          294
+        ]
+      ],
+      "feet": [
+        0.997984,
+        0.997984,
+        0.997382,
+        0.997674,
+        0.997797,
+        0.997821,
+        0.997608,
+        0.996599
+      ],
+      "centers": [
+        0.114625,
+        0.116732,
+        0.094556,
+        0.085546,
+        0.377525,
+        0.244275,
+        0.085627,
+        0.591973
+      ],
+      "frameScales": [
+        1.004049,
+        1.004049,
+        0.773279,
+        0.870445,
+        0.919028,
+        0.92915,
+        0.846154,
+        0.595142
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.27,
+        "end": 0.45,
+        "lunge": 0.45,
+        "castLunge": 0.08,
+        "idlePeriod": 2.52
+      },
+      "choreography": "Use EXACT reference incarnation: gray loose long sleeve sweater, black trousers, dark shoes, black hair, mouth corner scar. Relaxed predatory idle; windup low crouch, attack driving elbow strike, technique fast sweeping leg kick; guard forearm. No invented armor or accessories."
+    },
+    "kenjaku": {
+      "file": "battle/v4/kenjaku.webp",
+      "label": "羂索",
+      "artIndex": 15,
+      "facing": "right",
+      "height": 3.6,
+      "pixelStep": 1,
+      "frames": [
+        [
+          85,
+          13,
+          210,
+          489
+        ],
+        [
+          441,
+          13,
+          229,
+          489
+        ],
+        [
+          726,
+          63,
+          392,
+          440
+        ],
+        [
+          1166,
+          86,
+          351,
+          411
+        ],
+        [
+          49,
+          526,
+          285,
+          457
+        ],
+        [
+          439,
+          562,
+          272,
+          421
+        ],
+        [
+          788,
+          613,
+          320,
+          369
+        ],
+        [
+          1200,
+          705,
+          285,
+          278
+        ]
+      ],
+      "feet": [
+        0.997955,
+        0.997955,
+        0.997727,
+        0.997567,
+        0.997812,
+        0.997625,
+        0.99729,
+        0.996403
+      ],
+      "centers": [
+        0.195238,
+        0.19214,
+        0.204082,
+        0.074074,
+        0.077193,
+        0.099265,
+        0.896875,
+        0.598246
+      ],
+      "frameScales": [
+        1.004107,
+        1.004107,
+        0.903491,
+        0.843943,
+        0.938398,
+        0.864476,
+        0.7577,
+        0.570842
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.27,
+        "end": 0.45,
+        "lunge": 0.1,
+        "castLunge": 0.08,
+        "idlePeriod": 2.13
+      },
+      "choreography": "Forehead stitches essential, dark long tied hair and exact gold-edged green kesa over navy monk robes. Idle smile with sleeve hand, idle2 raises fingers, windup sleeve drawn back, attack outward open-palm sweep, cast spiral palm gesture manipulating curses."
+    },
+    "choso": {
+      "file": "battle/v4/choso.webp",
+      "label": "胀相",
+      "artIndex": 20,
+      "facing": "right",
+      "height": 3.4,
+      "pixelStep": 1,
+      "frames": [
+        [
+          30,
+          23,
+          257,
+          481
+        ],
+        [
+          406,
+          22,
+          253,
+          481
+        ],
+        [
+          775,
+          67,
+          326,
+          436
+        ],
+        [
+          1150,
+          89,
+          369,
+          411
+        ],
+        [
+          43,
+          524,
+          286,
+          453
+        ],
+        [
+          426,
+          576,
+          285,
+          399
+        ],
+        [
+          751,
+          548,
+          330,
+          427
+        ],
+        [
+          1178,
+          644,
+          299,
+          325
+        ]
+      ],
+      "feet": [
+        0.997921,
+        0.997921,
+        0.997706,
+        0.997567,
+        0.997792,
+        0.997494,
+        0.997658,
+        0.996923
+      ],
+      "centers": [
+        0.297665,
+        0.29249,
+        0.115031,
+        0.078591,
+        0.118881,
+        0.084211,
+        0.071212,
+        0.371237
+      ],
+      "frameScales": [
+        1.004175,
+        1.004175,
+        0.91023,
+        0.858038,
+        0.94572,
+        0.832985,
+        0.891441,
+        0.678497
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.27,
+        "end": 0.45,
+        "lunge": 0.1,
+        "castLunge": 0.08,
+        "idlePeriod": 2.7800000000000002
+      },
+      "choreography": "Exact spiked twin hair tufts, stripe across nose, purple scarf/tunic over loose white robes. Idle hands loose, idle2 controlled breath; windup palms joined at chest to compress blood, attack two hands together pointing straight right for Piercing Blood, cast crossed fingers. No bow."
+    },
+    "eso": {
+      "file": "battle/v4/eso.webp",
+      "label": "坏相",
+      "artIndex": 21,
+      "facing": "right",
+      "height": 3.6,
+      "pixelStep": 1,
+      "frames": [
+        [
+          38,
+          10,
+          249,
+          522
+        ],
+        [
+          431,
+          10,
+          246,
+          522
+        ],
+        [
+          773,
+          11,
+          333,
+          520
+        ],
+        [
+          1132,
+          62,
+          391,
+          458
+        ],
+        [
+          34,
+          601,
+          396,
+          398
+        ],
+        [
+          475,
+          559,
+          278,
+          443
+        ],
+        [
+          810,
+          566,
+          294,
+          439
+        ],
+        [
+          1152,
+          678,
+          311,
+          301
+        ]
+      ],
+      "feet": [
+        0.998084,
+        0.998084,
+        0.998077,
+        0.997817,
+        0.997487,
+        0.997743,
+        0.997722,
+        0.996678
+      ],
+      "centers": [
+        0.156627,
+        0.138211,
+        0.891892,
+        0.097187,
+        0.126263,
+        0.215827,
+        0.102041,
+        0.411576
+      ],
+      "frameScales": [
+        1.003846,
+        1.003846,
+        1.0,
+        0.880769,
+        0.765385,
+        0.851923,
+        0.844231,
+        0.578846
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.27,
+        "end": 0.45,
+        "lunge": 0.45,
+        "castLunge": 0.08,
+        "idlePeriod": 2.0
+      },
+      "choreography": "Exact muscular mohawk character with bow tie and navy strapped outfit. Idle contrapposto, idle2 shoulder flex, windup twists back, attack sweeping open palm, cast leans forward with both arms spread for rot technique. No invented armor, keep face and anatomy reference."
+    },
+    "kechizu": {
+      "file": "battle/v4/kechizu.webp",
+      "label": "血涂",
+      "artIndex": 22,
+      "facing": "right",
+      "height": 3.15,
+      "pixelStep": 1,
+      "frames": [
+        [
+          48,
+          108,
+          277,
+          376
+        ],
+        [
+          428,
+          107,
+          283,
+          377
+        ],
+        [
+          755,
+          155,
+          338,
+          332
+        ],
+        [
+          1125,
+          165,
+          400,
+          321
+        ],
+        [
+          56,
+          536,
+          371,
+          398
+        ],
+        [
+          461,
+          581,
+          290,
+          352
+        ],
+        [
+          818,
+          609,
+          277,
+          325
+        ],
+        [
+          1187,
+          668,
+          315,
+          276
+        ]
+      ],
+      "feet": [
+        0.99734,
+        0.997347,
+        0.996988,
+        0.996885,
+        0.997487,
+        0.997159,
+        0.996923,
+        0.996377
+      ],
+      "centers": [
+        0.158845,
+        0.151943,
+        0.85503,
+        0.845,
+        0.083558,
+        0.241379,
+        0.104693,
+        0.561905
+      ],
+      "frameScales": [
+        1.005348,
+        1.008021,
+        0.887701,
+        0.858289,
+        1.064171,
+        0.941176,
+        0.868984,
+        0.737968
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.2,
+        "contact": 0.34,
+        "end": 0.55,
+        "lunge": 0.45,
+        "castLunge": 0.08,
+        "idlePeriod": 2.13
+      },
+      "choreography": "NONHUMAN reference anatomy: turquoise hunched bulky body, giant mouth on torso, small face above it, long arms and short bent legs. Idle crouched knuckles low, idle2 subtle torso inhale, windup coils low, attack claw swat, cast mouth open to spit (no detached liquid), hit recoil, guard arms cover face, defeat slumped crouch."
+    },
+    "finger-bearer": {
+      "file": "battle/v4/finger-bearer.webp",
+      "label": "咒胎怠天",
+      "artIndex": 23,
+      "facing": "right",
+      "height": 3.7,
+      "pixelStep": 1,
+      "frames": [
+        [
+          48,
+          45,
+          317,
+          453
+        ],
+        [
+          430,
+          45,
+          292,
+          453
+        ],
+        [
+          765,
+          94,
+          325,
+          401
+        ],
+        [
+          1125,
+          123,
+          394,
+          372
+        ],
+        [
+          43,
+          544,
+          358,
+          416
+        ],
+        [
+          459,
+          586,
+          267,
+          373
+        ],
+        [
+          793,
+          566,
+          339,
+          393
+        ],
+        [
+          1190,
+          700,
+          294,
+          265
+        ]
+      ],
+      "feet": [
+        0.997792,
+        0.997792,
+        0.997506,
+        0.997312,
+        0.997596,
+        0.997319,
+        0.997455,
+        0.996226
+      ],
+      "centers": [
+        0.173502,
+        0.184932,
+        0.098462,
+        0.06599,
+        0.075419,
+        0.097378,
+        0.079646,
+        0.482993
+      ],
+      "frameScales": [
+        1.004435,
+        1.004435,
+        0.889135,
+        0.824834,
+        0.922395,
+        0.827051,
+        0.871397,
+        0.587583
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.27,
+        "end": 0.45,
+        "lunge": 0.45,
+        "castLunge": 0.08,
+        "idlePeriod": 2.26
+      },
+      "choreography": "Exact finger-bearer white skeletal muscular curse, dark stripes over eyeless head, wide toothy grin, black sternum eye, red claws, dark purple trousers. Idle arms curved outward, idle2 finger flex; windup cups palm beside torso, attack thrust palm for cursed energy blast, cast both claw hands spread, guard crossed long arms."
+    },
+    "junpei": {
+      "file": "battle/v4/junpei.webp",
+      "label": "顺平",
+      "artIndex": 24,
+      "facing": "right",
+      "height": 3.1,
+      "pixelStep": 1,
+      "frames": [
+        [
+          96,
+          38,
+          175,
+          471
+        ],
+        [
+          476,
+          41,
+          177,
+          468
+        ],
+        [
+          794,
+          61,
+          306,
+          448
+        ],
+        [
+          1174,
+          91,
+          339,
+          418
+        ],
+        [
+          56,
+          569,
+          280,
+          405
+        ],
+        [
+          475,
+          592,
+          250,
+          384
+        ],
+        [
+          805,
+          566,
+          292,
+          410
+        ],
+        [
+          1221,
+          683,
+          236,
+          281
+        ]
+      ],
+      "feet": [
+        0.997877,
+        0.997863,
+        0.997768,
+        0.997608,
+        0.997531,
+        0.997396,
+        0.997561,
+        0.996441
+      ],
+      "centers": [
+        0.12,
+        0.118644,
+        0.081699,
+        0.073746,
+        0.085714,
+        0.108,
+        0.106164,
+        0.478814
+      ],
+      "frameScales": [
+        1.004264,
+        0.997868,
+        0.955224,
+        0.891258,
+        0.863539,
+        0.818763,
+        0.8742,
+        0.599147
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.27,
+        "end": 0.45,
+        "lunge": 0.1,
+        "castLunge": 0.08,
+        "idlePeriod": 2.39
+      },
+      "choreography": "Exact black hair covering one eye, lavender purple striped T shirt, khaki cropped pants and cream sneakers. Withdrawn idle and breathing hand adjustment; windup raises one arm timidly, attack directs shikigami with pointing hand, cast two open hands held low for jellyfish summon (do not draw companion), hit doubles over, guard shields face."
+    },
+    "koguy": {
+      "file": "battle/v4/koguy.webp",
+      "label": "蝗虫",
+      "artIndex": 25,
+      "facing": "right",
+      "height": 3.7,
+      "pixelStep": 1,
+      "frames": [
+        [
+          343,
+          21,
+          273,
+          230
+        ],
+        [
+          970,
+          19,
+          293,
+          236
+        ],
+        [
+          282,
+          273,
+          318,
+          237
+        ],
+        [
+          942,
+          259,
+          392,
+          249
+        ],
+        [
+          282,
+          538,
+          314,
+          234
+        ],
+        [
+          957,
+          519,
+          338,
+          254
+        ],
+        [
+          281,
+          779,
+          300,
+          224
+        ],
+        [
+          959,
+          815,
+          297,
+          191
+        ]
+      ],
+      "feet": [
+        0.995652,
+        0.995763,
+        0.995781,
+        0.995984,
+        0.995726,
+        0.996063,
+        0.995536,
+        0.994764
+      ],
+      "centers": [
+        0.886447,
+        0.883959,
+        0.59434,
+        0.512755,
+        0.066879,
+        0.224852,
+        0.886667,
+        0.446128
+      ],
+      "frameScales": [
+        1.008772,
+        1.035088,
+        1.039474,
+        1.092105,
+        1.026316,
+        1.114035,
+        0.982456,
+        0.837719
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.2,
+        "contact": 0.34,
+        "end": 0.55,
+        "lunge": 0.45,
+        "castLunge": 0.08,
+        "idlePeriod": 2.52
+      },
+      "choreography": "Exact grasshopper curse body, FOUR arms plus two powerful legs, green speckled chitin and olive muscles, large insect eyes, purple waistwrap, folded narrow wings kept within cell. Idle hunched four fists, idle2 mandible and shoulders move subtly, windup hind leg coils, attack powerful kick while four arms counterbalance; cast four-arm flurry pose, guard four forearms raised. Do not turn into human or lose limbs.",
+      "reversed": [
+        0,
+        1
+      ]
+    },
+    "mahoraga": {
+      "file": "battle/v4/mahoraga.webp",
+      "label": "魔虚罗",
+      "artIndex": 26,
+      "facing": "right",
+      "height": 4.4,
+      "pixelStep": 1,
+      "frames": [
+        [
+          51,
+          13,
+          278,
+          495
+        ],
+        [
+          445,
+          13,
+          283,
+          495
+        ],
+        [
+          802,
+          18,
+          323,
+          490
+        ],
+        [
+          1171,
+          129,
+          356,
+          379
+        ],
+        [
+          45,
+          525,
+          337,
+          469
+        ],
+        [
+          430,
+          536,
+          305,
+          460
+        ],
+        [
+          791,
+          593,
+          336,
+          399
+        ],
+        [
+          1188,
+          705,
+          310,
+          291
+        ]
+      ],
+      "feet": [
+        0.99798,
+        0.99798,
+        0.997959,
+        0.997361,
+        0.997868,
+        0.997826,
+        0.997494,
+        0.996564
+      ],
+      "centers": [
+        0.133094,
+        0.825088,
+        0.108359,
+        0.794944,
+        0.118694,
+        0.872131,
+        0.136905,
+        0.583871
+      ],
+      "frameScales": [
+        1.004057,
+        1.004057,
+        0.993915,
+        0.768763,
+        0.951318,
+        0.933063,
+        0.809331,
+        0.590264
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.2,
+        "contact": 0.34,
+        "end": 0.55,
+        "lunge": 0.45,
+        "castLunge": 0.08,
+        "idlePeriod": 2.65
+      },
+      "choreography": "Exact divine general anatomy from model reference: massive white two-armed muscular body, no normal eyes, FOUR horizontal wing-like eyestalk structures on head, toothed mouth, eight-handled golden wheel above head attached by stalk, dark flowing lower pants, sash, forearm sword and black chest pendant. Canonical wheel and face crucial. Idle sword down and other fist ready; idle2 subtle shoulder/wheel rotation (wheel stays connected), windup raises sword arm, attack heavy downward sword chop, cast left palm with upright wheel, guard sword forearm, defeated crouch still eight wheel handles. Keep wheel/head/sword all in every cell."
+    },
+    "naobito": {
+      "file": "battle/v4/naobito.webp",
+      "label": "禅院家主",
+      "artIndex": 27,
+      "facing": "right",
+      "height": 3.4,
+      "pixelStep": 1,
+      "frames": [
+        [
+          59,
+          11,
+          238,
+          490
+        ],
+        [
+          443,
+          12,
+          226,
+          489
+        ],
+        [
+          760,
+          98,
+          365,
+          399
+        ],
+        [
+          1135,
+          108,
+          391,
+          389
+        ],
+        [
+          46,
+          521,
+          301,
+          476
+        ],
+        [
+          457,
+          535,
+          269,
+          451
+        ],
+        [
+          752,
+          564,
+          377,
+          416
+        ],
+        [
+          1210,
+          680,
+          267,
+          308
+        ]
+      ],
+      "feet": [
+        0.997959,
+        0.997955,
+        0.997494,
+        0.997429,
+        0.997899,
+        0.997783,
+        0.997596,
+        0.996753
+      ],
+      "centers": [
+        0.176471,
+        0.119469,
+        0.065753,
+        0.061381,
+        0.152824,
+        0.104089,
+        0.066313,
+        0.700375
+      ],
+      "frameScales": [
+        1.004098,
+        1.002049,
+        0.817623,
+        0.797131,
+        0.97541,
+        0.92418,
+        0.852459,
+        0.631148
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.27,
+        "end": 0.45,
+        "lunge": 0.45,
+        "castLunge": 0.08,
+        "idlePeriod": 2.7800000000000002
+      },
+      "choreography": "Exact elderly silver swept hair, long thin mustache, olive kimono one shoulder bare, dark patterned belt, bare feet. Idle holds brown gourd by side; idle2 readjusts gourd grip; windup forward lean, attack fast open hand thrust, cast projection-sorcery two fingers, defensive raised palm, defeated kneel. Gourd remains attached in idle."
+    },
+    "uraume": {
+      "file": "battle/v4/uraume.webp",
+      "label": "里梅",
+      "artIndex": 28,
+      "facing": "right",
+      "height": 3.15,
+      "pixelStep": 1,
+      "frames": [
+        [
+          78,
+          31,
+          201,
+          479
+        ],
+        [
+          436,
+          33,
+          195,
+          477
+        ],
+        [
+          767,
+          45,
+          311,
+          460
+        ],
+        [
+          1161,
+          62,
+          356,
+          441
+        ],
+        [
+          45,
+          565,
+          318,
+          414
+        ],
+        [
+          458,
+          564,
+          236,
+          415
+        ],
+        [
+          797,
+          575,
+          309,
+          399
+        ],
+        [
+          1198,
+          652,
+          292,
+          318
+        ]
+      ],
+      "feet": [
+        0.997912,
+        0.997904,
+        0.997826,
+        0.997732,
+        0.997585,
+        0.99759,
+        0.997494,
+        0.996855
+      ],
+      "centers": [
+        0.243781,
+        0.230769,
+        0.135048,
+        0.067416,
+        0.072327,
+        0.101695,
+        0.148867,
+        0.558219
+      ],
+      "frameScales": [
+        1.004193,
+        1.0,
+        0.964361,
+        0.924528,
+        0.867925,
+        0.870021,
+        0.836478,
+        0.666667
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.27,
+        "end": 0.45,
+        "lunge": 0.1,
+        "castLunge": 0.08,
+        "idlePeriod": 2.0
+      },
+      "choreography": "White bob hair with red side patches, exact layered white/charcoal robe and purple lower garment, sandals. Still sleeves-down idle, subtle sleeve adjustment idle2; windup brings palm to mouth, attack extends exhaling hand for freezing breath, cast both palms sweeping down to form ice (no detached ice on sheet), guard crossed sleeves."
+    },
+    "dhruv": {
+      "file": "battle/v4/dhruv.webp",
+      "label": "多鲁布",
+      "artIndex": 29,
+      "facing": "right",
+      "height": 2.7,
+      "pixelStep": 1,
+      "frames": [
+        [
+          14,
+          142,
+          363,
+          354
+        ],
+        [
+          398,
+          138,
+          359,
+          359
+        ],
+        [
+          783,
+          154,
+          372,
+          343
+        ],
+        [
+          1159,
+          160,
+          371,
+          336
+        ],
+        [
+          13,
+          597,
+          354,
+          349
+        ],
+        [
+          410,
+          620,
+          343,
+          322
+        ],
+        [
+          773,
+          621,
+          348,
+          319
+        ],
+        [
+          1166,
+          657,
+          343,
+          286
+        ]
+      ],
+      "feet": [
+        0.997175,
+        0.997214,
+        0.997085,
+        0.997024,
+        0.997135,
+        0.996894,
+        0.996865,
+        0.996503
+      ],
+      "centers": [
+        0.360882,
+        0.345404,
+        0.271505,
+        0.663073,
+        0.327684,
+        0.351312,
+        0.412356,
+        0.227405
+      ],
+      "frameScales": [
+        1.005682,
+        1.019886,
+        0.974432,
+        0.954545,
+        0.991477,
+        0.914773,
+        0.90625,
+        0.8125
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.27,
+        "end": 0.45,
+        "lunge": 0.1,
+        "castLunge": 0.08,
+        "idlePeriod": 2.13
+      },
+      "choreography": "Exact elderly dark-skinned bald crown, long white side hair, white split beard and ceremonial forehead cord. Keep seated crosslegged meditation pose across all8frames, modest dark waistwrap visible; idle palms resting on knees, idle2 breathing and finger shift, windup opens arms, attack directs shikigami with pointing palm, cast mudra both hands, hit torso recoil, guard crossed arms, defeat seated slumped forward. Do not turn into standing martial artist, no staff."
+    },
+    "kurourushi": {
+      "file": "battle/v4/kurourushi.webp",
+      "label": "黑沐死",
+      "artIndex": 30,
+      "facing": "right",
+      "height": 3.65,
+      "pixelStep": 1,
+      "frames": [
+        [
+          55,
+          33,
+          272,
+          465
+        ],
+        [
+          431,
+          50,
+          269,
+          451
+        ],
+        [
+          766,
+          65,
+          346,
+          434
+        ],
+        [
+          1153,
+          91,
+          382,
+          408
+        ],
+        [
+          19,
+          540,
+          402,
+          447
+        ],
+        [
+          446,
+          593,
+          306,
+          388
+        ],
+        [
+          810,
+          634,
+          294,
+          349
+        ],
+        [
+          1162,
+          741,
+          353,
+          229
+        ]
+      ],
+      "feet": [
+        0.997849,
+        0.997783,
+        0.997696,
+        0.997549,
+        0.997763,
+        0.997423,
+        0.997135,
+        0.995633
+      ],
+      "centers": [
+        0.599265,
+        0.618959,
+        0.430636,
+        0.371728,
+        0.465174,
+        0.526144,
+        0.571429,
+        0.767705
+      ],
+      "frameScales": [
+        1.00432,
+        0.974082,
+        0.937365,
+        0.88121,
+        0.965443,
+        0.838013,
+        0.75378,
+        0.4946
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.27,
+        "end": 0.45,
+        "lunge": 0.45,
+        "castLunge": 0.08,
+        "idlePeriod": 2.26
+      },
+      "choreography": "Exact black shrouded cockroach curse with reddish multiple-eye insect mask, long purple feelers and tendrils. Remain a draped inhuman silhouette, no human face, no invented human costume. Idle shroud trailing low, idle2 antennae slight shift; windup twists shroud and raises chitin claw, attack jutting insect limb thrust, cast spreads purple feelers/tendrils, hit recoils, guard closes carapace, defeat collapses drapery. Keep antennae safely within cells."
+    },
+    "uro": {
+      "file": "battle/v4/uro.webp",
+      "label": "乌璐亨子",
+      "artIndex": 31,
+      "facing": "right",
+      "height": 3.65,
+      "pixelStep": 1,
+      "frames": [
+        [
+          88,
+          17,
+          183,
+          483
+        ],
+        [
+          473,
+          18,
+          191,
+          482
+        ],
+        [
+          814,
+          56,
+          287,
+          444
+        ],
+        [
+          1201,
+          57,
+          312,
+          443
+        ],
+        [
+          63,
+          534,
+          258,
+          439
+        ],
+        [
+          417,
+          553,
+          312,
+          420
+        ],
+        [
+          836,
+          563,
+          262,
+          415
+        ],
+        [
+          1232,
+          614,
+          256,
+          352
+        ]
+      ],
+      "feet": [
+        0.99793,
+        0.997925,
+        0.997748,
+        0.997743,
+        0.997722,
+        0.997619,
+        0.99759,
+        0.997159
+      ],
+      "centers": [
+        0.836066,
+        0.848168,
+        0.836237,
+        0.092949,
+        0.124031,
+        0.897436,
+        0.091603,
+        0.460938
+      ],
+      "frameScales": [
+        1.004158,
+        1.002079,
+        0.923077,
+        0.920998,
+        0.912682,
+        0.873181,
+        0.862786,
+        0.731809
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.27,
+        "end": 0.45,
+        "lunge": 0.1,
+        "castLunge": 0.08,
+        "idlePeriod": 2.39
+      },
+      "choreography": "Exact pink lavender upswept flowing hair, dark eyes, gold earrings, black choker and wrist bands. Opaque light cyan sky-cloth obscures chest and pelvis in ALL frames, nonsexual combat sheet, no explicit nudity. Idle floats slightly with both feet pointed down at common baseline; idle2 fingers/hair subtly adjust; windup grasps sky as cloth, attack pulls sky sideways, cast two hands stretch folded sky; guard sky-wrapping palms, hit arch recoil, defeat crouch. Keep blue cloth attached to body inside each cell."
+    },
+    "ryu": {
+      "file": "battle/v4/ryu.webp",
+      "label": "石流龙",
+      "artIndex": 32,
+      "facing": "right",
+      "height": 3.6,
+      "pixelStep": 1,
+      "frames": [
+        [
+          68,
+          25,
+          235,
+          469
+        ],
+        [
+          452,
+          25,
+          235,
+          469
+        ],
+        [
+          796,
+          40,
+          298,
+          452
+        ],
+        [
+          1152,
+          89,
+          377,
+          403
+        ],
+        [
+          31,
+          535,
+          316,
+          440
+        ],
+        [
+          451,
+          542,
+          251,
+          433
+        ],
+        [
+          791,
+          560,
+          342,
+          410
+        ],
+        [
+          1199,
+          680,
+          279,
+          292
+        ]
+      ],
+      "feet": [
+        0.997868,
+        0.997868,
+        0.997788,
+        0.997519,
+        0.997727,
+        0.997691,
+        0.997561,
+        0.996575
+      ],
+      "centers": [
+        0.191489,
+        0.191489,
+        0.124161,
+        0.092838,
+        0.101266,
+        0.211155,
+        0.134503,
+        0.437276
+      ],
+      "frameScales": [
+        1.004283,
+        1.004283,
+        0.96788,
+        0.862955,
+        0.942184,
+        0.927195,
+        0.877944,
+        0.625268
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.27,
+        "end": 0.45,
+        "lunge": 0.1,
+        "castLunge": 0.08,
+        "idlePeriod": 2.52
+      },
+      "choreography": "Exact oversized black pompadour, black open jacket white fur collar/cuffs, bare muscular chest, dark pants and boots. Confident loose idle, idle2 flex fist; windup leans head back, attack aims pompadour forward for Granite Blast (no big laser on sheet), cast both fists at hips charging, guard forearms crossed."
+    },
+    "higuruma": {
+      "file": "battle/v4/higuruma.webp",
+      "label": "日车宽见",
+      "artIndex": 33,
+      "facing": "right",
+      "height": 3.45,
+      "pixelStep": 1,
+      "frames": [
+        [
+          73,
+          31,
+          235,
+          469
+        ],
+        [
+          457,
+          32,
+          235,
+          468
+        ],
+        [
+          791,
+          75,
+          351,
+          425
+        ],
+        [
+          1165,
+          128,
+          357,
+          372
+        ],
+        [
+          37,
+          537,
+          336,
+          448
+        ],
+        [
+          453,
+          564,
+          236,
+          425
+        ],
+        [
+          790,
+          581,
+          321,
+          402
+        ],
+        [
+          1199,
+          688,
+          268,
+          292
+        ]
+      ],
+      "feet": [
+        0.997868,
+        0.997863,
+        0.997647,
+        0.997312,
+        0.997768,
+        0.997647,
+        0.997512,
+        0.996575
+      ],
+      "centers": [
+        0.148936,
+        0.148936,
+        0.735043,
+        0.742297,
+        0.732143,
+        0.34322,
+        0.074766,
+        0.511194
+      ],
+      "frameScales": [
+        1.004283,
+        1.002141,
+        0.910064,
+        0.796574,
+        0.959315,
+        0.910064,
+        0.860814,
+        0.625268
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.27,
+        "end": 0.45,
+        "lunge": 0.45,
+        "castLunge": 0.08,
+        "idlePeriod": 2.65
+      },
+      "choreography": "Exact tired dark-haired lawyer in charcoal suit white shirt green tie and lapel pin. Small wooden judges gavel in right hand; idle gavel low, idle2 grip adjustment, windup raises gavel shoulder-high, attack forceful downward gavel strike, cast left hand presents judicial gesture while gavel upright, guard gavel across chest. Keep weapon in cell."
+    },
+    "kashimo": {
+      "file": "battle/v4/kashimo.webp",
+      "label": "鹿紫云一",
+      "artIndex": 34,
+      "facing": "right",
+      "height": 3.4,
+      "pixelStep": 1,
+      "frames": [
+        [
+          64,
+          55,
+          210,
+          454
+        ],
+        [
+          447,
+          56,
+          224,
+          455
+        ],
+        [
+          739,
+          21,
+          333,
+          490
+        ],
+        [
+          1113,
+          151,
+          398,
+          355
+        ],
+        [
+          34,
+          558,
+          351,
+          425
+        ],
+        [
+          469,
+          584,
+          241,
+          392
+        ],
+        [
+          781,
+          588,
+          304,
+          395
+        ],
+        [
+          1174,
+          605,
+          308,
+          371
+        ]
+      ],
+      "feet": [
+        0.997797,
+        0.997802,
+        0.997959,
+        0.997183,
+        0.997647,
+        0.997449,
+        0.997468,
+        0.997305
+      ],
+      "centers": [
+        0.138095,
+        0.113839,
+        0.183183,
+        0.09799,
+        0.891738,
+        0.178423,
+        0.069079,
+        0.366883
+      ],
+      "frameScales": [
+        1.004425,
+        1.006637,
+        1.084071,
+        0.785398,
+        0.940265,
+        0.867257,
+        0.873894,
+        0.820796
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.27,
+        "end": 0.45,
+        "lunge": 0.45,
+        "castLunge": 0.08,
+        "idlePeriod": 2.7800000000000002
+      },
+      "choreography": "Exact mint cyan hair with two tied horn-like tufts, white high-collar martial clothes, wrapped wrists/calves, pale boots, red-orange staff with dark gold ends. Idle staff near-vertical, idle2 shifts wrist grip, windup draws staff diagonally back, attack short forward diagonal thrust held close enough to fit cell, cast free fingers poised to release electricity, guard diagonal staff. No long horizontal staff bridging cells."
+    },
+    "hakari": {
+      "file": "battle/v4/hakari.webp",
+      "label": "秤金次",
+      "artIndex": 35,
+      "facing": "right",
+      "height": 3.65,
+      "pixelStep": 1,
+      "frames": [
+        [
+          81,
+          44,
+          211,
+          458
+        ],
+        [
+          465,
+          43,
+          213,
+          459
+        ],
+        [
+          817,
+          79,
+          275,
+          420
+        ],
+        [
+          1180,
+          105,
+          334,
+          397
+        ],
+        [
+          57,
+          538,
+          305,
+          437
+        ],
+        [
+          459,
+          571,
+          273,
+          404
+        ],
+        [
+          806,
+          570,
+          321,
+          403
+        ],
+        [
+          1207,
+          685,
+          278,
+          282
+        ]
+      ],
+      "feet": [
+        0.997817,
+        0.997821,
+        0.997619,
+        0.997481,
+        0.997712,
+        0.997525,
+        0.997519,
+        0.996454
+      ],
+      "centers": [
+        0.132701,
+        0.131455,
+        0.098182,
+        0.10479,
+        0.088525,
+        0.32967,
+        0.102804,
+        0.611511
+      ],
+      "frameScales": [
+        1.004386,
+        1.006579,
+        0.921053,
+        0.870614,
+        0.958333,
+        0.885965,
+        0.883772,
+        0.618421
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.2,
+        "contact": 0.34,
+        "end": 0.55,
+        "lunge": 0.45,
+        "castLunge": 0.08,
+        "idlePeriod": 2.0
+      },
+      "choreography": "Exact blond swept hair, dark forest-green padded high collar coat, brown trousers and black boots. Idle hands in pockets, idle2 rolls shoulders with one fist outside pocket, windup boxer shoulder roll, attack powerful hook punch, cast both hands forming distinctive circle/diamond hand sign in front of chest, guard boxer forearms, defeat kneeling."
+    },
+    "sukuna-shibuya": {
+      "file": "battle/v4/sukuna-shibuya.webp",
+      "label": "宿傩·涩谷",
+      "artIndex": 12,
+      "facing": "right",
+      "height": 3.3,
+      "pixelStep": 1,
+      "frames": [
+        [
+          66,
+          22,
+          238,
+          485
+        ],
+        [
+          434,
+          22,
+          240,
+          485
+        ],
+        [
+          794,
+          57,
+          319,
+          449
+        ],
+        [
+          1161,
+          76,
+          360,
+          428
+        ],
+        [
+          31,
+          538,
+          335,
+          445
+        ],
+        [
+          429,
+          542,
+          300,
+          438
+        ],
+        [
+          787,
+          560,
+          340,
+          420
+        ],
+        [
+          1191,
+          661,
+          283,
+          295
+        ]
+      ],
+      "feet": [
+        0.997938,
+        0.997938,
+        0.997773,
+        0.997664,
+        0.997753,
+        0.997717,
+        0.997619,
+        0.99661
+      ],
+      "centers": [
+        0.117647,
+        0.120833,
+        0.087774,
+        0.1,
+        0.101493,
+        0.14,
+        0.079412,
+        0.424028
+      ],
+      "frameScales": [
+        1.004141,
+        1.004141,
+        0.929607,
+        0.886128,
+        0.921325,
+        0.906832,
+        0.869565,
+        0.610766
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "windup": 2,
+        "attack": 3,
+        "cast": 4,
+        "hit": 5,
+        "guard": 6,
+        "defeat": 7
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.27,
+        "end": 0.45,
+        "lunge": 0.45,
+        "castLunge": 0.08,
+        "idlePeriod": 2.65
+      },
+      "choreography": "Use EXACT approved Shibuya incarnation from image1: pink spiky hair, black facial tattoos, navy student uniform with red hood/collar and red boots. TWO arms only. Idle cruel relaxed stance, idle2 tiny finger/shoulder adjustment, windup wrist raised sideways, attack dismissive two-finger slash gesture, cast two-handed domain hand sign, hit small shoulder recoil, guard one raised palm, defeat kneel. Do not use white kimono, four arms or cover illustration outfit."
+    }
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "higuruma_domain",
+    "actor": 33,
+    "domain": "诛伏赐死",
+    "file": "assets/audio/v2/higuruma_domain.mp3",
+    "durationMs": 4000,
+    "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
+    "startSeconds": 497.0,
+    "note": "完整独立喊招",
+    "sha256": "e97e262740a1b588e60406dc84de5da697d60eb67c7626febb4b88f37d7cadf4",
+    "verification": "画面与字幕核对；人工音色试听待确认"
+  },
+  {
+    "id": "megumi_shadow",
+    "actor": 2,
+    "domain": "嵌合暗翳庭",
+    "file": "assets/audio/v2/megumi_shadow.mp3",
+    "durationMs": 9850,
+    "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
+    "startSeconds": 190.85,
+    "note": "完整独立喊招，保留中间演出停顿",
+    "sha256": "22134a19582747fa2d45bffc910ab78d025145872e7a03ff756d535da240f85a",
+    "verification": "画面与字幕核对；人工音色试听待确认"
+  },
+  {
+    "id": "hanami_domain",
+    "actor": 18,
+    "domain": "朵颐光海",
+    "file": "assets/audio/v2/hanami_domain.mp3",
+    "durationMs": 2150,
+    "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
+    "startSeconds": 187.1,
+    "note": "仅被打断的领域喊声，没有领域名称",
+    "sha256": "6d89e53745de194b99ec53c4f76bb6e8101a905a13f877023e9f709c99dc7bc7",
+    "verification": "画面与字幕核对；人工音色试听待确认"
+  },
+  {
+    "id": "gojo_void",
+    "actor": 0,
+    "domain": "无量空处",
+    "file": "assets/audio/v2/gojo_void.mp3",
+    "durationMs": 5100,
+    "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
+    "startSeconds": 265.2,
+    "note": "完整独立喊招",
+    "sha256": "6a4afbe8b70b79b5c57d5fb067695f21a6ce9e3065867522b0d4a0e96694fbba",
+    "verification": "画面与字幕核对；人工音色试听待确认"
+  }
+]

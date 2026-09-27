@@ -1,0 +1,481 @@
+{
+  "npcs": [
+    {
+      "name": "五条悟",
+      "level": 11,
+      "domain": "无量空处",
+      "voice": "gojo_void",
+      "status": "原片重新剪取，保留喊招、领域名称及自然收音"
+    },
+    {
+      "name": "1指受肉宿傩",
+      "level": 7,
+      "domain": "伏魔御厨子",
+      "voice": "sukuna_shrine",
+      "status": "原片重新剪取，保留喊招、领域名称及自然收音"
+    },
+    {
+      "name": "2指宿傩",
+      "level": 8,
+      "domain": "伏魔御厨子",
+      "voice": "sukuna_shrine",
+      "status": "原片重新剪取，保留喊招、领域名称及自然收音"
+    },
+    {
+      "name": "伏黑惠",
+      "level": 4,
+      "domain": "嵌合暗翳庭",
+      "voice": "megumi_shadow",
+      "status": "原片重新剪取，保留喊招、领域名称及自然收音"
+    },
+    {
+      "name": "漏壶",
+      "level": 10,
+      "domain": "盖棺铁围山",
+      "voice": "jogo_domain",
+      "status": "保留完整展开喊声与原片收音；原片未念出领域名称"
+    },
+    {
+      "name": "真人",
+      "level": 8,
+      "domain": "自闭圆顿裹",
+      "voice": "mahito_domain",
+      "status": "原片重新剪取，保留喊招、领域名称及自然收音"
+    },
+    {
+      "name": "真人",
+      "level": 9,
+      "domain": "自闭圆顿裹",
+      "voice": "mahito_domain",
+      "status": "原片重新剪取，保留喊招、领域名称及自然收音"
+    },
+    {
+      "name": "花御",
+      "level": 9,
+      "domain": "朵颐光海",
+      "voice": "hanami_domain",
+      "status": "《幻影夜行》花御领域演出原音，含游戏音效；完整喊招台词未核实，按用户选择接入。领域名显字按画面定时，非台词对齐。"
+    },
+    {
+      "name": "虎杖悠仁",
+      "level": 10,
+      "domain": "领域（名称未公开）",
+      "voice": null,
+      "status": "无声演出"
+    },
+    {
+      "name": "羂索",
+      "level": 10,
+      "domain": "胎藏遍野",
+      "voice": null,
+      "status": "无声演出"
+    },
+    {
+      "name": "16指宿傩",
+      "level": 10,
+      "domain": "伏魔御厨子",
+      "voice": "sukuna_shrine",
+      "status": "原片重新剪取，保留喊招、领域名称及自然收音"
+    },
+    {
+      "name": "陀艮",
+      "level": 8,
+      "domain": "荡蕴平线",
+      "voice": "dagon_domain_name",
+      "status": "动画原声，仅完整领域名；未拼接归属待核实的展开喊声。音色与混音待人工试听"
+    },
+    {
+      "name": "里梅",
+      "level": 8,
+      "domain": "领域（扩展设定）",
+      "voice": null,
+      "status": "无声演出"
+    },
+    {
+      "name": "九十九由基",
+      "level": 9,
+      "domain": "领域（名称未公开）",
+      "voice": null,
+      "status": "无声演出"
+    },
+    {
+      "name": "多鲁布",
+      "level": 7,
+      "domain": "领域（名称未公开）",
+      "voice": null,
+      "status": "无声演出"
+    },
+    {
+      "name": "黑沐死",
+      "level": 8,
+      "domain": "领域（扩展设定）",
+      "voice": null,
+      "status": "无声演出"
+    },
+    {
+      "name": "乌璐亨子",
+      "level": 8,
+      "domain": "领域（名称未公开）",
+      "voice": null,
+      "status": "无声演出"
+    },
+    {
+      "name": "石流龙",
+      "level": 9,
+      "domain": "领域（名称未公开）",
+      "voice": null,
+      "status": "无声演出"
+    },
+    {
+      "name": "乙骨忧太",
+      "level": 10,
+      "domain": "真赝相爱",
+      "voice": null,
+      "status": "无声演出"
+    },
+    {
+      "name": "日车宽见",
+      "level": 8,
+      "domain": "诛伏赐死",
+      "voice": "higuruma_domain",
+      "status": "原片重新剪取，保留喊招、领域名称及自然收音"
+    },
+    {
+      "name": "秤金次",
+      "level": 8,
+      "domain": "坐杀博徒",
+      "voice": null,
+      "status": "无声演出"
+    },
+    {
+      "name": "禅院直哉",
+      "level": 9,
+      "domain": "时胞月宫殿",
+      "voice": null,
+      "status": "无声演出"
+    },
+    {
+      "name": "十影宿傩",
+      "level": 11,
+      "domain": "伏魔御厨子",
+      "voice": "sukuna_shrine",
+      "status": "原片重新剪取，保留喊招、领域名称及自然收音"
+    },
+    {
+      "name": "一削·神武真身宿傩",
+      "level": 10,
+      "domain": "伏魔御厨子",
+      "voice": "sukuna_shrine",
+      "status": "原片重新剪取，保留喊招、领域名称及自然收音"
+    },
+    {
+      "name": "二削·神武真身宿傩",
+      "level": 10,
+      "domain": "伏魔御厨子",
+      "voice": "sukuna_shrine",
+      "status": "原片重新剪取，保留喊招、领域名称及自然收音"
+    },
+    {
+      "name": "三削·神武真身宿傩",
+      "level": 10,
+      "domain": "伏魔御厨子",
+      "voice": "sukuna_shrine",
+      "status": "原片重新剪取，保留喊招、领域名称及自然收音"
+    },
+    {
+      "name": "四削·神武真身宿傩",
+      "level": 9,
+      "domain": "伏魔御厨子",
+      "voice": "sukuna_shrine",
+      "status": "原片重新剪取，保留喊招、领域名称及自然收音"
+    },
+    {
+      "name": "五削·神武真身宿傩",
+      "level": 9,
+      "domain": "伏魔御厨子",
+      "voice": "sukuna_shrine",
+      "status": "原片重新剪取，保留喊招、领域名称及自然收音"
+    }
+  ],
+  "players": [
+    {
+      "name": "无下限术式",
+      "domain": "无量空处",
+      "voice": "gojo_void"
+    },
+    {
+      "name": "十种影法术",
+      "domain": "嵌合暗翳庭",
+      "voice": "megumi_shadow"
+    },
+    {
+      "name": "御厨子",
+      "domain": "伏魔御厨子",
+      "voice": "sukuna_shrine"
+    },
+    {
+      "name": "刍灵咒法",
+      "domain": "灵魂共鸣",
+      "voice": null
+    },
+    {
+      "name": "十划咒法",
+      "domain": "真视斩击",
+      "voice": null
+    },
+    {
+      "name": "咒言",
+      "domain": "真我言灵",
+      "voice": null
+    },
+    {
+      "name": "咒灵操术",
+      "domain": "万鬼来朝",
+      "voice": null
+    },
+    {
+      "name": "无为转变",
+      "domain": "自闭圆顿裹",
+      "voice": "mahito_domain"
+    },
+    {
+      "name": "不义游戏",
+      "domain": "天手力",
+      "voice": null
+    },
+    {
+      "name": "赤血操术",
+      "domain": "超红莲真新星",
+      "voice": null
+    },
+    {
+      "name": "黑鸟操术",
+      "domain": "百鸟共舞",
+      "voice": null
+    },
+    {
+      "name": "投射咒法",
+      "domain": "时胞月宫殿",
+      "voice": null
+    },
+    {
+      "name": "构筑术式",
+      "domain": "三重疾苦",
+      "voice": null
+    },
+    {
+      "name": "傀儡操术",
+      "domain": "超巨大机甲",
+      "voice": null
+    },
+    {
+      "name": "淀月",
+      "domain": "恶毒邪月",
+      "voice": null
+    },
+    {
+      "name": "蚀烂腐术",
+      "domain": "暗蚀",
+      "voice": null
+    },
+    {
+      "name": "奇迹",
+      "domain": "鸿运齐天",
+      "voice": null
+    },
+    {
+      "name": "雅各布天梯",
+      "domain": "天使之息",
+      "voice": null
+    },
+    {
+      "name": "幻兽琥珀",
+      "domain": "死门雷兽",
+      "voice": null
+    },
+    {
+      "name": "判决术式",
+      "domain": "诛伏赐死",
+      "voice": "higuruma_domain"
+    },
+    {
+      "name": "咒力大炮",
+      "domain": "咒力加农炮",
+      "voice": null
+    },
+    {
+      "name": "质量术式",
+      "domain": "星之怒",
+      "voice": null
+    },
+    {
+      "name": "鬼臂罗网",
+      "domain": "百臂魔神",
+      "voice": null
+    },
+    {
+      "name": "付丧操术",
+      "domain": "跑得很快",
+      "voice": null
+    },
+    {
+      "name": "降灵术",
+      "domain": "秽土转生",
+      "voice": null
+    },
+    {
+      "name": "天空术式",
+      "domain": "虚化神威",
+      "voice": null
+    },
+    {
+      "name": "生长术式",
+      "domain": "超高速再生",
+      "voice": null
+    },
+    {
+      "name": "火灾操术",
+      "domain": "盖棺铁围山",
+      "voice": "jogo_domain"
+    },
+    {
+      "name": "蛊毒术式",
+      "domain": "巫蛊",
+      "voice": null
+    },
+    {
+      "name": "复制术式",
+      "domain": "真赝相爱",
+      "voice": null
+    },
+    {
+      "name": "万象拒绝",
+      "domain": "我拒绝",
+      "voice": null
+    },
+    {
+      "name": "黄金体验镇魂曲",
+      "domain": "万象虚无",
+      "voice": null
+    },
+    {
+      "name": "界王拳",
+      "domain": "十倍界王拳",
+      "voice": null
+    },
+    {
+      "name": "超级赛亚人变身",
+      "domain": "超级赛亚人变身第二阶段",
+      "voice": null
+    },
+    {
+      "name": "仙人模式",
+      "domain": "仙法之术",
+      "voice": null
+    },
+    {
+      "name": "死而替生",
+      "domain": "替死鬼",
+      "voice": null
+    }
+  ],
+  "cues": [
+    {
+      "id": "dagon_domain_name",
+      "actor": 19,
+      "match": [
+        "荡蕴平线"
+      ],
+      "file": "assets/audio/v4/dagon_domain_name.mp3",
+      "durationMs": 4400,
+      "nameAtMs": 1290,
+      "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
+      "note": "动画原声，仅完整领域名；未拼接归属待核实的展开喊声。音色与混音待人工试听"
+    },
+    {
+      "id": "gojo_void",
+      "actor": 0,
+      "match": [
+        "无量空处"
+      ],
+      "file": "assets/audio/v3/gojo_void.mp3",
+      "durationMs": 5750,
+      "nameAtMs": 3130,
+      "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
+      "note": "原片重新剪取，保留喊招、领域名称及自然收音"
+    },
+    {
+      "id": "megumi_shadow",
+      "actor": 2,
+      "match": [
+        "嵌合暗翳庭"
+      ],
+      "file": "assets/audio/v3/megumi_shadow.mp3",
+      "durationMs": 11350,
+      "nameAtMs": 8340,
+      "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
+      "note": "原片重新剪取，保留喊招、领域名称及自然收音"
+    },
+    {
+      "id": "higuruma_domain",
+      "actor": 33,
+      "match": [
+        "诛伏赐死"
+      ],
+      "file": "assets/audio/v3/higuruma_domain.mp3",
+      "durationMs": 4200,
+      "nameAtMs": 1880,
+      "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
+      "note": "原片重新剪取，保留喊招、领域名称及自然收音"
+    },
+    {
+      "id": "sukuna_shrine",
+      "actor": 12,
+      "match": [
+        "伏魔御厨子"
+      ],
+      "file": "assets/audio/v3/sukuna_shrine.mp3",
+      "durationMs": 7600,
+      "nameAtMs": 4780,
+      "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
+      "note": "原片重新剪取，保留喊招、领域名称及自然收音"
+    },
+    {
+      "id": "mahito_domain",
+      "actor": 16,
+      "match": [
+        "自闭圆顿裹"
+      ],
+      "file": "assets/audio/v3/mahito_domain.mp3",
+      "durationMs": 7300,
+      "nameAtMs": 4060,
+      "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
+      "note": "原片重新剪取，保留喊招、领域名称及自然收音"
+    },
+    {
+      "id": "jogo_domain",
+      "actor": 17,
+      "match": [
+        "盖棺铁围山"
+      ],
+      "file": "assets/audio/v3/jogo_domain.mp3",
+      "durationMs": 3550,
+      "nameAtMs": 2750,
+      "source": "https://tuna.voicemod.net/sound/a3f9ed16-5315-450a-9cca-ce2b1688115c",
+      "note": "保留完整展开喊声与原片收音；原片未念出领域名称"
+    },
+    {
+      "id": "hanami_domain",
+      "actor": 18,
+      "match": [
+        "朵颐光海"
+      ],
+      "file": "assets/audio/v4/hanami_game_domain.mp3",
+      "durationMs": 8650,
+      "nameAtMs": 1500,
+      "source": "https://www.bilibili.com/video/BV1oc41167UZ/",
+      "note": "《幻影夜行》花御领域演出原音，含游戏音效；完整喊招台词未核实，按用户选择接入。领域名显字按画面定时，非台词对齐。"
+    }
+  ],
+  "voicePolicy": "matched-canonical-recordings-only; missing or failed recordings are silent"
+}

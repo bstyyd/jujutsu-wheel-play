@@ -1,0 +1,154 @@
+{
+  "downloaded": "2026-09-27",
+  "sources": {
+    "rpg": "https://kenney.nl/assets/rpg-audio",
+    "impact": "https://kenney.nl/assets/impact-sounds",
+    "scifi": "https://kenney.nl/assets/sci-fi-sounds"
+  },
+  "files": [
+    {
+      "file": "cloth1.ogg",
+      "pack": "rpg",
+      "original": "Audio\\cloth1.ogg",
+      "sha256": "ddb93a3671233f95da0e0b10367f082f7eb42fa6caaddcf776410aa8833c747d",
+      "license": "CC0-1.0",
+      "author": "Kenney"
+    },
+    {
+      "file": "cloth2.ogg",
+      "pack": "rpg",
+      "original": "Audio\\cloth2.ogg",
+      "sha256": "8a7451193c38bc05483aec25dd193e163a15d44cf7fff04ac7912573231b0201",
+      "license": "CC0-1.0",
+      "author": "Kenney"
+    },
+    {
+      "file": "knifeSlice.ogg",
+      "pack": "rpg",
+      "original": "Audio\\knifeSlice.ogg",
+      "sha256": "4cd96dc630bed9840c15f1dd2306da2cc56a4da26a5d3f1a03c5a7265ac5e54f",
+      "license": "CC0-1.0",
+      "author": "Kenney"
+    },
+    {
+      "file": "knifeSlice2.ogg",
+      "pack": "rpg",
+      "original": "Audio\\knifeSlice2.ogg",
+      "sha256": "6c2064d0ef988d1ec3d56868e823ea8823a5cac00f2742560052633529407def",
+      "license": "CC0-1.0",
+      "author": "Kenney"
+    },
+    {
+      "file": "chop.ogg",
+      "pack": "rpg",
+      "original": "Audio\\chop.ogg",
+      "sha256": "d00c2b3c9fff07e376145c8c8c45c90e5084ec192f6ce0387db233f7b86f1486",
+      "license": "CC0-1.0",
+      "author": "Kenney"
+    },
+    {
+      "file": "drawKnife1.ogg",
+      "pack": "rpg",
+      "original": "Audio\\drawKnife1.ogg",
+      "sha256": "276403e72c3b71c47bc24db3083970c23f8e5551ffa78f436f83483c56f3f0bb",
+      "license": "CC0-1.0",
+      "author": "Kenney"
+    },
+    {
+      "file": "impactPunch_medium_000.ogg",
+      "pack": "impact",
+      "original": "Audio\\impactPunch_medium_000.ogg",
+      "sha256": "486988aa2d6440ffc4c62a0e8ccf3c23673ba84424bd4723378d451b7255eb5c",
+      "license": "CC0-1.0",
+      "author": "Kenney"
+    },
+    {
+      "file": "impactPunch_medium_001.ogg",
+      "pack": "impact",
+      "original": "Audio\\impactPunch_medium_001.ogg",
+      "sha256": "e71d23abcc3f10d9d6bc9615b2a431fff70b12333a5fcdd9964457564ace4349",
+      "license": "CC0-1.0",
+      "author": "Kenney"
+    },
+    {
+      "file": "impactPunch_heavy_000.ogg",
+      "pack": "impact",
+      "original": "Audio\\impactPunch_heavy_000.ogg",
+      "sha256": "b33a8f14068aec24ec69ba85e5e87fdc41228975f6a1a3e44a6e7d6fc3d9f8d8",
+      "license": "CC0-1.0",
+      "author": "Kenney"
+    },
+    {
+      "file": "impactPunch_heavy_001.ogg",
+      "pack": "impact",
+      "original": "Audio\\impactPunch_heavy_001.ogg",
+      "sha256": "f92f5cb6ba4ff2766497292ffd90865654317eeca976f5652e0708dbdcdc0dd9",
+      "license": "CC0-1.0",
+      "author": "Kenney"
+    },
+    {
+      "file": "impactGlass_light_000.ogg",
+      "pack": "impact",
+      "original": "Audio\\impactGlass_light_000.ogg",
+      "sha256": "d750cf88097d0c3e69920e6e14496e1444e1a9da01aa4cca8f5ec8cb44c57b4f",
+      "license": "CC0-1.0",
+      "author": "Kenney"
+    },
+    {
+      "file": "impactSoft_medium_000.ogg",
+      "pack": "impact",
+      "original": "Audio\\impactSoft_medium_000.ogg",
+      "sha256": "7d3ba0bb5e60a11b5d3e558c141303dcf494256675fbf753c0d252d2cf0481e3",
+      "license": "CC0-1.0",
+      "author": "Kenney"
+    },
+    {
+      "file": "laserSmall_000.ogg",
+      "pack": "scifi",
+      "original": "Audio\\laserSmall_000.ogg",
+      "sha256": "72b589eadd41781257ac859e4f4d030222e623390e4a1a83f6d05329a6e026f1",
+      "license": "CC0-1.0",
+      "author": "Kenney"
+    },
+    {
+      "file": "laserLarge_000.ogg",
+      "pack": "scifi",
+      "original": "Audio\\laserLarge_000.ogg",
+      "sha256": "a56d95794cd732d6c2d66ce488c14cf557fe526c282897c9a77675c2bd9b77e6",
+      "license": "CC0-1.0",
+      "author": "Kenney"
+    },
+    {
+      "file": "forceField_000.ogg",
+      "pack": "scifi",
+      "original": "Audio\\forceField_000.ogg",
+      "sha256": "c2916f2a062c8ddd1aca2826d134fe90847037db31342726ffb0f9097afe339c",
+      "license": "CC0-1.0",
+      "author": "Kenney"
+    },
+    {
+      "file": "slime_000.ogg",
+      "pack": "scifi",
+      "original": "Audio\\slime_000.ogg",
+      "sha256": "480ee82b690136ea9db6966a3c3033356b8274752795c4e37afd6b6defcfacff",
+      "license": "CC0-1.0",
+      "author": "Kenney"
+    },
+    {
+      "file": "explosionCrunch_000.ogg",
+      "pack": "scifi",
+      "original": "Audio\\explosionCrunch_000.ogg",
+      "sha256": "4b597d658d0ae101f0a030fbeea5fc3a4292ab85f017470a8254a8e7959cbd69",
+      "license": "CC0-1.0",
+      "author": "Kenney"
+    },
+    {
+      "file": "thrusterFire_000.ogg",
+      "pack": "scifi",
+      "original": "Audio\\thrusterFire_000.ogg",
+      "sha256": "0fdc474d93f209debf1fc4ea77765a669dcb7676db31b4d8a0a509685bccf374",
+      "license": "CC0-1.0",
+      "author": "Kenney"
+    }
+  ]
+}

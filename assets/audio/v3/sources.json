@@ -1,0 +1,122 @@
+[
+  {
+    "id": "gojo_void",
+    "actor": 0,
+    "match": [
+      "无量空处"
+    ],
+    "file": "assets/audio/v3/gojo_void.mp3",
+    "durationMs": 5750,
+    "nameAtMs": 3130,
+    "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
+    "raw": "references/audio-v2/compilation.m4a",
+    "startSeconds": 265.45,
+    "endSeconds": 271.2,
+    "recognizedSpeechEnd": 270.24,
+    "sourceTailMs": 960,
+    "note": "原片重新剪取，保留喊招、领域名称及自然收音",
+    "verification": "Longer source windows and local ASR word timings; names checked against source-frame captions. ASR may mistranscribe proper nouns.",
+    "sha256": "178a7530ebbec14db63fd22dd03dcf054ee6277ca6c262beebf6f2aaab660bba",
+    "peak": 0.4769943952560425
+  },
+  {
+    "id": "megumi_shadow",
+    "actor": 2,
+    "match": [
+      "嵌合暗翳庭"
+    ],
+    "file": "assets/audio/v3/megumi_shadow.mp3",
+    "durationMs": 11350,
+    "nameAtMs": 8340,
+    "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
+    "raw": "references/audio-v2/compilation.m4a",
+    "startSeconds": 190.4,
+    "endSeconds": 201.75,
+    "recognizedSpeechEnd": 200.94,
+    "sourceTailMs": 810,
+    "note": "原片重新剪取，保留喊招、领域名称及自然收音",
+    "verification": "Longer source windows and local ASR word timings; names checked against source-frame captions. ASR may mistranscribe proper nouns.",
+    "sha256": "b805abb8a7ef4a08d1cf44c1459714e7e26aea667a0b4b7d0562219cebe50568",
+    "peak": 0.6876052618026733
+  },
+  {
+    "id": "higuruma_domain",
+    "actor": 33,
+    "match": [
+      "诛伏赐死"
+    ],
+    "file": "assets/audio/v3/higuruma_domain.mp3",
+    "durationMs": 4200,
+    "nameAtMs": 1880,
+    "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
+    "raw": "references/audio-v2/compilation.m4a",
+    "startSeconds": 496.9,
+    "endSeconds": 501.1,
+    "recognizedSpeechEnd": 500.06,
+    "sourceTailMs": 1040,
+    "note": "原片重新剪取，保留喊招、领域名称及自然收音",
+    "verification": "Longer source windows and local ASR word timings; names checked against source-frame captions. ASR may mistranscribe proper nouns.",
+    "sha256": "52100f607b7aaffec23f60b6e79f537faa09a427e9e5eff5186c96421d7d0aa4",
+    "peak": 0.8335492014884949
+  },
+  {
+    "id": "sukuna_shrine",
+    "actor": 12,
+    "match": [
+      "伏魔御厨子"
+    ],
+    "file": "assets/audio/v3/sukuna_shrine.mp3",
+    "durationMs": 7600,
+    "nameAtMs": 4780,
+    "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
+    "raw": "references/audio-v2/compilation.m4a",
+    "startSeconds": 381.0,
+    "endSeconds": 388.6,
+    "recognizedSpeechEnd": 387.4,
+    "sourceTailMs": 1200,
+    "note": "原片重新剪取，保留喊招、领域名称及自然收音",
+    "verification": "Longer source windows and local ASR word timings; names checked against source-frame captions. ASR may mistranscribe proper nouns.",
+    "sha256": "a7772b54d14c6dd34ef0ac01ef2f4069762e40fed123b89c769b27209b8b3af5",
+    "peak": 0.45308637619018555
+  },
+  {
+    "id": "mahito_domain",
+    "actor": 16,
+    "match": [
+      "自闭圆顿裹"
+    ],
+    "file": "assets/audio/v3/mahito_domain.mp3",
+    "durationMs": 7300,
+    "nameAtMs": 4060,
+    "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
+    "raw": "references/audio-v2/compilation.m4a",
+    "startSeconds": 444.5,
+    "endSeconds": 451.8,
+    "recognizedSpeechEnd": 450.7,
+    "sourceTailMs": 1100,
+    "note": "原片重新剪取，保留喊招、领域名称及自然收音",
+    "verification": "Longer source windows and local ASR word timings; names checked against source-frame captions. ASR may mistranscribe proper nouns.",
+    "sha256": "85ea5500529c44d52ee1d18821f2245c008e17c8e9ba80e4d9aea67b8b428275",
+    "peak": 0.6363499760627747
+  },
+  {
+    "id": "jogo_domain",
+    "actor": 17,
+    "match": [
+      "盖棺铁围山"
+    ],
+    "file": "assets/audio/v3/jogo_domain.mp3",
+    "durationMs": 3550,
+    "nameAtMs": 2750,
+    "source": "https://tuna.voicemod.net/sound/a3f9ed16-5315-450a-9cca-ce2b1688115c",
+    "raw": "references/audio/jogo-domain.mp3",
+    "startSeconds": 0.3,
+    "endSeconds": 3.85,
+    "recognizedSpeechEnd": 2.82,
+    "sourceTailMs": 1030,
+    "note": "保留完整展开喊声与原片收音；原片未念出领域名称",
+    "verification": "Longer source windows and local ASR word timings; names checked against source-frame captions. ASR may mistranscribe proper nouns.",
+    "sha256": "223322b1fc4acb96bbe41c37f5ac8dd3c9fb19215a5e50a00f5b9c2f92f0924d",
+    "peak": 0.7279760241508484
+  }
+]

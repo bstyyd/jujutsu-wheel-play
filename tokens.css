@@ -1,0 +1,16 @@
+:root{--color-paper:#101a23;--color-paper-2:#192631;--color-paper-3:#223440;--color-ink:#f2efe5;--color-muted:#a8bbc3;--color-rule:#40535d;--color-accent:#d4b077;--color-accent-ink:#172029;--color-cyan:#82becd;--color-red:#e79490;--color-green:#9ac5a4;--color-clear:transparent;--color-veil:rgba(9,17,26,.86);--color-shade:rgba(5,12,20,.65);--color-black:#04070b;--color-white:#fff;--font-display:'SimSun','Songti SC',serif;--font-body:'Microsoft YaHei','PingFang SC',sans-serif;--space-xs:8px;--space-sm:12px;--space-md:20px;--space-lg:32px;--space-xl:48px;--radius-sm:4px;--radius-card:8px;--ease-out:cubic-bezier(.16,1,.3,1);--dur-short:180ms;--text-display:clamp(38px,5.8vw,78px);--bg:var(--color-paper);--panel:var(--color-paper-2);--panel2:var(--color-paper-3);--line:var(--color-rule);--txt:var(--color-ink);--txt2:var(--color-muted);--txt3:var(--color-muted);--purple:var(--color-accent);--purple2:var(--color-accent);--gold:var(--color-accent);--cyan:var(--color-cyan)}
+/* Scene edition: the existing ink/brass system, with explicit HUD elevations. */
+:root{
+ --color-paper:oklch(17% .022 237);--color-paper-2:oklch(22% .023 237);--color-paper-3:oklch(28% .026 237);
+ --color-ink:oklch(94% .012 87);--color-muted:oklch(74% .025 219);--color-rule:oklch(38% .027 231);
+ --color-accent:oklch(79% .083 79);--color-accent-ink:oklch(19% .018 237);
+ --color-hud:oklch(19% .023 237 / .97);--color-hud-soft:oklch(23% .026 237 / .92);
+ --color-hud-faint:oklch(36% .036 237 / .32);--color-rule-soft:oklch(56% .038 237 / .23);
+ --color-brass-soft:oklch(79% .083 79 / .18);--color-brass-rule:oklch(79% .083 79 / .45);
+ --color-stage-shadow:oklch(10% .015 237 / .7);--color-stage-fade:oklch(15% .021 237 / .96);
+ --color-hover:oklch(31% .025 237);--color-focus:oklch(83% .064 210);
+ --color-good:oklch(80% .07 153);--color-error:oklch(80% .09 34);
+ --space-2xs:4px;--space-2xl:64px;--text-xs:11px;--text-sm:13px;--text-base:15px;
+ --text-lg:20px;--text-xl:28px;--text-2xl:36px;--text-display:clamp(40px,5.3vw,72px);
+ --ease-in:cubic-bezier(.7,0,.84,0);--ease-in-out:cubic-bezier(.65,0,.35,1);--dur-micro:120ms;--dur-long:400ms;
+}

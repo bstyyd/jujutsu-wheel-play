@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>角色动作排练 · 咒术回战</title><link rel="stylesheet" href="battle-art-review.css"></head>
+<body><main>
+<header><div><p class="eyebrow">战斗美术 · 全角色</p><h1>角色动作排练</h1><p>现有 36 个角色条目、38 套形态，均已接入待机与战斗动作。选择角色即可预览。</p></div><a href="/">返回游戏 ↗</a></header>
+<section class="toolbar"><label>己方<select id="ally"></select></label><label>敌方<select id="enemy"></select></label><label>查看动作<select id="side"><option value="0">己方</option><option value="1">敌方</option></select></label><label>场地<select id="environment"><option value="abandoned">废弃楼层</option><option value="campus">高专</option><option value="shibuya">涩谷</option></select></label></section>
+<section class="stage" aria-label="Godot 战斗动作预览"><iframe id="stage" title="角色战斗舞台" src="godot/embed.html" sandbox="allow-scripts allow-same-origin"></iframe><p id="status" role="status">正在载入战斗舞台…</p></section>
+<nav class="actions" aria-label="演示控制"><button id="attack">普通攻击</button><button id="cast">施术动作</button><button id="idle">恢复待机</button><label><input type="checkbox" id="group"> 三对三站位</label><span id="name"></span></nav>
+<p id="note"></p><section id="poses" aria-label="八个关键姿势"></section>
+<footer>默认循环播放待机。点击姿势可定格；三对三模式可查看多人站位。每套包含待机、待机变化、蓄势、攻击、施术、受击、防御和倒地八个关键姿势。</footer>
+</main><script src="battle-art-review.js"></script></body></html>

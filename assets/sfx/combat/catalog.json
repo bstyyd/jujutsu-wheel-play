@@ -1,0 +1,1137 @@
+{
+  "clips": {
+    "cloth1": {
+      "file": "cloth1.ogg",
+      "gain": 0.8
+    },
+    "cloth2": {
+      "file": "cloth2.ogg",
+      "gain": 0.8
+    },
+    "knifeSlice": {
+      "file": "knifeSlice.ogg",
+      "gain": 0.8
+    },
+    "knifeSlice2": {
+      "file": "knifeSlice2.ogg",
+      "gain": 0.8
+    },
+    "chop": {
+      "file": "chop.ogg",
+      "gain": 0.8
+    },
+    "drawKnife1": {
+      "file": "drawKnife1.ogg",
+      "gain": 1.2
+    },
+    "impactPunch_medium_000": {
+      "file": "impactPunch_medium_000.ogg",
+      "gain": 0.8
+    },
+    "impactPunch_medium_001": {
+      "file": "impactPunch_medium_001.ogg",
+      "gain": 0.8
+    },
+    "impactPunch_heavy_000": {
+      "file": "impactPunch_heavy_000.ogg",
+      "gain": 0.8
+    },
+    "impactPunch_heavy_001": {
+      "file": "impactPunch_heavy_001.ogg",
+      "gain": 0.8
+    },
+    "impactGlass_light_000": {
+      "file": "impactGlass_light_000.ogg",
+      "gain": 0.8
+    },
+    "impactSoft_medium_000": {
+      "file": "impactSoft_medium_000.ogg",
+      "gain": 0.8
+    },
+    "laserSmall_000": {
+      "file": "laserSmall_000.ogg",
+      "gain": 0.45
+    },
+    "laserLarge_000": {
+      "file": "laserLarge_000.ogg",
+      "gain": 0.45
+    },
+    "forceField_000": {
+      "file": "forceField_000.ogg",
+      "gain": 0.45
+    },
+    "slime_000": {
+      "file": "slime_000.ogg",
+      "gain": 0.45
+    },
+    "explosionCrunch_000": {
+      "file": "explosionCrunch_000.ogg",
+      "gain": 0.45
+    },
+    "thrusterFire_000": {
+      "file": "thrusterFire_000.ogg",
+      "gain": 0.45,
+      "duration": 0.62
+    },
+    "flare-burn": {
+      "file": "flare-burn.ogg",
+      "gain": 1.15,
+      "duration": 1.35
+    },
+    "flare-freeze": {
+      "file": "flare-freeze.ogg",
+      "gain": 1.321,
+      "duration": 0.9187301587301587
+    },
+    "flare-heal": {
+      "file": "flare-heal.ogg",
+      "gain": 2.891,
+      "duration": 1.35
+    },
+    "flare-melee_attack": {
+      "file": "flare-melee_attack.ogg",
+      "gain": 0.9,
+      "duration": 0.25795918367346937
+    },
+    "flare-melee_attack_2": {
+      "file": "flare-melee_attack_2.ogg",
+      "gain": 0.9,
+      "duration": 0.28662131519274375
+    },
+    "flare-melee_attack_3": {
+      "file": "flare-melee_attack_3.ogg",
+      "gain": 0.9,
+      "duration": 0.2345124716553288
+    },
+    "flare-powers-block": {
+      "file": "flare-powers-block.ogg",
+      "gain": 2.971,
+      "duration": 0.7500226757369615
+    },
+    "flare-powers-fireball": {
+      "file": "flare-powers-fireball.ogg",
+      "gain": 3.236,
+      "duration": 0.8288888888888889
+    },
+    "flare-powers-quake": {
+      "file": "flare-powers-quake.ogg",
+      "gain": 0.896,
+      "duration": 1.35
+    },
+    "flare-powers-shield": {
+      "file": "flare-powers-shield.ogg",
+      "gain": 3.695,
+      "duration": 0.44693877551020406
+    },
+    "flare-powers-shock": {
+      "file": "flare-powers-shock.ogg",
+      "gain": 9,
+      "duration": 1.1903854875283446
+    },
+    "flare-powers-teleport": {
+      "file": "flare-powers-teleport.ogg",
+      "gain": 2.611,
+      "duration": 1.0503401360544218
+    },
+    "flare-shoot": {
+      "file": "flare-shoot.ogg",
+      "gain": 1.193,
+      "duration": 0.4492063492063492
+    },
+    "flare-thunder": {
+      "file": "flare-thunder.ogg",
+      "gain": 1.95,
+      "duration": 1.35
+    },
+    "wesnoth-fist": {
+      "file": "wesnoth-fist.ogg",
+      "gain": 0.755,
+      "duration": 0.21333333333333335
+    }
+  },
+  "cues": {
+    "melee": {
+      "approach": [
+        "flare-melee_attack",
+        "flare-melee_attack_2",
+        "flare-melee_attack_3"
+      ],
+      "impact": [
+        "wesnoth-fist"
+      ]
+    },
+    "heavy": {
+      "approach": [
+        "flare-melee_attack",
+        "flare-melee_attack_2",
+        "flare-melee_attack_3"
+      ],
+      "impact": [
+        "flare-powers-quake"
+      ]
+    },
+    "touch": {
+      "approach": [
+        "flare-melee_attack",
+        "flare-melee_attack_2",
+        "flare-melee_attack_3"
+      ],
+      "impact": [
+        "wesnoth-fist"
+      ]
+    },
+    "rush": {
+      "approach": [
+        "flare-melee_attack",
+        "flare-melee_attack_2",
+        "flare-melee_attack_3"
+      ],
+      "impact": [
+        "wesnoth-fist"
+      ]
+    },
+    "slash": {
+      "approach": [],
+      "impact": [
+        "flare-melee_attack_2",
+        "flare-melee_attack_3"
+      ]
+    },
+    "ratio": {
+      "approach": [
+        "flare-melee_attack",
+        "flare-melee_attack_2",
+        "flare-melee_attack_3"
+      ],
+      "impact": [
+        "flare-powers-block"
+      ]
+    },
+    "nail": {
+      "approach": [],
+      "impact": [
+        "flare-shoot"
+      ]
+    },
+    "orb": {
+      "approach": [],
+      "impact": [
+        "flare-powers-shock"
+      ]
+    },
+    "beam": {
+      "approach": [],
+      "impact": [
+        "flare-shoot"
+      ]
+    },
+    "cannon": {
+      "approach": [],
+      "impact": [
+        "flare-powers-quake"
+      ]
+    },
+    "wave": {
+      "approach": [],
+      "impact": [
+        "flare-powers-teleport"
+      ]
+    },
+    "fire": {
+      "approach": [
+        "flare-powers-fireball"
+      ],
+      "impact": [
+        "flare-burn"
+      ]
+    },
+    "lightning": {
+      "approach": [],
+      "impact": [
+        "flare-thunder"
+      ]
+    },
+    "pillar": {
+      "approach": [],
+      "impact": [
+        "flare-powers-shock"
+      ]
+    },
+    "summon": {
+      "approach": [],
+      "impact": [
+        "flare-powers-teleport"
+      ]
+    },
+    "swarm": {
+      "approach": [
+        "flare-melee_attack",
+        "flare-melee_attack_2",
+        "flare-melee_attack_3"
+      ],
+      "impact": [
+        "flare-melee_attack_2",
+        "flare-melee_attack_3"
+      ]
+    },
+    "poison": {
+      "approach": [],
+      "impact": [
+        "flare-burn"
+      ]
+    },
+    "heal": {
+      "approach": [],
+      "impact": [
+        "flare-heal"
+      ]
+    },
+    "ward": {
+      "approach": [],
+      "impact": [
+        "flare-powers-shield"
+      ]
+    },
+    "buff": {
+      "approach": [],
+      "impact": [
+        "flare-powers-shield"
+      ]
+    }
+  },
+  "previousCues": {
+    "melee": {
+      "approach": [
+        "cloth1",
+        "cloth2"
+      ],
+      "impact": [
+        "impactPunch_medium_000",
+        "impactPunch_medium_001"
+      ]
+    },
+    "heavy": {
+      "approach": [
+        "cloth1",
+        "cloth2"
+      ],
+      "impact": [
+        "impactPunch_heavy_000",
+        "impactPunch_heavy_001"
+      ]
+    },
+    "touch": {
+      "approach": [
+        "cloth1",
+        "cloth2"
+      ],
+      "impact": [
+        "slime_000"
+      ]
+    },
+    "rush": {
+      "approach": [
+        "knifeSlice",
+        "knifeSlice2"
+      ],
+      "impact": [
+        "impactPunch_medium_000",
+        "impactPunch_medium_001"
+      ]
+    },
+    "slash": {
+      "approach": [
+        "drawKnife1"
+      ],
+      "impact": [
+        "knifeSlice",
+        "knifeSlice2"
+      ]
+    },
+    "ratio": {
+      "approach": [
+        "drawKnife1"
+      ],
+      "impact": [
+        "chop"
+      ]
+    },
+    "nail": {
+      "approach": [
+        "knifeSlice",
+        "knifeSlice2"
+      ],
+      "impact": [
+        "impactGlass_light_000"
+      ]
+    },
+    "orb": {
+      "approach": [
+        "forceField_000"
+      ],
+      "impact": [
+        "laserSmall_000"
+      ]
+    },
+    "beam": {
+      "approach": [
+        "knifeSlice",
+        "knifeSlice2"
+      ],
+      "impact": [
+        "laserSmall_000"
+      ]
+    },
+    "cannon": {
+      "approach": [
+        "forceField_000"
+      ],
+      "impact": [
+        "laserLarge_000"
+      ]
+    },
+    "wave": {
+      "approach": [
+        "cloth1",
+        "cloth2"
+      ],
+      "impact": [
+        "forceField_000"
+      ]
+    },
+    "fire": {
+      "approach": [
+        "thrusterFire_000"
+      ],
+      "impact": [
+        "explosionCrunch_000"
+      ]
+    },
+    "lightning": {
+      "approach": [
+        "laserSmall_000"
+      ],
+      "impact": [
+        "explosionCrunch_000"
+      ]
+    },
+    "pillar": {
+      "approach": [
+        "forceField_000"
+      ],
+      "impact": [
+        "laserLarge_000"
+      ]
+    },
+    "summon": {
+      "approach": [
+        "slime_000"
+      ],
+      "impact": [
+        "forceField_000"
+      ]
+    },
+    "swarm": {
+      "approach": [
+        "cloth1",
+        "cloth2"
+      ],
+      "impact": [
+        "knifeSlice",
+        "knifeSlice2"
+      ]
+    },
+    "poison": {
+      "approach": [
+        "knifeSlice",
+        "knifeSlice2"
+      ],
+      "impact": [
+        "slime_000"
+      ]
+    },
+    "heal": {
+      "approach": [],
+      "impact": [
+        "forceField_000"
+      ]
+    },
+    "ward": {
+      "approach": [],
+      "impact": [
+        "forceField_000"
+      ]
+    },
+    "buff": {
+      "approach": [],
+      "impact": [
+        "thrusterFire_000"
+      ]
+    }
+  },
+  "defaultBank": "jrpg",
+  "jrpgCues": {
+    "melee": {
+      "windup": [],
+      "approach": [
+        {
+          "clip": "flare-melee_attack",
+          "gain": 0.45,
+          "duration": 0.22,
+          "attack": 0.006,
+          "release": 0.06,
+          "highpass": 250,
+          "lowpass": 7500
+        }
+      ],
+      "impact": [
+        {
+          "clip": "wesnoth-fist",
+          "gain": 0.65,
+          "duration": 0.18,
+          "attack": 0.006,
+          "release": 0.075,
+          "offset": 0.033420000000000005,
+          "highpass": 90,
+          "lowpass": 4800
+        }
+      ]
+    },
+    "heavy": {
+      "windup": [],
+      "approach": [
+        {
+          "clip": "flare-melee_attack_2",
+          "gain": 0.48,
+          "duration": 0.24,
+          "attack": 0.006,
+          "release": 0.07,
+          "highpass": 350,
+          "lowpass": 8000
+        }
+      ],
+      "impact": [
+        {
+          "clip": "wesnoth-fist",
+          "gain": 0.65,
+          "duration": 0.18,
+          "attack": 0.006,
+          "release": 0.075,
+          "offset": 0.033420000000000005,
+          "highpass": 90,
+          "lowpass": 4800
+        },
+        {
+          "clip": "flare-powers-quake",
+          "gain": 0.34,
+          "duration": 0.28,
+          "attack": 0.006,
+          "release": 0.18,
+          "offset": 0,
+          "highpass": 100,
+          "lowpass": 2300
+        }
+      ]
+    },
+    "touch": {
+      "windup": [],
+      "approach": [
+        {
+          "clip": "flare-melee_attack",
+          "gain": 0.45,
+          "duration": 0.22,
+          "attack": 0.006,
+          "release": 0.06,
+          "highpass": 250,
+          "lowpass": 7500
+        }
+      ],
+      "impact": [
+        {
+          "clip": "wesnoth-fist",
+          "gain": 0.2,
+          "duration": 0.12,
+          "attack": 0.006,
+          "release": 0.065,
+          "offset": 0.033420000000000005,
+          "lowpass": 700
+        },
+        {
+          "clip": "flare-powers-teleport",
+          "gain": 0.3,
+          "duration": 0.32,
+          "attack": 0.006,
+          "release": 0.09,
+          "offset": 0.52415
+        }
+      ]
+    },
+    "rush": {
+      "windup": [],
+      "approach": [
+        {
+          "clip": "flare-melee_attack_2",
+          "gain": 0.48,
+          "duration": 0.24,
+          "attack": 0.006,
+          "release": 0.07,
+          "highpass": 350,
+          "lowpass": 8000
+        }
+      ],
+      "impact": [
+        {
+          "clip": "wesnoth-fist",
+          "gain": 0.65,
+          "duration": 0.18,
+          "attack": 0.006,
+          "release": 0.075,
+          "offset": 0.033420000000000005,
+          "highpass": 90,
+          "lowpass": 4800
+        }
+      ]
+    },
+    "slash": {
+      "windup": [],
+      "approach": [
+        {
+          "clip": "flare-melee_attack_2",
+          "gain": 0.48,
+          "duration": 0.24,
+          "attack": 0.006,
+          "release": 0.07,
+          "highpass": 350,
+          "lowpass": 8000
+        }
+      ],
+      "impact": [
+        {
+          "clip": "flare-melee_attack_3",
+          "gain": 0.62,
+          "duration": 0.17,
+          "attack": 0.006,
+          "release": 0.06,
+          "offset": 0.04589,
+          "highpass": 500
+        },
+        {
+          "clip": "wesnoth-fist",
+          "gain": 0.2,
+          "duration": 0.12,
+          "attack": 0.006,
+          "release": 0.065,
+          "offset": 0.033420000000000005,
+          "lowpass": 700
+        }
+      ]
+    },
+    "ratio": {
+      "windup": [],
+      "approach": [
+        {
+          "clip": "flare-melee_attack_2",
+          "gain": 0.48,
+          "duration": 0.24,
+          "attack": 0.006,
+          "release": 0.07,
+          "highpass": 350,
+          "lowpass": 8000
+        }
+      ],
+      "impact": [
+        {
+          "clip": "flare-powers-block",
+          "gain": 0.48,
+          "duration": 0.19,
+          "attack": 0.006,
+          "release": 0.08,
+          "offset": 0.009680000000000001,
+          "highpass": 300
+        },
+        {
+          "clip": "wesnoth-fist",
+          "gain": 0.2,
+          "duration": 0.12,
+          "attack": 0.006,
+          "release": 0.065,
+          "offset": 0.033420000000000005,
+          "lowpass": 700
+        }
+      ]
+    },
+    "nail": {
+      "windup": [],
+      "approach": [
+        {
+          "clip": "flare-melee_attack_3",
+          "gain": 0.32,
+          "duration": 0.23,
+          "attack": 0.006,
+          "release": 0.1,
+          "highpass": 650
+        }
+      ],
+      "impact": [
+        {
+          "clip": "flare-shoot",
+          "gain": 0.43,
+          "duration": 0.17,
+          "attack": 0.006,
+          "release": 0.06,
+          "offset": 0.02791,
+          "highpass": 500
+        },
+        {
+          "clip": "wesnoth-fist",
+          "gain": 0.2,
+          "duration": 0.12,
+          "attack": 0.006,
+          "release": 0.065,
+          "offset": 0.033420000000000005,
+          "lowpass": 700
+        }
+      ]
+    },
+    "orb": {
+      "windup": [
+        {
+          "clip": "flare-powers-shield",
+          "gain": 0.13,
+          "duration": 0.3,
+          "attack": 0.09,
+          "release": 0.13,
+          "lowpass": 3400
+        }
+      ],
+      "approach": [
+        {
+          "clip": "flare-melee_attack_3",
+          "gain": 0.32,
+          "duration": 0.23,
+          "attack": 0.006,
+          "release": 0.1,
+          "highpass": 650
+        }
+      ],
+      "impact": [
+        {
+          "clip": "flare-powers-shock",
+          "gain": 0.24,
+          "duration": 0.42,
+          "attack": 0.015,
+          "release": 0.22,
+          "offset": 0.18896,
+          "highpass": 900,
+          "lowpass": 7000
+        },
+        {
+          "clip": "wesnoth-fist",
+          "gain": 0.2,
+          "duration": 0.12,
+          "attack": 0.006,
+          "release": 0.065,
+          "offset": 0.033420000000000005,
+          "lowpass": 700
+        }
+      ]
+    },
+    "beam": {
+      "windup": [],
+      "approach": [
+        {
+          "clip": "flare-melee_attack_3",
+          "gain": 0.32,
+          "duration": 0.23,
+          "attack": 0.006,
+          "release": 0.1,
+          "highpass": 650
+        }
+      ],
+      "impact": [
+        {
+          "clip": "flare-shoot",
+          "gain": 0.48,
+          "duration": 0.2,
+          "attack": 0.006,
+          "release": 0.08,
+          "offset": 0.02791,
+          "highpass": 250
+        },
+        {
+          "clip": "flare-powers-shock",
+          "gain": 0.24,
+          "duration": 0.42,
+          "attack": 0.015,
+          "release": 0.22,
+          "offset": 0.18896,
+          "highpass": 900,
+          "lowpass": 7000
+        }
+      ]
+    },
+    "cannon": {
+      "windup": [
+        {
+          "clip": "flare-powers-shield",
+          "gain": 0.13,
+          "duration": 0.3,
+          "attack": 0.09,
+          "release": 0.13,
+          "lowpass": 3400
+        }
+      ],
+      "approach": [
+        {
+          "clip": "flare-melee_attack_3",
+          "gain": 0.32,
+          "duration": 0.23,
+          "attack": 0.006,
+          "release": 0.1,
+          "highpass": 650
+        }
+      ],
+      "impact": [
+        {
+          "clip": "flare-powers-quake",
+          "gain": 0.34,
+          "duration": 0.28,
+          "attack": 0.006,
+          "release": 0.18,
+          "offset": 0,
+          "highpass": 100,
+          "lowpass": 2300
+        },
+        {
+          "clip": "flare-powers-shock",
+          "gain": 0.24,
+          "duration": 0.42,
+          "attack": 0.015,
+          "release": 0.22,
+          "offset": 0.18896,
+          "highpass": 900,
+          "lowpass": 7000
+        }
+      ]
+    },
+    "wave": {
+      "windup": [
+        {
+          "clip": "flare-powers-shield",
+          "gain": 0.13,
+          "duration": 0.3,
+          "attack": 0.09,
+          "release": 0.13,
+          "lowpass": 3400
+        }
+      ],
+      "approach": [],
+      "impact": [
+        {
+          "clip": "flare-powers-teleport",
+          "gain": 0.35,
+          "duration": 0.46,
+          "attack": 0.03,
+          "release": 0.24,
+          "offset": 0.52415,
+          "highpass": 350
+        }
+      ]
+    },
+    "fire": {
+      "windup": [
+        {
+          "clip": "flare-powers-shield",
+          "gain": 0.13,
+          "duration": 0.3,
+          "attack": 0.09,
+          "release": 0.13,
+          "lowpass": 3400
+        }
+      ],
+      "approach": [
+        {
+          "clip": "flare-melee_attack_3",
+          "gain": 0.32,
+          "duration": 0.23,
+          "attack": 0.006,
+          "release": 0.1,
+          "highpass": 650
+        }
+      ],
+      "impact": [
+        {
+          "clip": "flare-powers-fireball",
+          "gain": 0.4,
+          "duration": 0.42,
+          "attack": 0.006,
+          "release": 0.2,
+          "offset": 0.23303,
+          "lowpass": 6800
+        },
+        {
+          "clip": "flare-burn",
+          "gain": 0.12,
+          "duration": 0.5,
+          "attack": 0.04,
+          "release": 0.3,
+          "highpass": 350,
+          "lowpass": 4500
+        }
+      ]
+    },
+    "lightning": {
+      "windup": [
+        {
+          "clip": "flare-powers-shield",
+          "gain": 0.13,
+          "duration": 0.3,
+          "attack": 0.09,
+          "release": 0.13,
+          "lowpass": 3400
+        }
+      ],
+      "approach": [
+        {
+          "clip": "flare-melee_attack_3",
+          "gain": 0.32,
+          "duration": 0.23,
+          "attack": 0.006,
+          "release": 0.1,
+          "highpass": 650
+        }
+      ],
+      "impact": [
+        {
+          "clip": "flare-thunder",
+          "gain": 0.35,
+          "duration": 0.34,
+          "attack": 0.006,
+          "release": 0.19,
+          "offset": 0.0901,
+          "highpass": 300,
+          "lowpass": 6500
+        },
+        {
+          "clip": "flare-powers-shock",
+          "gain": 0.24,
+          "duration": 0.42,
+          "attack": 0.015,
+          "release": 0.22,
+          "offset": 0.18896,
+          "highpass": 900,
+          "lowpass": 7000
+        }
+      ]
+    },
+    "pillar": {
+      "windup": [
+        {
+          "clip": "flare-powers-shield",
+          "gain": 0.13,
+          "duration": 0.3,
+          "attack": 0.09,
+          "release": 0.13,
+          "lowpass": 3400
+        }
+      ],
+      "approach": [
+        {
+          "clip": "flare-melee_attack_3",
+          "gain": 0.32,
+          "duration": 0.23,
+          "attack": 0.006,
+          "release": 0.1,
+          "highpass": 650
+        }
+      ],
+      "impact": [
+        {
+          "clip": "flare-powers-shock",
+          "gain": 0.24,
+          "duration": 0.42,
+          "attack": 0.015,
+          "release": 0.22,
+          "offset": 0.18896,
+          "highpass": 900,
+          "lowpass": 7000
+        },
+        {
+          "clip": "flare-powers-shield",
+          "gain": 0.25,
+          "duration": 0.4,
+          "attack": 0.015,
+          "release": 0.25
+        }
+      ]
+    },
+    "summon": {
+      "windup": [
+        {
+          "clip": "flare-powers-shield",
+          "gain": 0.13,
+          "duration": 0.3,
+          "attack": 0.09,
+          "release": 0.13,
+          "lowpass": 3400
+        }
+      ],
+      "approach": [],
+      "impact": [
+        {
+          "clip": "flare-powers-teleport",
+          "gain": 0.35,
+          "duration": 0.5,
+          "attack": 0.035,
+          "release": 0.25,
+          "offset": 0.52415,
+          "lowpass": 4000
+        },
+        {
+          "clip": "flare-powers-quake",
+          "gain": 0.1,
+          "duration": 0.32,
+          "attack": 0.006,
+          "release": 0.2,
+          "lowpass": 800
+        }
+      ]
+    },
+    "swarm": {
+      "windup": [],
+      "approach": [
+        {
+          "clip": "flare-melee_attack",
+          "gain": 0.45,
+          "duration": 0.22,
+          "attack": 0.006,
+          "release": 0.06,
+          "highpass": 250,
+          "lowpass": 7500
+        }
+      ],
+      "impact": [
+        {
+          "clip": "flare-melee_attack_3",
+          "gain": 0.5,
+          "duration": 0.2,
+          "attack": 0.006,
+          "release": 0.08,
+          "offset": 0.04589,
+          "highpass": 500
+        }
+      ]
+    },
+    "poison": {
+      "windup": [],
+      "approach": [
+        {
+          "clip": "flare-melee_attack_3",
+          "gain": 0.32,
+          "duration": 0.23,
+          "attack": 0.006,
+          "release": 0.1,
+          "highpass": 650
+        }
+      ],
+      "impact": [
+        {
+          "clip": "flare-powers-teleport",
+          "gain": 0.23,
+          "duration": 0.46,
+          "attack": 0.03,
+          "release": 0.25,
+          "lowpass": 2500
+        },
+        {
+          "clip": "wesnoth-fist",
+          "gain": 0.2,
+          "duration": 0.12,
+          "attack": 0.006,
+          "release": 0.065,
+          "offset": 0.033420000000000005,
+          "lowpass": 700
+        }
+      ]
+    },
+    "heal": {
+      "windup": [
+        {
+          "clip": "flare-powers-shield",
+          "gain": 0.13,
+          "duration": 0.3,
+          "attack": 0.09,
+          "release": 0.13,
+          "lowpass": 3400
+        }
+      ],
+      "approach": [],
+      "impact": [
+        {
+          "clip": "flare-heal",
+          "gain": 0.32,
+          "duration": 0.62,
+          "attack": 0.06,
+          "release": 0.34,
+          "highpass": 500,
+          "lowpass": 6500
+        }
+      ]
+    },
+    "ward": {
+      "windup": [
+        {
+          "clip": "flare-powers-shield",
+          "gain": 0.13,
+          "duration": 0.3,
+          "attack": 0.09,
+          "release": 0.13,
+          "lowpass": 3400
+        }
+      ],
+      "approach": [],
+      "impact": [
+        {
+          "clip": "flare-powers-shield",
+          "gain": 0.36,
+          "duration": 0.38,
+          "attack": 0.02,
+          "release": 0.2,
+          "highpass": 250
+        }
+      ]
+    },
+    "buff": {
+      "windup": [
+        {
+          "clip": "flare-powers-shield",
+          "gain": 0.13,
+          "duration": 0.3,
+          "attack": 0.09,
+          "release": 0.13,
+          "lowpass": 3400
+        }
+      ],
+      "approach": [],
+      "impact": [
+        {
+          "clip": "flare-powers-shield",
+          "gain": 0.27,
+          "duration": 0.38,
+          "attack": 0.02,
+          "release": 0.2
+        },
+        {
+          "clip": "flare-powers-shock",
+          "gain": 0.24,
+          "duration": 0.42,
+          "attack": 0.015,
+          "release": 0.22,
+          "offset": 0.18896,
+          "highpass": 900,
+          "lowpass": 7000
+        }
+      ]
+    }
+  }
+}
