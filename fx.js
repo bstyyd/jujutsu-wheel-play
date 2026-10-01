@@ -17,11 +17,24 @@ const Cinema={raf:0,timer:0,resolve:null,
   return art?`<img class="sprite verified-art" src="assets/${art.file}" alt="${HD.escape(who)} · 领域展开" style="object-fit:contain">`:HD.sprite(who,who==='你');
  },
  background(who,text,kind){
-  const p=kind==='domain'?window.BattleScenes?.presentationFor({actorName:who,name:text,isPlayer:who==='你'}):null,world=this.el.querySelector('.cinema-world');
+  let p=kind==='domain'?window.BattleScenes?.presentationFor({actorName:who,name:text,isPlayer:who==='你'}):null,world=this.el.querySelector('.cinema-world');
+  /* 未登记领域（24 种扩展术式）：presentationFor 兜底为 barrier「保留当前战场」，
+   * 即"灰屏翻页"的来源。改按领域名哈希生成专属程序演出，色相+纹样由名字决定，
+   * 每个领域都有可辨认的独立演出。无名杂兵领域（'领域'）保持 barrier 兜底不变。 */
+  this._procType=null;
+  if(kind==='domain'&&p&&p.key==='barrier'&&String(text||'')!=='领域'){
+   const PROC=['energy','void','slash','shadow','lava','ice','lightning','blood','ratio'];
+   let h=0;for(const ch of String(text||'领域'))h=(h*31+ch.charCodeAt(0))>>>0;
+   const type=PROC[h%PROC.length];
+   const hue=h%360;
+   this._procType=type;
+   p={key:'proc',motif:true,cinemaOnly:true,note:'扩展领域 · 程序演绎',
+      light:`oklch(75% .12 ${hue})`,_procHue:hue};
+  }
   const motif=this.el.querySelector('.cinema-motif');
   motif.dataset.kind=p&&(p.motif||!p.file)?p.key:'';
   motif.innerHTML=p&&(p.motif||!p.file)?Array.from({length:24},(_,i)=>'<i style="--i:'+i+';--x:'+((i*37)%100)+'%;--y:'+((i*23)%100)+'%;--r:'+((i*47)%360)+'deg;--size:'+(0.5+(i*7%13)/13)+';--tilt:'+((i*11%31)-15)+'deg"></i>').join(''):'';
-  this.el.style.setProperty('--domain-light',p?.light||({love:'#d6c8fb',jackpot:'#a7e5c1',womb:'#d4b477',moon:'#ccb5ed',station:'#e4ebee',shrine:'#ff665f',lava:'#ffb669',hands:'#c9a9ff',court:'#ffe0a6'})[p?.key]||'#d2e9ff');
+  this.el.style.setProperty('--domain-light',p?._procHue!=null?p.light:(p?.light||({love:'#d6c8fb',jackpot:'#a7e5c1',womb:'#d4b477',moon:'#ccb5ed',station:'#e4ebee',shrine:'#ff665f',lava:'#ffb669',hands:'#c9a9ff',court:'#ffe0a6'})[p?.key]||'#d2e9ff'));
   // The same approved profile drives both the battlefield and the character cut-in.
   // Ordinary techniques and unnamed domains cannot inherit a caster's domain background.
   world.style.background='radial-gradient(ellipse at 65% 40%,var(--color-paper-3),var(--color-black))';
@@ -35,16 +48,21 @@ const Cinema={raf:0,timer:0,resolve:null,
    world.style.backgroundImage=`url("assets/${p.file}")`;
    world.style.backgroundSize=p.atlas?'200% 200%':'cover';
    world.style.backgroundPosition=p.atlas?`${p.atlas[0]*200}% ${(1-p.atlas[1]-p.atlas[3])*200}%`:'center';
+  }else if(p&&p.key==='proc'){
+   /* 程序演绎领域：名字哈希色相的全屏结界底色，不用战场旧图 */
+   world.style.backgroundImage=`radial-gradient(ellipse at 50% 42%,oklch(35% .12 ${p._procHue} / .95),oklch(12% .03 ${p._procHue} / .98) 75%)`;
   }else{
    const base=document.querySelector('.battle-field')?.style.backgroundImage;
    if(base&&base!=='none'){world.style.backgroundImage=`linear-gradient(var(--color-shade),var(--color-shade)),${base}`;world.style.backgroundSize='cover';world.style.backgroundPosition='center';}
   }
  },
- play({who='',text='',kind='skill',duration=1800,type}){this.hide();return new Promise(resolve=>{this.resolve=resolve;this.el.hidden=false;this.el.className='cinema '+kind;this.background(who,text,kind);this.el.dataset.effect=kind==='domain'?(this.el.querySelector('.cinema-world').dataset.domain||'neutral'):(type||this.type(who,text));this.el.querySelector('.cinema-portrait').innerHTML=this.portrait(who,text,kind);this.el.querySelector('h2').textContent=kind==='domain'&&/^领域（/.test(text)?'领域':text;this.el.querySelector('.cinema-kicker').textContent=kind==='domain'?'領域展開':kind==='ultimate'?'極 ノ 番':kind==='quote'?'':'術 式 発 動';this.el.querySelector('.cinema-actor').textContent=who+(kind==='domain'&&/^领域（/.test(text)?' · '+text.slice(3,-1):'')+(this.el.dataset.interpretation==='true'?' · 游戏演绎':'');this.timer=setTimeout(()=>this.hide(),duration);
+ play({who='',text='',kind='skill',duration=1800,type}){this.hide();return new Promise(resolve=>{this.resolve=resolve;this.el.hidden=false;this.el.className='cinema '+kind;this.background(who,text,kind);const domKey=this.el.querySelector('.cinema-world').dataset.domain;this.el.dataset.effect=kind==='domain'?(domKey==='proc'?(this._procType||'energy'):(domKey||'neutral')):(type||this.type(who,text));this.el.querySelector('.cinema-portrait').innerHTML=this.portrait(who,text,kind);this.el.querySelector('h2').textContent=kind==='domain'&&/^领域（/.test(text)?'领域':text;this.el.querySelector('.cinema-kicker').textContent=kind==='domain'?'領域展開':kind==='ultimate'?'極 ノ 番':kind==='quote'?'':'術 式 発 動';this.el.querySelector('.cinema-actor').textContent=who+(kind==='domain'&&/^领域（/.test(text)?' · '+text.slice(3,-1):'')+(this.el.dataset.interpretation==='true'?' · 游戏演绎':'');this.timer=setTimeout(()=>this.hide(),duration);
    const rect=this.el.getBoundingClientRect(),dpr=Math.min(devicePixelRatio||1,1.5);this.cv.width=rect.width*dpr;this.cv.height=rect.height*dpr;this.ctx.setTransform(dpr,0,0,dpr,0,0);const start=performance.now();
    const frame=now=>{const t=Math.max(0,(now-start)/1000);this.draw(rect.width,rect.height,t,this.el.dataset.effect,kind);if(!this.el.hidden&&!document.body.classList.contains('reduced-motion')&&kind!=='quote')this.raf=requestAnimationFrame(frame);};frame(start+200);
   });},
- draw(w,h,t,type,kind){const c=this.ctx;c.clearRect(0,0,w,h);if(kind==='quote'||kind==='domain')return;const x=w*.58,y=h*.48,dim=Math.min(w,h),p=Math.min(1,t*2.3),colors={void:'#8ceaff',shrine:'#e05058',shadow:'#6a9c9d',lava:'#ff8b39',hands:'#c39bce',flash:'#ee354a',purple:'#b581ff',blood:'#e65268',ratio:'#f0cf8e',lightning:'#8de2f4',ice:'#b9efff',straw:'#e8b980',gravity:'#a49bd4',slash:'#eb9e9e',energy:'#87cddd'};c.strokeStyle=colors[type]||colors.energy;c.fillStyle=c.strokeStyle;c.lineWidth=1.5;
+ draw(w,h,t,type,kind){const c=this.ctx;c.clearRect(0,0,w,h);if(kind==='quote')return;
+  /* 领域演出：仅程序演绎（未登记）领域叠加 canvas 动画；登记领域保持原验证视觉不动。 */
+  if(kind==='domain'){if(!this._procType)return;type=this._procType;}const x=w*.58,y=h*.48,dim=Math.min(w,h),p=Math.min(1,t*2.3),colors={void:'#8ceaff',shrine:'#e05058',shadow:'#6a9c9d',lava:'#ff8b39',hands:'#c39bce',flash:'#ee354a',purple:'#b581ff',blood:'#e65268',ratio:'#f0cf8e',lightning:'#8de2f4',ice:'#b9efff',straw:'#e8b980',gravity:'#a49bd4',slash:'#eb9e9e',energy:'#87cddd'};c.strokeStyle=colors[type]||colors.energy;c.fillStyle=c.strokeStyle;c.lineWidth=1.5;
   if(type==='void'||type==='purple'||type==='gravity'||type==='energy'){for(let i=0;i<12;i++){const r=(i*29+t*130)%(dim*.78);c.globalAlpha=(1-r/(dim*.8))*.48;c.beginPath();c.ellipse(x,y,r,r*.55,t*.24+i*.04,0,Math.PI*2);c.stroke();}for(let i=0;i<70;i++){const a=i*2.399+t*.12,r=dim*.10+(i*37+t*95)%(dim*.85);c.globalAlpha=.14+(i%6)/15;c.beginPath();c.moveTo(x+Math.cos(a)*r,y+Math.sin(a)*r*.75);c.lineTo(x+Math.cos(a)*(r+28*p),y+Math.sin(a)*(r+28*p)*.75);c.stroke();}c.globalAlpha=.8;const g=c.createRadialGradient(x,y,1,x,y,dim*.15);g.addColorStop(0,type==='purple'?'#e4ccff':'#d9f7ff');g.addColorStop(.13,colors[type]);g.addColorStop(1,'transparent');c.fillStyle=g;c.fillRect(x-dim*.2,y-dim*.2,dim*.4,dim*.4);}
   else if(type==='shrine'||type==='slash'||type==='ratio'||type==='straw'){for(let i=0;i<12;i++){const phase=(t*1.25+i*.12)%1;if(phase>.7)continue;const xx=(i*137)%w,yy=(i*89)%h;c.globalAlpha=(.7-phase)*p;c.lineWidth=type==='straw'?3:1+i%2;c.beginPath();c.moveTo(xx-w*.3,yy+h*.2);c.lineTo(xx+w*.5,yy-h*.3);c.stroke();}if(type==='ratio'){c.globalAlpha=.85;c.lineWidth=2;c.beginPath();c.moveTo(w*.2,y);c.lineTo(w*.86,y);c.stroke();for(let i=0;i<=10;i++){const xx=w*.2+w*.066*i;c.beginPath();c.moveTo(xx,y-10);c.lineTo(xx,y+10);c.stroke();}c.fillRect(w*.2+w*.066*7-2,y-23,4,46);}}
   else if(type==='flash'||type==='lightning'){for(let i=0;i<9;i++){const a=i*Math.PI*2/9+t*.18;c.beginPath();c.moveTo(x,y);for(let j=1;j<9;j++){const r=dim*j*.065,aa=a+Math.sin(j*17+i+t*9)*.17;c.lineTo(x+Math.cos(aa)*r,y+Math.sin(aa)*r);}c.globalAlpha=.8;c.lineWidth=type==='flash'?9:5;c.strokeStyle=type==='flash'?'#130d18':'#d5fcff';c.stroke();c.lineWidth=2;c.strokeStyle=colors[type];c.stroke();}}

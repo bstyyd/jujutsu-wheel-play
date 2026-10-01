@@ -1,0 +1,278 @@
+{
+  "policy": "Use actual official reference images in each generation call. Preserve exact designs and visible phase; do not infer missing designs from names. Generation quality and alpha are reviewed separately. These are private local development references, not a redistribution license.",
+  "references": [
+    {
+      "index": 0,
+      "key": "gojo",
+      "file": "references/gojo.png",
+      "source": "https://jujutsukaisen.jp/images/chara_detail4.png"
+    },
+    {
+      "index": 1,
+      "key": "yuji",
+      "file": "references/official-yuji-v5.png",
+      "source": "https://jujutsukaisen.jp/images/chara_category1/chara_detail1.png"
+    },
+    {
+      "index": 2,
+      "key": "megumi",
+      "file": "references/official-megumi-v5.png",
+      "source": "https://jujutsukaisen.jp/images/chara_category1/chara_detail2.png",
+      "caption": "按要求调整站姿，双手自然垂放并完整露出。"
+    },
+    {
+      "index": 3,
+      "key": "nobara",
+      "file": "references/official-nobara-v5.png",
+      "source": "https://jujutsukaisen.jp/images/chara_category1/chara_detail3.png"
+    },
+    {
+      "index": 4,
+      "key": "nanami",
+      "file": "references/official-nanami.png",
+      "source": "https://jujutsukaisen.jp/images/chara_detail9.png"
+    },
+    {
+      "index": 5,
+      "key": "maki",
+      "file": "references/official-maki.png",
+      "source": "https://jujutsukaisen.jp/images/chara_detail6.png"
+    },
+    {
+      "index": 6,
+      "key": "yuta",
+      "file": "references/official-yuta.png",
+      "source": "https://jujutsukaisen.jp/images/chara_shimetsu/chara_detail7.png"
+    },
+    {
+      "index": 7,
+      "key": "todo",
+      "file": "references/official-todo.png",
+      "source": "https://jujutsukaisen.jp/images/chara_detail13.png"
+    },
+    {
+      "index": 8,
+      "key": "kamo",
+      "file": "references/official-kamo.png",
+      "source": "https://jujutsukaisen.jp/images/chara_detail23.png"
+    },
+    {
+      "index": 9,
+      "key": "naoya",
+      "file": "references/official-naoya.png",
+      "source": "https://jujutsukaisen.jp/images/chara_shimetsu/chara_detail13.png"
+    },
+    {
+      "index": 10,
+      "key": "yuki",
+      "file": "references/official-yuki.png",
+      "source": "https://jujutsukaisen.jp/images/chara_shimetsu/chara_detail9.png"
+    },
+    {
+      "index": 11,
+      "key": "toji",
+      "file": "references/official-toji.png",
+      "source": "https://jujutsukaisen.jp/images/chara_category4/chara_detail22.png"
+    },
+    {
+      "index": 12,
+      "key": "虎杖受肉宿傩",
+      "file": "references/sukuna-manga-v4/yuji-ch130-stance.jpg",
+      "source": "https://www.pinterest.com/pin/874542821404290109/",
+      "type": "Manga story-panel pose reproduced by a community account; chapter 130 is the repost claim, not independently verified. Official anime sheet supplies color only.",
+      "caption": "漫画正文站姿 · 话数尚未核定",
+      "additional": [
+        {
+          "file": "references/official-sukuna.png",
+          "source": "https://jujutsukaisen.jp/images/chara_detail5.png",
+          "label": "官方动画配色参考"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "key": "十影宿傩",
+      "file": "references/sukuna-manga-v4/megumi-ch224-street.jpg",
+      "source": "https://www.sportskeeda.com/anime/jujutsu-kaisen-fans-troll-akutami-gojo-sukuna-become-friends-chapter-224",
+      "type": "Chapter 224 story panels reproduced by Sportskeeda: sleeveless white kimono and relaxed standing pose. Chapter 216 supplies face details only.",
+      "caption": "第 224 话正文 · 白色无袖和服",
+      "additional": [
+        {
+          "file": "references/sukuna-manga-v4/megumi-ch216-stance.jpg",
+          "source": "https://forum.gamer.com.tw/C.php?bsn=48102&snA=1670",
+          "label": "第 216 话正文 · 发型与脸部咒纹"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "key": "神武真身宿傩",
+      "file": "references/sukuna-manga-v4/heian-ch237-reveal.jpg",
+      "source": "https://game.xiaomi.com/viewpoint/1359077112_1695887892389_100",
+      "type": "Chapter 237 final story panel reproduced by Xiaomi community; chapter 238 story panel reproduced by FandomWire. No volume cover used in v4 generation.",
+      "caption": "第 237 话正文 · 受肉完成",
+      "additional": [
+        {
+          "file": "references/sukuna-manga-v4/heian-ch238-front.png",
+          "source": "https://fandomwire.com/yuji-and-yuta-do-the-unthinkable-rescue-megumi-even-when-gojo-satoru-couldnt/",
+          "label": "第 238 话正文 · 脸部与四臂结构"
+        },
+        {
+          "source": "https://shonenjumpplus.com/volume/17106371867308608466/trial",
+          "label": "集英社第 27 卷试读"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "key": "kenjaku",
+      "file": "references/official-kenjaku.png",
+      "source": "https://jujutsukaisen.jp/images/chara_shimetsu/chara_detail29.png"
+    },
+    {
+      "index": 16,
+      "key": "mahito",
+      "file": "references/official-mahito.png",
+      "source": "https://jujutsukaisen.jp/images/chara_detail22.png"
+    },
+    {
+      "index": 17,
+      "key": "jogo",
+      "file": "references/official-jogo.png",
+      "source": "https://jujutsukaisen.jp/images/chara_detail18.png"
+    },
+    {
+      "index": 18,
+      "key": "hanami",
+      "file": "references/official-hanami.png",
+      "source": "https://jujutsukaisen.jp/images/chara_detail19.png"
+    },
+    {
+      "index": 19,
+      "key": "dagon",
+      "file": "references/official-dagon.png",
+      "source": "https://jujutsukaisen.jp/images/chara_category4/chara_detail21.png"
+    },
+    {
+      "index": 20,
+      "key": "choso",
+      "file": "references/official-choso.png",
+      "source": "https://jujutsukaisen.jp/images/chara_detail29.png"
+    },
+    {
+      "index": 21,
+      "key": "eso",
+      "file": "references/official-eso.png",
+      "source": "https://jujutsukaisen.jp/images/chara_detail30.png"
+    },
+    {
+      "index": 22,
+      "key": "kechizu",
+      "file": "references/official-kechizu.png",
+      "source": "https://jujutsukaisen.jp/images/chara_detail31.png"
+    },
+    {
+      "index": 23,
+      "key": "咒胎怠天",
+      "file": "references/episode4-2.jpg",
+      "source": "https://jujutsukaisen.jp/images/episodes/4-2.jpg",
+      "type": "Official episode4 special-grade curse. Visual mapping inferred from original game episode-like label; original label retained.",
+      "caption": "沿用官方剧照可核对的上半身构图。"
+    },
+    {
+      "index": 24,
+      "key": "junpei",
+      "file": "references/official-junpei.png",
+      "source": "https://jujutsukaisen.jp/images/chara_detail21.png"
+    },
+    {
+      "index": 25,
+      "key": "koguy",
+      "file": "references/official-koguy.png",
+      "source": "https://jujutsukaisen.jp/images/chara_category4/chara_detail15.png"
+    },
+    {
+      "index": 26,
+      "key": "魔虚罗",
+      "file": "references/official-mahoraga-full.jpg",
+      "source": "https://on-line.1kuji.com/Contents/ProductImages/0/sap_0000001411_2766106_LL.jpg",
+      "additional": [
+        {
+          "file": "references/episode41-2.jpg",
+          "source": "https://jujutsukaisen.jp/images/episodes/41-2.jpg",
+          "label": "官方第41集 · 面部细节"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "key": "naobito",
+      "file": "references/official-naobito.png",
+      "source": "https://jujutsukaisen.jp/images/chara_detail28.png"
+    },
+    {
+      "index": 28,
+      "key": "uraume",
+      "file": "references/official-uraume.png",
+      "source": "https://jujutsukaisen.jp/images/chara_category4/chara_detail20.png"
+    },
+    {
+      "index": 29,
+      "key": "dhruv",
+      "file": "references/official-dhruv.png",
+      "source": "https://jujutsukaisen.jp/images/chara_shimetsu/chara_detail25.png"
+    },
+    {
+      "index": 30,
+      "key": "kurourushi",
+      "file": "references/official-kurourushi.png",
+      "source": "https://jujutsukaisen.jp/images/chara_shimetsu/chara_detail27.png"
+    },
+    {
+      "index": 31,
+      "key": "uro",
+      "file": "references/official-uro.png",
+      "source": "https://jujutsukaisen.jp/images/chara_shimetsu/chara_detail26.png"
+    },
+    {
+      "index": 32,
+      "key": "ryu",
+      "file": "references/official-ryu.png",
+      "source": "https://jujutsukaisen.jp/images/chara_shimetsu/chara_detail24.png"
+    },
+    {
+      "index": 33,
+      "key": "higuruma",
+      "file": "references/official-higuruma.png",
+      "source": "https://jujutsukaisen.jp/images/chara_shimetsu/chara_detail16.png"
+    },
+    {
+      "index": 34,
+      "key": "kashimo",
+      "file": "references/official-kashimo.png",
+      "source": "https://jujutsukaisen.jp/images/chara_shimetsu/chara_detail19.png"
+    },
+    {
+      "index": 35,
+      "key": "hakari",
+      "file": "references/official-hakari.png",
+      "source": "https://jujutsukaisen.jp/images/chara_shimetsu/chara_detail11.png"
+    }
+  ],
+  "mahoraga": {
+    "index": 26,
+    "fullbody": {
+      "file": "references/official-mahoraga-full.jpg",
+      "source": "https://on-line.1kuji.com/Contents/ProductImages/0/sap_0000001411_2766106_LL.jpg",
+      "type": "Official licensed full-body figure; anatomy reference"
+    },
+    "anime": {
+      "file": "references/episode41-2.jpg",
+      "source": "https://jujutsukaisen.jp/images/episodes/41-2.jpg",
+      "type": "Official episode41 anime frame; head and linework"
+    },
+    "generated": "assets/mahoraga-official-v2.png"
+  },
+  "missing": [],
+  "supplementalReferenceApproval": "2026-09-11 user approved manga/model references, then specifically rejected cover-derived Sukuna designs and required actual manga story panels. V4 uses story-panel reproductions; original art is Gege Akutami / Shueisha, repost hosts are identified separately."
+}

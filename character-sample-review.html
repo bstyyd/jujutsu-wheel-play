@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>精致像素 · 角色动作审核</title><link rel="stylesheet" href="battle-art-review.css?v=web-20261001T095751Z"><link rel="stylesheet" href="character-sample-review.css?v=web-20261001T095751Z"></head>
+<body class="sample-review" data-sample="phanpara-v1"><main>
+<header><div><p class="eyebrow">已选基准 B · 精致像素平衡</p><h1>B 基准角色动作</h1><p>虎杖、钉崎、坏相、血涂与此前四人，每人16帧，已接入本地游戏。动作按拳击、锤钉、血羽、吐血及各自武器区分；可切换旧样张比较。</p></div><a href="/">返回游戏 ↗</a></header>
+<section class="toolbar"><label>美术版本<select id="artStyle"><option value="b">B · 精致像素平衡 / 16帧</option><option value="pixel">像素 · 上一批样张</option><option value="cel">赛璐璐 · 旧样张</option></select></label><label>己方<select id="ally"></select></label><label>敌方<select id="enemy"></select></label><label>查看动作<select id="side"><option value="0">己方</option><option value="1">敌方</option></select></label><label>场地<select id="environment"><option value="abandoned">废弃楼层</option><option value="campus">高专</option><option value="shibuya">涩谷</option></select></label></section>
+<section class="stage" aria-label="Godot 样张动作预览"><iframe id="stage" title="角色战斗舞台" src="godot/embed.html" sandbox="allow-scripts allow-same-origin"></iframe><p id="status" role="status">正在载入战斗舞台…</p></section>
+<nav class="actions" aria-label="演示控制"><button id="attack">播放攻击</button><button id="cast">播放招牌动作</button><button id="idle">恢复待机</button><label><input type="checkbox" id="group" checked> 多人站位</label><span id="name"></span></nav>
+<p id="note"></p>
+<section class="reference-panel" aria-label="造型比对"><div><h2>像素头部放大</h2><canvas id="head" width="420" height="340" aria-label="当前姿势头部细节"></canvas><p>点击下方姿势检查脸型、服装、双手和武器；恢复待机可查看呼吸与眨眼。</p></div><div><h2>官方造型参考</h2><img id="reference" alt="对应角色的官方造型参考"><a id="referenceLink" target="_blank" rel="noopener">查看官方来源 ↗</a></div></section>
+<section id="poses" aria-label="16个关键帧"></section>
+<footer>B 已选为后续统一画风，这批四人已接入本地游戏。待机按脚底对齐，攻击分别有起手、出手、命中和收势。伏黑的召唤与领域手势分开；真希重劈为武器动作。魔虚罗继续使用已认可的原图。</footer>
+</main><script src="combat-presentation.js?v=web-20261001T095751Z"></script><script src="battle-art-review.js?v=web-20261001T095751Z"></script></body></html>
+

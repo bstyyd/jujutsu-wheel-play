@@ -32,7 +32,7 @@
  const draw=DomainPresentation.draw;DomainPresentation.draw=function(...a){const result=draw.apply(this,a);refresh();return result;};
  const sfx=BattleUI.sfxFor;BattleUI.sfxFor=function(event){
   const result=sfx.call(this,event);if(event.domainSnapshot)refresh();
-  if(event.type==='domain_clash'&&event.domainSnapshot?.length===2){
+  if(event.type==='domain_clash'&&event.domainSnapshot?.length===2&&event.domainPhase==='engage'){
    get('domainClashFlash')?.remove();clearTimeout(clashTimer);
    const flash=document.createElement('div');flash.id='domainClashFlash';flash.className='domain-clash-flash';flash.setAttribute('aria-hidden','true');
    const a=event.domainSnapshot.find(f=>f.side==='ally'),b=event.domainSnapshot.find(f=>f.side==='enemy');

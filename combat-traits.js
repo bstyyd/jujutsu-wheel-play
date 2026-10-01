@@ -24,7 +24,7 @@
  const court=(e,u)=>hostiles(e,u).some(f=>fieldType(e,f)==='诛伏赐死');
  const sealed=(e,u)=>court(e,u)&&!u.equipmentId;
  const toolSealed=(e,u)=>!!u.equipmentId&&court(e,u);
- const blocked=(e,u,action)=>sealed(e,u)&&['tech','ult','domain'].includes(action)?'判决没收：术式暂时封锁，使用体术或防御。':'';
+ const blocked=(e,u,action)=>window.BattleResonance?.blocked(e,u,action)||(sealed(e,u)&&['tech','ult','domain'].includes(action)?'判决没收：术式暂时封锁，使用体术或防御。':'');
  const effects=u=>u.traitEffects||(u.traitEffects={});
  const mark=(u,key,source,turns=2)=>{effects(u)[key]={source,left:turns};};
  const say=(ev,text)=>ev.push({type:'skill',text});
@@ -41,7 +41,7 @@
   if(name==='嵌合暗翳庭'){say(ev,'【嵌合暗翳庭】影与式神增幅生效；不完整领域没有必中。');return true;}
   if(!solo(e,f))return true;
   if(name==='无量空处'||name==='诛伏赐死'){say(ev,`【${name}】${info(name).tag}生效，不结算直接伤害。`);return true;}
-  const avg=(u.eff[0]+u.eff[1])/2,total=u.isPlayer?avg*6+u.maxCp*.06:avg*(u.side==='enemy'?3.5:5),base=total*(opening?.4:.2);
+  const avg=(u.eff[0]+u.eff[1])/2,total=u.isPlayer?avg*6+u.maxCp*.06:avg*(u.side==='enemy'?3.5:5),base=total*(opening?.4:.2)*(f.barrierCondition==='compact'?.85:1);
   const hit=(t,n,label)=>{if(t?.alive&&!e.ended&&fs(e).includes(f))e.dealDamage(u,t,Math.round(n),1,'domain',ev,label,false,true);};
   if(name==='荡蕴平线'){
    if(!e.units[f.focus]?.alive)f.focus=e.units.indexOf(targets.slice().sort((a,b)=>a.hp/a.maxHp-b.hp/b.maxHp)[0]);
@@ -126,11 +126,12 @@
  proto.playerAct=function(action,...a){
   const reason=blocked(this,this.player,action);
   if(reason){this.awaitingPlayer=true;return {events:[{type:'info',text:reason}],ended:false,needInput:true,retryInput:true};}
-  if(action==='defend'){
+  let fortify=null;
+  if(action==='defend'&&this.awaitingPlayer){
    const state=effects(this.player);delete state.nail;delete state.soul;
-   const f=dc().active(this,this.player);if(f)f.stability=Math.min(100,f.stability+15);
+   const f=dc().active(this,this.player);if(f){const before=f.stability;f.stability=Math.min(100,f.stability+15);fortify={type:'domain_state',domainPhase:'fortify',owner:f.owner,stabilityGain:f.stability-before,reason:'防御稳固',text:`【${f.name}】防御稳固 +${Math.round(f.stability-before)} 稳定度；恢复8%咒力，仍需支付领域维持。`,domainSnapshot:dc().snapshot(this)};}
   }
-  this.player.traitAction=action;return player.call(this,action,...a);
+  this.player.traitAction=action;const result=player.call(this,action,...a);if(fortify)result.events.unshift(fortify);return result;
  };
  const npc=proto.npcAct;
  proto.npcAct=function(u,ev){
@@ -163,7 +164,7 @@
   if(u.buff.stun>0)list.push('受控 · 跳过 '+u.buff.stun+' 行动');
   if(u.traitJackpot>0)list.push('奖金补给 · '+u.traitJackpot+' 行动');
   if(dc().active(e,u)?.combo)list.push('刀阵连携 · 下次体术 +35%');
-  return list;
+  list.push(...(window.BattleResonance?.status(e,u)||[]));return list;
  }
  window.BattleTraits={rules,info,description,techniqueNotes,domainPulse,beforeTurn,blocked,toolSealed,status,solo};
 })();

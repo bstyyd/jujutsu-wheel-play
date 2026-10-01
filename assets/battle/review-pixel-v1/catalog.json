@@ -1,0 +1,1383 @@
+{
+  "version": "review-pixel-v1",
+  "surfaceAtlas": "battle/v1/surfaces.png",
+  "actors": {
+    "yuji": {
+      "file": "battle/review-pixel-v1/yuji.png",
+      "label": "虎杖悠仁",
+      "artIndex": 1,
+      "facing": "right",
+      "height": 3.2,
+      "pixelStep": 1,
+      "frames": [
+        [
+          53,
+          24,
+          272,
+          329
+        ],
+        [
+          413,
+          23,
+          274,
+          330
+        ],
+        [
+          774,
+          25,
+          274,
+          328
+        ],
+        [
+          1128,
+          55,
+          295,
+          298
+        ],
+        [
+          41,
+          384,
+          286,
+          330
+        ],
+        [
+          404,
+          387,
+          318,
+          325
+        ],
+        [
+          743,
+          392,
+          374,
+          322
+        ],
+        [
+          1137,
+          385,
+          284,
+          329
+        ],
+        [
+          42,
+          756,
+          294,
+          308
+        ],
+        [
+          417,
+          713,
+          296,
+          349
+        ],
+        [
+          775,
+          762,
+          274,
+          302
+        ],
+        [
+          1138,
+          765,
+          281,
+          299
+        ]
+      ],
+      "feet": [
+        0.993921,
+        0.993939,
+        0.993902,
+        0.993289,
+        0.993939,
+        1.0,
+        0.993789,
+        0.993921,
+        0.993506,
+        1.0,
+        0.993377,
+        0.993311
+      ],
+      "centers": [
+        0.498162,
+        0.498175,
+        0.498175,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "frameScales": [
+        1.012308,
+        1.015385,
+        1.009231,
+        0.916923,
+        1.015385,
+        1.0,
+        0.990769,
+        1.012308,
+        0.947692,
+        1.073846,
+        0.929231,
+        0.92
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "idle3": 2,
+        "windup": 3,
+        "advance": 4,
+        "release": 5,
+        "attack": 6,
+        "recover": 7,
+        "cast": 8,
+        "castRelease": 9,
+        "guard": 10,
+        "hit": 11
+      },
+      "motion": {
+        "windup": 0.08,
+        "contact": 0.2,
+        "end": 0.35,
+        "lunge": 0.85,
+        "castLunge": 0.12
+      },
+      "choreography": "Yuji Itadori, early red hood, navy uniform, red sneakers, short pink hair, NO tattoos, no weapon. Frames: 0 compact boxing idle; 1 small weight shift and shoulder breath; 2 same stance closing eyelids briefly. 3 low hips, right fist drawn behind rib; 4 short forward step in boxing guard; 5 right shoulder rotates with fist just before extension; 6 planted driving right straight punch; 7 fist follows through with twisted hips; 8 draws fist to chin recovering feet. 9 left hand guarding face right fist tight low preparing cursed-energy hook; 10 diagonal downward hook contact; 11 hook recovered into guard. 12 tight forearm boxing shell; 13 body-blow recoil knees bent both fists close; 14 exhausted seated with one hand supporting, no injury; 15 sharp uppercut/contact silhouette for Black Flash, NO energy painted.",
+      "animations": {
+        "idle": {
+          "loop": true,
+          "track": [
+            {
+              "frame": 0,
+              "until": 0.94
+            },
+            {
+              "frame": 1,
+              "until": 1.7
+            },
+            {
+              "frame": 0,
+              "until": 2.34
+            },
+            {
+              "frame": 2,
+              "until": 2.48
+            },
+            {
+              "frame": 0,
+              "until": 3.1
+            }
+          ]
+        },
+        "cast": {
+          "track": [
+            {
+              "frame": 8,
+              "until": 0.72
+            },
+            {
+              "frame": 9,
+              "until": 1.08
+            },
+            {
+              "frame": 7,
+              "until": 1.28
+            },
+            {
+              "frame": 0,
+              "until": 1.36
+            }
+          ]
+        }
+      },
+      "actions": {
+        "melee": {
+          "timing": [
+            0.2,
+            0.5,
+            0.59,
+            0.84,
+            1.14
+          ],
+          "approach": true,
+          "track": [
+            {
+              "frame": 3,
+              "until": 0.2
+            },
+            {
+              "frame": 4,
+              "until": 0.32
+            },
+            {
+              "frame": 5,
+              "until": 0.5
+            },
+            {
+              "frame": 6,
+              "until": 0.59
+            },
+            {
+              "frame": 7,
+              "until": 0.84
+            },
+            {
+              "frame": 0,
+              "until": 1.14
+            }
+          ]
+        },
+        "yuji-cursed": {
+          "timing": [
+            0.32,
+            0.72,
+            0.82,
+            1.08,
+            1.36
+          ],
+          "approach": true,
+          "track": [
+            {
+              "frame": 8,
+              "until": 0.72
+            },
+            {
+              "frame": 9,
+              "until": 1.08
+            },
+            {
+              "frame": 7,
+              "until": 1.28
+            },
+            {
+              "frame": 0,
+              "until": 1.36
+            }
+          ]
+        }
+      },
+      "signature": "yuji-cursed",
+      "idleRegistration": {
+        "method": "planted-stance-v1",
+        "frames": [
+          0,
+          1,
+          2
+        ]
+      },
+      "pixelArt": true,
+      "headRects": [
+        [
+          120,
+          24,
+          158,
+          112
+        ],
+        [
+          481,
+          23,
+          158,
+          112
+        ],
+        [
+          843,
+          25,
+          159,
+          112
+        ],
+        [
+          1188,
+          55,
+          212,
+          101
+        ],
+        [
+          113,
+          384,
+          172,
+          112
+        ],
+        [
+          492,
+          387,
+          228,
+          111
+        ],
+        [
+          869,
+          392,
+          246,
+          109
+        ],
+        [
+          1207,
+          385,
+          165,
+          112
+        ],
+        [
+          86,
+          756,
+          194,
+          105
+        ],
+        [
+          494,
+          713,
+          150,
+          119
+        ],
+        [
+          852,
+          762,
+          163,
+          103
+        ],
+        [
+          1204,
+          765,
+          194,
+          102
+        ]
+      ],
+      "reference": "references/phanpara-review-v1/yuji.png"
+    },
+    "nobara": {
+      "file": "battle/review-pixel-v1/nobara.png",
+      "label": "钉崎野蔷薇",
+      "artIndex": 3,
+      "facing": "right",
+      "height": 3.0,
+      "pixelStep": 1,
+      "frames": [
+        [
+          103,
+          17,
+          191,
+          329
+        ],
+        [
+          486,
+          17,
+          191,
+          329
+        ],
+        [
+          861,
+          17,
+          194,
+          329
+        ],
+        [
+          1213,
+          23,
+          235,
+          323
+        ],
+        [
+          86,
+          353,
+          243,
+          334
+        ],
+        [
+          473,
+          373,
+          239,
+          314
+        ],
+        [
+          796,
+          398,
+          346,
+          289
+        ],
+        [
+          1250,
+          359,
+          197,
+          329
+        ],
+        [
+          89,
+          689,
+          248,
+          326
+        ],
+        [
+          470,
+          714,
+          225,
+          301
+        ],
+        [
+          837,
+          747,
+          210,
+          268
+        ],
+        [
+          1181,
+          714,
+          287,
+          301
+        ]
+      ],
+      "feet": [
+        0.993921,
+        0.993921,
+        0.993921,
+        0.993808,
+        0.994012,
+        0.993631,
+        0.99308,
+        0.993921,
+        0.993865,
+        0.993355,
+        0.992537,
+        0.993355
+      ],
+      "centers": [
+        0.507853,
+        0.510471,
+        0.512887,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "frameScales": [
+        1.012308,
+        1.012308,
+        1.012308,
+        0.993846,
+        1.027692,
+        0.966154,
+        0.889231,
+        1.012308,
+        1.003077,
+        0.926154,
+        0.824615,
+        0.926154
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "idle3": 2,
+        "windup": 3,
+        "advance": 4,
+        "release": 5,
+        "attack": 6,
+        "recover": 7,
+        "cast": 8,
+        "castRelease": 9,
+        "guard": 10,
+        "hit": 11
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.25,
+        "end": 0.4,
+        "lunge": 0.2,
+        "castLunge": 0.12
+      },
+      "choreography": "Nobara Kugisaki, orange bob hair, navy jacket skirt brown tights brown loafers, small silver claw hammer and metal nails. Frames: 0 hammer rested by shoulder left hand holds nail; 1 tiny wrist/hip shift; 2 matching stance brief blink. 3 hammer draws back near shoulder left hand held safely away; 4 short firm forward foot step; 5 waist twist hammer begins descending; 6 horizontal hammer strike in front of torso; 7 hammer follows through low and across; 8 returns hammer to shoulder. 9 left hand places nail pointing RIGHT while right hammer lifts above head; 10 crisp hammer taps nail towards RIGHT, hammer hand and nail hand clearly separate; 11 follow through hammer lowered, left fingers released. 12 crouched forearm/hammer defensive stance; 13 sideways stumble retaining hammer; 14 exhausted seated knees together with hammer by knee; 15 holds straw doll with left hand and taps it with hammer for Resonance. No blood.",
+      "animations": {
+        "idle": {
+          "loop": true,
+          "track": [
+            {
+              "frame": 0,
+              "until": 0.94
+            },
+            {
+              "frame": 1,
+              "until": 1.7
+            },
+            {
+              "frame": 0,
+              "until": 2.34
+            },
+            {
+              "frame": 2,
+              "until": 2.48
+            },
+            {
+              "frame": 0,
+              "until": 3.1
+            }
+          ]
+        },
+        "cast": {
+          "track": [
+            {
+              "frame": 8,
+              "until": 0.72
+            },
+            {
+              "frame": 9,
+              "until": 1.08
+            },
+            {
+              "frame": 7,
+              "until": 1.28
+            },
+            {
+              "frame": 0,
+              "until": 1.36
+            }
+          ]
+        }
+      },
+      "actions": {
+        "melee": {
+          "timing": [
+            0.26,
+            0.58,
+            0.69,
+            0.92,
+            1.22
+          ],
+          "approach": true,
+          "track": [
+            {
+              "frame": 3,
+              "until": 0.26
+            },
+            {
+              "frame": 4,
+              "until": 0.388
+            },
+            {
+              "frame": 5,
+              "until": 0.58
+            },
+            {
+              "frame": 6,
+              "until": 0.69
+            },
+            {
+              "frame": 7,
+              "until": 0.92
+            },
+            {
+              "frame": 0,
+              "until": 1.22
+            }
+          ]
+        },
+        "straw": {
+          "timing": [
+            0.32,
+            0.72,
+            0.82,
+            1.08,
+            1.36
+          ],
+          "approach": false,
+          "track": [
+            {
+              "frame": 8,
+              "until": 0.72
+            },
+            {
+              "frame": 9,
+              "until": 1.08
+            },
+            {
+              "frame": 7,
+              "until": 1.28
+            },
+            {
+              "frame": 0,
+              "until": 1.36
+            }
+          ]
+        }
+      },
+      "signature": "straw",
+      "idleRegistration": {
+        "method": "planted-stance-v1",
+        "frames": [
+          0,
+          1,
+          2
+        ]
+      },
+      "pixelArt": true,
+      "headRects": [
+        [
+          105,
+          17,
+          187,
+          112
+        ],
+        [
+          488,
+          17,
+          187,
+          112
+        ],
+        [
+          863,
+          17,
+          190,
+          112
+        ],
+        [
+          1215,
+          23,
+          230,
+          110
+        ],
+        [
+          107,
+          353,
+          206,
+          114
+        ],
+        [
+          476,
+          373,
+          213,
+          107
+        ],
+        [
+          854,
+          398,
+          286,
+          98
+        ],
+        [
+          1252,
+          359,
+          193,
+          112
+        ],
+        [
+          91,
+          689,
+          244,
+          111
+        ],
+        [
+          508,
+          714,
+          185,
+          102
+        ],
+        [
+          880,
+          747,
+          150,
+          91
+        ],
+        [
+          1185,
+          714,
+          269,
+          102
+        ]
+      ],
+      "reference": "references/phanpara-review-v1/nobara.png"
+    },
+    "gojo": {
+      "file": "battle/review-pixel-v1/gojo.png",
+      "label": "五条悟·前期",
+      "artIndex": 0,
+      "facing": "right",
+      "height": 3.55,
+      "pixelStep": 1,
+      "frames": [
+        [
+          174,
+          7,
+          131,
+          346
+        ],
+        [
+          464,
+          7,
+          131,
+          346
+        ],
+        [
+          807,
+          8,
+          134,
+          345
+        ],
+        [
+          1137,
+          7,
+          187,
+          346
+        ],
+        [
+          115,
+          366,
+          198,
+          348
+        ],
+        [
+          426,
+          366,
+          302,
+          348
+        ],
+        [
+          778,
+          369,
+          340,
+          345
+        ],
+        [
+          1175,
+          368,
+          144,
+          346
+        ],
+        [
+          153,
+          725,
+          151,
+          347
+        ],
+        [
+          470,
+          726,
+          236,
+          345
+        ],
+        [
+          791,
+          726,
+          175,
+          345
+        ],
+        [
+          1172,
+          730,
+          188,
+          341
+        ]
+      ],
+      "feet": [
+        0.99422,
+        0.99422,
+        0.994203,
+        0.99422,
+        0.994253,
+        0.994253,
+        0.994203,
+        0.99422,
+        0.994236,
+        0.994203,
+        0.994203,
+        0.994135
+      ],
+      "centers": [
+        0.503817,
+        0.507634,
+        0.514925,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "frameScales": [
+        1.011696,
+        1.011696,
+        1.008772,
+        1.011696,
+        1.017544,
+        1.017544,
+        1.008772,
+        1.011696,
+        1.01462,
+        1.008772,
+        1.008772,
+        0.997076
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "idle3": 2,
+        "windup": 3,
+        "advance": 4,
+        "release": 5,
+        "attack": 6,
+        "recover": 7,
+        "cast": 8,
+        "castRelease": 9,
+        "guard": 10,
+        "hit": 11
+      },
+      "motion": {
+        "windup": 0.06,
+        "contact": 0.18,
+        "end": 0.32,
+        "lunge": 0.25,
+        "castLunge": 0.06
+      },
+      "choreography": "EARLY Satoru Gojo black blindfold ALWAYS ON, white upright hair, dark violet high-collar zipped uniform trousers black shoes. Relaxed confident smile. Frames: 0 upright relaxed one hand in pocket; 1 lean weight to opposite leg free hand loose; 2 brief amused head inclination. 3 lifts knee with other hand in pocket; 4 hip pivots slightly backward; 5 side kick half extended; 6 full RIGHT side kick leaning torso back; 7 bent knee returns; 8 grounded relaxed stance. 9 free right index and middle fingers lift beside face; 10 right index points precisely towards RIGHT while other hand remains pocketed; 11 free hand lowers unhurriedly. 12 upright open palm stops attack with Infinity, no boxing shell; 13 short shoulder recoil head tilt, not doubled-over; 14 exhausted seated forearms on bent knees; 15 canonical crossed index/middle fingers in front of face for Unlimited Void, blindfold remains ON. No painted effects.",
+      "animations": {
+        "idle": {
+          "loop": true,
+          "track": [
+            {
+              "frame": 0,
+              "until": 0.94
+            },
+            {
+              "frame": 1,
+              "until": 1.7
+            },
+            {
+              "frame": 0,
+              "until": 2.34
+            },
+            {
+              "frame": 2,
+              "until": 2.48
+            },
+            {
+              "frame": 0,
+              "until": 3.1
+            }
+          ]
+        },
+        "cast": {
+          "track": [
+            {
+              "frame": 8,
+              "until": 0.72
+            },
+            {
+              "frame": 9,
+              "until": 1.08
+            },
+            {
+              "frame": 7,
+              "until": 1.28
+            },
+            {
+              "frame": 0,
+              "until": 1.36
+            }
+          ]
+        }
+      },
+      "actions": {
+        "melee": {
+          "timing": [
+            0.18,
+            0.46,
+            0.56,
+            0.82,
+            1.12
+          ],
+          "approach": true,
+          "track": [
+            {
+              "frame": 3,
+              "until": 0.18
+            },
+            {
+              "frame": 4,
+              "until": 0.292
+            },
+            {
+              "frame": 5,
+              "until": 0.46
+            },
+            {
+              "frame": 6,
+              "until": 0.56
+            },
+            {
+              "frame": 7,
+              "until": 0.82
+            },
+            {
+              "frame": 0,
+              "until": 1.12
+            }
+          ]
+        },
+        "limitless": {
+          "timing": [
+            0.32,
+            0.72,
+            0.82,
+            1.08,
+            1.36
+          ],
+          "approach": false,
+          "track": [
+            {
+              "frame": 8,
+              "until": 0.72
+            },
+            {
+              "frame": 9,
+              "until": 1.08
+            },
+            {
+              "frame": 7,
+              "until": 1.28
+            },
+            {
+              "frame": 0,
+              "until": 1.36
+            }
+          ]
+        }
+      },
+      "signature": "limitless",
+      "idleRegistration": {
+        "method": "planted-stance-v1",
+        "frames": [
+          0,
+          1,
+          2
+        ]
+      },
+      "pixelArt": true,
+      "headRects": [
+        [
+          191,
+          7,
+          91,
+          93
+        ],
+        [
+          480,
+          7,
+          90,
+          93
+        ],
+        [
+          823,
+          8,
+          92,
+          93
+        ],
+        [
+          1188,
+          7,
+          101,
+          93
+        ],
+        [
+          151,
+          366,
+          103,
+          94
+        ],
+        [
+          453,
+          366,
+          98,
+          94
+        ],
+        [
+          821,
+          369,
+          100,
+          93
+        ],
+        [
+          1195,
+          368,
+          92,
+          93
+        ],
+        [
+          159,
+          725,
+          113,
+          94
+        ],
+        [
+          490,
+          726,
+          214,
+          93
+        ],
+        [
+          793,
+          726,
+          140,
+          93
+        ],
+        [
+          1193,
+          730,
+          137,
+          92
+        ]
+      ],
+      "reference": "references/phanpara-review-v1/gojo.png"
+    },
+    "mahoraga": {
+      "file": "battle/review-pixel-v1/mahoraga.png",
+      "label": "魔虚罗",
+      "artIndex": 26,
+      "facing": "right",
+      "height": 4.4,
+      "pixelStep": 1,
+      "frames": [
+        [
+          57,
+          17,
+          283,
+          347
+        ],
+        [
+          415,
+          17,
+          279,
+          347
+        ],
+        [
+          781,
+          16,
+          285,
+          348
+        ],
+        [
+          1104,
+          38,
+          325,
+          330
+        ],
+        [
+          14,
+          376,
+          364,
+          329
+        ],
+        [
+          408,
+          374,
+          331,
+          334
+        ],
+        [
+          749,
+          392,
+          385,
+          313
+        ],
+        [
+          1134,
+          378,
+          296,
+          331
+        ],
+        [
+          27,
+          709,
+          318,
+          355
+        ],
+        [
+          401,
+          709,
+          318,
+          356
+        ],
+        [
+          760,
+          718,
+          318,
+          345
+        ],
+        [
+          1131,
+          722,
+          307,
+          341
+        ]
+      ],
+      "feet": [
+        0.994236,
+        0.994236,
+        0.994253,
+        0.993939,
+        0.993921,
+        0.994012,
+        0.99361,
+        0.993958,
+        0.994366,
+        0.994382,
+        0.994203,
+        0.994135
+      ],
+      "centers": [
+        0.507067,
+        0.507168,
+        0.507018,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "frameScales": [
+        1.011662,
+        1.011662,
+        1.014577,
+        0.962099,
+        0.959184,
+        0.973761,
+        0.912536,
+        0.965015,
+        1.034985,
+        1.037901,
+        1.005831,
+        0.994169
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "idle3": 2,
+        "windup": 3,
+        "advance": 4,
+        "release": 5,
+        "attack": 6,
+        "recover": 7,
+        "cast": 8,
+        "castRelease": 9,
+        "guard": 10,
+        "hit": 11
+      },
+      "motion": {
+        "windup": 0.2,
+        "contact": 0.34,
+        "end": 0.55,
+        "lunge": 0.45,
+        "castLunge": 0.08,
+        "idlePeriod": 2.65
+      },
+      "choreography": "Exact divine general anatomy from model reference: massive white two-armed muscular body, no normal eyes, FOUR horizontal wing-like eyestalk structures on head, toothed mouth, eight-handled golden wheel above head attached by stalk, dark flowing lower pants, sash, forearm sword and black chest pendant. Canonical wheel and face crucial. Idle sword down and other fist ready; idle2 subtle shoulder/wheel rotation (wheel stays connected), windup raises sword arm, attack heavy downward sword chop, cast left palm with upright wheel, guard sword forearm, defeated crouch still eight wheel handles. Keep wheel/head/sword all in every cell.",
+      "actions": {
+        "melee": {
+          "timing": [
+            0.44,
+            0.86,
+            1.0,
+            1.32,
+            1.68
+          ],
+          "approach": true,
+          "track": [
+            {
+              "frame": 3,
+              "until": 0.44
+            },
+            {
+              "frame": 4,
+              "until": 0.608
+            },
+            {
+              "frame": 5,
+              "until": 0.86
+            },
+            {
+              "frame": 6,
+              "until": 1.0
+            },
+            {
+              "frame": 7,
+              "until": 1.32
+            },
+            {
+              "frame": 0,
+              "until": 1.68
+            }
+          ]
+        },
+        "adaptation": {
+          "timing": [
+            0.32,
+            0.72,
+            0.82,
+            1.08,
+            1.36
+          ],
+          "approach": false,
+          "track": [
+            {
+              "frame": 8,
+              "until": 0.72
+            },
+            {
+              "frame": 9,
+              "until": 1.08
+            },
+            {
+              "frame": 7,
+              "until": 1.28
+            },
+            {
+              "frame": 0,
+              "until": 1.36
+            }
+          ]
+        }
+      },
+      "animations": {
+        "idle": {
+          "loop": true,
+          "track": [
+            {
+              "frame": 0,
+              "until": 0.94
+            },
+            {
+              "frame": 1,
+              "until": 1.7
+            },
+            {
+              "frame": 0,
+              "until": 2.34
+            },
+            {
+              "frame": 2,
+              "until": 2.48
+            },
+            {
+              "frame": 0,
+              "until": 3.1
+            }
+          ]
+        },
+        "cast": {
+          "track": [
+            {
+              "frame": 8,
+              "until": 0.72
+            },
+            {
+              "frame": 9,
+              "until": 1.08
+            },
+            {
+              "frame": 7,
+              "until": 1.28
+            },
+            {
+              "frame": 0,
+              "until": 1.36
+            }
+          ]
+        }
+      },
+      "idleRegistration": {
+        "method": "planted-stance-v1",
+        "frames": [
+          0,
+          1,
+          2
+        ]
+      },
+      "pixelArt": false,
+      "headRects": [
+        [
+          128,
+          17,
+          171,
+          118
+        ],
+        [
+          482,
+          17,
+          171,
+          118
+        ],
+        [
+          852,
+          16,
+          177,
+          118
+        ],
+        [
+          1106,
+          38,
+          306,
+          112
+        ],
+        [
+          27,
+          376,
+          308,
+          112
+        ],
+        [
+          482,
+          374,
+          211,
+          114
+        ],
+        [
+          890,
+          392,
+          177,
+          106
+        ],
+        [
+          1207,
+          378,
+          186,
+          113
+        ],
+        [
+          92,
+          709,
+          249,
+          121
+        ],
+        [
+          461,
+          709,
+          251,
+          121
+        ],
+        [
+          845,
+          718,
+          214,
+          117
+        ],
+        [
+          1204,
+          722,
+          165,
+          116
+        ]
+      ],
+      "signature": "adaptation",
+      "reference": "references/phanpara-review-v1/mahoraga-official-pv.jpg"
+    }
+  }
+}

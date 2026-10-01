@@ -13,6 +13,9 @@ const Save={key:'jjk_hd2d_save_v1',backupKey:'jjk_hd2d_backup_v1',phase:'title',
    if(!strings(p.notes)||!strings(p.stolen)||!s.logs.every(l=>l&&typeof l.cls==='string'&&typeof l.text==='string'))throw Error('手记字段格式异常');
    if(!pair(p.melee)||!pair(p.eff)||!Number.isInteger(p.levelIndex)||!Number.isInteger(p.startDay))throw Error('属性范围异常');
    if(p.absorbed.length>24||!p.absorbed.every(a=>a&&typeof a.name==='string'&&Number.isInteger(a.li)&&a.li>=-2&&a.li<=11&&Number.isFinite(a.maxHp)&&a.maxHp>0&&Number.isFinite(a.maxCp)&&a.maxCp>=0&&pair(a.melee)&&pair(a.eff)))throw Error('吸收角色数据异常');
+   // Batch C2 好感度：存量存档缺失时补空表，再校验取值范围
+   if(p.favors===undefined)p.favors={};
+   if(!p.favors||typeof p.favors!=='object'||Array.isArray(p.favors)||Object.keys(p.favors).length>50||!Object.entries(p.favors).every(([k,v])=>typeof k==='string'&&k.length<=20&&Number.isInteger(v)&&v>=0&&v<=100))throw Error('好感度数据异常');
   }
   return s;
  },

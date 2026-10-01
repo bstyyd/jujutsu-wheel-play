@@ -1,0 +1,2853 @@
+{
+  "version": "web-20261001T095751Z",
+  "createdAt": "2026-10-01T09:57:53.371Z",
+  "entry": "index.html",
+  "sourcePolicy": "current frontend; no legacy regeneration",
+  "files": [
+    {
+      "path": "ART_REFERENCE_MAP.json",
+      "bytes": 9917,
+      "sha256": "102c9103d949996ae205aae2ef5282b29d3afbceedca8c1b3ed97970bbd6afba"
+    },
+    {
+      "path": "art-catalog.js",
+      "bytes": 3977,
+      "sha256": "d59b0b3e197e5a55022d4122b69d205ebea4a5548560c236f098e6990cc10e6d"
+    },
+    {
+      "path": "art-review.css",
+      "bytes": 3362,
+      "sha256": "251c8400685b842816cecf30495af44a94c0c67b3e6d38b2abb458eb7acbf508"
+    },
+    {
+      "path": "art-review.html",
+      "bytes": 1196,
+      "sha256": "f45eccfa1f72c19237c77a44c65f69ff1e448fbf54e7c055ef804f96b8b8e2ea"
+    },
+    {
+      "path": "art-review.js",
+      "bytes": 3996,
+      "sha256": "5e36709f156dca70e4346ab3e918bbae1a69fb01afe890ba582b1bf3efb8ca3a"
+    },
+    {
+      "path": "assets/audio/coverage.json",
+      "bytes": 15625,
+      "sha256": "665ff572a8423c6003d80cc3af9da19f5485be852190a843ef87dd16808c5f43"
+    },
+    {
+      "path": "assets/audio/gojo_void.mp3",
+      "bytes": 114709,
+      "sha256": "bfc8eb4ef3e240dab0bfcc0bcded13e33796ddfe2193d5fb1f8e000ce495a321"
+    },
+    {
+      "path": "assets/audio/jogo_domain.mp3",
+      "bytes": 44346,
+      "sha256": "a0e9c57762d280fa26cdfc393993b8212951655cfadd3794354b619eab5521e3"
+    },
+    {
+      "path": "assets/audio/mahito_domain.mp3",
+      "bytes": 84052,
+      "sha256": "1044efe8acef3030e6fe3395d2ff9be9cfd823d44602e50d0d4cf7f5f0477b56"
+    },
+    {
+      "path": "assets/audio/megumi_shadow.mp3",
+      "bytes": 38077,
+      "sha256": "e2bc42221436b47fcb525599cbcd841edd1e18ab8bb3d4ddad18bd66c3fd4492"
+    },
+    {
+      "path": "assets/audio/sources.json",
+      "bytes": 3668,
+      "sha256": "c2a2212e6f75ec23963478be64c017244e85e6d80f641af96d09e6f43d67e62b"
+    },
+    {
+      "path": "assets/audio/sukuna_shrine.mp3",
+      "bytes": 67334,
+      "sha256": "e1782f1508f95ec3615061128b5032865bba18d8524202b367b66749d781c76b"
+    },
+    {
+      "path": "assets/audio/v2/gojo_void.mp3",
+      "bytes": 82957,
+      "sha256": "6a4afbe8b70b79b5c57d5fb067695f21a6ce9e3065867522b0d4a0e96694fbba"
+    },
+    {
+      "path": "assets/audio/v2/hanami_domain.mp3",
+      "bytes": 35728,
+      "sha256": "6d89e53745de194b99ec53c4f76bb6e8101a905a13f877023e9f709c99dc7bc7"
+    },
+    {
+      "path": "assets/audio/v2/higuruma_domain.mp3",
+      "bytes": 65403,
+      "sha256": "e97e262740a1b588e60406dc84de5da697d60eb67c7626febb4b88f37d7cadf4"
+    },
+    {
+      "path": "assets/audio/v2/megumi_shadow.mp3",
+      "bytes": 159026,
+      "sha256": "22134a19582747fa2d45bffc910ab78d025145872e7a03ff756d535da240f85a"
+    },
+    {
+      "path": "assets/audio/v2/sources.json",
+      "bytes": 1846,
+      "sha256": "58cf7364d18db726ea94994a1a1c726bc42ec6b6646528e2e92a09bf4e6ad1c9"
+    },
+    {
+      "path": "assets/audio/v3/gojo_void.mp3",
+      "bytes": 116709,
+      "sha256": "178a7530ebbec14db63fd22dd03dcf054ee6277ca6c262beebf6f2aaab660bba"
+    },
+    {
+      "path": "assets/audio/v3/higuruma_domain.mp3",
+      "bytes": 85362,
+      "sha256": "52100f607b7aaffec23f60b6e79f537faa09a427e9e5eff5186c96421d7d0aa4"
+    },
+    {
+      "path": "assets/audio/v3/jogo_domain.mp3",
+      "bytes": 72142,
+      "sha256": "223322b1fc4acb96bbe41c37f5ac8dd3c9fb19215a5e50a00f5b9c2f92f0924d"
+    },
+    {
+      "path": "assets/audio/v3/mahito_domain.mp3",
+      "bytes": 147533,
+      "sha256": "85ea5500529c44d52ee1d18821f2245c008e17c8e9ba80e4d9aea67b8b428275"
+    },
+    {
+      "path": "assets/audio/v3/megumi_shadow.mp3",
+      "bytes": 228513,
+      "sha256": "b805abb8a7ef4a08d1cf44c1459714e7e26aea667a0b4b7d0562219cebe50568"
+    },
+    {
+      "path": "assets/audio/v3/sources.json",
+      "bytes": 4719,
+      "sha256": "19c4260391ad2133298be0bc4ccf4d79f9464f403231d60110c5530fca4a57c5"
+    },
+    {
+      "path": "assets/audio/v3/sukuna_shrine.mp3",
+      "bytes": 153280,
+      "sha256": "a7772b54d14c6dd34ef0ac01ef2f4069762e40fed123b89c769b27209b8b3af5"
+    },
+    {
+      "path": "assets/audio/v4/dagon_domain_name.mp3",
+      "bytes": 89541,
+      "sha256": "c2aa95a76e2e01986f6432b563a6f0ad9e6348003ebfb01ef6242c78c8b5eb5f"
+    },
+    {
+      "path": "assets/audio/v4/hanami_game_domain.mp3",
+      "bytes": 174703,
+      "sha256": "64517f51c50ad4a3765aea848c27d381f87dba90a4a9277e8298836e525cb357"
+    },
+    {
+      "path": "assets/audio/v4/sources.json",
+      "bytes": 2070,
+      "sha256": "2b31b1a072d0b0f7e4c503bc9f78b0aa16d15f61c08e915aad2d73bb66911220"
+    },
+    {
+      "path": "assets/audio/v5/higuruma_domain.mp3",
+      "bytes": 75288,
+      "sha256": "8cea86bba8c1873aeeaf4cc11ac542e8a76930a7a7e0d3619cc24840dc6c5146"
+    },
+    {
+      "path": "assets/audio/v5/sources.json",
+      "bytes": 1026,
+      "sha256": "43ff761a23c7d45181e615020ee4178958798ac1c41b3a0afe1033b2333a3c2b"
+    },
+    {
+      "path": "assets/battle/pixel-b-v1/maki.png",
+      "bytes": 1256057,
+      "sha256": "c2346480c3353a11df051bbdd59355590d5b44b5d319fb4439fc96961f51ac34"
+    },
+    {
+      "path": "assets/battle/pixel-b-v1/megumi.png",
+      "bytes": 1120289,
+      "sha256": "87584daf32ad7968efbfcdcfccc52353b7680f5aadc557382465c52336272159"
+    },
+    {
+      "path": "assets/battle/pixel-b-v1/nanami.png",
+      "bytes": 1341838,
+      "sha256": "f508f1ece74c82b0d613300dbccdd4be29c1deff6a2f2790942fbb40e8773b83"
+    },
+    {
+      "path": "assets/battle/pixel-b-v1/yuta.png",
+      "bytes": 1218410,
+      "sha256": "e0247937a359da514ddf6184ea2db76d695d7bdce027a6a36ab0ed50a290ca77"
+    },
+    {
+      "path": "assets/battle/pixel-b-v2/eso.png",
+      "bytes": 1241279,
+      "sha256": "23aa0a66e9f97fc818f19725bc9ecf9be57a740b4cce28b92614c0f18a715da0"
+    },
+    {
+      "path": "assets/battle/pixel-b-v2/kechizu.png",
+      "bytes": 1373829,
+      "sha256": "30f6aabfc3d3f54951b58eb9f2e9a3330946ba1316b960657e46abe7e9495c6c"
+    },
+    {
+      "path": "assets/battle/pixel-b-v2/nobara.png",
+      "bytes": 1202786,
+      "sha256": "fb5693624496d0c08c4baef3ae82cf479df46385fff8382ab26c9c1b5048edc4"
+    },
+    {
+      "path": "assets/battle/pixel-b-v2/yuji.png",
+      "bytes": 1241797,
+      "sha256": "7d795262697b6c8bf0d2ad4cc0bd4494bca9fef221ca69d8bd0503dc8e61c158"
+    },
+    {
+      "path": "assets/battle/pixel-b-v3/catalog.json",
+      "bytes": 109934,
+      "sha256": "c69f017ed673baad6c705631434e3269f4f95d225930dd5b6e536e4d5ad71ef9"
+    },
+    {
+      "path": "assets/battle/pixel-b-v3/jogo-isolation.png",
+      "bytes": 20091,
+      "sha256": "cd6b1f708205daea0add002ac2470d5f44bc13bde23ffa4ce9755b669559f8e3"
+    },
+    {
+      "path": "assets/battle/pixel-b-v3/jogo.png",
+      "bytes": 1452337,
+      "sha256": "0f0df8b282b1e053637dd5f1ca13a754157bc60b422ccdecc58c852fc9a8bb77"
+    },
+    {
+      "path": "assets/battle/pixel-b-v3/poster-jogo-0.png",
+      "bytes": 78140,
+      "sha256": "ebf01146897ad3dee14e771d8a6e4480d2dbc2fdd592096d1bcaa9d1db14cc48"
+    },
+    {
+      "path": "assets/battle/pixel-b-v3/poster-jogo-1.png",
+      "bytes": 77746,
+      "sha256": "07aa68c48e9b8aa79d7c41235217f468c5164df620ae13a2c14fb53795cc9907"
+    },
+    {
+      "path": "assets/battle/pixel-b-v3/poster-jogo-10.png",
+      "bytes": 95712,
+      "sha256": "5d8179539041af3b5f0fb3a94d451c432b8f848cf15d96f29e4fb33b2dc4dd90"
+    },
+    {
+      "path": "assets/battle/pixel-b-v3/poster-jogo-11.png",
+      "bytes": 84552,
+      "sha256": "5d0af9c6f7229621c886b700d0ce8d1aef46def687e7131acba193c3b51914a7"
+    },
+    {
+      "path": "assets/battle/pixel-b-v3/poster-jogo-12.png",
+      "bytes": 82667,
+      "sha256": "0cad2c91f1fa349204282a5f3338b901e68116d01c2796669235cdf63b859f2f"
+    },
+    {
+      "path": "assets/battle/pixel-b-v3/poster-jogo-13.png",
+      "bytes": 85983,
+      "sha256": "46b84d3a68149fc3c367100dd77ea51d14a82dac86ea747ddbe626ae9626b232"
+    },
+    {
+      "path": "assets/battle/pixel-b-v3/poster-jogo-14.png",
+      "bytes": 82480,
+      "sha256": "c405963338032e9fc09e5a07ca6904a0cc7c68988530add03a146d2bb33e99b7"
+    },
+    {
+      "path": "assets/battle/pixel-b-v3/poster-jogo-15.png",
+      "bytes": 89486,
+      "sha256": "05083b0edf3c540b5e2f2f349bfd64a813adc685c9a317109d18cb1ec900c025"
+    },
+    {
+      "path": "assets/battle/pixel-b-v3/poster-jogo-2.png",
+      "bytes": 77615,
+      "sha256": "8b66675a21674c3d5502f9bcc7f3641a43d6bc387a54c652cd7ccb8b55166751"
+    },
+    {
+      "path": "assets/battle/pixel-b-v3/poster-jogo-3.png",
+      "bytes": 85576,
+      "sha256": "8b7ad5acb69f29b047d48e2a1471587f5b5091f7fd77c42d45977e4db8b9a337"
+    },
+    {
+      "path": "assets/battle/pixel-b-v3/poster-jogo-4.png",
+      "bytes": 87783,
+      "sha256": "a9bebd12e3eb3e6497a7354d0cd7095e969014a9afca5de80d79f5ec68f0c921"
+    },
+    {
+      "path": "assets/battle/pixel-b-v3/poster-jogo-5.png",
+      "bytes": 93758,
+      "sha256": "46be38f6c26efbc58c6f99bb62858fd5ffef523c639a297146d60c74bc486293"
+    },
+    {
+      "path": "assets/battle/pixel-b-v3/poster-jogo-6.png",
+      "bytes": 87184,
+      "sha256": "ba3f5f4b49370e8aaa6b994e8d5fe514fd70f9a4dc2468a69d07dbd73b14284a"
+    },
+    {
+      "path": "assets/battle/pixel-b-v3/poster-jogo-7.png",
+      "bytes": 83656,
+      "sha256": "06bffaff377ed2571a12a49d7eaffce9b25cf94140989fd0d5e041948e7f5c8e"
+    },
+    {
+      "path": "assets/battle/pixel-b-v3/poster-jogo-8.png",
+      "bytes": 83679,
+      "sha256": "a02f4d9b2741a448dbb058d128c102a7f7791539cd2cc2e2b1ba81bc66d14ab1"
+    },
+    {
+      "path": "assets/battle/pixel-b-v3/poster-jogo-9.png",
+      "bytes": 89855,
+      "sha256": "52ddfa754da8b7c7260f8fc403ceb2fedd5f0f7c5d58c85a4e1ab23cd37a2d5e"
+    },
+    {
+      "path": "assets/battle/players-b-v1/adult-f.png",
+      "bytes": 2235031,
+      "sha256": "c6035501d2dcc6cb044d5c66ead6b16c64dfd20b63d404059dafe97ca7acc557"
+    },
+    {
+      "path": "assets/battle/players-b-v1/adult-m.png",
+      "bytes": 2194862,
+      "sha256": "a3df070563dc80c2250bc1da437e7328495c49bb90b2660b482c0e779838352c"
+    },
+    {
+      "path": "assets/battle/players-b-v1/curse.png",
+      "bytes": 2463738,
+      "sha256": "4bd9fe10f505adfdd2a6a3d14f98b3ae24871b986fabeb6bb26ec6fdf03a40a7"
+    },
+    {
+      "path": "assets/battle/players-b-v1/older-f.png",
+      "bytes": 2277645,
+      "sha256": "a670013630279fbac5cb6a1bb7aae567ae24ca3d310371f2a6f8b43b3d8a370c"
+    },
+    {
+      "path": "assets/battle/players-b-v1/older-m.png",
+      "bytes": 2359757,
+      "sha256": "ee9046374ea812fe1fe41cf401979bad557abcf0258eab33802c81134a26f8fb"
+    },
+    {
+      "path": "assets/battle/players-b-v1/weapons.png",
+      "bytes": 1226579,
+      "sha256": "c106a9d50a8cf554988e110a082d0ae1c4d8e26de17d14cdbaae03409916f338"
+    },
+    {
+      "path": "assets/battle/players-b-v1/young-f.png",
+      "bytes": 2140147,
+      "sha256": "a42eecd30cf8cbac55a2a4621e34bc32212d57af1faf9307db5545dadcf5d5d0"
+    },
+    {
+      "path": "assets/battle/players-b-v1/young-m.png",
+      "bytes": 2131700,
+      "sha256": "769b4c2475c1dbcebc2512d75ea6313aa1d730ec7e1989bbc99f975fa1aa7eb6"
+    },
+    {
+      "path": "assets/battle/review-phanpara-v1/catalog.json",
+      "bytes": 27866,
+      "sha256": "22ecb7803512c32b28c1a26fd5dd453157780a340a1f2198da520ac36af86612"
+    },
+    {
+      "path": "assets/battle/review-phanpara-v1/gojo.png",
+      "bytes": 904934,
+      "sha256": "bac746900eb022267ccfd6cba16b26df64a6413a0671a6101e50e9fdbbef8757"
+    },
+    {
+      "path": "assets/battle/review-phanpara-v1/mahoraga.png",
+      "bytes": 1778780,
+      "sha256": "32cb40e732e25b4166c987024622007fc6ade47d527dc97345711d55d13e4dca"
+    },
+    {
+      "path": "assets/battle/review-phanpara-v1/nobara-v2.png",
+      "bytes": 967684,
+      "sha256": "05bad43322f1fe603b2ea4a1f563eefa53a7e557ab67bfa02c5f13f8b0246365"
+    },
+    {
+      "path": "assets/battle/review-phanpara-v1/yuji-v2.png",
+      "bytes": 950059,
+      "sha256": "a35e7196570192e66dc033345dd1af06a2825b9dfe239169a68de27f6e8d05da"
+    },
+    {
+      "path": "assets/battle/review-pixel-v1/catalog.json",
+      "bytes": 27844,
+      "sha256": "4c9587d2b417097422b88306802edbcc88aa30e91517c3d18a664c32e0d40f5d"
+    },
+    {
+      "path": "assets/battle/review-pixel-v1/gojo.png",
+      "bytes": 822816,
+      "sha256": "de842929962108735367d6aaec04384fd88579566ca729d132793f802e1d1688"
+    },
+    {
+      "path": "assets/battle/review-pixel-v1/mahoraga.png",
+      "bytes": 1778780,
+      "sha256": "32cb40e732e25b4166c987024622007fc6ade47d527dc97345711d55d13e4dca"
+    },
+    {
+      "path": "assets/battle/review-pixel-v1/nobara.png",
+      "bytes": 1905280,
+      "sha256": "2338dc3259d1438aa3a13c1f39a80fee5aef10d439f58f22c55139639b29ba61"
+    },
+    {
+      "path": "assets/battle/review-pixel-v1/yuji.png",
+      "bytes": 1182719,
+      "sha256": "d8a709b99dbbff334ff91e401c5d6226dfe27244fa16cbd14169b3ec7466b8c7"
+    },
+    {
+      "path": "assets/battle/style-baselines-v2/b.png",
+      "bytes": 1392935,
+      "sha256": "b1801917fe5ce2900e8afdfb326bf956826739f2f9a1b5907bd4ce9050cd7bbb"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/aerial-isolation.png",
+      "bytes": 22131,
+      "sha256": "6ba8d489820abca6546389c6b57b43e31348402cfc6944507a1edb85ee2f257d"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/aerial.png",
+      "bytes": 1834623,
+      "sha256": "b1f5c4c80e21bcc29e54e132352353a50d5af64de4615c5828c51fedb74a2355"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/common-final-isolation.png",
+      "bytes": 21746,
+      "sha256": "61885f0442ea6a9226440f74f00535aca80caacdb8fd4f5529b0ca6ae2750e66"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/common-final.png",
+      "bytes": 1444071,
+      "sha256": "62d51671f538f0ef8b8809d1484bfe3c34d08a16598551f294aab2123847b7fe"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/large-isolation.png",
+      "bytes": 29044,
+      "sha256": "340f7ca4a67a5f0c5b93b0273415fe73abcd60d8aaa29765c2b6ab4e1423073a"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/large.png",
+      "bytes": 1583204,
+      "sha256": "1ba68b8f7e84e70d23f5062830dfb4c292339a1adf525368f9e6b1e5a7f7368c"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/mechanical-isolation.png",
+      "bytes": 20877,
+      "sha256": "9d758b3c9a8eeb63da6887f9894e63c943aaff772f5dcf4d334f20791c312755"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/mechanical.png",
+      "bytes": 1203215,
+      "sha256": "93f6f252649153f6cdfd7785fc915ef068101fe0a21ba581b8eee41a21afb38f"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-crow-1.png",
+      "bytes": 46058,
+      "sha256": "f5cf72aa78554ffdcb4a473d7bb99fbcdb9f0141a59c49a9766965a516c15295"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-crow-2.png",
+      "bytes": 71255,
+      "sha256": "237ece00a14dc974ca0a57683f8f47aeb99b45781ebc8871ab4724028601aa5b"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-crow-3.png",
+      "bytes": 79571,
+      "sha256": "324553255db50822c6e9b1cf18ef984c5da036097a6ef7ed24445df967448fe6"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-crow-4.png",
+      "bytes": 73724,
+      "sha256": "13b7a4c8f1843caadfc9733c944af00469a956e05c467a21f62a24152935712d"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-crow-5.png",
+      "bytes": 74988,
+      "sha256": "28e05294575e1119096aeafa19e3c8855db450190ace4cb601fd5f0cbbd57383"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-crow-6.png",
+      "bytes": 49291,
+      "sha256": "bbf8d263d105361c8b1e38542ce1b6341eeb772a904e0284294771b73fa9ed18"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-crow-7.png",
+      "bytes": 36158,
+      "sha256": "ecdcc77e23039bbee7b3e2bb4a48deee55df39a261f8b7a0572090398c553395"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-crow.png",
+      "bytes": 46674,
+      "sha256": "0ff749c02864def608ff8bc4a6083b446d83e35c1e8cb25959f4b4c6833b2916"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-deer-1.png",
+      "bytes": 35120,
+      "sha256": "4be11965ac4f471f566b7db92608be560b7beea22169f2e1893c485f95624b15"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-deer-10.png",
+      "bytes": 31752,
+      "sha256": "450e60af30c20bd6c967429977d0fb5749a4273ea7ac02634efd460b11b8676f"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-deer-11.png",
+      "bytes": 33436,
+      "sha256": "f9fe5a6b71b80a8eaa907cfcdd00991a575a4c8520a0f7d2cd107506b85272a9"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-deer-12.png",
+      "bytes": 35328,
+      "sha256": "426fae11b2aa6dcec5da85757a752e2afcb29620c849ac8e7eda531403b7562f"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-deer-13.png",
+      "bytes": 31367,
+      "sha256": "73e26785d426bc7bbcf2c0729bd780e25a1db02e271e20f82bbcd26b64d9328c"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-deer-14.png",
+      "bytes": 35873,
+      "sha256": "3a105639639c23812b5e220ec076455c6a191c351806e7d7a5d4c146c576f7c8"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-deer-15.png",
+      "bytes": 19116,
+      "sha256": "4899e897297e75f116569d08ede37fbec2b64d63e3b3c8acb527fe0bd3ef5db6"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-deer-2.png",
+      "bytes": 33423,
+      "sha256": "af495314231710166c53f364f8eec0b4305d8ef90585f8ac3bcbf7c056836f91"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-deer-3.png",
+      "bytes": 32622,
+      "sha256": "d2d73f06fc220caadd276cb2288abb526ebf191476fe534963b29663532cdbe7"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-deer-4.png",
+      "bytes": 34056,
+      "sha256": "834c3840aef36ee4cc52247761ce21560865a309393bbbfd79a030724fbc1432"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-deer-5.png",
+      "bytes": 31756,
+      "sha256": "ee7c2a71fda27369c5afea4321f4302f2d1a5fdd13a1800e3d063c25329d4a70"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-deer-6.png",
+      "bytes": 36378,
+      "sha256": "0a5a5ade8d2759ed0d6519dad8673d79d897d0a06daba24e48227dcf45b2856e"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-deer-7.png",
+      "bytes": 20145,
+      "sha256": "23d58e8a44130c5c6def60015397db2b8377c43b2d03d77bd143b3d9278e54fe"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-deer-8.png",
+      "bytes": 35436,
+      "sha256": "f0fac1c485059323dd9de4ba1f71714afb21618bc3e86e3a801da162373779f7"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-deer-9.png",
+      "bytes": 34823,
+      "sha256": "42dcd24744793c2589919fbca3bc9d17195a501996e217d3e513d161dded964d"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-deer.png",
+      "bytes": 35776,
+      "sha256": "cfc1392ccb95081b42614c7527d307ca6f2deae24603feeb2b039655ec15bb1a"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-dog-1.png",
+      "bytes": 70681,
+      "sha256": "fc7b08c6d207d5efa64ec5a77f7d719ab57097217e6cee06854ee55741796690"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-dog-2.png",
+      "bytes": 63476,
+      "sha256": "9d56d6fc4dc112dd4b332bbe7e0aa8cbecd2f5853e72c8d377a4528fc2810c10"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-dog-3.png",
+      "bytes": 67726,
+      "sha256": "b64344c6438f8f30ffe61fb44fcbd5f8835f2b3d77bd5c1f0b04895cac81b127"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-dog-4.png",
+      "bytes": 76103,
+      "sha256": "0e5df255f2efa90ea2543844c6b7c939453028573cfe800b633aca43d4015201"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-dog-5.png",
+      "bytes": 70360,
+      "sha256": "8fc8c3d6a245730f6910e8edbf505feb03efb2ff6fe1296623cd1752d6f03687"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-dog-6.png",
+      "bytes": 71489,
+      "sha256": "3d640441bb11b2751b39b6f2283975fbe58bd3674d5beed8d64db17789d5beb8"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-dog-7.png",
+      "bytes": 49325,
+      "sha256": "7546c4183e104ba347c1d347ec0bf41ee3064ed98db19b3511fed7d4a1549ff9"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-dog.png",
+      "bytes": 69116,
+      "sha256": "ccce1de3300b68c6c7aef4dc2975e334bed309ad971ab7ea50b332d87daff747"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-elephant-1.png",
+      "bytes": 34900,
+      "sha256": "b82e2c07a94f7ef338ad1f83b924fbf907e4383a43ef08dcd8d5d31338431bfc"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-elephant-10.png",
+      "bytes": 35831,
+      "sha256": "04e4c8a4136045ff7f47f0f54e6d0db0e79b401e161796d1d0022861b393005d"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-elephant-11.png",
+      "bytes": 47227,
+      "sha256": "3f2f5735e0c7ad7b2890e93a94b20136ff5922fcadf0ff934dc52755a7dca66c"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-elephant-12.png",
+      "bytes": 34057,
+      "sha256": "2631442ccb94b23d5fd4b717faf690a750b9162f76de3d2ed32e8042594c2abe"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-elephant-13.png",
+      "bytes": 31904,
+      "sha256": "8d3e3810f6bea0a59ca6deb9403020c6efa24c312a26820475cc4bb788e03b4c"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-elephant-14.png",
+      "bytes": 35012,
+      "sha256": "fb8f9aea9ea1d18dd15368569ca54033b1d396d2c8f30c4588962a89cadac834"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-elephant-15.png",
+      "bytes": 21071,
+      "sha256": "8b541ecc575ffbcd5119c1b850d44def9b7657b9f806f5e96124fc7e9c7950cb"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-elephant-2.png",
+      "bytes": 35064,
+      "sha256": "398281e0e208e184187a728ab896c7929c8cf93b47e832b19f2f785e0f19692e"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-elephant-3.png",
+      "bytes": 43821,
+      "sha256": "08e513592a12dee030ab479c931641ba76fe48fbf082f4df59d5e2b5af2c449e"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-elephant-4.png",
+      "bytes": 31114,
+      "sha256": "3dd7086f8341d4ae5d3ff0f8ef2aed918a57e5beae9069574e542682fb024f5d"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-elephant-5.png",
+      "bytes": 31592,
+      "sha256": "a01c341bcaa5ce2bc72e9fabed957d29fb0d4c3c30681452956f98ac4dc79560"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-elephant-6.png",
+      "bytes": 32437,
+      "sha256": "3692f4fe9e05ad04286bef6dd9a6116d853e7dc6aef22c98ed245196109c4b23"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-elephant-7.png",
+      "bytes": 20402,
+      "sha256": "cbff399af6fc8cd34083ffe7006917aa4fb582af2be371e9ef99f49649a75169"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-elephant-8.png",
+      "bytes": 38324,
+      "sha256": "aaec7bcfe6f7bb3f79bd2ac2e5bbcd2768a2812e9905d15dc255852b8d743ae9"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-elephant-9.png",
+      "bytes": 34274,
+      "sha256": "3e61955c53958af624e931052e72b3bca73442e60d9ec1d7f065ad4008e3eb38"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-elephant.png",
+      "bytes": 37827,
+      "sha256": "d29bf4b5c67a17372041457b9f52b52b3733886ab0cefd904fe8ba27b90b1b48"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-frog-1.png",
+      "bytes": 46927,
+      "sha256": "213a1b17df5c0ac1e407b5c22bc2bded0f2b935b7ef6d5e04b05158998d8d97d"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-frog-2.png",
+      "bytes": 46376,
+      "sha256": "333d0cfbd452bbad9ac84130d12c614faf9e53ed39112e3e340af0ff8f2e7d43"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-frog-3.png",
+      "bytes": 56030,
+      "sha256": "d3b009988e2e31abae91b0739d5ab84726ec2c1aac76b3542542609c2d61b912"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-frog-4.png",
+      "bytes": 58338,
+      "sha256": "48952216f8b741c51c865d6ce7b84cbc93bf9f0253e84ef60d08947c77c10342"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-frog-5.png",
+      "bytes": 47460,
+      "sha256": "b184076e9b420cb8a74277558e5b9f54d3c32f336a53f1719553370ed6370fb5"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-frog-6.png",
+      "bytes": 64830,
+      "sha256": "ff0f9e6c6025f1a3f5ce9fbc93db2d1cd2ef4c6ed1554a5281ec41e57cd74fcc"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-frog-7.png",
+      "bytes": 44591,
+      "sha256": "f76135ff16760e03132ecc85eca13c85da495858765c8bacde38505304896017"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-frog.png",
+      "bytes": 46349,
+      "sha256": "56a9749d7c3b70ac8fabe672e5e8b79e67ea769859f6d6475d5bee0f93b6d5f5"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-fused-1.png",
+      "bytes": 207928,
+      "sha256": "8d906d203f5f917dcc23dd0b4d4a46bc74efb041f97c95f3cb0ad569d05d934e"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-fused-2.png",
+      "bytes": 183413,
+      "sha256": "ecb4be1928af43277897aa0fa3d6d56eaae59dc10c6ebee1c59a94b5f8935da0"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-fused-3.png",
+      "bytes": 221669,
+      "sha256": "9a36290a904a143d5d477ea1d49ce9e16f2d5a17a64e61813f58ea2eefc74bea"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-fused-4.png",
+      "bytes": 227863,
+      "sha256": "01f86b05a0747367f849b2985010390d447d9051482f7a859cf8702832dcd9c5"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-fused-5.png",
+      "bytes": 148294,
+      "sha256": "c023bb22330eae2a1f71798bf46493658ffb5d4dd15f4e0314d5a61483daa3ff"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-fused-6.png",
+      "bytes": 174319,
+      "sha256": "0e1c0e47f8a3fc93380b17d4454e7c23860673e8584fd1392dcceb9cccab5d53"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-fused-7.png",
+      "bytes": 139471,
+      "sha256": "c861313424236c6ff9066f700603f3aa0deee865ddd55a8b2ec8354647c03692"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-fused.png",
+      "bytes": 213790,
+      "sha256": "859f47697daaa19749b1d0975d949cfc5900f425fa6e9697a6f4303b414798d4"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-mecha-1.png",
+      "bytes": 182109,
+      "sha256": "610cca36559514bf4db73dfbaaf9cfdab0bbf8590d339a912d00fcd80fb558ed"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-mecha-2.png",
+      "bytes": 221510,
+      "sha256": "4fddc746252bc0f7b29ba53dcb5633fc42d9c79ed1675ccbcc49e1a2fed7242a"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-mecha-3.png",
+      "bytes": 148938,
+      "sha256": "8a6c330997a342ed773b8378fec12b1dd07962d6a3bc9ae4271c869ee9ab5efe"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-mecha-4.png",
+      "bytes": 221510,
+      "sha256": "4fddc746252bc0f7b29ba53dcb5633fc42d9c79ed1675ccbcc49e1a2fed7242a"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-mecha-5.png",
+      "bytes": 199509,
+      "sha256": "346009de0fad7cf63c0dea35120cf85e958d68eef23408a92e42d26b08432e1e"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-mecha-6.png",
+      "bytes": 182109,
+      "sha256": "610cca36559514bf4db73dfbaaf9cfdab0bbf8590d339a912d00fcd80fb558ed"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-mecha-7.png",
+      "bytes": 148938,
+      "sha256": "8a6c330997a342ed773b8378fec12b1dd07962d6a3bc9ae4271c869ee9ab5efe"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-mecha.png",
+      "bytes": 199509,
+      "sha256": "346009de0fad7cf63c0dea35120cf85e958d68eef23408a92e42d26b08432e1e"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-nue-1.png",
+      "bytes": 104887,
+      "sha256": "52a5e1289ae29ec9261569f1eed9585588925c1cb47ad27d0cbd411c027f7231"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-nue-2.png",
+      "bytes": 130609,
+      "sha256": "e7524f079d4c581c290fb493dcfbe2dac82ef1809bf845ef58ac7bb15ee02118"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-nue-3.png",
+      "bytes": 141929,
+      "sha256": "2cbd54bf292e94fd4c7c62063d78d3989f0a6b662c7c82b9aa597b595935a069"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-nue-4.png",
+      "bytes": 162846,
+      "sha256": "b352879756c56c6487b3e3ee4d5eb96f57997dcd70ffaf40b9b342dab5e79450"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-nue-5.png",
+      "bytes": 102161,
+      "sha256": "7b2e3fe965506619392a3bdbbb60f549b106788a6df86ef7740b145b32d6b73a"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-nue-6.png",
+      "bytes": 107354,
+      "sha256": "b52c4dc50488668fb59d334e3f19d165a12f73d1601bedd3ca8affdfc37b3ea9"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-nue-7.png",
+      "bytes": 79958,
+      "sha256": "1d43347d6615316fa677bf948938c9a1d51623268395881c4fab4576ab1eaca8"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-nue.png",
+      "bytes": 95614,
+      "sha256": "0c75bb15d1ef81f6f1fb8cf2b3e60a2afbfc96cc92ab8c1aeb6198f8c947e33d"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-ox-1.png",
+      "bytes": 34301,
+      "sha256": "abe6cdbe85bd3f8c83c87ea69ccdd936164d891fe5a9a1b05b42fe3d4e52ba75"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-ox-10.png",
+      "bytes": 26393,
+      "sha256": "92c82826a65f3dda67f507e5808856e72098e7432e1dcdbe495e13d12b03629f"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-ox-11.png",
+      "bytes": 27947,
+      "sha256": "8d8ad21338a5684ad8940bd8f9ea5d1024877f18c0948b3de2c14424c17cfa25"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-ox-12.png",
+      "bytes": 26806,
+      "sha256": "f423570348ddabe6e4c6d65252f963034f5b74cab5eae87afc82b0f90ae102c7"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-ox-13.png",
+      "bytes": 30516,
+      "sha256": "8233cd55ce2402a55dcf8e76d7c0a9efa1c57cfca17621ae45119854f0471ce0"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-ox-14.png",
+      "bytes": 31169,
+      "sha256": "7734f92ff1eec2383825170a189dd330d18baf7a7a793cd3b88c456f916ccfac"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-ox-15.png",
+      "bytes": 20811,
+      "sha256": "02332f2231f929ef16b761a0d97009e49af2dc2ff5a05673cad4b9ae80081f32"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-ox-2.png",
+      "bytes": 27647,
+      "sha256": "9ed7c7aea74230c98079fbcd94c27e5501ea28e6ab2942d7f3a0a72c78e2b103"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-ox-3.png",
+      "bytes": 31937,
+      "sha256": "efcc686358050b9cd0c711a5fd752f0a80c8db4bfd36323e7b40d98db526a1bd"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-ox-4.png",
+      "bytes": 30669,
+      "sha256": "638b8abc3356ea8efc417ae98de525f83fde8070fbc92ee4286cc6452ce2bc55"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-ox-5.png",
+      "bytes": 31867,
+      "sha256": "0f828393c033626f8cc15d98b5504379b241e8ab9479e82fcdbbd79799b62985"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-ox-6.png",
+      "bytes": 27814,
+      "sha256": "0863aee279a19146bcbd17cdd0a024ccf13a40803524faacb7d5598c92ab51f5"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-ox-7.png",
+      "bytes": 22984,
+      "sha256": "eba69a57568dc85b61259235942235c553fda93904cc8aea777565c3b557d1b5"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-ox-8.png",
+      "bytes": 35069,
+      "sha256": "47ea14bf00c1135862aa10df10ca9b55ad9cb45dc320d24ce2be44a4ba98d403"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-ox-9.png",
+      "bytes": 33500,
+      "sha256": "82e9ae8c0d5803e9195939244c883542330d7ad0879ecc566ae361db426672c0"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-ox.png",
+      "bytes": 35926,
+      "sha256": "f96ff4ed7f6383420866fbb2d9b22c3f18d3035c0070ab241adbcbf058978bfe"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-puppet-1.png",
+      "bytes": 77416,
+      "sha256": "e24f58fbab855215f69fef339a6094fe27516aaac640c3002b4f0c318be2d400"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-puppet-2.png",
+      "bytes": 92126,
+      "sha256": "91a982b6aca888e7e3868b28f4598c142e94af0d3a94ac305965b6d9f5c49ce1"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-puppet-3.png",
+      "bytes": 78686,
+      "sha256": "c1865a24f42bdec0f3227472b12cffd63c492835b679a1cfbbea2d26126c7b80"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-puppet-4.png",
+      "bytes": 93078,
+      "sha256": "1f7cadcd04a5db32c12435a51b84f7d5203ec3400c68313cd073913b875f4e31"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-puppet-5.png",
+      "bytes": 79074,
+      "sha256": "91aeee8faab3537c54a213335421c162fc32adc83a0228f941b07b7095819590"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-puppet-6.png",
+      "bytes": 82989,
+      "sha256": "a2b0776af38ca7e75381ad3755bd8b8c87d8545d75718f80ea9207c1143ff66d"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-puppet-7.png",
+      "bytes": 63618,
+      "sha256": "c323475c4ebf5794fba84b5e3875c08666b625aa3abcf01a127705516a675cbc"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-puppet.png",
+      "bytes": 80565,
+      "sha256": "1c7cfbe7357ff61d01553a40ecee47b84bb1a14b2514675d268b6f3707815786"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-rabbit-1.png",
+      "bytes": 47455,
+      "sha256": "dd91cd04555d6fa64a156ee66d396be92ffdbc95c9a3af23167fb3fb869eb1f5"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-rabbit-2.png",
+      "bytes": 50228,
+      "sha256": "ac88f0926a246f1396a297cecf9560c2f4fd779185b258b5559ac3b650557afe"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-rabbit-3.png",
+      "bytes": 51930,
+      "sha256": "42acbc24a1b9708d958a0eb73d9b0c8a679c30beb562da16915b698acfded9a5"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-rabbit-4.png",
+      "bytes": 48576,
+      "sha256": "9097cd1b04451307e5faa382438e8298baf3c7a33a700a6eb2c2b9ef0faeaa72"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-rabbit-5.png",
+      "bytes": 50257,
+      "sha256": "f5174cfa5cfb08e52722548609d9f9c5b912b43af875f78fbd21e19430b692d2"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-rabbit-6.png",
+      "bytes": 52254,
+      "sha256": "016af9de1a38a527859eb6d2a0ab2459fd1bca05c795ac4556ad1c7a29b523a0"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-rabbit-7.png",
+      "bytes": 40737,
+      "sha256": "9e19a102e97022770ecf324f147470d48b7453e88870d8968903136e8385e0c1"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-rabbit.png",
+      "bytes": 48528,
+      "sha256": "d8aa973fc3869f18a8edef1c3b002662d7503528ae4af4e18402dfab56d631a8"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-serpent-1.png",
+      "bytes": 105054,
+      "sha256": "a4c7c2815896fa6c8efcad2e36b13c88a58c95e43f0dfd0040f313c826a925db"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-serpent-2.png",
+      "bytes": 102026,
+      "sha256": "6b67b6ebb787fdd1f70ac7a90db07ec715040dedc5eb0aa309b7c649701753c5"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-serpent-3.png",
+      "bytes": 96169,
+      "sha256": "8f70825e679e93ed08b4ad307d0a5fc1e1fa8fb9e8fe888aa9d60d16ee3dbabe"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-serpent-4.png",
+      "bytes": 132182,
+      "sha256": "f15d568281adec38397e29324939e8c0ff8d2b95384271c72fa381a71cf5cc83"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-serpent-5.png",
+      "bytes": 113965,
+      "sha256": "d06511071da3d7454f5dab8eca1fea06b0dd1fe0820364b5e35274fdac7edf4b"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-serpent-6.png",
+      "bytes": 114493,
+      "sha256": "6f2b58e64205f936a7d0eae01b435df3a69f01b3c2276cbe8edbad79581a048a"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-serpent-7.png",
+      "bytes": 78000,
+      "sha256": "bbc456f553d80dd1131c2449464c1300cd0ee83f5af399ef5cce81b099c36c69"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/poster-summon-serpent.png",
+      "bytes": 104254,
+      "sha256": "9148e2b913c9f55a8cbd932f5ba82bc1bff7834cefa7c33216e1b807976680b4"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/special-isolation.png",
+      "bytes": 25101,
+      "sha256": "83c026fff5528f696ba6a57996e54517a923a5da32ba6493c7334cc1ddbb17c3"
+    },
+    {
+      "path": "assets/battle/summons-b-v1/special.png",
+      "bytes": 2661183,
+      "sha256": "94e4c6b9f2ae1330b966319fb2749c8a7784a6c66f9b836269a14d55f88d8062"
+    },
+    {
+      "path": "assets/battle/v1/curse.png",
+      "bytes": 2161713,
+      "sha256": "c35e9a465f60d2b6fc0bb8f331d88fbbc04a7a355d9575d55c9a72392de507b0"
+    },
+    {
+      "path": "assets/battle/v1/gojo-domain.png",
+      "bytes": 2290822,
+      "sha256": "e8bf29b3ee45a8450387c67ed9f7d7df813e2d16240459c8eacc2c698cd03eaf"
+    },
+    {
+      "path": "assets/battle/v1/player.png",
+      "bytes": 1435253,
+      "sha256": "94e9edc2d7b21c72d2584dc3bf1926994061fcf74c574b7ce325ffc37727297d"
+    },
+    {
+      "path": "assets/battle/v1/sukuna-shibuya.png",
+      "bytes": 1188285,
+      "sha256": "e38c801ad3a6fc421cbbf4d5f702ac41d1578f60ee591e174b5214d7b245895b"
+    },
+    {
+      "path": "assets/battle/v1/surfaces.png",
+      "bytes": 2798604,
+      "sha256": "c170b81d365fbfecb86e219edc70ff9dcd8886caaf7b852205b07c03f89ee2d5"
+    },
+    {
+      "path": "assets/battle/v2/dagon.png",
+      "bytes": 1949169,
+      "sha256": "500ea6cd969bd85440ca9ac7233df279b07c0f3c33cdbe8d04899e6a2020d207"
+    },
+    {
+      "path": "assets/battle/v2/gojo-shinjuku.png",
+      "bytes": 2008727,
+      "sha256": "04176509c50efda4b67d7c9ff891c30c8166cd8f229a8b4f0975fe86e822bb42"
+    },
+    {
+      "path": "assets/battle/v2/hanami.png",
+      "bytes": 2035478,
+      "sha256": "df1bae92e5d7b93a98361d265f6491b15203d76a4ed85cc99cb3a8a4a1373553"
+    },
+    {
+      "path": "assets/battle/v2/mahito.png",
+      "bytes": 2018822,
+      "sha256": "2860e8df6204e0164492e61efcfb120e6fac70b09c465f3927b3143a5dc8c643"
+    },
+    {
+      "path": "assets/battle/v2/sukuna-heian.png",
+      "bytes": 2322124,
+      "sha256": "fa51f1cfd3bf5cae05ec6352ec6cba0b35c05674a908b2ce8fc8140ac0fb22b8"
+    },
+    {
+      "path": "assets/battle/v2/sukuna-megumi.png",
+      "bytes": 2108003,
+      "sha256": "c7e015a4de36cc83fe61c23805b6bca8df31770de87ed39cf77a94ee5f83665f"
+    },
+    {
+      "path": "assets/battle/v2/sukuna-yuji.png",
+      "bytes": 2039517,
+      "sha256": "b2bd6ab39cdba7348928dd30d093ac4c52dd08523964c03c59e9c414f4bb3221"
+    },
+    {
+      "path": "assets/battle/v2/todo.png",
+      "bytes": 1945917,
+      "sha256": "9cb788023a722fe59f1cda44b46f51ab3aa1a21c3f248553919694d0a2788413"
+    },
+    {
+      "path": "assets/battle/v3/yuji-melee.png",
+      "bytes": 1914327,
+      "sha256": "1ee245c9fc0139cd9f5fc14fe496804958f6e97468ddc5e67074a3bfbfce03b8"
+    },
+    {
+      "path": "assets/battle/v4/choso.png",
+      "bytes": 2091634,
+      "sha256": "18f2965b881c7e78f44a4d773051515d3f153408affe1160749d19a0cfa03e78"
+    },
+    {
+      "path": "assets/battle/v4/dhruv.png",
+      "bytes": 2015275,
+      "sha256": "29d288b2f1341c71df3f433db384cc0c76cca1f4881aa9ac480ef591f9091150"
+    },
+    {
+      "path": "assets/battle/v4/finger-bearer.png",
+      "bytes": 2047640,
+      "sha256": "ce64c9c3fdbd5990d1335162da7e5092a1e4ff35c9a13f706a727e8820a87dcf"
+    },
+    {
+      "path": "assets/battle/v4/hakari.png",
+      "bytes": 1744760,
+      "sha256": "444a11ec082c287482224bd103b8d2d9932d8484cee7f161b31ee9d6a62d41a5"
+    },
+    {
+      "path": "assets/battle/v4/higuruma.png",
+      "bytes": 1728969,
+      "sha256": "592c29d014f94c02e962e2defc7ed23168fcb4486e934788cf1f7b15f0861b8f"
+    },
+    {
+      "path": "assets/battle/v4/junpei.png",
+      "bytes": 1855900,
+      "sha256": "9ad47d35c9beff20b737b68486a11cac1ad6aaa0f6f54969339e73dc714f6b4e"
+    },
+    {
+      "path": "assets/battle/v4/kamo.png",
+      "bytes": 1933643,
+      "sha256": "cb3fe8c6cea4f39acd737ef74942acd0bbb06999ff435edf1b449f3c1c7895bb"
+    },
+    {
+      "path": "assets/battle/v4/kashimo.png",
+      "bytes": 2065151,
+      "sha256": "45f99b6e3076b1d3476dfdb0a915d8af0a7e101567f6d197b56dd653049632c2"
+    },
+    {
+      "path": "assets/battle/v4/kenjaku.png",
+      "bytes": 2074575,
+      "sha256": "187bf84ed0e21f9c1114bb6ee8d43d007e22b578d951fedfeb50bfc652bdbe40"
+    },
+    {
+      "path": "assets/battle/v4/koguy.png",
+      "bytes": 1789620,
+      "sha256": "e28bb00be5b9edc70a6f5fd7cd320ff6bf2a16b5eea98ba1150a3ed0b00120ea"
+    },
+    {
+      "path": "assets/battle/v4/kurourushi.png",
+      "bytes": 1710849,
+      "sha256": "d96d351f4a1e48974a314bee1d2fe91f421b5fdd388cb713938d29ae0a2fc10d"
+    },
+    {
+      "path": "assets/battle/v4/mahoraga.png",
+      "bytes": 2345758,
+      "sha256": "ff27a8219037c6a9f8a39047219b8fd5712c4540b464fa2b69faca5fe572c895"
+    },
+    {
+      "path": "assets/battle/v4/naobito.png",
+      "bytes": 2041745,
+      "sha256": "90f8ab6b6257c9eea12578223ec6eac375c5751d22504cc543cea262d2a8cb17"
+    },
+    {
+      "path": "assets/battle/v4/naoya.png",
+      "bytes": 1926165,
+      "sha256": "eb5679c9544462badc20afdfe20e14532166b53fd3174bb36d5f48d84852fcca"
+    },
+    {
+      "path": "assets/battle/v4/ryu.png",
+      "bytes": 1840865,
+      "sha256": "426ded54bfcaf2a4a56a580a4577ed14328467568af0baa6eb5f37385dbe591c"
+    },
+    {
+      "path": "assets/battle/v4/sukuna-shibuya.png",
+      "bytes": 1871759,
+      "sha256": "482e36c9dca8139833c472385702076d76657df57390738f8575c9cb2ce71e29"
+    },
+    {
+      "path": "assets/battle/v4/toji.png",
+      "bytes": 1817046,
+      "sha256": "f8604b40a0cf3f5c250ef2bd12029be8b325a78d7417b3c3c88d64d0452c22b9"
+    },
+    {
+      "path": "assets/battle/v4/uraume.png",
+      "bytes": 1825315,
+      "sha256": "1ee4c379d868eaff534b2a7aa8fe864b848be587f987ed0b5e9ad0189a15663b"
+    },
+    {
+      "path": "assets/battle/v4/uro.png",
+      "bytes": 1985030,
+      "sha256": "f59d68f2b52a1eed893224813a29cd764221858d00080fe775830addb88241f5"
+    },
+    {
+      "path": "assets/battle/v4/yuki.png",
+      "bytes": 1920221,
+      "sha256": "8b0dbc4ee9438230ff2400d1ac13984bcbb41d4ef361085ccaea7b02d0819329"
+    },
+    {
+      "path": "assets/battle/v5/gojo.png",
+      "bytes": 815840,
+      "sha256": "f6d06f5954c56074304b14dd1e6a4db42dcc3e51afd524c26b9611dd98155f5c"
+    },
+    {
+      "path": "assets/cast-official-6.png",
+      "bytes": 820162,
+      "sha256": "960297fa23ed90cbd3b004b0b62f1084f3654519ba52d1591fab2ed1b9370921"
+    },
+    {
+      "path": "assets/cast/v5/choso.png",
+      "bytes": 1621059,
+      "sha256": "e40fedea7367022b38004d57efd7f38a2fc312bd0bb232748c22aee634a56c4f"
+    },
+    {
+      "path": "assets/cast/v5/dagon.png",
+      "bytes": 1613724,
+      "sha256": "7706049a535bee969215f93d2e17daafc03ae6e07eb098337998c7da3349e37a"
+    },
+    {
+      "path": "assets/cast/v5/dhruv.png",
+      "bytes": 1610263,
+      "sha256": "73ad0634d63127e5308bd0fdbdb3cf2a9a8749d0021443fae077a10d7680e0c1"
+    },
+    {
+      "path": "assets/cast/v5/eso.png",
+      "bytes": 1404339,
+      "sha256": "3fe48271c7c16e52b6d01e9ce65cbb28b7b6a628df3d7e6e7f3d89b27132cd2b"
+    },
+    {
+      "path": "assets/cast/v5/finger-bearer.png",
+      "bytes": 1663101,
+      "sha256": "3706df3e4e1778e80706b9662fdeb727992d62e5bd38a0385b36070975afd5c7"
+    },
+    {
+      "path": "assets/cast/v5/gojo.png",
+      "bytes": 1365508,
+      "sha256": "10279041cd363538cb571086a96f1b74fb66d94ce6781d05946b5e72b8dd5660"
+    },
+    {
+      "path": "assets/cast/v5/hakari.png",
+      "bytes": 1386708,
+      "sha256": "38792e2a2c082dbc85859cb7d623123ba5f78c55586bd50ded84b356afcaca55"
+    },
+    {
+      "path": "assets/cast/v5/hanami.png",
+      "bytes": 1597973,
+      "sha256": "429e39b49b89e02d5259bad509d70e37d615df1dd600128aabeee581f0051b95"
+    },
+    {
+      "path": "assets/cast/v5/higuruma.png",
+      "bytes": 1325202,
+      "sha256": "75803b93c02042a512841276b8b7193a751c62488b504c56cf0f57f16c743fcd"
+    },
+    {
+      "path": "assets/cast/v5/jogo.png",
+      "bytes": 1518017,
+      "sha256": "b7313d726ef814aabd9c6e849bb0b92e72815c40a74a6acd03d93f652696c604"
+    },
+    {
+      "path": "assets/cast/v5/junpei.png",
+      "bytes": 1381259,
+      "sha256": "c21fbdd4828d3e186ba7da47537969c06eb8fda2da8da9fbe4269e8afb7ff075"
+    },
+    {
+      "path": "assets/cast/v5/kamo.png",
+      "bytes": 1393315,
+      "sha256": "a55c6112f9798cb5ac48b55b973903ed1c9a47b3bd3294a934d7ab83ee498ce6"
+    },
+    {
+      "path": "assets/cast/v5/kashimo.png",
+      "bytes": 1505925,
+      "sha256": "e0bffc0d6d6ac295e76753e62944028b4fdc6554f3672a06a35212b1642a00c3"
+    },
+    {
+      "path": "assets/cast/v5/kechizu.png",
+      "bytes": 1516170,
+      "sha256": "b5c950f50f1f55b93120bdd1804238eff6091a1a3a338971282d9681ea7c588d"
+    },
+    {
+      "path": "assets/cast/v5/kenjaku.png",
+      "bytes": 1588121,
+      "sha256": "49521f72d129bc94e74c32b1244231af06c44b362f0110e787d0168ef4988833"
+    },
+    {
+      "path": "assets/cast/v5/koguy.png",
+      "bytes": 1729582,
+      "sha256": "02f174f64a680bdabce0660bf6f7d54ac26265a65bb92174defd055b65603f57"
+    },
+    {
+      "path": "assets/cast/v5/kurourushi.png",
+      "bytes": 1407070,
+      "sha256": "e49aee89de3754d8ee38ef1a963e213efdc81bebd80e7c9e0aa5b20486a44e83"
+    },
+    {
+      "path": "assets/cast/v5/mahito.png",
+      "bytes": 1478509,
+      "sha256": "979aa847ec8b104cb99584a84e0bb350bf796d9be3ad8b6c2f2adb5f9887143e"
+    },
+    {
+      "path": "assets/cast/v5/mahoraga.png",
+      "bytes": 1677761,
+      "sha256": "dfa1a11047355d0060af3fc87d54b77df276caaa66d29dada41c2f2bd58f0932"
+    },
+    {
+      "path": "assets/cast/v5/maki-cut2.png",
+      "bytes": 2478311,
+      "sha256": "aa4df6fcc46926a80d93e4458c5150cbb525589da3de0365d62f7c0d33403025"
+    },
+    {
+      "path": "assets/cast/v5/megumi-hands-v2.png",
+      "bytes": 1681720,
+      "sha256": "87097f1f8d07afe3518c661d22a56368e2d648bc103cdafcd1b1b98c33c0d9d3"
+    },
+    {
+      "path": "assets/cast/v5/nanami-cut2.png",
+      "bytes": 1844918,
+      "sha256": "449af147d66a89266fde5f3591a4a924ccbc277faa089fcbe1a050908f73938f"
+    },
+    {
+      "path": "assets/cast/v5/naobito.png",
+      "bytes": 1532369,
+      "sha256": "9d27db2b5fc25d737af165d84c6bbcaf4031c78c61f6c80f01763efc629c5b3f"
+    },
+    {
+      "path": "assets/cast/v5/naoya.png",
+      "bytes": 1451347,
+      "sha256": "cf64a20d4b2fd2a18a7c6367b415683eeed1477d2fbfc1a5ca928ce7fb7813be"
+    },
+    {
+      "path": "assets/cast/v5/nobara.png",
+      "bytes": 1402798,
+      "sha256": "2ed598500e4279c275ff25174a7f8df645899d1f10531adc3a54f2e4ff2ed181"
+    },
+    {
+      "path": "assets/cast/v5/ryu.png",
+      "bytes": 1505183,
+      "sha256": "76b09778f7937f6b045356a746e9a400e245b58aafea49988e7d8bb0816be14b"
+    },
+    {
+      "path": "assets/cast/v5/todo-cut2.png",
+      "bytes": 2126252,
+      "sha256": "84e38e7f704ef522c7a834a1d00f0a5856155dd8e7cf08596c10b60363fd4a5f"
+    },
+    {
+      "path": "assets/cast/v5/toji.png",
+      "bytes": 1375950,
+      "sha256": "f20b892afd7944a5dec61731a245f8bad906a44c721f8591ca7525e168f4639b"
+    },
+    {
+      "path": "assets/cast/v5/uraume.png",
+      "bytes": 1364587,
+      "sha256": "47383494de4e88ccaafdcf3a27f0168aa870f42b58160cd6a62c47879a03af4b"
+    },
+    {
+      "path": "assets/cast/v5/yuji.png",
+      "bytes": 1348083,
+      "sha256": "37456ceb9a64b2841e36e8390075dae04d2c84ef93ed2e8c1b8f7dee100e1e28"
+    },
+    {
+      "path": "assets/cast/v5/yuki.png",
+      "bytes": 1417978,
+      "sha256": "85595fde7abcf85a950542095262a7cbdb6b86ad0c3caec74dc2019170e04710"
+    },
+    {
+      "path": "assets/cast/v5/yuta-cut2.png",
+      "bytes": 2322574,
+      "sha256": "cc8fe7c10fc01a4ca9a2d35f08d12aa7bae95bbab2b3b6d213f59b721fd70d0e"
+    },
+    {
+      "path": "assets/core-alpha.png",
+      "bytes": 778510,
+      "sha256": "52318995188073c61ba91f7843f569527cd2e553aba0ade5cde44105996918dc"
+    },
+    {
+      "path": "assets/domains.png",
+      "bytes": 2475350,
+      "sha256": "40aee9b4085f6a7996be5212c02630eb3bfbf40a055af926c885edb20157c6b2"
+    },
+    {
+      "path": "assets/domains/realtime-v1/gojo.png",
+      "bytes": 1120546,
+      "sha256": "d7fac1ed76e0b1df6718d18b76673ffbfb4df267e02c515855002223404467e8"
+    },
+    {
+      "path": "assets/domains/realtime-v1/manifest.json",
+      "bytes": 5432,
+      "sha256": "80dcce30e2254d56b769289ea76ebd9e0ee0c0561dd0c5d1b502999b95f9bd6a"
+    },
+    {
+      "path": "assets/domains/realtime-v1/megumi.png",
+      "bytes": 1128946,
+      "sha256": "9858494440b18ae1f2b60ab40ad25b6b641f313e48f6f332aa3009973a87039f"
+    },
+    {
+      "path": "assets/domains/realtime-v1/prompts.json",
+      "bytes": 3824,
+      "sha256": "957eb0f0eab318d8510862ff4be99b470b850d061e1417869483588873b0cc0e"
+    },
+    {
+      "path": "assets/domains/realtime-v1/sukuna.png",
+      "bytes": 1198557,
+      "sha256": "b9883599a9cdb6cf39cdaef2c9a6b761f00cdb7b43aefcbbab9e26a8da8c862c"
+    },
+    {
+      "path": "assets/domains/v3/beach.png",
+      "bytes": 2433977,
+      "sha256": "bf6ccf11599322669ef0881b5d28bff12863a2df65f1cc6c35aed4462c3157a2"
+    },
+    {
+      "path": "assets/domains/v3/court.png",
+      "bytes": 1600770,
+      "sha256": "7ea6931b8849d462608a1edf827acc686ebf198dfb9b8c72a9037ad86e9ac556"
+    },
+    {
+      "path": "assets/domains/v3/hands.png",
+      "bytes": 1745351,
+      "sha256": "57cf0f1cc51078933a939eaff6deb91b14acd653265e95ea0fe849215973576b"
+    },
+    {
+      "path": "assets/domains/v3/lava.png",
+      "bytes": 2604622,
+      "sha256": "e190aa0bc088741a71682b0487635cfbe3a21dc95b0a281826261a144b708bfe"
+    },
+    {
+      "path": "assets/domains/v3/shadow.png",
+      "bytes": 1527404,
+      "sha256": "d62bf074b6cf8e2535dc4397224de68084757e695d5d2cf917e3407e0b81c4dd"
+    },
+    {
+      "path": "assets/domains/v3/shrine.png",
+      "bytes": 1933713,
+      "sha256": "b568db6e2a52f262035738d59216536051faccd052582e3f41488e1cac1e9b47"
+    },
+    {
+      "path": "assets/domains/v3/void.png",
+      "bytes": 1566860,
+      "sha256": "dd864ce37a44023533b27f51769ad61f3e01b7b576201656d7ef3a10dd3d0c55"
+    },
+    {
+      "path": "assets/domains/v4/blossom.png",
+      "bytes": 2855603,
+      "sha256": "1f8286bafc5220e717ceada3212e96119ad360a460655f8fa10bfd614e281393"
+    },
+    {
+      "path": "assets/domains/v4/frost.png",
+      "bytes": 3293667,
+      "sha256": "a36c1e8ba483a6691068b304080ab18ada9621b44bb2d30e3da24dde94f720c8"
+    },
+    {
+      "path": "assets/domains/v4/jackpot.png",
+      "bytes": 2385766,
+      "sha256": "8696b2bcfabd6d29a8223e85df5e402c29936f1aec256235b406efcff0e44607"
+    },
+    {
+      "path": "assets/domains/v4/love.png",
+      "bytes": 3124592,
+      "sha256": "74a38a33a28734462d3b2d70ea078e5c182803fd0268c25358a7f1b30c62cfd9"
+    },
+    {
+      "path": "assets/domains/v4/mass.png",
+      "bytes": 3226114,
+      "sha256": "dc0723820b908b74ad417693427e0acc0b29664fda1d502b5b92cf0d97415622"
+    },
+    {
+      "path": "assets/domains/v4/moon.png",
+      "bytes": 2047580,
+      "sha256": "482298da038ed7cd6d5f3795647fa1563e0796f86a572d30ff9cc0bffb6f42c5"
+    },
+    {
+      "path": "assets/domains/v4/orbit.png",
+      "bytes": 3201239,
+      "sha256": "f5d68ed5c91bf92bb52717ba26db43d94d6d472d92c20762901133ed4403a0e9"
+    },
+    {
+      "path": "assets/domains/v4/output.png",
+      "bytes": 3148440,
+      "sha256": "5c5b6362162ea092a7eaac046b67c93c5c89a178ebe87d225256620db284d0ed"
+    },
+    {
+      "path": "assets/domains/v4/sky.png",
+      "bytes": 3147576,
+      "sha256": "c4c6d83bc088bc49ee1a19107d2e511faa9b4a49f50a6c8ef9e3cf6f60dc3f87"
+    },
+    {
+      "path": "assets/domains/v4/station.png",
+      "bytes": 2590261,
+      "sha256": "da7290ef79d66a7c51365b4b5da521682f03950d9990f959eb0c522e1d17dd43"
+    },
+    {
+      "path": "assets/domains/v4/swarm.png",
+      "bytes": 2892110,
+      "sha256": "2ce81f6341d94acf225e1617087b831f03285ac6603545de333c05d33a6afd80"
+    },
+    {
+      "path": "assets/domains/v4/womb.png",
+      "bytes": 2253155,
+      "sha256": "33de467be3b18d3f3896c1efc9f77052acc6d39f7dbd69efb2dce3fc82021d42"
+    },
+    {
+      "path": "assets/events/b-v1/tool-training.png",
+      "bytes": 2078570,
+      "sha256": "1ace803c4590f3ec104a9211b5caade34e8674cdda6e0cc3ba1b0c29779427f0"
+    },
+    {
+      "path": "assets/mahoraga-official-v2.png",
+      "bytes": 1671747,
+      "sha256": "5881438cd77d26b7bf0c7e2fd97d2a3e391d1c2398a72724cf4efcd95780ee1a"
+    },
+    {
+      "path": "assets/music/v1/BV12a4y1F755-1.m4a",
+      "bytes": 3255044,
+      "sha256": "b1d9d9eee583b7b4e1c7cf1216ff72229a92310dd08ebf6d6c805cffc4ba574e"
+    },
+    {
+      "path": "assets/music/v1/BV13h4y1m7aU-1.m4a",
+      "bytes": 3818315,
+      "sha256": "74abae1aa46742453060ddd0a526130a9180e58a30b483605f30c6e712e97648"
+    },
+    {
+      "path": "assets/music/v1/BV143rKBeEdv-1.m4a",
+      "bytes": 4850082,
+      "sha256": "cd6b0515fa508ef9d038e92a40e902c410df196f440798f6aed45480f72941e5"
+    },
+    {
+      "path": "assets/music/v1/BV1Cz4y1m7V2-1.m4a",
+      "bytes": 3481589,
+      "sha256": "6f5659d4e9af7626bd47c43467de00c63f08f48f7c0d3e4cab9f464c75651977"
+    },
+    {
+      "path": "assets/music/v1/BV1Ga4y1L7sF-1.m4a",
+      "bytes": 5432734,
+      "sha256": "87e488c0b25583bffef3432aa9bcb5a31322dc479ec0fea350402702fd3a8321"
+    },
+    {
+      "path": "assets/music/v1/BV1Qt4y1e74s-1.m4a",
+      "bytes": 8908975,
+      "sha256": "ffa0fec25d2ae7474f8716b01316d1427f5ed8708898d1c0d8535641bb281168"
+    },
+    {
+      "path": "assets/music/v1/BV1eh4y1m7N9-1.m4a",
+      "bytes": 7647915,
+      "sha256": "7154c7fd0669e6a36cb3ca19003c4b5f9c17826b90b600e4bf2fc02059091581"
+    },
+    {
+      "path": "assets/music/v1/BV1hV411M7cN-1.m4a",
+      "bytes": 2558671,
+      "sha256": "e10d9c94f0a13e31c42158c81d6e07e454d5e8c8cbd5f9cc004b552bd8698927"
+    },
+    {
+      "path": "assets/music/v1/BV1v1kNBLE96-1.m4a",
+      "bytes": 5988230,
+      "sha256": "8f6d2b4467843ad360d22229bb1e33a9601bff81206b37e299866f8cd4391136"
+    },
+    {
+      "path": "assets/music/v1/BV1vA411H7AX-1.m4a",
+      "bytes": 7625527,
+      "sha256": "9050eb7641176e3640c9dcdb4521d3acd5b48696bfc57af73feae8d32dbd07aa"
+    },
+    {
+      "path": "assets/rooftop.png",
+      "bytes": 2515306,
+      "sha256": "2f3da27850e83be95cad861483cb2988dcbf2e8437a2bef0dbe09a6ae228f2a1"
+    },
+    {
+      "path": "assets/scenes/v1/bridge-night.png",
+      "bytes": 2590942,
+      "sha256": "5432e8fa76c68c3afcd14282334fec31d7f7a0c859b2161340c4e83f51a1fd17"
+    },
+    {
+      "path": "assets/scenes/v1/campus-dusk.png",
+      "bytes": 2435435,
+      "sha256": "b77744e913af884a29da8b638c275c4355912ade6d4203a983b2dd01db4943b2"
+    },
+    {
+      "path": "assets/scenes/v1/shibuya-night.png",
+      "bytes": 2271678,
+      "sha256": "6dfe511d8e3a49d310d39a290e538a85f428a3369fb650baec77b1d765763fd0"
+    },
+    {
+      "path": "assets/scenes/v1/urban-ruins.png",
+      "bytes": 2468463,
+      "sha256": "621f67745edf8a1d4be2ecc14abf787ba53451207ddf5cb41c7fc7b896dcd14c"
+    },
+    {
+      "path": "assets/scenes/v2/detention.png",
+      "bytes": 2355443,
+      "sha256": "c5264af56d52379f4e775fbed43da73ddf30121649d240328d638d1746a20ba7"
+    },
+    {
+      "path": "assets/scenes/v2/domain-beach.png",
+      "bytes": 2215111,
+      "sha256": "37e8a7a6ff4987979a5fdedbdcbfd4a6f9600e9cef2d9671a38b99214b681aaa"
+    },
+    {
+      "path": "assets/scenes/v2/domain-court.png",
+      "bytes": 1678269,
+      "sha256": "5c8d48a46cd766bd3c1e06b7ace006421b794fc189fcbd84292c294bd6758bfe"
+    },
+    {
+      "path": "assets/scenes/v2/domain-hands.png",
+      "bytes": 2089315,
+      "sha256": "2bf491a266ae42f684780847ca7f354bcd9d2b710124a154112a6cd854b3996c"
+    },
+    {
+      "path": "assets/scenes/v2/subway.png",
+      "bytes": 1910665,
+      "sha256": "9b0c9509f56d829710395867bed9b1185c8daaf8d663392001e6246a3c46434c"
+    },
+    {
+      "path": "assets/scenes/v3/abandoned.png",
+      "bytes": 2220081,
+      "sha256": "703e9ce0c65a301e095f23066847493518965e696605ba2283faec919e1fbf5d"
+    },
+    {
+      "path": "assets/scenes/v3/bridge-cave.png",
+      "bytes": 2533896,
+      "sha256": "2f8156ddc959fcfb1bfb4deff6ddb403c1cbffd51b6d75e76a3983eb99bc44d5"
+    },
+    {
+      "path": "assets/scenes/v3/forest.png",
+      "bytes": 2706157,
+      "sha256": "ec0240c931bc161c2997fddbc20a614b31d3eb8d016d0d583526fcc1e28aaf0a"
+    },
+    {
+      "path": "assets/scenes/v3/harbor.png",
+      "bytes": 2632286,
+      "sha256": "67e80d0503ba6cef785f0a65c8af9bbf0d5ba164ca2011b8021514a8ebed8dc2"
+    },
+    {
+      "path": "assets/scenes/v3/platform.png",
+      "bytes": 1988279,
+      "sha256": "83f9d5089ec7057ebd72342b8af850467f10727fdeb75ff06814e327c1d00e4d"
+    },
+    {
+      "path": "assets/scenes/v3/restroom.png",
+      "bytes": 1984261,
+      "sha256": "aa55b5e1889f5e4dfbcfb987e72a90aab0da944ac163dc820e544ee1ab90a8ff"
+    },
+    {
+      "path": "assets/scenes/v3/sakurajima.png",
+      "bytes": 2679188,
+      "sha256": "6b5629dcdb8c0d3bb80f2a941b280b96820741dcf3c523d43613ed2a00613237"
+    },
+    {
+      "path": "assets/scenes/v3/school-hall.png",
+      "bytes": 1785995,
+      "sha256": "413593f1153ecb2de2b1a09284cb85532849dc75c64d17b4762c3e2b3c1e144d"
+    },
+    {
+      "path": "assets/scenes/v3/school.png",
+      "bytes": 2389570,
+      "sha256": "2f4b1ed460902a5ab96e356017db12e80207407c25c2cda6da506d339e99f817"
+    },
+    {
+      "path": "assets/scenes/v3/sendai.png",
+      "bytes": 2645866,
+      "sha256": "8b93881406dccd11836788fcad9295d9d4e61122704d10629160e6233b6d5e97"
+    },
+    {
+      "path": "assets/scenes/v3/shibuya-ruins.png",
+      "bytes": 2448351,
+      "sha256": "77688c5ea6821f2978e580e6044a3769c2e986278bee39cb3307f54b01cd5735"
+    },
+    {
+      "path": "assets/scenes/v3/shinjuku-ruins.png",
+      "bytes": 2842296,
+      "sha256": "faafac2fc438f298d75d810508e94f29be794858f9e58594bf43f07fc7fd1ac8"
+    },
+    {
+      "path": "assets/scenes/v3/shinjuku.png",
+      "bytes": 2417828,
+      "sha256": "f3c1112f2154b77e0fc625e06e14e9ab919d0cc03c36616e2cf1c7df41ef3698"
+    },
+    {
+      "path": "assets/scenes/v3/theatre.png",
+      "bytes": 1472023,
+      "sha256": "82a1cf2a01025b036de43312030c9850810e0229a7cbb8d6bbd43f7159d8d8a0"
+    },
+    {
+      "path": "assets/sfx/combat/GAME-SOURCES.json",
+      "bytes": 10109,
+      "sha256": "f3ac6cdf496a692047691f2aafb28b12458839ec4a3ee568811e3a8c42edeef4"
+    },
+    {
+      "path": "assets/sfx/combat/SOURCES.json",
+      "bytes": 5001,
+      "sha256": "c6ee9b1be9355036ecfa38c9f8390e6b40549b5884db6f00a14270cff8c4894d"
+    },
+    {
+      "path": "assets/sfx/combat/catalog.json",
+      "bytes": 24654,
+      "sha256": "59b7a1e418066c8e2dc0b5c7979aa7a04922292a8b0260049410b15914498186"
+    },
+    {
+      "path": "assets/sfx/combat/chop.ogg",
+      "bytes": 9370,
+      "sha256": "d00c2b3c9fff07e376145c8c8c45c90e5084ec192f6ce0387db233f7b86f1486"
+    },
+    {
+      "path": "assets/sfx/combat/cloth1.ogg",
+      "bytes": 16508,
+      "sha256": "ddb93a3671233f95da0e0b10367f082f7eb42fa6caaddcf776410aa8833c747d"
+    },
+    {
+      "path": "assets/sfx/combat/cloth2.ogg",
+      "bytes": 11787,
+      "sha256": "8a7451193c38bc05483aec25dd193e163a15d44cf7fff04ac7912573231b0201"
+    },
+    {
+      "path": "assets/sfx/combat/drawKnife1.ogg",
+      "bytes": 11134,
+      "sha256": "276403e72c3b71c47bc24db3083970c23f8e5551ffa78f436f83483c56f3f0bb"
+    },
+    {
+      "path": "assets/sfx/combat/explosionCrunch_000.ogg",
+      "bytes": 28274,
+      "sha256": "4b597d658d0ae101f0a030fbeea5fc3a4292ab85f017470a8254a8e7959cbd69"
+    },
+    {
+      "path": "assets/sfx/combat/flare-burn.ogg",
+      "bytes": 12410,
+      "sha256": "3f525aa97a4b33e0282ac78855ec52ab88c534e67dc471403a2a3a97931db021"
+    },
+    {
+      "path": "assets/sfx/combat/flare-freeze.ogg",
+      "bytes": 11161,
+      "sha256": "0e20bf06629a4f4913e63b124c6662138d3821ae7552e5413456ba22cd37aa84"
+    },
+    {
+      "path": "assets/sfx/combat/flare-heal.ogg",
+      "bytes": 11520,
+      "sha256": "0240234d960a684fced186833d8db6e960a0ce0e26095da1b6386cb0e235dc16"
+    },
+    {
+      "path": "assets/sfx/combat/flare-melee_attack.ogg",
+      "bytes": 8914,
+      "sha256": "bcb5d618730de5568b5dad1a9c741b5907aa8098ff69de76d2393752d16d165b"
+    },
+    {
+      "path": "assets/sfx/combat/flare-melee_attack_2.ogg",
+      "bytes": 9333,
+      "sha256": "66055aa7fcb94533582f1cb0c9389ef7e6660cc84fdb43fa56239b0d64c27127"
+    },
+    {
+      "path": "assets/sfx/combat/flare-melee_attack_3.ogg",
+      "bytes": 8738,
+      "sha256": "3738417e1b365bc228886413976e3f8f17ede14b6bf0e2626c0d6ca9e7f25d81"
+    },
+    {
+      "path": "assets/sfx/combat/flare-powers-block.ogg",
+      "bytes": 7597,
+      "sha256": "63dc9876d267b5a21943d774226d7e3251ed558606f10d5d46668af845e369dd"
+    },
+    {
+      "path": "assets/sfx/combat/flare-powers-fireball.ogg",
+      "bytes": 9489,
+      "sha256": "0d0390a4b84d731e81b87df828725b08a27c4df5277e4323f2ceb72d01fdc627"
+    },
+    {
+      "path": "assets/sfx/combat/flare-powers-quake.ogg",
+      "bytes": 9332,
+      "sha256": "dcb12477adf80c40abf966b2e83cd97675c9a1cad56962d7822b46617ec87a8a"
+    },
+    {
+      "path": "assets/sfx/combat/flare-powers-shield.ogg",
+      "bytes": 6314,
+      "sha256": "8f6c75d914a76b86fe4d35c3b8b48212d6cedc18b7b3a284f7db2dc38a745711"
+    },
+    {
+      "path": "assets/sfx/combat/flare-powers-shock.ogg",
+      "bytes": 15372,
+      "sha256": "342be451371c2464db9ae5656867f90605687b60faaf0fc713972571a9dbe3a1"
+    },
+    {
+      "path": "assets/sfx/combat/flare-powers-teleport.ogg",
+      "bytes": 8179,
+      "sha256": "c8b23d12268e27e847fd2ef79bce5457a6807e5303b7c675e2f2c9a92a4672f4"
+    },
+    {
+      "path": "assets/sfx/combat/flare-shoot.ogg",
+      "bytes": 6381,
+      "sha256": "ac3e1f9868946cfd2fdfe00f65d7170d1e30d66ec626ba7767a5370dacedaba6"
+    },
+    {
+      "path": "assets/sfx/combat/flare-thunder.ogg",
+      "bytes": 54886,
+      "sha256": "9488e178b60d86f3bc23fe8ecc751032544e3445050cad4d607382d41ec4a377"
+    },
+    {
+      "path": "assets/sfx/combat/forceField_000.ogg",
+      "bytes": 25672,
+      "sha256": "c2916f2a062c8ddd1aca2826d134fe90847037db31342726ffb0f9097afe339c"
+    },
+    {
+      "path": "assets/sfx/combat/impact-LICENSE.txt",
+      "bytes": 608,
+      "sha256": "b49aa9c56b04528b95913de13e506a0f7c5e807b9925db9bfef86af1f91120db"
+    },
+    {
+      "path": "assets/sfx/combat/impactGlass_light_000.ogg",
+      "bytes": 6526,
+      "sha256": "d750cf88097d0c3e69920e6e14496e1444e1a9da01aa4cca8f5ec8cb44c57b4f"
+    },
+    {
+      "path": "assets/sfx/combat/impactPunch_heavy_000.ogg",
+      "bytes": 11617,
+      "sha256": "b33a8f14068aec24ec69ba85e5e87fdc41228975f6a1a3e44a6e7d6fc3d9f8d8"
+    },
+    {
+      "path": "assets/sfx/combat/impactPunch_heavy_001.ogg",
+      "bytes": 10861,
+      "sha256": "f92f5cb6ba4ff2766497292ffd90865654317eeca976f5652e0708dbdcdc0dd9"
+    },
+    {
+      "path": "assets/sfx/combat/impactPunch_medium_000.ogg",
+      "bytes": 8800,
+      "sha256": "486988aa2d6440ffc4c62a0e8ccf3c23673ba84424bd4723378d451b7255eb5c"
+    },
+    {
+      "path": "assets/sfx/combat/impactPunch_medium_001.ogg",
+      "bytes": 8701,
+      "sha256": "e71d23abcc3f10d9d6bc9615b2a431fff70b12333a5fcdd9964457564ace4349"
+    },
+    {
+      "path": "assets/sfx/combat/impactSoft_medium_000.ogg",
+      "bytes": 5351,
+      "sha256": "7d3ba0bb5e60a11b5d3e558c141303dcf494256675fbf753c0d252d2cf0481e3"
+    },
+    {
+      "path": "assets/sfx/combat/knifeSlice.ogg",
+      "bytes": 15532,
+      "sha256": "4cd96dc630bed9840c15f1dd2306da2cc56a4da26a5d3f1a03c5a7265ac5e54f"
+    },
+    {
+      "path": "assets/sfx/combat/knifeSlice2.ogg",
+      "bytes": 15099,
+      "sha256": "6c2064d0ef988d1ec3d56868e823ea8823a5cac00f2742560052633529407def"
+    },
+    {
+      "path": "assets/sfx/combat/laserLarge_000.ogg",
+      "bytes": 25566,
+      "sha256": "a56d95794cd732d6c2d66ce488c14cf557fe526c282897c9a77675c2bd9b77e6"
+    },
+    {
+      "path": "assets/sfx/combat/laserSmall_000.ogg",
+      "bytes": 7286,
+      "sha256": "72b589eadd41781257ac859e4f4d030222e623390e4a1a83f6d05329a6e026f1"
+    },
+    {
+      "path": "assets/sfx/combat/rpg-LICENSE.txt",
+      "bytes": 478,
+      "sha256": "5735dfd72cb64cbbceda4ebc00c380c41ca680edb82ff153aa7c9ab97614c539"
+    },
+    {
+      "path": "assets/sfx/combat/scifi-LICENSE.txt",
+      "bytes": 571,
+      "sha256": "a9767b25c3533f69d03af136480efad08efba19a9f0d89616992b34c79fd6186"
+    },
+    {
+      "path": "assets/sfx/combat/slime_000.ogg",
+      "bytes": 20870,
+      "sha256": "480ee82b690136ea9db6966a3c3033356b8274752795c4e37afd6b6defcfacff"
+    },
+    {
+      "path": "assets/sfx/combat/thrusterFire_000.ogg",
+      "bytes": 201216,
+      "sha256": "0fdc474d93f209debf1fc4ea77765a669dcb7676db31b4d8a0a509685bccf374"
+    },
+    {
+      "path": "assets/sfx/combat/wesnoth-GPL-2.txt",
+      "bytes": 18011,
+      "sha256": "e6d6a009505e345fe949e1310334fcb0747f28dae2856759de102ab66b722cb4"
+    },
+    {
+      "path": "assets/sfx/combat/wesnoth-fist.ogg",
+      "bytes": 6626,
+      "sha256": "e7a0e81e9fd01b4067703a3f84555cb91f830e0252d6e1747314f5bf4e50439e"
+    },
+    {
+      "path": "assets/sukuna-heian-v4.png",
+      "bytes": 1867471,
+      "sha256": "10ad189f4bf2c9c15c8686e140e4be6d4674a700b694bc17429016941d27bede"
+    },
+    {
+      "path": "assets/sukuna-megumi-v4.png",
+      "bytes": 1624538,
+      "sha256": "cc059553e4c34c4108e6b429f188ede1db801d941b9617314c0353c78348f367"
+    },
+    {
+      "path": "assets/sukuna-yuji-v4.png",
+      "bytes": 1447665,
+      "sha256": "cb5d1679ad2d5dd28d2f6e767eacd5ba3536dc66081675bffd0befb421edd0d8"
+    },
+    {
+      "path": "assets/ui/v1/cursed-tools-atlas.png",
+      "bytes": 1522635,
+      "sha256": "a3dcf5244a079a1dae35f3045164948f2fe5db2c6b0814fa14fdb1886896559a"
+    },
+    {
+      "path": "assets/ui/v1/title-keyart.png",
+      "bytes": 2466865,
+      "sha256": "a12ddf42dbdd5094cf10f2a76db2529e99a388df44755a4c755eeec024c5ab06"
+    },
+    {
+      "path": "assets/ui/v2/tools/demonScroll.png",
+      "bytes": 1847815,
+      "sha256": "f84f97c2c260b7c10707e73fd2e803cbd727ba66a2d16a8a8b1fd28a9e3b9636"
+    },
+    {
+      "path": "assets/ui/v2/tools/godBell.png",
+      "bytes": 1609737,
+      "sha256": "2ff33faaba2986c2efbae41a43fbc71cf1eb7f2c366fb054d3f0542ce66d0f83"
+    },
+    {
+      "path": "assets/ui/v2/tools/manifest.json",
+      "bytes": 4333,
+      "sha256": "44c8e47144ad05f8b7397dd61015b3c9ce57dbb6b1073c0def112b1357092e68"
+    },
+    {
+      "path": "assets/ui/v2/tools/paradoxRing.png",
+      "bytes": 1904439,
+      "sha256": "4d9d0a981f1c3e1cddac7c69d1d86fa97725815549ec7ff4b404f47a38b4960a"
+    },
+    {
+      "path": "assets/ui/v2/tools/scissors.png",
+      "bytes": 1579232,
+      "sha256": "0fce75187f1d9ad44b2f956da6f749f5309283c4057502f513fe352b7c44fe83"
+    },
+    {
+      "path": "assets/ui/v2/tools/sheath.png",
+      "bytes": 1401492,
+      "sha256": "47f2aff53c83fc3d5f85e24e40ce82d05ab57d35c53b1915d477829ca894a091"
+    },
+    {
+      "path": "audio-cues.js",
+      "bytes": 9905,
+      "sha256": "ccc8ab2713bf6ab9a13d3b8a69efa0c8b477f77317fdc3ea3bcf8ec6310a1e01"
+    },
+    {
+      "path": "audio-review.html",
+      "bytes": 3370,
+      "sha256": "096ed5fd294bc2dbda3d96440e797d1d236f34cb4d8458642372739396715244"
+    },
+    {
+      "path": "batch-c.css",
+      "bytes": 2686,
+      "sha256": "ce068b9e115ead27edc1b0d6778f82ac7372580ba607aff68f7b8e75c9d96089"
+    },
+    {
+      "path": "batch-e.css",
+      "bytes": 1430,
+      "sha256": "8d0b6401adc15398cd21a3d7811a3b32857247e4cf63bc79fb404ff6f9b4e90b"
+    },
+    {
+      "path": "battle-art-review.css",
+      "bytes": 2153,
+      "sha256": "08aeb62241bb9a9c58f46aaf94d0c8efa3a28acacbddd12e1cc6065afda1fed4"
+    },
+    {
+      "path": "battle-art-review.html",
+      "bytes": 1930,
+      "sha256": "5ad8b6dcf620b783f177dda755dbe3e60f08e8ec323a03abe99f15aa2ff05f99"
+    },
+    {
+      "path": "battle-art-review.js",
+      "bytes": 10953,
+      "sha256": "347c8f052e76e7e44f2c49ebdd2e877620c5690da2f69d29a547256b04ac8eee"
+    },
+    {
+      "path": "battle-impact.css",
+      "bytes": 4064,
+      "sha256": "e6bb641b640263e2485ed8f59542c42f2586ab957dfe3c4d2fce8b985b565ab0"
+    },
+    {
+      "path": "battle-impact.js",
+      "bytes": 4317,
+      "sha256": "773e572de8e5c977b2eb45957d569920a7306490f376fbdf7590f4e7562dcf7a"
+    },
+    {
+      "path": "battle-resonance.js",
+      "bytes": 9044,
+      "sha256": "2aee3096a0af7a73c31a9cbc62e4cf3a5bb039cbc222d3d55b6d7dd048b92c98"
+    },
+    {
+      "path": "battle-scenes.js",
+      "bytes": 10007,
+      "sha256": "ea8896763aee29f415f52048330366b4c4fb516ac40e3f8084682c5d83d11f2c"
+    },
+    {
+      "path": "battle-sprites.json",
+      "bytes": 447357,
+      "sha256": "572b0ca9b06b86e723bd293d6403466ee2de5346b2708344fe36dc3b78a96ade"
+    },
+    {
+      "path": "battle-ui-v2.css",
+      "bytes": 20566,
+      "sha256": "8dbd7f30b46fd0eabde699e79c4734d70634cab1b9744676e75681497ade4da5"
+    },
+    {
+      "path": "battle-ui-v2.js",
+      "bytes": 11766,
+      "sha256": "8b85ce2a689d020b140efc61db0a407e7b959fb6a0b9009db41f1295d34fc182"
+    },
+    {
+      "path": "campaign-ui.js",
+      "bytes": 9598,
+      "sha256": "685cd6fa5aed90c67d1715be0e822324f3ecf4b759f906a3e680714f77cfa3d9"
+    },
+    {
+      "path": "campaign.css",
+      "bytes": 4140,
+      "sha256": "4d36ba78d9dde1e6037b615ac3937da64a33af4f18d4c1f5de713809ee154e1d"
+    },
+    {
+      "path": "campaign.js",
+      "bytes": 19228,
+      "sha256": "5f75c95aa8121a9c8593bdfdf8e4c1654fcb386146e0b1ff1b1d6dcd8d5c9535"
+    },
+    {
+      "path": "character-sample-review.css",
+      "bytes": 1041,
+      "sha256": "a9a65b1b0dab4fadc0d69c0507c6805f6254216437be7f77cfca7491d7d4acda"
+    },
+    {
+      "path": "character-sample-review.html",
+      "bytes": 2911,
+      "sha256": "dfc5db6c429f2c49835b98bdfef45521b7ac45fd0b674f53172dfe22439b469b"
+    },
+    {
+      "path": "combat-audio-sources.html",
+      "bytes": 7073,
+      "sha256": "abfebc4caccd5d23fcd4dec381eb63a2d20867ed521021483b5ee816f737b287"
+    },
+    {
+      "path": "combat-audio.js",
+      "bytes": 4706,
+      "sha256": "d1d4edbe4ed9062a7d4bb0492f01e0a3a7347f92c7ab2179b92a060431c06488"
+    },
+    {
+      "path": "combat-lab.css",
+      "bytes": 9362,
+      "sha256": "8bae1b65ab1fa3e36eafe1df487a777a425c96ff46ce6642ed48ade10a6ca5a2"
+    },
+    {
+      "path": "combat-lab.html",
+      "bytes": 4181,
+      "sha256": "7ada7b4333ab59c9f9b91e9c7ed611e445a30e676d9673c9f51a86c07d189896"
+    },
+    {
+      "path": "combat-lab.js",
+      "bytes": 10668,
+      "sha256": "53f6e7802ad74ec7e4a49b8eb91926839143afc0959816f072c6aae319405755"
+    },
+    {
+      "path": "combat-presentation.js",
+      "bytes": 3897,
+      "sha256": "71464ae324429236787b68fdbd43bb254845fe1f97dd0e88c7bc8a892a6e81d0"
+    },
+    {
+      "path": "combat-sample-model.js",
+      "bytes": 4685,
+      "sha256": "90444519e3f4b204141b2e021d5e68a4c19b65fce1887d4bb782c7660b283437"
+    },
+    {
+      "path": "combat-sample.css",
+      "bytes": 11524,
+      "sha256": "e997aab7b651deabe42e5bad4925bc3e7cc6d11c6473ba81118ec3c6fbd6153a"
+    },
+    {
+      "path": "combat-sample.html",
+      "bytes": 3734,
+      "sha256": "3fbb42c29510f6f8ac07bd697bb64a89bc0d237f592a8185c429458168c61c13"
+    },
+    {
+      "path": "combat-sample.js",
+      "bytes": 14111,
+      "sha256": "e94ae79be551036f83bccecf62109a8aeb79149006d812ba81f22c0680d2d26e"
+    },
+    {
+      "path": "combat-traits-ui.js",
+      "bytes": 5086,
+      "sha256": "7bb12fefb005c2690a1379ef0f5fc7e82ab6e0df67bb196fa918b1a20fcccdbb"
+    },
+    {
+      "path": "combat-traits.css",
+      "bytes": 4191,
+      "sha256": "16002324e3869207210dd9c3685be96cadb07a51895920bea77bb05cfdfc5c49"
+    },
+    {
+      "path": "combat-traits.js",
+      "bytes": 14249,
+      "sha256": "83b0846e0743c7516a0829240d070b2e78c5fefde2b22b5057681d0247d101a4"
+    },
+    {
+      "path": "consumables.js",
+      "bytes": 6580,
+      "sha256": "abd15e3b122310619d5dc308fa9b4792d7d5fa0fbd34651d96f77cfc3b230de9"
+    },
+    {
+      "path": "cursed-tool-training-ui.js",
+      "bytes": 1780,
+      "sha256": "c41f4a9f5b3103fdb41e8f34e7d0e1e2a77f4be0ff08c43bbee5b57a64911949"
+    },
+    {
+      "path": "cursed-tool-training.css",
+      "bytes": 1975,
+      "sha256": "896c9784c4cfda2efcb6d5a86224a971665d5d83b3a00746c17cf687b0d20e0c"
+    },
+    {
+      "path": "cursed-tool-training.js",
+      "bytes": 4083,
+      "sha256": "6634cce421169ea1ed9cdb8303337d367fd99890ce466c57814277808c3a10a1"
+    },
+    {
+      "path": "daily-events.js",
+      "bytes": 14357,
+      "sha256": "584be5b045714672ba7df53145c09cfb1be614fce8de7a14f963c6280e38633c"
+    },
+    {
+      "path": "daily-ui.css",
+      "bytes": 11203,
+      "sha256": "670c13d4c7bf130323132ffd524b39acd9f30fa214e51ed7a5c5d4bddd76219e"
+    },
+    {
+      "path": "daily-ui.js",
+      "bytes": 4710,
+      "sha256": "5de7e7b1c465b941373bf8211c5bb4660edc139bc58317a2e0ac31d0ab935625"
+    },
+    {
+      "path": "domain-combat.css",
+      "bytes": 3498,
+      "sha256": "4474f71dfbc931dfaa25c4928ff4e72b2f04bb94327e9d68cc8c6106b06b9fe2"
+    },
+    {
+      "path": "domain-combat.js",
+      "bytes": 17158,
+      "sha256": "fb83d89a831e725c4eaec0b2b298a21665c4e98faeb828042cc4767f9f1cad49"
+    },
+    {
+      "path": "domain-duel-model.js",
+      "bytes": 2387,
+      "sha256": "0c7815e0aab3ea6ddaa6b5ea560770011d2cd00e3f0b7644267bb513c190bf65"
+    },
+    {
+      "path": "domain-duel-shell.js",
+      "bytes": 1349,
+      "sha256": "7bd2cd4a3a320550ec05d17a39ea921dd994e18c84cbf49dc6c77d49884b2a27"
+    },
+    {
+      "path": "domain-duel.css",
+      "bytes": 4327,
+      "sha256": "dfc7ee0057e84d152f8dd56c823510597471fe335d30069b3f5793680f7a18f7"
+    },
+    {
+      "path": "domain-duel.html",
+      "bytes": 5401,
+      "sha256": "7c9871c97688cc54216c22ba0087432688ed2131ebf3e01015d4fb4eb5237b5b"
+    },
+    {
+      "path": "domain-duel.js",
+      "bytes": 19285,
+      "sha256": "48590265202142d2d03a086b2c546fa24af08e476f2434b16fd7bc4e9dc1aa44"
+    },
+    {
+      "path": "domain-effects.css",
+      "bytes": 5444,
+      "sha256": "33ffe6f6becfe88cedb000683f9e42664ca80f6df5bfed8ae0340b13bb9120fc"
+    },
+    {
+      "path": "domain-effects.js",
+      "bytes": 19970,
+      "sha256": "d5e6cf48c2ec194f441ed253d6ce5dfa70d628ccd731c8574ac1e9b7ecdceb79"
+    },
+    {
+      "path": "domain-preview.html",
+      "bytes": 13037,
+      "sha256": "c8f11e37bb243c8ee927891821619642970e149e892cc4d52ea1ba917e2d3488"
+    },
+    {
+      "path": "domain-preview.js",
+      "bytes": 3453,
+      "sha256": "8527198bd09af72d59dbab1fe0a44e1fc98ff2115d74745432f64c396836eee9"
+    },
+    {
+      "path": "domain-realtime.css",
+      "bytes": 5654,
+      "sha256": "4275071aa081155eb5a2ee60dd669ddd40bcf485c8cecd5142a200025dd4b093"
+    },
+    {
+      "path": "domain-realtime.js",
+      "bytes": 9814,
+      "sha256": "df4036770081d761713a6eafadcbb3a5d97ba6692461bade47d78f6b1b25529c"
+    },
+    {
+      "path": "domain-review.css",
+      "bytes": 2746,
+      "sha256": "8c0e864140fda8b3e3bbdc36136aeacfc8ad4cf007681d419689318d2acf7fab"
+    },
+    {
+      "path": "domain-review.html",
+      "bytes": 2035,
+      "sha256": "967220111fa382eca62f8258b0eb307b10127c52214e211b0a0c9647da409c26"
+    },
+    {
+      "path": "domain-review.js",
+      "bytes": 5333,
+      "sha256": "a0e60dfbd22c5ad96a996827387404659a3d3d62257d4f06f35ff76ddbae57bf"
+    },
+    {
+      "path": "domain-stage-review.css",
+      "bytes": 4423,
+      "sha256": "084b22da74acc6b5649cd2df2bee4892722d9ebfafa37b9b265cca73eae76e6e"
+    },
+    {
+      "path": "domain-stage-review.html",
+      "bytes": 4131,
+      "sha256": "1429a7ada5710a1a6763ee9aacb9811b34481222bb46ba9e1c93a2211862f4bc"
+    },
+    {
+      "path": "domain-stage-review.js",
+      "bytes": 8113,
+      "sha256": "4c0344c1f8c636035bc8c3affc50297beb27796fbcc480f74c8c060a6bfd2afc"
+    },
+    {
+      "path": "domain-stage-shell.js",
+      "bytes": 1070,
+      "sha256": "d6e4702872cf8a1d12da32801a4adf6dbd01aae004db889487bb98fca5ec8a7b"
+    },
+    {
+      "path": "engine.js",
+      "bytes": 167689,
+      "sha256": "1295a1d46f9295e00615956d37c1425d88a6ccdeb99527d0c090443202ff82e3"
+    },
+    {
+      "path": "equipment-original.js",
+      "bytes": 3981,
+      "sha256": "98d9518979109330bd8b339ff13320ce618e5792d32c1fc3982e194f1358ed3c"
+    },
+    {
+      "path": "equipment-ui.js",
+      "bytes": 5796,
+      "sha256": "c32bea3a8783627b81aaa493e424d24ffac3d68852d5ce6636a4aa2eb038c64f"
+    },
+    {
+      "path": "equipment.css",
+      "bytes": 13223,
+      "sha256": "6714a5214aa84314dfc86f7600543b9b7024070f08942a024b4cca01a6639f8a"
+    },
+    {
+      "path": "equipment.js",
+      "bytes": 6124,
+      "sha256": "f840bbf916d44b915fef92cb46c6ce6a8a3376c7bd6a9e6c3dc4bd1e62e48ddd"
+    },
+    {
+      "path": "event-codex.js",
+      "bytes": 2815,
+      "sha256": "f098705315ecae9259cb51430140a16ac93da3d1589e6dbe5842cc70b6105320"
+    },
+    {
+      "path": "event-engine.js",
+      "bytes": 17411,
+      "sha256": "5b68825b81195d34dcaece4c51f7a586e4236259f85317a8a6ea0472d5c124c1"
+    },
+    {
+      "path": "favor.js",
+      "bytes": 9398,
+      "sha256": "af3027a9893bfae37a6430152ead181362cda819765159d7bd80bf2003845d64"
+    },
+    {
+      "path": "fx.css",
+      "bytes": 17374,
+      "sha256": "65b5c6de3234f7b4347600bc2921954b77ffac340ab607ae07b57a795b44a387"
+    },
+    {
+      "path": "fx.js",
+      "bytes": 13659,
+      "sha256": "0d8b36b918bca26f16a9151a6443d5d53f6b14fe8d5cd3fb59cd944b220a9821"
+    },
+    {
+      "path": "godot-battle.js",
+      "bytes": 16554,
+      "sha256": "688c8ef786877d41004e20b608f2bf3a75452635f585d47b4a82495b10b661d9"
+    },
+    {
+      "path": "godot/battle.audio.position.worklet.js",
+      "bytes": 2973,
+      "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
+    },
+    {
+      "path": "godot/battle.audio.position.worklet.js.gz",
+      "bytes": 1168,
+      "sha256": "4cd8683f53317f79dbccfa1163194290c10c7edd8b0d0b4604f8c907d3664cfd"
+    },
+    {
+      "path": "godot/battle.audio.worklet.js",
+      "bytes": 7298,
+      "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
+    },
+    {
+      "path": "godot/battle.audio.worklet.js.gz",
+      "bytes": 2195,
+      "sha256": "d87ecc7d78ec725b4cd1ff46826586f62cc2900ff0132255ad41bfa6b5d413ed"
+    },
+    {
+      "path": "godot/battle.html",
+      "bytes": 5332,
+      "sha256": "90d6fdb18ae3a68882a12764ce4f40b6114baf9d2f77a92eea70d6cfe033ab92"
+    },
+    {
+      "path": "godot/battle.html.gz",
+      "bytes": 2128,
+      "sha256": "7de6ad3ca0414e0c2a9367813b6f35cbda63882a24cfe78e1ce4b93f06600f7b"
+    },
+    {
+      "path": "godot/battle.js",
+      "bytes": 279815,
+      "sha256": "68586d6daafc93c6e697b3fb258976874aa7459b8931165ebb1dc3c9614cc42c"
+    },
+    {
+      "path": "godot/battle.js.gz",
+      "bytes": 68916,
+      "sha256": "14b646f653a17c5cf2cc60c63e7b9c5b3ce63ccdf5aa692a8acdcb145a7c8402"
+    },
+    {
+      "path": "godot/battle.pck",
+      "bytes": 117260,
+      "sha256": "62c5588b047371eed211c1a1840ef887f765dfd15d047bb2d9a310700217ac19"
+    },
+    {
+      "path": "godot/battle.pck.gz",
+      "bytes": 101697,
+      "sha256": "756fc88cd122f9c5eaa0174d73b1bf5f0293b14f836b0c6a5f9414670e5a22bf"
+    },
+    {
+      "path": "godot/battle.png",
+      "bytes": 21443,
+      "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
+    },
+    {
+      "path": "godot/battle.wasm",
+      "bytes": 39513091,
+      "sha256": "35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277"
+    },
+    {
+      "path": "godot/battle.wasm.gz",
+      "bytes": 10153832,
+      "sha256": "95c744b23efadca2d20d9ca9b302377a79a7ec8e1471835aaf4e24d129e15a55"
+    },
+    {
+      "path": "godot/embed.html",
+      "bytes": 525,
+      "sha256": "52a1275de1a7add93e68bfd00b3caeedc43f251756d7af683afe840763409c85"
+    },
+    {
+      "path": "godot/embed.html.gz",
+      "bytes": 312,
+      "sha256": "6cc2781b08c3bfbdb05876657a03efd38369cd88099c06b18d8fc3e64ae25421"
+    },
+    {
+      "path": "godot/embed.js",
+      "bytes": 2767,
+      "sha256": "8103348cccf70c3c4823d818403c910e18afca2192a24ac3731b3114f1d46523"
+    },
+    {
+      "path": "godot/embed.js.gz",
+      "bytes": 1343,
+      "sha256": "31ccf872aa96bcca0ab963e8534e4ed9711b1593cf0ad266711ab5cc7f3c5932"
+    },
+    {
+      "path": "godot/engine-config.js",
+      "bytes": 283,
+      "sha256": "5a15873fd14a366db83d329bf0b1ef0aa13200f319d06e4a1df6b0474596d155"
+    },
+    {
+      "path": "godot/engine-config.js.gz",
+      "bytes": 230,
+      "sha256": "cd6506cf57148aec2a07503f5b1fe9f5d78076cd84c5c60993766dbf84a41717"
+    },
+    {
+      "path": "index.html",
+      "bytes": 16872,
+      "sha256": "d162d22c5e0ab134043a9f7f2ab54686d31ffdcb949103bb7497c814c3981bc7"
+    },
+    {
+      "path": "legacy.css",
+      "bytes": 21622,
+      "sha256": "2c02deb174dc4df16689e9e1d9b95331c0e8466fce770e25256fc142db1bca13"
+    },
+    {
+      "path": "music-native.js",
+      "bytes": 16849,
+      "sha256": "cc7959d637f8a245cf5d68894bc25fad8a73a863be547020bacb9833e9c3e66b"
+    },
+    {
+      "path": "music-native.json",
+      "bytes": 10039,
+      "sha256": "f1d9b311661fc857bdb45f79b13d5f2a4615a7494c90ca1b3ef35337e3a2dc3c"
+    },
+    {
+      "path": "player-arsenal.js",
+      "bytes": 6040,
+      "sha256": "56fb0cae1a5ac37ce562d4f334b86c0c711dbf78605205aef3af5434a364c576"
+    },
+    {
+      "path": "player-battle-core.js",
+      "bytes": 215387,
+      "sha256": "6861e44fdd61fd6e5effdd28297a355752bef075b3c7fc41f81c43e355f6c829"
+    },
+    {
+      "path": "player-battle-model.js",
+      "bytes": 3346,
+      "sha256": "fe341bda58c0c1c5c022828ceb5b380947aacafda73ce1d714d6bf00c1518b2e"
+    },
+    {
+      "path": "player-battle.css",
+      "bytes": 3540,
+      "sha256": "9e57ca72d44fffbfc3a620a15dfc1bdb7d539f9904c29be868b002939f8ce742"
+    },
+    {
+      "path": "player-battle.html",
+      "bytes": 6322,
+      "sha256": "68ee9df693c2e77c999d311278a98ba0e140c6cc6c3ef5ad69be8e5a730bca03"
+    },
+    {
+      "path": "player-battle.js",
+      "bytes": 24598,
+      "sha256": "873cc23b729ac9ec5e97bc71dea276e117dca4c56f0db21c78a7519bef57b90e"
+    },
+    {
+      "path": "player-build-combat.js",
+      "bytes": 9760,
+      "sha256": "d7ecc566185e12d3f0bd3e18f8896543b5bab66b1e7f5689889742c98c4dc4fe"
+    },
+    {
+      "path": "player-build-rewards.js",
+      "bytes": 1680,
+      "sha256": "8fffdd9cc37bc1fb94b9a4cb9b12782983e3850b6f85747382b8c2729df01a3c"
+    },
+    {
+      "path": "player-build-ui.js",
+      "bytes": 6194,
+      "sha256": "4c5cfdb1474891ec1d4cd3e441f645fa72bc60da74f11a5edaee21112d976e0f"
+    },
+    {
+      "path": "player-build.css",
+      "bytes": 3849,
+      "sha256": "945bc95f0d9efd17e64919098803c0651ce09f6231635932ddc85877cdfe2b7a"
+    },
+    {
+      "path": "player-build.js",
+      "bytes": 11934,
+      "sha256": "7e94ddaa12f6cebd0cc5d68d544d66de23ddb71406bd53af72f1533021d17399"
+    },
+    {
+      "path": "player-presentation.js",
+      "bytes": 2693,
+      "sha256": "81bfc1abcbcbe704b62a1a5626a198900476ac9bbbbe50d05dda6f17e2f5419a"
+    },
+    {
+      "path": "player-styles-ui.js",
+      "bytes": 4542,
+      "sha256": "485ddd98d67c9ed70b15eb17aaf6067ca5b5abf5db5fe84f37330dff4353c4bf"
+    },
+    {
+      "path": "player-styles.css",
+      "bytes": 2166,
+      "sha256": "fb4f6ab4a12baf11fc6c287cae293f68967ba54574ed71126c49f1a21d358d42"
+    },
+    {
+      "path": "player-styles.js",
+      "bytes": 12064,
+      "sha256": "cf3ff627ed310f249438fcdbb8d00fcba06ed9a505b4f45463866e6be184d500"
+    },
+    {
+      "path": "radar-chart.css",
+      "bytes": 734,
+      "sha256": "9e3325a91c5d1a78919a2c7496a4009b55032db1a0f97c1fb58d5c89be1e37ef"
+    },
+    {
+      "path": "radar-chart.js",
+      "bytes": 9166,
+      "sha256": "3c61e80373d82add2902ead0f3ea776c62ecc27169a34860b0a9c009314f7a67"
+    },
+    {
+      "path": "references/audio-v2/compilation.m4a",
+      "bytes": 7912163,
+      "sha256": "884584194675c098700677472714352c1ec1a1d07170f7c8f20275e05717beb0"
+    },
+    {
+      "path": "references/audio/jogo-domain.mp3",
+      "bytes": 493056,
+      "sha256": "f99080d0b830be9eec3f35aa6194e6240cc3269480074060f3299262f21c1925"
+    },
+    {
+      "path": "references/battle-slice-v1/domain-18.5.png",
+      "bytes": 167797,
+      "sha256": "7f6912b785397ad4a64c810b81380a2df953dd573f3bdedc8b7490d5ab260561"
+    },
+    {
+      "path": "references/battle-slice-v1/domain-204.png",
+      "bytes": 311671,
+      "sha256": "a8214f9e11b719206fd4d56297419de927a26c801febc53ccecc342c9a183ec9"
+    },
+    {
+      "path": "references/battle-slice-v1/domain-82.png",
+      "bytes": 136396,
+      "sha256": "3d5ed36457ab21de733ee9c47630b42a1d24124c835c9cc5c866e09fb86a97bc"
+    },
+    {
+      "path": "references/domain-voice-v4/hanami-game.m4a",
+      "bytes": 185887,
+      "sha256": "7f5501b71280a87560c10ce0013bae6501cb4a7864f56c2a5d7c8e3d41bd9505"
+    },
+    {
+      "path": "references/episode4-2.jpg",
+      "bytes": 91105,
+      "sha256": "58de6a9217aa14b68b4bb8c875695c27b56c49c34cbc2f0f64e9b6aacd2894cd"
+    },
+    {
+      "path": "references/episode41-2.jpg",
+      "bytes": 84792,
+      "sha256": "38611c1df6983b4aecf6e08c0e1776e32fb97d51481c4eed74efb616c0848e7a"
+    },
+    {
+      "path": "references/gojo.png",
+      "bytes": 45997,
+      "sha256": "91c1d8c02396840f47b9cae842ba3d01f02ea95768335d23ff3e5efdc42ada52"
+    },
+    {
+      "path": "references/official-choso.png",
+      "bytes": 303754,
+      "sha256": "f1e7e8a0951952b1b2e94ae7be7cabe138ad5ed72de23ea8849a7c63a25d4ffc"
+    },
+    {
+      "path": "references/official-dagon.png",
+      "bytes": 264420,
+      "sha256": "5bb247c4972dd2e0281f755da61e63a95a4f1c9aba1c8b4483502c37489e0156"
+    },
+    {
+      "path": "references/official-dhruv.png",
+      "bytes": 243107,
+      "sha256": "02b25247f87824a68e8175573d15e10eabe3bdcec5ce9c2aecd52f357d5d330f"
+    },
+    {
+      "path": "references/official-eso.png",
+      "bytes": 254756,
+      "sha256": "dcffff5f42359fdb5f66e989304f9cc3c026dc07aba9f6cd30c80e5081d48f63"
+    },
+    {
+      "path": "references/official-hakari.png",
+      "bytes": 162001,
+      "sha256": "1b2553e353211dc040eeccc299f2e80a1f5b07ef1517e6fc37c2efaee6e26d2e"
+    },
+    {
+      "path": "references/official-hanami.png",
+      "bytes": 243636,
+      "sha256": "c9db0a85282913560446f3db6ac700dfe3c0a8c7aa7693dc73649aede22bec86"
+    },
+    {
+      "path": "references/official-higuruma.png",
+      "bytes": 131280,
+      "sha256": "301afcd93cb3b6c16df73204f9691319021e7ef7f24567aa24598852049e023b"
+    },
+    {
+      "path": "references/official-jogo.png",
+      "bytes": 217216,
+      "sha256": "74fa67cf38f912bca0286e652ec9a32af57b7fbd26df138823856b0850633dfc"
+    },
+    {
+      "path": "references/official-junpei.png",
+      "bytes": 175995,
+      "sha256": "78f6a672a56e501dcf2697649de5ba98c90c94a2f75c0a52415c4560d60301b2"
+    },
+    {
+      "path": "references/official-kamo.png",
+      "bytes": 200817,
+      "sha256": "b61aa31aa446afd9dd41c5c86d984ff504e58eed226ae5e7c336770bc00cea60"
+    },
+    {
+      "path": "references/official-kashimo.png",
+      "bytes": 218977,
+      "sha256": "e9f043c5c11c9217b8b1c33e4723d3a27e93fb64d201ef2c626888fb2c8dff3b"
+    },
+    {
+      "path": "references/official-kechizu.png",
+      "bytes": 237445,
+      "sha256": "7a60767b496537fcab666dc2be5e9a0a2160758df1237e8508fed90ac7604b7e"
+    },
+    {
+      "path": "references/official-kenjaku.png",
+      "bytes": 251240,
+      "sha256": "4606bf5e9b9cd904949a52c8e28ca83a4da6a33c2d9b2cbf3694171eaf2ca2c6"
+    },
+    {
+      "path": "references/official-koguy.png",
+      "bytes": 275137,
+      "sha256": "99bf667d9cc1ab6c69231cef86d9f4e94107d561b4838aee3f63883833294501"
+    },
+    {
+      "path": "references/official-kurourushi.png",
+      "bytes": 130449,
+      "sha256": "d0de2820bfeca511d5ebb93e33e265fb943f68a73f08294fcf6b0de84350249f"
+    },
+    {
+      "path": "references/official-mahito.png",
+      "bytes": 217097,
+      "sha256": "9e72257ba65854aa194bfc0ad657687418df290dc9440209a14033df295d0d02"
+    },
+    {
+      "path": "references/official-mahoraga-full.jpg",
+      "bytes": 80574,
+      "sha256": "46013e2869d4c6106057347a88be231123c4fb88c5b545247279a9e645a07e70"
+    },
+    {
+      "path": "references/official-maki.png",
+      "bytes": 244137,
+      "sha256": "03b6d0f5f3ed154e00f05e683673331fed1c1c9d3363faf4a68db4b7bca13bac"
+    },
+    {
+      "path": "references/official-megumi-v5.png",
+      "bytes": 125519,
+      "sha256": "d4b193f2309c0c2dd80a4746103f29cb097a1d58105c552006ed508ec11d710e"
+    },
+    {
+      "path": "references/official-nanami.png",
+      "bytes": 189315,
+      "sha256": "ce1a3ed9cdc29d86ef908cf04eb25d0caddab4f8b6540aeed13f9f24270b1b46"
+    },
+    {
+      "path": "references/official-naobito.png",
+      "bytes": 197222,
+      "sha256": "d50420958511254edd2b6335ab23dc8a3777a03e25723a60ad11121a254d03de"
+    },
+    {
+      "path": "references/official-naoya.png",
+      "bytes": 211718,
+      "sha256": "b5fbcb5ef30aa7f97d0748d45656ac04fd8dc91b1d2e88c77f98c0a84d2d293f"
+    },
+    {
+      "path": "references/official-nobara-v5.png",
+      "bytes": 173975,
+      "sha256": "86c0dfd23da44ad7b0412d098ad5316c1c9d22a192f3565ef457447b7101e06f"
+    },
+    {
+      "path": "references/official-ryu.png",
+      "bytes": 210838,
+      "sha256": "fb3787f21dc6a79d812e3f9102d5cb03971418ecd4d7a99fd9365d635acf4496"
+    },
+    {
+      "path": "references/official-sukuna.png",
+      "bytes": 237264,
+      "sha256": "cd67738eecaaa68364e1d327cff42e084248f5decc3b464b1d2ea10c96fdc827"
+    },
+    {
+      "path": "references/official-todo.png",
+      "bytes": 231521,
+      "sha256": "e36dc10d40a45707eee9738606a2a9330425ce9d43581101e41564c01310b0c2"
+    },
+    {
+      "path": "references/official-toji.png",
+      "bytes": 159198,
+      "sha256": "d6d9d33f8f52e28baf9b1e74c034d1db639135f4d6566dc917d8e94723e6ceb8"
+    },
+    {
+      "path": "references/official-uraume.png",
+      "bytes": 114421,
+      "sha256": "3e1f9be2ed4cb9898e6365321a4ad871960e36cf60f1be39185348ef2118516b"
+    },
+    {
+      "path": "references/official-uro.png",
+      "bytes": 164249,
+      "sha256": "7143330582ff0e4d160eec9fa3220728decc7a85c9a22d515f9dda463d811c8a"
+    },
+    {
+      "path": "references/official-yuji-v5.png",
+      "bytes": 165431,
+      "sha256": "9bd908ac1ca915a348653f35c94a83e99c68c58db7c6b23f2d0ede99ad06c754"
+    },
+    {
+      "path": "references/official-yuki.png",
+      "bytes": 167964,
+      "sha256": "bb74a15e8569d09c07ae4a8212ccc665702f39a2665dda98f24db781706283af"
+    },
+    {
+      "path": "references/official-yuta.png",
+      "bytes": 154756,
+      "sha256": "1530262c826edacfaa083887bfde7d7ba95f7cdfe8bdff0177e19d7c2b75b190"
+    },
+    {
+      "path": "references/phanpara-review-v1/gojo.png",
+      "bytes": 209540,
+      "sha256": "232d10e428c5c945a04ef75b67bc9e611287fb2f9db0c7e8f041bb8404b09b92"
+    },
+    {
+      "path": "references/phanpara-review-v1/mahoraga-official-pv.jpg",
+      "bytes": 170269,
+      "sha256": "ff9ac879bca29da520c71f3525f3712c50707e7c48fb033a67416a46706d46b5"
+    },
+    {
+      "path": "references/phanpara-review-v1/nobara.png",
+      "bytes": 172320,
+      "sha256": "3738f7fef6db59d7dbd17944053ab8303c39bb0bea8018799665e7c3109f04cd"
+    },
+    {
+      "path": "references/phanpara-review-v1/yuji.png",
+      "bytes": 227963,
+      "sha256": "c673854d805a9d809ebb72699395a62f15679d1a20d02766a6bfb85b370b5b8c"
+    },
+    {
+      "path": "references/sukuna-manga-v4/heian-ch237-reveal.jpg",
+      "bytes": 1737702,
+      "sha256": "c3daec0dc07e239a691aa6a3e5cb1a61ccff49f7edc2aad4497b645a57037807"
+    },
+    {
+      "path": "references/sukuna-manga-v4/heian-ch238-front.png",
+      "bytes": 792768,
+      "sha256": "930cea3637dffd78dab4ac22f7ce77f4f229d1efd5964a053b5e97427313c6eb"
+    },
+    {
+      "path": "references/sukuna-manga-v4/megumi-ch216-stance.jpg",
+      "bytes": 279665,
+      "sha256": "3cf42627a5bb4f68bf234340ac4e996a24a6fa2d836e8fcb18437f7d60511ab7"
+    },
+    {
+      "path": "references/sukuna-manga-v4/megumi-ch224-street.jpg",
+      "bytes": 83287,
+      "sha256": "fc959b305ef49a928086ecdde83397e5ea29b2fdbb9c47716a2c24b597a5b65d"
+    },
+    {
+      "path": "references/sukuna-manga-v4/yuji-ch130-stance.jpg",
+      "bytes": 57706,
+      "sha256": "9baa3cd080461db7f8600598934ccae15792562f62794dd7b0d529917f3ef2f6"
+    },
+    {
+      "path": "refinements.css",
+      "bytes": 12003,
+      "sha256": "b94cac2d528dd8be74fef1a055d1fc819519e73354b539191ae183feb3838444"
+    },
+    {
+      "path": "roulette-polish.css",
+      "bytes": 12939,
+      "sha256": "1ee08449e71d7c6a05645bc150fbb1f93098b4a895a2c282e55eed5c2eb84a9c"
+    },
+    {
+      "path": "roulette-polish.js",
+      "bytes": 2136,
+      "sha256": "2c1bb222d0c2d712252fe1cc17209311be2e809c48f3b3f53286ac005589345b"
+    },
+    {
+      "path": "save-slots.js",
+      "bytes": 10386,
+      "sha256": "c25e262ccff9b2c7077e3d6704dd65997b71552efad1a0a2654d38cf5291685d"
+    },
+    {
+      "path": "save.js",
+      "bytes": 10264,
+      "sha256": "c0fc2934e8e33a0a5ef967d8e131f7bb97221790803e3a6c78def2cfe0d5081e"
+    },
+    {
+      "path": "scene-review.html",
+      "bytes": 2005,
+      "sha256": "d3073d9274eb6188756adde812f9694b2ba8bc591cc33f9330072cd374da9dfd"
+    },
+    {
+      "path": "scene-review.js",
+      "bytes": 4323,
+      "sha256": "006e1364c67102d83ec729041083a600206a61fd67a8fe147035694c5e76b4ec"
+    },
+    {
+      "path": "slot-machine.css",
+      "bytes": 8036,
+      "sha256": "c92e8bdfc2f4c9c6719271cdc8cf38aea8236b35cceeff7fd73b4e58ca831968"
+    },
+    {
+      "path": "slot-machine.js",
+      "bytes": 10817,
+      "sha256": "22ca5102632b50c8a920c3946946aed5333ecdf685a84847c42e20911dba5625"
+    },
+    {
+      "path": "stage-art.json",
+      "bytes": 5832,
+      "sha256": "1267c52fe9f2d4bf29df633af51c899b14db01759f9bf655bf8ca2a945cf5601"
+    },
+    {
+      "path": "stage-domains.js",
+      "bytes": 3771,
+      "sha256": "0ff18f5e4bacdc1032f6a3757252e679be58aae05587f936641a7af6cec36d57"
+    },
+    {
+      "path": "stage-hd.css",
+      "bytes": 26896,
+      "sha256": "c4aaed1f33ea9686b9463d32efc651b9e334d31f4e52fb3df94815bb3392fd65"
+    },
+    {
+      "path": "stage-hd.js",
+      "bytes": 39271,
+      "sha256": "9f2df23862c99fd63a66bea013c661ee6d0a35d4392d37d457aa7d742e0e4ebe"
+    },
+    {
+      "path": "summon-presentation.js",
+      "bytes": 3637,
+      "sha256": "0520f9093109ff81779da4a7b08eaf3d5186b428cae53c338e9ebb04614919bb"
+    },
+    {
+      "path": "summon-review.html",
+      "bytes": 1945,
+      "sha256": "25e538b1f3e59a925a018c27e35d020bb522007771d56d3d725e869b478e227a"
+    },
+    {
+      "path": "summon-review.js",
+      "bytes": 4122,
+      "sha256": "5fc88d66a29f4afe078cd923c7cf682eed59f165e254f674929ab7f35a352a29"
+    },
+    {
+      "path": "technique-build-combat.js",
+      "bytes": 10570,
+      "sha256": "503c633c272aa920eeb0facc84b05f0975c72daf7caad23a40301f655e6f668b"
+    },
+    {
+      "path": "technique-builds.js",
+      "bytes": 11867,
+      "sha256": "5f9fa7909456354d73ef0540fe4f7a4f3d29b49e7098145b4078a466d11022d3"
+    },
+    {
+      "path": "tokens.css",
+      "bytes": 2125,
+      "sha256": "b68370c72789aed9b5bdd1bc5f20d4be030e00eae0402181322c3f49b1bf0a53"
+    },
+    {
+      "path": "ui.css",
+      "bytes": 21639,
+      "sha256": "d610110187d7abc68ee76a27bf6856b60dc481549ecb5dbbbb0f1f1df9fb88a2"
+    },
+    {
+      "path": "ui.js",
+      "bytes": 9491,
+      "sha256": "fec5375e72c0915ea0d0370199484568d37b7aacb50a86ded703f6825066d377"
+    },
+    {
+      "path": "vendor/three.core.min.js",
+      "bytes": 381124,
+      "sha256": "61ba0df005b05991361d040d8ff670e1aadfd0ce7aeebd1fdb0725957a8957de"
+    },
+    {
+      "path": "vendor/three.module.min.js",
+      "bytes": 338908,
+      "sha256": "e2b5ee6bccd38fd6d8a2428546b83c5f2426d84b152ef82be8055556e3b40eb6"
+    }
+  ]
+}

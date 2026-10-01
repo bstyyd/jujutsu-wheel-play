@@ -25,7 +25,7 @@ export class DomainStage {
   async backdrop(p,g,version){
     const s=this.stage;
     try{
-      const map=await s.loadTexture(p.file||'domains.webp');if(version!==this.version)return;
+      const map=await s.loadTexture(p.file||'domains.png');if(version!==this.version)return;
       const w=p.open?10:1,h=p.open?6:1,geometry=new THREE.PlaneGeometry(w,h);
       if(p.atlas){const [x,y,w,h]=p.atlas,uv=geometry.attributes.uv;for(let i=0;i<uv.count;i++)uv.setXY(i,x+.002+uv.getX(i)*(w-.004),y+.002+uv.getY(i)*(h-.004));}
       const material=new THREE.MeshBasicMaterial({map,fog:false,toneMapped:false,transparent:!!(p.open||p.overlay),opacity:p.open?.92:p.overlay?.65:1,depthWrite:!p.overlay});

@@ -8,7 +8,8 @@ const HD={
   let index=/女/.test(gender)?3:2;if(/咒灵/.test(identity))index=22;else if(/诅咒师/.test(identity))index=27;else if(/受肉/.test(identity))index=12;
   return {index,scale:Number(age)<15?.82:1};
  },
- sprite(name,player=false){
+ sprite(name,player=false,unit=null){
+  const summon=unit&&window.SummonPresentation?.poster(unit,Game.day);if(summon)return summon;
   let index=this.artIndex(name),scale=1;if(player){const s=this.silhouette();index=s.index;scale=s.scale;}
   if(index<0){return `<span class="sprite unknown" aria-label="${this.escape(name)}">影</span>`;}
   const art=(!player&&window.BattleScenes?.portrait(name))||window.ArtCatalog?.[index];
@@ -44,7 +45,7 @@ const HD={
   $('btnActionWheel').textContent='行动 · 推进一天';$('btnShowAttr').textContent='详细属性';
  },
  installBattle(){
-  BattleUI.unitHtml=function(u,side){const idx=this.eng.units.indexOf(u);return `<div class="unit ${u.alive?'':'dead'} ${side==='enemy'&&u.alive?'targetable':''} ${this.selectedTargetIdx===idx?'selected':''}" data-idx="${idx}" ${side==='enemy'&&u.alive?'role="button" tabindex="0"':''} aria-label="${HD.escape(u.name)}，生命${Math.round(u.hp)}">${HD.sprite(u.name,u.isPlayer)}<div class="unit-info"><div class="uname">${HD.escape(u.isPlayer?'你':u.name)}<span class="utype">${HD.escape(lvName(u.li))}</span></div><div class="mini-bar hp"><i style="width:${pct(u.hp,u.maxHp)}"></i></div><div class="nums">HP ${Math.max(0,Math.round(u.hp))}/${u.maxHp}</div><div class="mini-bar cp"><i style="width:${pct(u.cp,u.maxCp)}"></i></div><div class="nums">CP ${Math.round(u.cp)}/${u.maxCp}</div><div class="badges">${this.unitBadges(u)}</div></div></div>`;};
+  BattleUI.unitHtml=function(u,side){const idx=this.eng.units.indexOf(u);return `<div class="unit ${u.alive?'':'dead'} ${side==='enemy'&&u.alive?'targetable':''} ${this.selectedTargetIdx===idx?'selected':''}" data-idx="${idx}" ${side==='enemy'&&u.alive?'role="button" tabindex="0"':''} aria-label="${HD.escape(u.name)}，生命${Math.round(u.hp)}">${HD.sprite(u.name,u.isPlayer,u)}<div class="unit-info"><div class="uname">${HD.escape(u.isPlayer?'你':u.name)}<span class="utype">${HD.escape(lvName(u.li))}</span></div><div class="mini-bar hp"><i style="width:${pct(u.hp,u.maxHp)}"></i></div><div class="nums">HP ${Math.max(0,Math.round(u.hp))}/${u.maxHp}</div><div class="mini-bar cp"><i style="width:${pct(u.cp,u.maxCp)}"></i></div><div class="nums">CP ${Math.round(u.cp)}/${u.maxCp}</div><div class="badges">${this.unitBadges(u)}</div></div></div>`;};
   const render=BattleUI.render;BattleUI.render=function(){render.call(this);HD.shortBattleLabels();HD.battleDetails(this.eng);$('bfEnemy').querySelectorAll('[role=button]').forEach(el=>el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();el.click();}});};
   const wait=BattleUI.waitInput;BattleUI.waitInput=function(){wait.call(this);HD.shortBattleLabels();};
   const run=BattleUI.run;BattleUI.run=function(cfg){const p=run.call(this,cfg);const title=$('modalBox').querySelector('h2');if(title)title.dataset.battleTitle='true';HD.shortBattleLabels();return p;};

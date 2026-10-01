@@ -1,0 +1,4691 @@
+{
+  "version": "pixel-b-v2",
+  "surfaceAtlas": "battle/v1/surfaces.png",
+  "actors": {
+    "megumi": {
+      "file": "battle/pixel-b-v1/megumi.png",
+      "label": "伏黑惠",
+      "artIndex": 2,
+      "facing": "right",
+      "height": 3.25,
+      "pixelStep": 1,
+      "frames": [
+        [
+          70,
+          34,
+          205,
+          279
+        ],
+        [
+          372,
+          34,
+          203,
+          279
+        ],
+        [
+          670,
+          34,
+          205,
+          279
+        ],
+        [
+          1022,
+          33,
+          168,
+          280
+        ],
+        [
+          68,
+          334,
+          208,
+          291
+        ],
+        [
+          382,
+          334,
+          266,
+          291
+        ],
+        [
+          671,
+          340,
+          306,
+          285
+        ],
+        [
+          1022,
+          334,
+          157,
+          291
+        ],
+        [
+          65,
+          642,
+          204,
+          284
+        ],
+        [
+          369,
+          642,
+          216,
+          284
+        ],
+        [
+          674,
+          652,
+          208,
+          274
+        ],
+        [
+          1004,
+          646,
+          180,
+          280
+        ],
+        [
+          53,
+          956,
+          233,
+          260
+        ],
+        [
+          387,
+          951,
+          214,
+          269
+        ],
+        [
+          686,
+          1022,
+          179,
+          192
+        ],
+        [
+          1010,
+          930,
+          164,
+          294
+        ]
+      ],
+      "feet": [
+        0.992832,
+        0.992832,
+        0.992832,
+        0.992857,
+        0.993127,
+        0.993127,
+        0.992982,
+        0.993127,
+        0.992958,
+        0.992958,
+        0.992701,
+        0.992857,
+        0.992308,
+        0.992565,
+        0.989583,
+        0.993197
+      ],
+      "centers": [
+        0.497561,
+        0.497537,
+        0.497561,
+        0.494048,
+        0.435096,
+        0.18609,
+        0.207516,
+        0.544586,
+        0.497549,
+        0.497685,
+        0.497596,
+        0.497222,
+        0.48927,
+        0.497664,
+        0.497207,
+        0.496951
+      ],
+      "frameScales": [
+        1.014545,
+        1.014545,
+        1.014545,
+        1.018182,
+        1.058182,
+        1.058182,
+        1.036364,
+        1.058182,
+        1.032727,
+        1.032727,
+        0.996364,
+        1.018182,
+        0.945455,
+        0.978182,
+        0.698182,
+        1.069091
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "idle3": 2,
+        "windup": 3,
+        "advance": 4,
+        "release": 5,
+        "attack": 6,
+        "follow": 7,
+        "recover": 8,
+        "cast": 9,
+        "castRelease": 10,
+        "castRecover": 11,
+        "guard": 12,
+        "hit": 13,
+        "defeat": 14,
+        "victory": 15
+      },
+      "motion": {
+        "windup": 0.12,
+        "contact": 0.25,
+        "end": 0.4,
+        "lunge": 0.5,
+        "castLunge": 0.12
+      },
+      "choreography": "Use case: stylized-concept.\nAsset: production HD-2D RPG battle sprite atlas, EXACTLY 16 separate full-body figures in a square 4-column x 4-row grid, ordered row-major. Aim for a 2048 x 2048 canvas with generous empty gutters. Genuine alpha transparency, NOT a painted checkerboard. No scenery, floor, shadows, effects, labels, grid lines or text.\nInput image 1 is the ACCEPTED STYLE B: reproduce its refined JRPG pixel-cluster aesthetic and compact expressive anatomy, not its characters or dark background. Input image 2 is the official anime CHARACTER IDENTITY and exact costume reference. Preserve that identity in every frame. This is carefully authored pixel art, visible stepped contours and intentional square clusters, compact roughly 5-head-tall people, restrained 3-4 shades per material, dark navy outlines, readable small pixel faces. No smooth anime ink contours, blurry painted shading, 3D, super-deformed chibi or photorealism. Keep the same pixel density throughout the sheet, finer than classic tiny JRPG sprites but still unmistakably pixel art. Keep the whole body AND weapon inside each cell with generous 12-15 percent side margins. Faces and action aim toward screen RIGHT in three-quarter side view. Full legs, feet, hands and connected limbs must remain readable. Every cell contains exactly ONE same-size character, no fragments outside it, no duplicate character. Small facial details should remain pixels, never oversized anime eyes. Standing feet share a consistent ground baseline. Frames 0,1,2 have IDENTICAL feet and pelvis placement; only subtle breathing, cloth and a blink vary. Do not shift the entire idle body sideways. Attack frames form a coherent windup -> step -> release -> contact -> follow-through -> recovery sequence. No energy painted into the character sheet; game renders effects separately.\n\nMegumi Fushiguro, early school uniform: black spiky hair with his distinctive angular tufts, dark blue eyes, navy high collar with gold button, navy straight trousers and tan ankle boots. No weapon. Both arms and hands are always visibly present, not hidden or cut off. Slim, cautious and serious.\nFrames: 0 low side-on ready stance, hands guarding chest, two feet grounded; 1 same foot anchors and small shoulder breath; 2 same pose blinking. 3 chamber the right knee, hands balance; 4 planted rear foot pivots, knee aimed RIGHT; 5 half-extended side kick; 6 fully extended RIGHT side kick with rear foot planted; 7 retract knee; 8 recover both feet and guard. 9 BOTH hands clearly overlap horizontally at chest forming the canonical Divine Dogs shadow-puppet sign, crossed thumbs and dog ears, not a one-handed ninja sign; 10 a DISTINCT canonical Chimera Shadow Garden hand seal: both clenched fists clasped tightly together at chest, leaning forward with focused face (not Gojo's crossed-finger seal); 11 both hands lower after summoning; 12 compact forearm side guard; 13 shoulder-hit recoil with both hands visible; 14 kneeling exhausted, one hand on ground; 15 restrained victory, standing calmly with arms folded. No summoned animals.",
+      "animations": {
+        "idle": {
+          "loop": true,
+          "track": [
+            {
+              "frame": 0,
+              "until": 0.8
+            },
+            {
+              "frame": 1,
+              "until": 1.5
+            },
+            {
+              "frame": 0,
+              "until": 2.15
+            },
+            {
+              "frame": 2,
+              "until": 2.28
+            },
+            {
+              "frame": 0,
+              "until": 2.95
+            }
+          ]
+        },
+        "cast": {
+          "track": [
+            {
+              "frame": 0,
+              "until": 0.32
+            },
+            {
+              "frame": 9,
+              "until": 0.8
+            },
+            {
+              "frame": 11,
+              "until": 1.03
+            },
+            {
+              "frame": 0,
+              "until": 1.3
+            }
+          ]
+        },
+        "victory": {
+          "track": [
+            {
+              "frame": 15,
+              "until": 2.0
+            }
+          ]
+        },
+        "domain": {
+          "track": [
+            {
+              "frame": 10,
+              "until": 1.05
+            },
+            {
+              "frame": 11,
+              "until": 1.24
+            },
+            {
+              "frame": 0,
+              "until": 1.4
+            }
+          ]
+        }
+      },
+      "actions": {
+        "melee": {
+          "timing": [
+            0.24,
+            0.56,
+            0.65,
+            0.88,
+            1.24
+          ],
+          "approach": true,
+          "track": [
+            {
+              "frame": 3,
+              "until": 0.24
+            },
+            {
+              "frame": 4,
+              "until": 0.368
+            },
+            {
+              "frame": 5,
+              "until": 0.56
+            },
+            {
+              "frame": 6,
+              "until": 0.65
+            },
+            {
+              "frame": 7,
+              "until": 0.88
+            },
+            {
+              "frame": 8,
+              "until": 1.16
+            },
+            {
+              "frame": 0,
+              "until": 1.24
+            }
+          ]
+        },
+        "shadows": {
+          "timing": [
+            0.32,
+            0.72,
+            0.8,
+            1.03,
+            1.3
+          ],
+          "approach": false,
+          "track": [
+            {
+              "frame": 0,
+              "until": 0.32
+            },
+            {
+              "frame": 9,
+              "until": 0.8
+            },
+            {
+              "frame": 11,
+              "until": 1.03
+            },
+            {
+              "frame": 0,
+              "until": 1.3
+            }
+          ]
+        },
+        "summon": {
+          "timing": [
+            0.32,
+            0.72,
+            0.8,
+            1.03,
+            1.3
+          ],
+          "approach": false,
+          "track": [
+            {
+              "frame": 0,
+              "until": 0.32
+            },
+            {
+              "frame": 9,
+              "until": 0.8
+            },
+            {
+              "frame": 11,
+              "until": 1.03
+            },
+            {
+              "frame": 0,
+              "until": 1.3
+            }
+          ]
+        }
+      },
+      "idleRegistration": {
+        "method": "planted-stance-v1",
+        "frames": [
+          0,
+          1,
+          2
+        ]
+      },
+      "pixelArt": true,
+      "headRects": [
+        [
+          148,
+          49,
+          86,
+          80
+        ],
+        [
+          446,
+          49,
+          88,
+          80
+        ],
+        [
+          744,
+          51,
+          86,
+          78
+        ],
+        [
+          1067,
+          49,
+          86,
+          80
+        ],
+        [
+          112,
+          352,
+          84,
+          75
+        ],
+        [
+          422,
+          352,
+          84,
+          75
+        ],
+        [
+          713,
+          360,
+          86,
+          72
+        ],
+        [
+          1059,
+          353,
+          86,
+          72
+        ],
+        [
+          148,
+          662,
+          86,
+          75
+        ],
+        [
+          430,
+          676,
+          120,
+          102
+        ],
+        [
+          754,
+          674,
+          86,
+          75
+        ],
+        [
+          1060,
+          664,
+          84,
+          75
+        ],
+        [
+          127,
+          971,
+          86,
+          78
+        ],
+        [
+          410,
+          951,
+          88,
+          90
+        ],
+        [
+          770,
+          1040,
+          69,
+          75
+        ],
+        [
+          1050,
+          943,
+          76,
+          72
+        ]
+      ],
+      "reference": "references/official-megumi-v5.png",
+      "referenceURL": "https://jujutsukaisen.jp/character/",
+      "reviewSkill": {
+        "label": "播放十影召唤",
+        "kind": "summon",
+        "variant": "shadows"
+      },
+      "styleBaseline": "B",
+      "poseLabels": {
+        "cast": "十影手势",
+        "castRelease": "领域手势",
+        "castRecover": "手势收势"
+      },
+      "signature": "shadows"
+    },
+    "nanami": {
+      "file": "battle/pixel-b-v1/nanami.png",
+      "label": "七海建人",
+      "artIndex": 4,
+      "facing": "right",
+      "height": 3.5,
+      "pixelStep": 1,
+      "frames": [
+        [
+          100,
+          21,
+          161,
+          284
+        ],
+        [
+          401,
+          21,
+          162,
+          284
+        ],
+        [
+          704,
+          20,
+          160,
+          285
+        ],
+        [
+          983,
+          37,
+          189,
+          268
+        ],
+        [
+          37,
+          346,
+          269,
+          259
+        ],
+        [
+          377,
+          332,
+          192,
+          277
+        ],
+        [
+          648,
+          379,
+          314,
+          230
+        ],
+        [
+          978,
+          342,
+          262,
+          266
+        ],
+        [
+          47,
+          660,
+          229,
+          258
+        ],
+        [
+          399,
+          634,
+          164,
+          284
+        ],
+        [
+          639,
+          681,
+          305,
+          237
+        ],
+        [
+          1019,
+          635,
+          160,
+          283
+        ],
+        [
+          45,
+          973,
+          242,
+          253
+        ],
+        [
+          363,
+          959,
+          248,
+          266
+        ],
+        [
+          669,
+          1022,
+          220,
+          203
+        ],
+        [
+          1021,
+          936,
+          163,
+          290
+        ]
+      ],
+      "feet": [
+        0.992958,
+        0.992958,
+        0.992982,
+        0.992537,
+        0.992278,
+        0.99278,
+        0.991304,
+        0.992481,
+        0.992248,
+        0.992958,
+        0.991561,
+        0.992933,
+        0.992095,
+        0.992481,
+        0.990148,
+        0.993103
+      ],
+      "centers": [
+        0.524845,
+        0.530864,
+        0.525,
+        0.497354,
+        0.540892,
+        0.497396,
+        0.406051,
+        0.433206,
+        0.497817,
+        0.512195,
+        0.442623,
+        0.503125,
+        0.497934,
+        0.497984,
+        0.497727,
+        0.509202
+      ],
+      "frameScales": [
+        1.014286,
+        1.014286,
+        1.017857,
+        0.957143,
+        0.925,
+        0.989286,
+        0.821429,
+        0.95,
+        0.921429,
+        1.014286,
+        0.846429,
+        1.010714,
+        0.903571,
+        0.95,
+        0.725,
+        1.035714
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "idle3": 2,
+        "windup": 3,
+        "advance": 4,
+        "release": 5,
+        "attack": 6,
+        "follow": 7,
+        "recover": 8,
+        "cast": 9,
+        "castRelease": 10,
+        "castRecover": 11,
+        "guard": 12,
+        "hit": 13,
+        "defeat": 14,
+        "victory": 15
+      },
+      "motion": {
+        "windup": 0.16,
+        "contact": 0.29,
+        "end": 0.45,
+        "lunge": 0.6,
+        "castLunge": 0.12
+      },
+      "choreography": "Use case: stylized-concept.\nAsset: production HD-2D RPG battle sprite atlas, EXACTLY 16 separate full-body figures in a square 4-column x 4-row grid, ordered row-major. Aim for a 2048 x 2048 canvas with generous empty gutters. Genuine alpha transparency, NOT a painted checkerboard. No scenery, floor, shadows, effects, labels, grid lines or text.\nInput image 1 is the ACCEPTED STYLE B: reproduce its refined JRPG pixel-cluster aesthetic and compact expressive anatomy, not its characters or dark background. Input image 2 is the official anime CHARACTER IDENTITY and exact costume reference. Preserve that identity in every frame. This is carefully authored pixel art, visible stepped contours and intentional square clusters, compact roughly 5-head-tall people, restrained 3-4 shades per material, dark navy outlines, readable small pixel faces. No smooth anime ink contours, blurry painted shading, 3D, super-deformed chibi or photorealism. Keep the same pixel density throughout the sheet, finer than classic tiny JRPG sprites but still unmistakably pixel art. Keep the whole body AND weapon inside each cell with generous 12-15 percent side margins. Faces and action aim toward screen RIGHT in three-quarter side view. Full legs, feet, hands and connected limbs must remain readable. Every cell contains exactly ONE same-size character, no fragments outside it, no duplicate character. Small facial details should remain pixels, never oversized anime eyes. Standing feet share a consistent ground baseline. Frames 0,1,2 have IDENTICAL feet and pelvis placement; only subtle breathing, cloth and a blink vary. Do not shift the entire idle body sideways. Attack frames form a coherent windup -> step -> release -> contact -> follow-through -> recovery sequence. No energy painted into the character sheet; game renders effects separately.\n\nKento Nanami, blond neatly side-parted hair, characteristic small green-lensed goggles with pale frame, beige suit, BLUE collared shirt, mustard spotted tie, brown dress shoes. Mature angular face, restrained adult proportions, precise professional posture. His weapon is his SHORT blunt cleaver tightly wrapped in pale patterned cloth, NOT a giant sword or a katana. Weapon remains physically held and fits inside each cell.\nFrames: 0 upright precise guard with wrapped cleaver lowered in right hand and free left hand near tie; 1 same feet, subtle breath and tie movement; 2 same stance blink behind goggles. 3 cleaver drawn back diagonally near right shoulder; 4 measured step forward; 5 torso rotates starting downward diagonal cut; 6 decisive diagonal cleaver contact toward RIGHT; 7 controlled follow-through, no wild overswing; 8 reset cleaver near waist. 9 left hand adjusts tie, cleaver still low in right hand preparing Overtime; 10 both shoulders set, sharp focused Ratio Technique ready pose with weapon forward, no spell gesture; 11 returns weapon to low guard. 12 short blade diagonal guard across torso; 13 tight shoulder recoil without dropping weapon; 14 exhausted one-knee crouch, cleaver held down; 15 relaxed victory adjusting tie and holding the cleaver. Suit, goggles and weapon consistent in all frames.",
+      "actions": {
+        "melee": {
+          "timing": [
+            0.24,
+            0.52,
+            0.6,
+            0.8,
+            1.12
+          ],
+          "approach": true,
+          "track": [
+            {
+              "frame": 3,
+              "until": 0.24
+            },
+            {
+              "frame": 4,
+              "until": 0.352
+            },
+            {
+              "frame": 5,
+              "until": 0.52
+            },
+            {
+              "frame": 6,
+              "until": 0.6
+            },
+            {
+              "frame": 7,
+              "until": 0.8
+            },
+            {
+              "frame": 8,
+              "until": 1.04
+            },
+            {
+              "frame": 0,
+              "until": 1.12
+            }
+          ]
+        },
+        "ratio": {
+          "timing": [
+            0.3,
+            0.66,
+            0.75,
+            0.94,
+            1.3
+          ],
+          "approach": true,
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.3
+            },
+            {
+              "frame": 3,
+              "until": 0.48
+            },
+            {
+              "frame": 10,
+              "until": 0.66
+            },
+            {
+              "frame": 6,
+              "until": 0.75
+            },
+            {
+              "frame": 7,
+              "until": 0.94
+            },
+            {
+              "frame": 8,
+              "until": 1.24
+            },
+            {
+              "frame": 0,
+              "until": 1.3
+            }
+          ]
+        }
+      },
+      "animations": {
+        "idle": {
+          "loop": true,
+          "track": [
+            {
+              "frame": 0,
+              "until": 0.8
+            },
+            {
+              "frame": 1,
+              "until": 1.5
+            },
+            {
+              "frame": 0,
+              "until": 2.15
+            },
+            {
+              "frame": 2,
+              "until": 2.28
+            },
+            {
+              "frame": 0,
+              "until": 2.95
+            }
+          ]
+        },
+        "cast": {
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.3
+            },
+            {
+              "frame": 3,
+              "until": 0.48
+            },
+            {
+              "frame": 10,
+              "until": 0.66
+            },
+            {
+              "frame": 6,
+              "until": 0.75
+            },
+            {
+              "frame": 7,
+              "until": 0.94
+            },
+            {
+              "frame": 8,
+              "until": 1.24
+            },
+            {
+              "frame": 0,
+              "until": 1.3
+            }
+          ]
+        },
+        "victory": {
+          "track": [
+            {
+              "frame": 15,
+              "until": 2.0
+            }
+          ]
+        }
+      },
+      "idleRegistration": {
+        "method": "planted-stance-v1",
+        "frames": [
+          0,
+          1,
+          2
+        ]
+      },
+      "pixelArt": true,
+      "headRects": [
+        [
+          116,
+          21,
+          130,
+          152
+        ],
+        [
+          417,
+          21,
+          128,
+          152
+        ],
+        [
+          720,
+          20,
+          126,
+          152
+        ],
+        [
+          1032,
+          37,
+          126,
+          150
+        ],
+        [
+          152,
+          346,
+          126,
+          148
+        ],
+        [
+          452,
+          332,
+          117,
+          148
+        ],
+        [
+          648,
+          379,
+          307,
+          230
+        ],
+        [
+          978,
+          342,
+          262,
+          260
+        ],
+        [
+          120,
+          660,
+          130,
+          148
+        ],
+        [
+          417,
+          634,
+          124,
+          145
+        ],
+        [
+          722,
+          681,
+          128,
+          142
+        ],
+        [
+          1030,
+          635,
+          122,
+          148
+        ],
+        [
+          122,
+          973,
+          128,
+          148
+        ],
+        [
+          424,
+          959,
+          132,
+          148
+        ],
+        [
+          754,
+          1022,
+          120,
+          150
+        ],
+        [
+          1031,
+          936,
+          120,
+          142
+        ]
+      ],
+      "reference": "references/official-nanami.png",
+      "referenceURL": "https://jujutsukaisen.jp/character/",
+      "reviewSkill": {
+        "label": "播放十划斩击",
+        "kind": "ratio",
+        "variant": "ratio"
+      },
+      "styleBaseline": "B",
+      "poseLabels": {
+        "cast": "整理领带",
+        "castRelease": "十划架势",
+        "castRecover": "斩击收势"
+      },
+      "signature": "ratio"
+    },
+    "maki": {
+      "file": "battle/pixel-b-v1/maki.png",
+      "label": "禅院真希·前期",
+      "artIndex": 5,
+      "facing": "right",
+      "height": 3.05,
+      "pixelStep": 1,
+      "frames": [
+        [
+          37,
+          79,
+          260,
+          247
+        ],
+        [
+          346,
+          80,
+          260,
+          246
+        ],
+        [
+          661,
+          80,
+          265,
+          246
+        ],
+        [
+          959,
+          113,
+          279,
+          213
+        ],
+        [
+          27,
+          390,
+          296,
+          229
+        ],
+        [
+          344,
+          389,
+          303,
+          232
+        ],
+        [
+          649,
+          390,
+          309,
+          231
+        ],
+        [
+          981,
+          389,
+          262,
+          232
+        ],
+        [
+          32,
+          702,
+          262,
+          235
+        ],
+        [
+          368,
+          638,
+          244,
+          299
+        ],
+        [
+          661,
+          702,
+          280,
+          235
+        ],
+        [
+          973,
+          702,
+          268,
+          235
+        ],
+        [
+          40,
+          994,
+          274,
+          216
+        ],
+        [
+          348,
+          1003,
+          291,
+          207
+        ],
+        [
+          675,
+          1046,
+          254,
+          165
+        ],
+        [
+          993,
+          953,
+          213,
+          257
+        ]
+      ],
+      "feet": [
+        0.991903,
+        0.99187,
+        0.99187,
+        0.99061,
+        0.991266,
+        0.991379,
+        0.991342,
+        0.991379,
+        0.991489,
+        0.993311,
+        0.991489,
+        0.991489,
+        0.990741,
+        0.990338,
+        0.987879,
+        0.992218
+      ],
+      "centers": [
+        0.432692,
+        0.45,
+        0.437736,
+        0.469534,
+        0.381757,
+        0.315182,
+        0.322006,
+        0.423664,
+        0.448473,
+        0.405738,
+        0.498214,
+        0.440299,
+        0.408759,
+        0.4811,
+        0.318898,
+        0.434272
+      ],
+      "frameScales": [
+        1.016461,
+        1.012346,
+        1.012346,
+        0.876543,
+        0.942387,
+        0.954733,
+        0.950617,
+        0.954733,
+        0.967078,
+        1.230453,
+        0.967078,
+        0.967078,
+        0.888889,
+        0.851852,
+        0.679012,
+        1.057613
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "idle3": 2,
+        "windup": 3,
+        "advance": 4,
+        "release": 5,
+        "attack": 6,
+        "follow": 7,
+        "recover": 8,
+        "cast": 9,
+        "castRelease": 10,
+        "castRecover": 11,
+        "guard": 12,
+        "hit": 13,
+        "defeat": 14,
+        "victory": 15
+      },
+      "motion": {
+        "windup": 0.18,
+        "contact": 0.32,
+        "end": 0.49,
+        "lunge": 0.68,
+        "castLunge": 0.12
+      },
+      "choreography": "Use case: stylized-concept.\nAsset: production HD-2D RPG battle sprite atlas, EXACTLY 16 separate full-body figures in a square 4-column x 4-row grid, ordered row-major. Aim for a 2048 x 2048 canvas with generous empty gutters. Genuine alpha transparency, NOT a painted checkerboard. No scenery, floor, shadows, effects, labels, grid lines or text.\nInput image 1 is the ACCEPTED STYLE B: reproduce its refined JRPG pixel-cluster aesthetic and compact expressive anatomy, not its characters or dark background. Input image 2 is the official anime CHARACTER IDENTITY and exact costume reference. Preserve that identity in every frame. This is carefully authored pixel art, visible stepped contours and intentional square clusters, compact roughly 5-head-tall people, restrained 3-4 shades per material, dark navy outlines, readable small pixel faces. No smooth anime ink contours, blurry painted shading, 3D, super-deformed chibi or photorealism. Keep the same pixel density throughout the sheet, finer than classic tiny JRPG sprites but still unmistakably pixel art. Keep the whole body AND weapon inside each cell with generous 12-15 percent side margins. Faces and action aim toward screen RIGHT in three-quarter side view. Full legs, feet, hands and connected limbs must remain readable. Every cell contains exactly ONE same-size character, no fragments outside it, no duplicate character. Small facial details should remain pixels, never oversized anime eyes. Standing feet share a consistent ground baseline. Frames 0,1,2 have IDENTICAL feet and pelvis placement; only subtle breathing, cloth and a blink vary. Do not shift the entire idle body sideways. Attack frames form a coherent windup -> step -> release -> contact -> follow-through -> recovery sequence. No energy painted into the character sheet; game renders effects separately.\n\nEARLY Maki Zenin only: dark green high ponytail, straight bangs, rectangular purple glasses, navy high-collar jacket and matching skirt, dark stockings and black ankle boots. Preserve the official reference costume, not her later short-haired/scarred form. Her cursed tool is the reference's LONG red-brown shaft naginata/polearm with silver curved blade and small red/pale tassel. Both hands firmly grip the shaft; do not make it a katana. Athletic sharp confident face.\nFrames: 0 low two-handed polearm ready diagonally, whole blade and butt inside cell; 1 same feet and tiny shoulder breath, ponytail tips move; 2 same pose blink. 3 shaft pulled back low, knee bends; 4 forward foot step, shaft parallel to aim; 5 arms drive shaft forward; 6 full two-handed polearm thrust toward RIGHT; 7 short controlled lateral sweeping follow-through; 8 pull shaft back to ready. 9 raise polearm above head in two hands, athletic overhead windup; 10 heavy downward diagonal polearm cleave toward RIGHT; 11 recover the weapon down across body. 12 braced two-handed shaft block across torso; 13 stagger with both hands maintaining grip; 14 exhausted low kneeling, polearm close to body; 15 confident victory with polearm resting diagonally by shoulder. These are physical weapon techniques, no magical hand signs, no domain.",
+      "actions": {
+        "melee": {
+          "timing": [
+            0.3,
+            0.64,
+            0.73,
+            0.98,
+            1.32
+          ],
+          "approach": true,
+          "track": [
+            {
+              "frame": 3,
+              "until": 0.3
+            },
+            {
+              "frame": 4,
+              "until": 0.436
+            },
+            {
+              "frame": 5,
+              "until": 0.64
+            },
+            {
+              "frame": 6,
+              "until": 0.73
+            },
+            {
+              "frame": 7,
+              "until": 0.98
+            },
+            {
+              "frame": 8,
+              "until": 1.24
+            },
+            {
+              "frame": 0,
+              "until": 1.32
+            }
+          ]
+        },
+        "polearm": {
+          "timing": [
+            0.4,
+            0.79,
+            0.9,
+            1.14,
+            1.48
+          ],
+          "approach": true,
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.4
+            },
+            {
+              "frame": 10,
+              "until": 0.9
+            },
+            {
+              "frame": 11,
+              "until": 1.14
+            },
+            {
+              "frame": 8,
+              "until": 1.42
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        },
+        "heavy": {
+          "timing": [
+            0.4,
+            0.79,
+            0.9,
+            1.14,
+            1.48
+          ],
+          "approach": true,
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.4
+            },
+            {
+              "frame": 10,
+              "until": 0.9
+            },
+            {
+              "frame": 11,
+              "until": 1.14
+            },
+            {
+              "frame": 8,
+              "until": 1.42
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        },
+        "slash": {
+          "timing": [
+            0.3,
+            0.64,
+            0.73,
+            0.98,
+            1.32
+          ],
+          "approach": true,
+          "track": [
+            {
+              "frame": 3,
+              "until": 0.3
+            },
+            {
+              "frame": 4,
+              "until": 0.436
+            },
+            {
+              "frame": 5,
+              "until": 0.64
+            },
+            {
+              "frame": 6,
+              "until": 0.73
+            },
+            {
+              "frame": 7,
+              "until": 0.98
+            },
+            {
+              "frame": 8,
+              "until": 1.24
+            },
+            {
+              "frame": 0,
+              "until": 1.32
+            }
+          ]
+        }
+      },
+      "animations": {
+        "idle": {
+          "loop": true,
+          "track": [
+            {
+              "frame": 0,
+              "until": 0.8
+            },
+            {
+              "frame": 1,
+              "until": 1.5
+            },
+            {
+              "frame": 0,
+              "until": 2.15
+            },
+            {
+              "frame": 2,
+              "until": 2.28
+            },
+            {
+              "frame": 0,
+              "until": 2.95
+            }
+          ]
+        },
+        "cast": {
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.4
+            },
+            {
+              "frame": 10,
+              "until": 0.9
+            },
+            {
+              "frame": 11,
+              "until": 1.14
+            },
+            {
+              "frame": 8,
+              "until": 1.42
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        },
+        "victory": {
+          "track": [
+            {
+              "frame": 15,
+              "until": 2.0
+            }
+          ]
+        }
+      },
+      "idleRegistration": {
+        "method": "planted-stance-v1",
+        "frames": [
+          0,
+          1,
+          2
+        ]
+      },
+      "pixelArt": true,
+      "headRects": [
+        [
+          136,
+          113,
+          57,
+          50
+        ],
+        [
+          446,
+          112,
+          57,
+          50
+        ],
+        [
+          764,
+          114,
+          55,
+          50
+        ],
+        [
+          1052,
+          146,
+          57,
+          50
+        ],
+        [
+          136,
+          426,
+          57,
+          50
+        ],
+        [
+          446,
+          424,
+          57,
+          50
+        ],
+        [
+          760,
+          423,
+          52,
+          50
+        ],
+        [
+          1052,
+          424,
+          48,
+          50
+        ],
+        [
+          133,
+          736,
+          55,
+          50
+        ],
+        [
+          410,
+          638,
+          50,
+          85
+        ],
+        [
+          757,
+          740,
+          55,
+          50
+        ],
+        [
+          1075,
+          735,
+          52,
+          50
+        ],
+        [
+          140,
+          1026,
+          55,
+          50
+        ],
+        [
+          387,
+          1012,
+          59,
+          50
+        ],
+        [
+          774,
+          1080,
+          46,
+          50
+        ],
+        [
+          1067,
+          977,
+          48,
+          50
+        ]
+      ],
+      "reference": "references/official-maki.png",
+      "referenceURL": "https://jujutsukaisen.jp/character/",
+      "reviewSkill": {
+        "label": "播放重劈",
+        "kind": "slash",
+        "variant": "polearm"
+      },
+      "styleBaseline": "B",
+      "poseLabels": {
+        "cast": "举杆蓄势",
+        "castRelease": "重劈",
+        "castRecover": "重劈收势"
+      }
+    },
+    "yuta": {
+      "file": "battle/pixel-b-v1/yuta.png",
+      "label": "乙骨忧太",
+      "artIndex": 6,
+      "facing": "right",
+      "height": 3.2,
+      "pixelStep": 1,
+      "frames": [
+        [
+          52,
+          57,
+          284,
+          260
+        ],
+        [
+          363,
+          55,
+          274,
+          262
+        ],
+        [
+          676,
+          57,
+          210,
+          260
+        ],
+        [
+          984,
+          73,
+          242,
+          244
+        ],
+        [
+          28,
+          391,
+          278,
+          237
+        ],
+        [
+          376,
+          349,
+          219,
+          280
+        ],
+        [
+          666,
+          359,
+          315,
+          271
+        ],
+        [
+          982,
+          358,
+          250,
+          273
+        ],
+        [
+          51,
+          661,
+          286,
+          259
+        ],
+        [
+          363,
+          661,
+          228,
+          259
+        ],
+        [
+          672,
+          663,
+          245,
+          257
+        ],
+        [
+          987,
+          662,
+          252,
+          258
+        ],
+        [
+          53,
+          961,
+          226,
+          250
+        ],
+        [
+          362,
+          993,
+          272,
+          217
+        ],
+        [
+          690,
+          1027,
+          245,
+          180
+        ],
+        [
+          1031,
+          929,
+          154,
+          283
+        ]
+      ],
+      "feet": [
+        0.992308,
+        0.992366,
+        0.992308,
+        0.991803,
+        0.991561,
+        0.992857,
+        0.99262,
+        0.992674,
+        0.992278,
+        0.992278,
+        0.992218,
+        0.992248,
+        0.992,
+        0.990783,
+        0.988889,
+        0.992933
+      ],
+      "centers": [
+        0.369718,
+        0.385036,
+        0.497619,
+        0.497934,
+        0.580935,
+        0.497717,
+        0.366667,
+        0.576,
+        0.372378,
+        0.497807,
+        0.461224,
+        0.424603,
+        0.497788,
+        0.393382,
+        0.497959,
+        0.50974
+      ],
+      "frameScales": [
+        1.015625,
+        1.023438,
+        1.015625,
+        0.953125,
+        0.925781,
+        1.09375,
+        1.058594,
+        1.066406,
+        1.011719,
+        1.011719,
+        1.003906,
+        1.007812,
+        0.976562,
+        0.847656,
+        0.703125,
+        1.105469
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "idle3": 2,
+        "windup": 3,
+        "advance": 4,
+        "release": 5,
+        "attack": 6,
+        "follow": 7,
+        "recover": 8,
+        "cast": 9,
+        "castRelease": 10,
+        "castRecover": 11,
+        "guard": 12,
+        "hit": 13,
+        "defeat": 14,
+        "victory": 15
+      },
+      "motion": {
+        "windup": 0.13,
+        "contact": 0.25,
+        "end": 0.42,
+        "lunge": 0.52,
+        "castLunge": 0.12
+      },
+      "choreography": "Use case: stylized-concept.\nAsset: production HD-2D RPG battle sprite atlas, EXACTLY 16 separate full-body figures in a square 4-column x 4-row grid, ordered row-major. Aim for a 2048 x 2048 canvas with generous empty gutters. Genuine alpha transparency, NOT a painted checkerboard. No scenery, floor, shadows, effects, labels, grid lines or text.\nInput image 1 is the ACCEPTED STYLE B: reproduce its refined JRPG pixel-cluster aesthetic and compact expressive anatomy, not its characters or dark background. Input image 2 is the official anime CHARACTER IDENTITY and exact costume reference. Preserve that identity in every frame. This is carefully authored pixel art, visible stepped contours and intentional square clusters, compact roughly 5-head-tall people, restrained 3-4 shades per material, dark navy outlines, readable small pixel faces. No smooth anime ink contours, blurry painted shading, 3D, super-deformed chibi or photorealism. Keep the same pixel density throughout the sheet, finer than classic tiny JRPG sprites but still unmistakably pixel art. Keep the whole body AND weapon inside each cell with generous 12-15 percent side margins. Faces and action aim toward screen RIGHT in three-quarter side view. Full legs, feet, hands and connected limbs must remain readable. Every cell contains exactly ONE same-size character, no fragments outside it, no duplicate character. Small facial details should remain pixels, never oversized anime eyes. Standing feet share a consistent ground baseline. Frames 0,1,2 have IDENTICAL feet and pelvis placement; only subtle breathing, cloth and a blink vary. Do not shift the entire idle body sideways. Attack frames form a coherent windup -> step -> release -> contact -> follow-through -> recovery sequence. No energy painted into the character sheet; game renders effects separately.\n\nYuta Okkotsu, regular school form: distinctive asymmetric black fringe, tired gentle eyes and subtle under-eye shadows, WHITE high-collar jacket with asymmetrical gold button, loose black trousers, white sneakers. Do not substitute navy uniform, later hair or bandages. Standard slim katana with dark hilt, carried in right hand and controlled by both hands during cuts. Small ring on LEFT ring finger. Nervous restrained readiness, determined during action. No Rika drawn in this atlas.\nFrames: 0 cautious two-handed katana guard at waist, blade angled forward RIGHT; 1 same feet, shoulder breath; 2 same stance blink. 3 katana lowered left across hips preparing rising slash; 4 short forward step with blade still low; 5 upward blade release; 6 two-handed rising diagonal katana contact toward RIGHT; 7 raised blade follow-through; 8 blade lowered, feet returned to cautious guard. 9 LEFT ring hand lifts toward chest while right hand holds katana safely down; 10 left ring hand extends forward with open fingers to call Rika/cursed-energy action, right hand still on katana, two arms clearly separated; 11 ring hand draws back and sword returns to guard. 12 two-handed sword block angled across front; 13 low torso recoil retaining sword; 14 exhausted kneeling with sword lowered safely; 15 modest victory holding sword low with a small relieved smile. Keep weapon a thin katana, not Nanami's cleaver or Maki's polearm.",
+      "actions": {
+        "melee": {
+          "timing": [
+            0.22,
+            0.52,
+            0.61,
+            0.84,
+            1.2
+          ],
+          "approach": true,
+          "track": [
+            {
+              "frame": 3,
+              "until": 0.22
+            },
+            {
+              "frame": 4,
+              "until": 0.34
+            },
+            {
+              "frame": 5,
+              "until": 0.52
+            },
+            {
+              "frame": 6,
+              "until": 0.61
+            },
+            {
+              "frame": 7,
+              "until": 0.84
+            },
+            {
+              "frame": 8,
+              "until": 1.12
+            },
+            {
+              "frame": 0,
+              "until": 1.2
+            }
+          ]
+        },
+        "copy": {
+          "timing": [
+            0.38,
+            0.74,
+            0.83,
+            1.06,
+            1.36
+          ],
+          "approach": false,
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.38
+            },
+            {
+              "frame": 10,
+              "until": 0.83
+            },
+            {
+              "frame": 11,
+              "until": 1.06
+            },
+            {
+              "frame": 8,
+              "until": 1.3
+            },
+            {
+              "frame": 0,
+              "until": 1.36
+            }
+          ]
+        }
+      },
+      "animations": {
+        "idle": {
+          "loop": true,
+          "track": [
+            {
+              "frame": 0,
+              "until": 0.8
+            },
+            {
+              "frame": 1,
+              "until": 1.5
+            },
+            {
+              "frame": 0,
+              "until": 2.15
+            },
+            {
+              "frame": 2,
+              "until": 2.28
+            },
+            {
+              "frame": 0,
+              "until": 2.95
+            }
+          ]
+        },
+        "cast": {
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.38
+            },
+            {
+              "frame": 10,
+              "until": 0.83
+            },
+            {
+              "frame": 11,
+              "until": 1.06
+            },
+            {
+              "frame": 8,
+              "until": 1.3
+            },
+            {
+              "frame": 0,
+              "until": 1.36
+            }
+          ]
+        },
+        "victory": {
+          "track": [
+            {
+              "frame": 15,
+              "until": 2.0
+            }
+          ]
+        }
+      },
+      "idleRegistration": {
+        "method": "planted-stance-v1",
+        "frames": [
+          0,
+          1,
+          2
+        ]
+      },
+      "pixelArt": true,
+      "headRects": [
+        [
+          120,
+          57,
+          99,
+          108
+        ],
+        [
+          428,
+          55,
+          97,
+          102
+        ],
+        [
+          744,
+          57,
+          99,
+          105
+        ],
+        [
+          1060,
+          73,
+          99,
+          102
+        ],
+        [
+          186,
+          391,
+          99,
+          95
+        ],
+        [
+          510,
+          349,
+          59,
+          132
+        ],
+        [
+          813,
+          396,
+          78,
+          78
+        ],
+        [
+          1093,
+          358,
+          113,
+          112
+        ],
+        [
+          128,
+          661,
+          99,
+          105
+        ],
+        [
+          429,
+          661,
+          97,
+          108
+        ],
+        [
+          734,
+          663,
+          101,
+          102
+        ],
+        [
+          1058,
+          662,
+          97,
+          102
+        ],
+        [
+          101,
+          971,
+          97,
+          90
+        ],
+        [
+          460,
+          993,
+          97,
+          88
+        ],
+        [
+          780,
+          1037,
+          44,
+          65
+        ],
+        [
+          1055,
+          929,
+          101,
+          102
+        ]
+      ],
+      "reference": "references/official-yuta.png",
+      "referenceURL": "https://jujutsukaisen.jp/character/",
+      "reviewSkill": {
+        "label": "播放戒指动作",
+        "kind": "orb",
+        "variant": "copy"
+      },
+      "styleBaseline": "B",
+      "poseLabels": {
+        "cast": "抬起戒指手",
+        "castRelease": "呼唤动作",
+        "castRecover": "回握太刀"
+      },
+      "signature": "copy"
+    },
+    "mahoraga": {
+      "file": "battle/review-phanpara-v1/mahoraga.png",
+      "label": "魔虚罗",
+      "artIndex": 26,
+      "facing": "right",
+      "height": 4.4,
+      "pixelStep": 1,
+      "frames": [
+        [
+          57,
+          17,
+          283,
+          347
+        ],
+        [
+          415,
+          17,
+          279,
+          347
+        ],
+        [
+          781,
+          16,
+          285,
+          348
+        ],
+        [
+          1104,
+          38,
+          325,
+          330
+        ],
+        [
+          14,
+          376,
+          364,
+          329
+        ],
+        [
+          408,
+          374,
+          331,
+          334
+        ],
+        [
+          749,
+          392,
+          385,
+          313
+        ],
+        [
+          1134,
+          378,
+          296,
+          331
+        ],
+        [
+          27,
+          709,
+          318,
+          355
+        ],
+        [
+          401,
+          709,
+          318,
+          356
+        ],
+        [
+          760,
+          718,
+          318,
+          345
+        ],
+        [
+          1131,
+          722,
+          307,
+          341
+        ]
+      ],
+      "feet": [
+        0.994236,
+        0.994236,
+        0.994253,
+        0.993939,
+        0.993921,
+        0.994012,
+        0.99361,
+        0.993958,
+        0.994366,
+        0.994382,
+        0.994203,
+        0.994135
+      ],
+      "centers": [
+        0.507067,
+        0.507168,
+        0.507018,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "frameScales": [
+        1.011662,
+        1.011662,
+        1.014577,
+        0.962099,
+        0.959184,
+        0.973761,
+        0.912536,
+        0.965015,
+        1.034985,
+        1.037901,
+        1.005831,
+        0.994169
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "idle3": 2,
+        "windup": 3,
+        "advance": 4,
+        "release": 5,
+        "attack": 6,
+        "recover": 7,
+        "cast": 8,
+        "castRelease": 9,
+        "guard": 10,
+        "hit": 11
+      },
+      "motion": {
+        "windup": 0.2,
+        "contact": 0.34,
+        "end": 0.55,
+        "lunge": 0.45,
+        "castLunge": 0.08,
+        "idlePeriod": 2.65
+      },
+      "choreography": "Exact divine general anatomy from model reference: massive white two-armed muscular body, no normal eyes, FOUR horizontal wing-like eyestalk structures on head, toothed mouth, eight-handled golden wheel above head attached by stalk, dark flowing lower pants, sash, forearm sword and black chest pendant. Canonical wheel and face crucial. Idle sword down and other fist ready; idle2 subtle shoulder/wheel rotation (wheel stays connected), windup raises sword arm, attack heavy downward sword chop, cast left palm with upright wheel, guard sword forearm, defeated crouch still eight wheel handles. Keep wheel/head/sword all in every cell.",
+      "actions": {
+        "melee": {
+          "timing": [
+            0.44,
+            0.86,
+            1.0,
+            1.32,
+            1.68
+          ],
+          "approach": true,
+          "track": [
+            {
+              "frame": 3,
+              "until": 0.44
+            },
+            {
+              "frame": 4,
+              "until": 0.608
+            },
+            {
+              "frame": 5,
+              "until": 0.86
+            },
+            {
+              "frame": 6,
+              "until": 1.0
+            },
+            {
+              "frame": 7,
+              "until": 1.32
+            },
+            {
+              "frame": 0,
+              "until": 1.68
+            }
+          ]
+        },
+        "adaptation": {
+          "timing": [
+            0.32,
+            0.72,
+            0.82,
+            1.08,
+            1.36
+          ],
+          "approach": false,
+          "track": [
+            {
+              "frame": 8,
+              "until": 0.72
+            },
+            {
+              "frame": 9,
+              "until": 1.08
+            },
+            {
+              "frame": 7,
+              "until": 1.28
+            },
+            {
+              "frame": 0,
+              "until": 1.36
+            }
+          ]
+        }
+      },
+      "animations": {
+        "idle": {
+          "loop": true,
+          "track": [
+            {
+              "frame": 0,
+              "until": 0.94
+            },
+            {
+              "frame": 1,
+              "until": 1.7
+            },
+            {
+              "frame": 0,
+              "until": 2.34
+            },
+            {
+              "frame": 2,
+              "until": 2.48
+            },
+            {
+              "frame": 0,
+              "until": 3.1
+            }
+          ]
+        },
+        "cast": {
+          "track": [
+            {
+              "frame": 8,
+              "until": 0.72
+            },
+            {
+              "frame": 9,
+              "until": 1.08
+            },
+            {
+              "frame": 7,
+              "until": 1.28
+            },
+            {
+              "frame": 0,
+              "until": 1.36
+            }
+          ]
+        }
+      },
+      "idleRegistration": {
+        "method": "planted-stance-v1",
+        "frames": [
+          0,
+          1,
+          2
+        ]
+      },
+      "pixelArt": false,
+      "headRects": [
+        [
+          128,
+          17,
+          171,
+          118
+        ],
+        [
+          482,
+          17,
+          171,
+          118
+        ],
+        [
+          852,
+          16,
+          177,
+          118
+        ],
+        [
+          1106,
+          38,
+          306,
+          112
+        ],
+        [
+          27,
+          376,
+          308,
+          112
+        ],
+        [
+          482,
+          374,
+          211,
+          114
+        ],
+        [
+          890,
+          392,
+          177,
+          106
+        ],
+        [
+          1207,
+          378,
+          186,
+          113
+        ],
+        [
+          92,
+          709,
+          249,
+          121
+        ],
+        [
+          461,
+          709,
+          251,
+          121
+        ],
+        [
+          845,
+          718,
+          214,
+          117
+        ],
+        [
+          1204,
+          722,
+          165,
+          116
+        ]
+      ],
+      "signature": "adaptation",
+      "reference": "references/phanpara-review-v1/mahoraga-official-pv.jpg"
+    },
+    "yuji": {
+      "file": "battle/pixel-b-v2/yuji.png",
+      "label": "虎杖悠仁",
+      "artIndex": 1,
+      "facing": "right",
+      "height": 3.55,
+      "pixelStep": 2,
+      "frames": [
+        [
+          61,
+          28,
+          204,
+          281
+        ],
+        [
+          374,
+          28,
+          204,
+          281
+        ],
+        [
+          687,
+          28,
+          205,
+          281
+        ],
+        [
+          981,
+          42,
+          237,
+          267
+        ],
+        [
+          30,
+          348,
+          254,
+          267
+        ],
+        [
+          335,
+          355,
+          295,
+          259
+        ],
+        [
+          658,
+          354,
+          300,
+          261
+        ],
+        [
+          970,
+          354,
+          255,
+          260
+        ],
+        [
+          54,
+          651,
+          212,
+          277
+        ],
+        [
+          337,
+          687,
+          267,
+          238
+        ],
+        [
+          656,
+          680,
+          276,
+          245
+        ],
+        [
+          962,
+          698,
+          273,
+          227
+        ],
+        [
+          43,
+          972,
+          219,
+          249
+        ],
+        [
+          363,
+          940,
+          233,
+          282
+        ],
+        [
+          665,
+          1033,
+          214,
+          180
+        ],
+        [
+          998,
+          923,
+          212,
+          301
+        ]
+      ],
+      "feet": [
+        0.992883,
+        0.992883,
+        0.992883,
+        0.992509,
+        0.992509,
+        0.992278,
+        0.992337,
+        0.992308,
+        0.99278,
+        0.991597,
+        0.991837,
+        0.991189,
+        0.991968,
+        0.992908,
+        0.988889,
+        0.993355
+      ],
+      "centers": [
+        0.497549,
+        0.497549,
+        0.497561,
+        0.49789,
+        0.498031,
+        0.430508,
+        0.421667,
+        0.496078,
+        0.497642,
+        0.481273,
+        0.498188,
+        0.443223,
+        0.497717,
+        0.51073,
+        0.495327,
+        0.497642
+      ],
+      "frameScales": [
+        1.01444,
+        1.01444,
+        1.01444,
+        0.963899,
+        0.963899,
+        0.935018,
+        0.942238,
+        0.938628,
+        1.0,
+        0.859206,
+        0.884477,
+        0.819495,
+        0.898917,
+        1.018051,
+        0.649819,
+        1.086643
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "idle3": 2,
+        "windup": 3,
+        "advance": 4,
+        "release": 5,
+        "attack": 6,
+        "follow": 7,
+        "recover": 8,
+        "cast": 9,
+        "castRelease": 10,
+        "castRecover": 11,
+        "guard": 12,
+        "hit": 13,
+        "defeat": 14,
+        "victory": 15
+      },
+      "motion": {
+        "windup": 0.08,
+        "contact": 0.2,
+        "end": 0.35,
+        "lunge": 0.85,
+        "castLunge": 0.12
+      },
+      "choreography": "Use case: stylized-concept. Create a production battle sprite atlas for a Jujutsu Kaisen HD-2D browser RPG.\nReference 1 is the USER-APPROVED B pixel style, not a subject reference. Reference 2 is official character identity. Follow reference 2 faithfully for hair, clothing, anatomy, accessories; render in reference 1's compact refined pixel style: crisp stepped pixel clusters, deliberate small pixel faces, readable 3-4-tone material shading, navy-violet shadows, approximately 4.5 to 5 heads tall for humans. Avoid smooth outlined anime illustrations, avoid tiny super-deformed chibis.\nDeliver ONE square transparent RGBA atlas, EXACTLY 16 separated full-body sprites in a strict 4 columns x 4 rows grid in reading order. Each sprite centered in its own cell with generous completely transparent gutters (at least 15% of cell width), head, feet, hands and props entirely contained within the cell. All face right or right three-quarter toward the opponent. No background, no fake checkerboard, no floor/shadow, no frame labels or text, no painted skill effects. Consistent character model, head size and limb lengths in all frames. First three idle poses keep the SAME planted feet and hip position: subtle torso breathing and one blink only, NO horizontal sway or relocation.\nFrame list in row-major order:\n0 alert idle; 1 inhale idle, same feet; 2 blink idle, same feet;\n3 normal attack wind-up; 4 advancing normal attack; 5 normal attack release; 6 extended contact pose;\n7 follow-through; 8 recovery; 9 special preparation; 10 special release; 11 special recovery;\n12 defensive guard; 13 small hit reaction; 14 defeated kneeling/slumped (non-gory); 15 unique final pose specified below.\nEach pose must read distinctly and fit in its own cell. Retain visible pixel construction at normal display size. No other characters.\nYuji Itadori: pink short spiky hair, no Sukuna tattoos, dark navy high-collar school uniform with RED hood and cuffs, red-black high-top shoes, athletic teenage build. No weapons. Normal attack frames 3-8: compact boxing stance, hip-driven straight punch, front foot planted at contact, recover to boxing guard. Special frames 9-11: powerful low stance, shoulder drawn back, committed hook punch for Black Flash (render only the body, the engine adds black/red electricity). Frame 15 cheerful upright victory with clenched fist. Clearly two arms/hands in every upright stance.",
+      "animations": {
+        "idle": {
+          "loop": true,
+          "track": [
+            {
+              "frame": 0,
+              "until": 0.8
+            },
+            {
+              "frame": 1,
+              "until": 1.5
+            },
+            {
+              "frame": 0,
+              "until": 2.15
+            },
+            {
+              "frame": 2,
+              "until": 2.28
+            },
+            {
+              "frame": 0,
+              "until": 2.95
+            }
+          ]
+        },
+        "cast": {
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.36
+            },
+            {
+              "frame": 4,
+              "until": 0.56
+            },
+            {
+              "frame": 9,
+              "until": 0.76
+            },
+            {
+              "frame": 10,
+              "until": 0.91
+            },
+            {
+              "frame": 11,
+              "until": 1.1
+            },
+            {
+              "frame": 8,
+              "until": 1.35
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        },
+        "victory": {
+          "track": [
+            {
+              "frame": 15,
+              "until": 2
+            }
+          ]
+        }
+      },
+      "actions": {
+        "melee": {
+          "approach": true,
+          "timing": [
+            0.24,
+            0.52,
+            0.61,
+            0.79,
+            1.12
+          ],
+          "track": [
+            {
+              "frame": 3,
+              "until": 0.24
+            },
+            {
+              "frame": 4,
+              "until": 0.352
+            },
+            {
+              "frame": 5,
+              "until": 0.52
+            },
+            {
+              "frame": 6,
+              "until": 0.61
+            },
+            {
+              "frame": 7,
+              "until": 0.79
+            },
+            {
+              "frame": 8,
+              "until": 1.04
+            },
+            {
+              "frame": 0,
+              "until": 1.12
+            }
+          ]
+        },
+        "heavy": {
+          "approach": true,
+          "timing": [
+            0.36,
+            0.76,
+            0.91,
+            1.1,
+            1.48
+          ],
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.36
+            },
+            {
+              "frame": 4,
+              "until": 0.56
+            },
+            {
+              "frame": 9,
+              "until": 0.76
+            },
+            {
+              "frame": 10,
+              "until": 0.91
+            },
+            {
+              "frame": 11,
+              "until": 1.1
+            },
+            {
+              "frame": 8,
+              "until": 1.35
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        },
+        "blackflash": {
+          "approach": true,
+          "timing": [
+            0.36,
+            0.76,
+            0.91,
+            1.1,
+            1.48
+          ],
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.36
+            },
+            {
+              "frame": 4,
+              "until": 0.56
+            },
+            {
+              "frame": 9,
+              "until": 0.76
+            },
+            {
+              "frame": 10,
+              "until": 0.91
+            },
+            {
+              "frame": 11,
+              "until": 1.1
+            },
+            {
+              "frame": 8,
+              "until": 1.35
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        }
+      },
+      "signature": "cleave",
+      "idleRegistration": {
+        "method": "planted-stance-v1",
+        "frames": [
+          0,
+          1,
+          2
+        ]
+      },
+      "pixelArt": true,
+      "headRects": [
+        [
+          98,
+          28,
+          153,
+          190
+        ],
+        [
+          409,
+          28,
+          155,
+          192
+        ],
+        [
+          724,
+          28,
+          153,
+          190
+        ],
+        [
+          1026,
+          42,
+          147,
+          192
+        ],
+        [
+          121,
+          348,
+          162,
+          185
+        ],
+        [
+          439,
+          355,
+          147,
+          182
+        ],
+        [
+          762,
+          354,
+          153,
+          182
+        ],
+        [
+          1065,
+          354,
+          147,
+          170
+        ],
+        [
+          97,
+          651,
+          151,
+          188
+        ],
+        [
+          448,
+          687,
+          145,
+          182
+        ],
+        [
+          746,
+          680,
+          147,
+          190
+        ],
+        [
+          1073,
+          698,
+          147,
+          178
+        ],
+        [
+          113,
+          972,
+          149,
+          218
+        ],
+        [
+          363,
+          940,
+          145,
+          150
+        ],
+        [
+          776,
+          1033,
+          103,
+          168
+        ],
+        [
+          1020,
+          923,
+          128,
+          165
+        ]
+      ],
+      "styleBaseline": "B",
+      "reference": "references/official-yuji-v5.png",
+      "referenceURL": "https://jujutsukaisen.jp/character/",
+      "reviewSkill": {
+        "label": "播放黑闪",
+        "kind": "heavy",
+        "variant": "blackflash"
+      }
+    },
+    "nobara": {
+      "file": "battle/pixel-b-v2/nobara.png",
+      "label": "钉崎野蔷薇",
+      "artIndex": 3,
+      "facing": "right",
+      "height": 3.35,
+      "pixelStep": 2,
+      "frames": [
+        [
+          72,
+          32,
+          186,
+          272
+        ],
+        [
+          387,
+          32,
+          180,
+          272
+        ],
+        [
+          694,
+          32,
+          186,
+          272
+        ],
+        [
+          1000,
+          30,
+          200,
+          274
+        ],
+        [
+          54,
+          344,
+          231,
+          266
+        ],
+        [
+          345,
+          352,
+          279,
+          258
+        ],
+        [
+          633,
+          358,
+          296,
+          249
+        ],
+        [
+          999,
+          347,
+          232,
+          263
+        ],
+        [
+          59,
+          652,
+          200,
+          278
+        ],
+        [
+          400,
+          647,
+          177,
+          284
+        ],
+        [
+          705,
+          664,
+          179,
+          267
+        ],
+        [
+          992,
+          664,
+          196,
+          268
+        ],
+        [
+          71,
+          963,
+          199,
+          262
+        ],
+        [
+          394,
+          953,
+          186,
+          272
+        ],
+        [
+          696,
+          1009,
+          174,
+          216
+        ],
+        [
+          996,
+          955,
+          208,
+          270
+        ]
+      ],
+      "feet": [
+        0.992647,
+        0.992647,
+        0.992647,
+        0.992701,
+        0.992481,
+        0.992248,
+        0.991968,
+        0.992395,
+        0.992806,
+        0.992958,
+        0.992509,
+        0.992537,
+        0.992366,
+        0.992647,
+        0.990741,
+        0.992593
+      ],
+      "centers": [
+        0.543011,
+        0.541667,
+        0.551075,
+        0.4975,
+        0.469697,
+        0.442652,
+        0.402027,
+        0.474138,
+        0.5725,
+        0.483051,
+        0.497207,
+        0.568878,
+        0.497487,
+        0.548387,
+        0.497126,
+        0.497596
+      ],
+      "frameScales": [
+        1.014925,
+        1.014925,
+        1.014925,
+        1.022388,
+        0.992537,
+        0.962687,
+        0.929104,
+        0.981343,
+        1.037313,
+        1.059701,
+        0.996269,
+        1.0,
+        0.977612,
+        1.014925,
+        0.80597,
+        1.007463
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "idle3": 2,
+        "windup": 3,
+        "advance": 4,
+        "release": 5,
+        "attack": 6,
+        "follow": 7,
+        "recover": 8,
+        "cast": 9,
+        "castRelease": 10,
+        "castRecover": 11,
+        "guard": 12,
+        "hit": 13,
+        "defeat": 14,
+        "victory": 0,
+        "resonance": 15
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.25,
+        "end": 0.4,
+        "lunge": 0.2,
+        "castLunge": 0.12
+      },
+      "choreography": "Use case: stylized-concept. Create a production battle sprite atlas for a Jujutsu Kaisen HD-2D browser RPG.\nReference 1 is the USER-APPROVED B pixel style, not a subject reference. Reference 2 is official character identity. Follow reference 2 faithfully for hair, clothing, anatomy, accessories; render in reference 1's compact refined pixel style: crisp stepped pixel clusters, deliberate small pixel faces, readable 3-4-tone material shading, navy-violet shadows, approximately 4.5 to 5 heads tall for humans. Avoid smooth outlined anime illustrations, avoid tiny super-deformed chibis.\nDeliver ONE square transparent RGBA atlas, EXACTLY 16 separated full-body sprites in a strict 4 columns x 4 rows grid in reading order. Each sprite centered in its own cell with generous completely transparent gutters (at least 15% of cell width), head, feet, hands and props entirely contained within the cell. All face right or right three-quarter toward the opponent. No background, no fake checkerboard, no floor/shadow, no frame labels or text, no painted skill effects. Consistent character model, head size and limb lengths in all frames. First three idle poses keep the SAME planted feet and hip position: subtle torso breathing and one blink only, NO horizontal sway or relocation.\nFrame list in row-major order:\n0 alert idle; 1 inhale idle, same feet; 2 blink idle, same feet;\n3 normal attack wind-up; 4 advancing normal attack; 5 normal attack release; 6 extended contact pose;\n7 follow-through; 8 recovery; 9 special preparation; 10 special release; 11 special recovery;\n12 defensive guard; 13 small hit reaction; 14 defeated kneeling/slumped (non-gory); 15 unique final pose specified below.\nEach pose must read distinctly and fit in its own cell. Retain visible pixel construction at normal display size. No other characters.\nNobara Kugisaki: orange-brown chin-length bob with side part, navy school jacket with small gold buttons and belt, navy skirt, dark brown stockings, brown loafers. Slim confident posture. A SMALL normal silver claw hammer with slender wooden handle in her right hand, NOT an axe or large sledgehammer; nails in her left hand. Normal attack 3-8: lift hammer, rotate shoulder, short diagonal hammer strike, crisp follow-through. Special 9-11: hold an upright iron nail in her left hand at chest height, aim toward right, tap nail with hammer, recover. Frame 15 holds a small straw doll in left hand and taps it with her right-hand hammer for Resonance. Hands remain anatomically distinct and nail not mistaken for finger. Guard hammer across torso, defeat kneeling without losing clothing.",
+      "animations": {
+        "idle": {
+          "loop": true,
+          "track": [
+            {
+              "frame": 0,
+              "until": 0.8
+            },
+            {
+              "frame": 1,
+              "until": 1.5
+            },
+            {
+              "frame": 0,
+              "until": 2.15
+            },
+            {
+              "frame": 2,
+              "until": 2.28
+            },
+            {
+              "frame": 0,
+              "until": 2.95
+            }
+          ]
+        },
+        "cast": {
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.38
+            },
+            {
+              "frame": 10,
+              "until": 0.89
+            },
+            {
+              "frame": 11,
+              "until": 1.15
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        },
+        "victory": {
+          "track": [
+            {
+              "frame": 0,
+              "until": 2
+            }
+          ]
+        }
+      },
+      "actions": {
+        "melee": {
+          "approach": true,
+          "timing": [
+            0.3,
+            0.64,
+            0.73,
+            0.94,
+            1.26
+          ],
+          "track": [
+            {
+              "frame": 3,
+              "until": 0.3
+            },
+            {
+              "frame": 4,
+              "until": 0.436
+            },
+            {
+              "frame": 5,
+              "until": 0.64
+            },
+            {
+              "frame": 6,
+              "until": 0.73
+            },
+            {
+              "frame": 7,
+              "until": 0.94
+            },
+            {
+              "frame": 8,
+              "until": 1.18
+            },
+            {
+              "frame": 0,
+              "until": 1.26
+            }
+          ]
+        },
+        "nail": {
+          "approach": false,
+          "timing": [
+            0.38,
+            0.78,
+            0.89,
+            1.15,
+            1.48
+          ],
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.38
+            },
+            {
+              "frame": 10,
+              "until": 0.89
+            },
+            {
+              "frame": 11,
+              "until": 1.15
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        },
+        "straw": {
+          "approach": false,
+          "timing": [
+            0.38,
+            0.78,
+            0.89,
+            1.15,
+            1.48
+          ],
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.38
+            },
+            {
+              "frame": 10,
+              "until": 0.89
+            },
+            {
+              "frame": 11,
+              "until": 1.15
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        },
+        "resonance": {
+          "approach": false,
+          "timing": [
+            0.4,
+            0.82,
+            0.97,
+            1.2,
+            1.58
+          ],
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.4
+            },
+            {
+              "frame": 15,
+              "until": 0.97
+            },
+            {
+              "frame": 11,
+              "until": 1.2
+            },
+            {
+              "frame": 0,
+              "until": 1.58
+            }
+          ]
+        }
+      },
+      "signature": "straw",
+      "idleRegistration": {
+        "method": "planted-stance-v1",
+        "frames": [
+          0,
+          1,
+          2
+        ]
+      },
+      "pixelArt": true,
+      "headRects": [
+        [
+          76,
+          32,
+          182,
+          182
+        ],
+        [
+          390,
+          32,
+          166,
+          182
+        ],
+        [
+          694,
+          32,
+          185,
+          175
+        ],
+        [
+          1016,
+          30,
+          164,
+          180
+        ],
+        [
+          89,
+          344,
+          196,
+          178
+        ],
+        [
+          359,
+          352,
+          204,
+          165
+        ],
+        [
+          674,
+          358,
+          202,
+          170
+        ],
+        [
+          1003,
+          347,
+          197,
+          160
+        ],
+        [
+          72,
+          652,
+          185,
+          182
+        ],
+        [
+          400,
+          647,
+          177,
+          202
+        ],
+        [
+          705,
+          664,
+          179,
+          182
+        ],
+        [
+          1000,
+          664,
+          181,
+          178
+        ],
+        [
+          74,
+          963,
+          185,
+          175
+        ],
+        [
+          394,
+          953,
+          186,
+          178
+        ],
+        [
+          735,
+          1009,
+          135,
+          190
+        ],
+        [
+          1001,
+          955,
+          181,
+          178
+        ]
+      ],
+      "styleBaseline": "B",
+      "reference": "references/official-nobara-v5.png",
+      "referenceURL": "https://jujutsukaisen.jp/character/",
+      "reviewSkill": {
+        "label": "播放共鸣",
+        "kind": "nail",
+        "variant": "resonance"
+      }
+    },
+    "eso": {
+      "file": "battle/pixel-b-v2/eso.png",
+      "label": "坏相",
+      "artIndex": 21,
+      "facing": "right",
+      "height": 3.9,
+      "pixelStep": 2,
+      "frames": [
+        [
+          85,
+          11,
+          166,
+          296
+        ],
+        [
+          398,
+          11,
+          167,
+          296
+        ],
+        [
+          711,
+          10,
+          167,
+          297
+        ],
+        [
+          963,
+          27,
+          282,
+          279
+        ],
+        [
+          37,
+          340,
+          300,
+          258
+        ],
+        [
+          349,
+          335,
+          296,
+          262
+        ],
+        [
+          660,
+          327,
+          288,
+          274
+        ],
+        [
+          990,
+          329,
+          233,
+          280
+        ],
+        [
+          75,
+          628,
+          185,
+          294
+        ],
+        [
+          336,
+          626,
+          266,
+          292
+        ],
+        [
+          661,
+          626,
+          293,
+          295
+        ],
+        [
+          1025,
+          632,
+          184,
+          286
+        ],
+        [
+          50,
+          963,
+          207,
+          257
+        ],
+        [
+          378,
+          949,
+          230,
+          275
+        ],
+        [
+          683,
+          1026,
+          229,
+          200
+        ],
+        [
+          1004,
+          922,
+          230,
+          310
+        ]
+      ],
+      "feet": [
+        0.993243,
+        0.993243,
+        0.993266,
+        0.992832,
+        0.992248,
+        0.992366,
+        0.992701,
+        0.992857,
+        0.993197,
+        0.993151,
+        0.99322,
+        0.993007,
+        0.992218,
+        0.992727,
+        0.99,
+        0.993548
+      ],
+      "centers": [
+        0.496988,
+        0.497006,
+        0.497006,
+        0.432624,
+        0.37,
+        0.408784,
+        0.430556,
+        0.497854,
+        0.510811,
+        0.545113,
+        0.491468,
+        0.497283,
+        0.497585,
+        0.504348,
+        0.497817,
+        0.48913
+      ],
+      "frameScales": [
+        1.013699,
+        1.013699,
+        1.017123,
+        0.955479,
+        0.883562,
+        0.89726,
+        0.938356,
+        0.958904,
+        1.006849,
+        1.0,
+        1.010274,
+        0.979452,
+        0.880137,
+        0.941781,
+        0.684932,
+        1.061644
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "idle3": 2,
+        "windup": 3,
+        "advance": 4,
+        "release": 5,
+        "attack": 6,
+        "follow": 7,
+        "recover": 8,
+        "cast": 9,
+        "castRelease": 10,
+        "castRecover": 11,
+        "guard": 12,
+        "hit": 13,
+        "defeat": 14,
+        "victory": 15
+      },
+      "motion": {
+        "windup": 0.14,
+        "contact": 0.27,
+        "end": 0.45,
+        "lunge": 0.45,
+        "castLunge": 0.08,
+        "idlePeriod": 2.0
+      },
+      "choreography": "Use case: stylized-concept. Create a production battle sprite atlas for a Jujutsu Kaisen HD-2D browser RPG.\nReference 1 is the USER-APPROVED B pixel style, not a subject reference. Reference 2 is official character identity. Follow reference 2 faithfully for hair, clothing, anatomy, accessories; render in reference 1's compact refined pixel style: crisp stepped pixel clusters, deliberate small pixel faces, readable 3-4-tone material shading, navy-violet shadows, approximately 4.5 to 5 heads tall for humans. Avoid smooth outlined anime illustrations, avoid tiny super-deformed chibis.\nDeliver ONE square transparent RGBA atlas, EXACTLY 16 separated full-body sprites in a strict 4 columns x 4 rows grid in reading order. Each sprite centered in its own cell with generous completely transparent gutters (at least 15% of cell width), head, feet, hands and props entirely contained within the cell. All face right or right three-quarter toward the opponent. No background, no fake checkerboard, no floor/shadow, no frame labels or text, no painted skill effects. Consistent character model, head size and limb lengths in all frames. First three idle poses keep the SAME planted feet and hip position: subtle torso breathing and one blink only, NO horizontal sway or relocation.\nFrame list in row-major order:\n0 alert idle; 1 inhale idle, same feet; 2 blink idle, same feet;\n3 normal attack wind-up; 4 advancing normal attack; 5 normal attack release; 6 extended contact pose;\n7 follow-through; 8 recovery; 9 special preparation; 10 special release; 11 special recovery;\n12 defensive guard; 13 small hit reaction; 14 defeated kneeling/slumped (non-gory); 15 unique final pose specified below.\nEach pose must read distinctly and fit in its own cell. Retain visible pixel construction at normal display size. No other characters.\nEso (壊相): match official second reference EXACTLY. Tall muscular tan-skinned adult, shaved sides with a narrow dark upright mohawk tuft, white collar and small red bow tie, black studded suspender harness: horizontal chest band and vertical straps, white studded cuffs, dark high-waist fitted trousers, BARE FEET. No shirt, jacket, shoes, katana or gun. Angular stern face with forehead markings. More mature proportions around 5.5 heads, still the same pixel construction. Normal 3-8: sweeping open palm/claw strike with shoulder-led follow-through. Special 9-11: turn torso to expose back/shoulder and extend both arms to release blood feathers, keep body clear (engine supplies blood-wing effects). Frame 15 upright, one hand lowered and the other extended arrogantly. Do not invent extra limbs or generic monster wings in the sprite.",
+      "actions": {
+        "melee": {
+          "approach": true,
+          "timing": [
+            0.3,
+            0.66,
+            0.75,
+            0.96,
+            1.32
+          ],
+          "track": [
+            {
+              "frame": 3,
+              "until": 0.3
+            },
+            {
+              "frame": 4,
+              "until": 0.444
+            },
+            {
+              "frame": 5,
+              "until": 0.66
+            },
+            {
+              "frame": 6,
+              "until": 0.75
+            },
+            {
+              "frame": 7,
+              "until": 0.96
+            },
+            {
+              "frame": 8,
+              "until": 1.24
+            },
+            {
+              "frame": 0,
+              "until": 1.32
+            }
+          ]
+        },
+        "wave": {
+          "approach": false,
+          "timing": [
+            0.38,
+            0.78,
+            0.89,
+            1.15,
+            1.48
+          ],
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.38
+            },
+            {
+              "frame": 10,
+              "until": 0.89
+            },
+            {
+              "frame": 11,
+              "until": 1.15
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        },
+        "poison": {
+          "approach": false,
+          "timing": [
+            0.38,
+            0.78,
+            0.89,
+            1.15,
+            1.48
+          ],
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.38
+            },
+            {
+              "frame": 10,
+              "until": 0.89
+            },
+            {
+              "frame": 11,
+              "until": 1.15
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        },
+        "blood": {
+          "approach": false,
+          "timing": [
+            0.38,
+            0.78,
+            0.89,
+            1.15,
+            1.48
+          ],
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.38
+            },
+            {
+              "frame": 10,
+              "until": 0.89
+            },
+            {
+              "frame": 11,
+              "until": 1.15
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        }
+      },
+      "signature": "rot",
+      "animations": {
+        "idle": {
+          "loop": true,
+          "track": [
+            {
+              "frame": 0,
+              "until": 0.8
+            },
+            {
+              "frame": 1,
+              "until": 1.5
+            },
+            {
+              "frame": 0,
+              "until": 2.15
+            },
+            {
+              "frame": 2,
+              "until": 2.28
+            },
+            {
+              "frame": 0,
+              "until": 2.95
+            }
+          ]
+        },
+        "cast": {
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.38
+            },
+            {
+              "frame": 10,
+              "until": 0.89
+            },
+            {
+              "frame": 11,
+              "until": 1.15
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        },
+        "victory": {
+          "track": [
+            {
+              "frame": 15,
+              "until": 2
+            }
+          ]
+        }
+      },
+      "idleRegistration": {
+        "method": "planted-stance-v1",
+        "frames": [
+          0,
+          1,
+          2
+        ]
+      },
+      "pixelArt": true,
+      "headRects": [
+        [
+          85,
+          11,
+          166,
+          242
+        ],
+        [
+          398,
+          11,
+          167,
+          240
+        ],
+        [
+          711,
+          10,
+          167,
+          242
+        ],
+        [
+          963,
+          27,
+          282,
+          205
+        ],
+        [
+          37,
+          340,
+          300,
+          175
+        ],
+        [
+          349,
+          335,
+          296,
+          210
+        ],
+        [
+          660,
+          327,
+          288,
+          132
+        ],
+        [
+          990,
+          329,
+          233,
+          175
+        ],
+        [
+          75,
+          628,
+          185,
+          225
+        ],
+        [
+          336,
+          626,
+          266,
+          192
+        ],
+        [
+          740,
+          626,
+          90,
+          105
+        ],
+        [
+          1025,
+          632,
+          184,
+          225
+        ],
+        [
+          102,
+          963,
+          155,
+          225
+        ],
+        [
+          378,
+          949,
+          230,
+          252
+        ],
+        [
+          709,
+          1026,
+          203,
+          200
+        ],
+        [
+          1004,
+          922,
+          230,
+          245
+        ]
+      ],
+      "styleBaseline": "B",
+      "reference": "references/official-eso.png",
+      "referenceURL": "https://jujutsukaisen.jp/character/",
+      "reviewSkill": {
+        "label": "播放血羽",
+        "kind": "wave",
+        "variant": "blood"
+      }
+    },
+    "kechizu": {
+      "file": "battle/pixel-b-v2/kechizu.png",
+      "label": "血涂",
+      "artIndex": 22,
+      "facing": "right",
+      "height": 3.0,
+      "pixelStep": 2,
+      "frames": [
+        [
+          44,
+          66,
+          234,
+          253
+        ],
+        [
+          355,
+          64,
+          231,
+          255
+        ],
+        [
+          660,
+          67,
+          234,
+          252
+        ],
+        [
+          939,
+          83,
+          293,
+          235
+        ],
+        [
+          24,
+          373,
+          290,
+          238
+        ],
+        [
+          323,
+          373,
+          300,
+          238
+        ],
+        [
+          635,
+          387,
+          316,
+          227
+        ],
+        [
+          967,
+          368,
+          247,
+          244
+        ],
+        [
+          27,
+          670,
+          249,
+          237
+        ],
+        [
+          354,
+          665,
+          207,
+          240
+        ],
+        [
+          679,
+          706,
+          238,
+          199
+        ],
+        [
+          958,
+          670,
+          274,
+          239
+        ],
+        [
+          40,
+          960,
+          225,
+          234
+        ],
+        [
+          347,
+          948,
+          251,
+          250
+        ],
+        [
+          620,
+          990,
+          297,
+          208
+        ],
+        [
+          945,
+          988,
+          276,
+          222
+        ]
+      ],
+      "feet": [
+        0.992095,
+        0.992157,
+        0.992063,
+        0.991489,
+        0.991597,
+        0.991597,
+        0.991189,
+        0.991803,
+        0.991561,
+        0.991667,
+        0.98995,
+        0.991632,
+        0.991453,
+        0.992,
+        0.990385,
+        0.990991
+      ],
+      "centers": [
+        0.497863,
+        0.497835,
+        0.497863,
+        0.537543,
+        0.386207,
+        0.373333,
+        0.371835,
+        0.497976,
+        0.497992,
+        0.434783,
+        0.409664,
+        0.498175,
+        0.493333,
+        0.462151,
+        0.498316,
+        0.498188
+      ],
+      "frameScales": [
+        1.016064,
+        1.024096,
+        1.012048,
+        0.943775,
+        0.955823,
+        0.955823,
+        0.911647,
+        0.97992,
+        0.951807,
+        0.963855,
+        0.799197,
+        0.959839,
+        0.939759,
+        1.004016,
+        0.835341,
+        0.891566
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "idle3": 2,
+        "windup": 3,
+        "advance": 4,
+        "release": 5,
+        "attack": 6,
+        "follow": 7,
+        "recover": 8,
+        "cast": 9,
+        "castRelease": 10,
+        "castRecover": 11,
+        "guard": 12,
+        "hit": 13,
+        "defeat": 14,
+        "victory": 15
+      },
+      "motion": {
+        "windup": 0.2,
+        "contact": 0.34,
+        "end": 0.55,
+        "lunge": 0.45,
+        "castLunge": 0.08,
+        "idlePeriod": 2.13
+      },
+      "choreography": "Use case: stylized-concept. Create a production battle sprite atlas for a Jujutsu Kaisen HD-2D browser RPG.\nReference 1 is the USER-APPROVED B pixel style, not a subject reference. Reference 2 is official character identity. Follow reference 2 faithfully for hair, clothing, anatomy, accessories; render in reference 1's compact refined pixel style: crisp stepped pixel clusters, deliberate small pixel faces, readable 3-4-tone material shading, navy-violet shadows, approximately 4.5 to 5 heads tall for humans. Avoid smooth outlined anime illustrations, avoid tiny super-deformed chibis.\nDeliver ONE square transparent RGBA atlas, EXACTLY 16 separated full-body sprites in a strict 4 columns x 4 rows grid in reading order. Each sprite centered in its own cell with generous completely transparent gutters (at least 15% of cell width), head, feet, hands and props entirely contained within the cell. All face right or right three-quarter toward the opponent. No background, no fake checkerboard, no floor/shadow, no frame labels or text, no painted skill effects. Consistent character model, head size and limb lengths in all frames. First three idle poses keep the SAME planted feet and hip position: subtle torso breathing and one blink only, NO horizontal sway or relocation.\nFrame list in row-major order:\n0 alert idle; 1 inhale idle, same feet; 2 blink idle, same feet;\n3 normal attack wind-up; 4 advancing normal attack; 5 normal attack release; 6 extended contact pose;\n7 follow-through; 8 recovery; 9 special preparation; 10 special release; 11 special recovery;\n12 defensive guard; 13 small hit reaction; 14 defeated kneeling/slumped (non-gory); 15 unique final pose specified below.\nEach pose must read distinctly and fit in its own cell. Retain visible pixel construction at normal display size. No other characters.\nKechizu (血塗): copy official second reference faithfully, NOT a generic green goblin. Squat hunched blue-green curse with long thick arms, clawed large feet, bulbous high rounded head/back. Small skull-like pale front face with dark eye sockets and thin red streaks, beneath it the enormous horizontal belly/front mouth with pale pointed teeth. Two arms, two legs, no human clothes or weapon. Distinct head and broad toothed mouth must both remain visible. Normal 3-8: hunch, thrust one long clawed arm forward, swipe at contact, fold arm back. Special 9-11: rear upper body back and lift the huge mouth, thrust mouth toward opponent to spit cursed blood (no painted blood projectile, engine renders it), slump back. Frame 15 threatening low hunched posture. Guard tucks arms inward, defeat low collapsed crouch; no gore.",
+      "actions": {
+        "melee": {
+          "approach": true,
+          "timing": [
+            0.26,
+            0.62,
+            0.72,
+            0.94,
+            1.3
+          ],
+          "track": [
+            {
+              "frame": 3,
+              "until": 0.26
+            },
+            {
+              "frame": 4,
+              "until": 0.404
+            },
+            {
+              "frame": 5,
+              "until": 0.62
+            },
+            {
+              "frame": 6,
+              "until": 0.72
+            },
+            {
+              "frame": 7,
+              "until": 0.94
+            },
+            {
+              "frame": 8,
+              "until": 1.22
+            },
+            {
+              "frame": 0,
+              "until": 1.3
+            }
+          ]
+        },
+        "wave": {
+          "approach": false,
+          "timing": [
+            0.38,
+            0.78,
+            0.89,
+            1.15,
+            1.48
+          ],
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.38
+            },
+            {
+              "frame": 10,
+              "until": 0.89
+            },
+            {
+              "frame": 11,
+              "until": 1.15
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        },
+        "poison": {
+          "approach": false,
+          "timing": [
+            0.38,
+            0.78,
+            0.89,
+            1.15,
+            1.48
+          ],
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.38
+            },
+            {
+              "frame": 10,
+              "until": 0.89
+            },
+            {
+              "frame": 11,
+              "until": 1.15
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        },
+        "blood": {
+          "approach": false,
+          "timing": [
+            0.38,
+            0.78,
+            0.89,
+            1.15,
+            1.48
+          ],
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.38
+            },
+            {
+              "frame": 10,
+              "until": 0.89
+            },
+            {
+              "frame": 11,
+              "until": 1.15
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        }
+      },
+      "signature": "rot",
+      "animations": {
+        "idle": {
+          "loop": true,
+          "track": [
+            {
+              "frame": 0,
+              "until": 0.8
+            },
+            {
+              "frame": 1,
+              "until": 1.5
+            },
+            {
+              "frame": 0,
+              "until": 2.15
+            },
+            {
+              "frame": 2,
+              "until": 2.28
+            },
+            {
+              "frame": 0,
+              "until": 2.95
+            }
+          ]
+        },
+        "cast": {
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.38
+            },
+            {
+              "frame": 10,
+              "until": 0.89
+            },
+            {
+              "frame": 11,
+              "until": 1.15
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        },
+        "victory": {
+          "track": [
+            {
+              "frame": 15,
+              "until": 2
+            }
+          ]
+        }
+      },
+      "idleRegistration": {
+        "method": "planted-stance-v1",
+        "frames": [
+          0,
+          1,
+          2
+        ]
+      },
+      "pixelArt": true,
+      "headRects": [
+        [
+          125,
+          119,
+          98,
+          93
+        ],
+        [
+          435,
+          117,
+          97,
+          94
+        ],
+        [
+          741,
+          119,
+          98,
+          93
+        ],
+        [
+          1041,
+          132,
+          123,
+          86
+        ],
+        [
+          125,
+          422,
+          121,
+          88
+        ],
+        [
+          428,
+          422,
+          126,
+          88
+        ],
+        [
+          745,
+          434,
+          132,
+          83
+        ],
+        [
+          1053,
+          419,
+          103,
+          90
+        ],
+        [
+          114,
+          719,
+          104,
+          87
+        ],
+        [
+          426,
+          715,
+          86,
+          88
+        ],
+        [
+          762,
+          747,
+          99,
+          73
+        ],
+        [
+          1053,
+          720,
+          115,
+          88
+        ],
+        [
+          118,
+          1009,
+          94,
+          86
+        ],
+        [
+          434,
+          1000,
+          105,
+          92
+        ],
+        [
+          723,
+          1033,
+          124,
+          76
+        ],
+        [
+          1041,
+          1034,
+          115,
+          82
+        ]
+      ],
+      "styleBaseline": "B",
+      "reference": "references/official-kechizu.png",
+      "referenceURL": "https://jujutsukaisen.jp/character/",
+      "reviewSkill": {
+        "label": "播放吐血",
+        "kind": "poison",
+        "variant": "blood"
+      }
+    },
+    "jogo": {
+      "file": "battle/pixel-b-v3/jogo.png",
+      "label": "漏壶",
+      "artIndex": 17,
+      "facing": "left",
+      "height": 3.15,
+      "pixelStep": 1,
+      "frames": [
+        [
+          63,
+          61,
+          207,
+          256
+        ],
+        [
+          384,
+          58,
+          202,
+          259
+        ],
+        [
+          689,
+          61,
+          206,
+          256
+        ],
+        [
+          962,
+          63,
+          260,
+          254
+        ],
+        [
+          34,
+          358,
+          271,
+          255
+        ],
+        [
+          312,
+          360,
+          329,
+          253
+        ],
+        [
+          638,
+          385,
+          309,
+          228
+        ],
+        [
+          956,
+          358,
+          269,
+          255
+        ],
+        [
+          40,
+          651,
+          241,
+          264
+        ],
+        [
+          338,
+          657,
+          291,
+          259
+        ],
+        [
+          642,
+          663,
+          308,
+          253
+        ],
+        [
+          991,
+          660,
+          237,
+          255
+        ],
+        [
+          44,
+          955,
+          230,
+          255
+        ],
+        [
+          368,
+          946,
+          226,
+          263
+        ],
+        [
+          670,
+          978,
+          231,
+          228
+        ],
+        [
+          979,
+          951,
+          227,
+          255
+        ]
+      ],
+      "feet": [
+        0.992188,
+        0.992278,
+        0.992188,
+        0.992126,
+        0.992157,
+        0.992095,
+        0.991228,
+        0.992157,
+        0.992424,
+        0.992278,
+        0.992095,
+        0.992157,
+        0.992157,
+        0.992395,
+        0.991228,
+        0.992157
+      ],
+      "centers": [
+        0.425121,
+        0.430693,
+        0.429612,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "frameScales": [
+        1.015873,
+        1.027778,
+        1.015873,
+        1.007937,
+        1.011905,
+        1.003968,
+        0.904762,
+        1.011905,
+        1.047619,
+        1.027778,
+        1.003968,
+        1.011905,
+        1.011905,
+        1.043651,
+        0.904762,
+        1.011905
+      ],
+      "poses": {
+        "idle": 0,
+        "idle2": 1,
+        "idle3": 2,
+        "windup": 3,
+        "advance": 4,
+        "release": 5,
+        "attack": 6,
+        "follow": 7,
+        "recover": 8,
+        "cast": 9,
+        "castRelease": 10,
+        "castRecover": 11,
+        "guard": 12,
+        "hit": 13,
+        "defeat": 14,
+        "domain": 15
+      },
+      "motion": {
+        "windup": 0.2,
+        "contact": 0.32,
+        "end": 0.5,
+        "lunge": 0.15,
+        "castLunge": 0.12
+      },
+      "choreography": "Jogo squat hunched cyclops curse. Gray skin, single central eye, bald volcano-shaped dark cranial cone, mustard spotted short cape over black clothing, pale scarf and brown mid-calf boots with reddish soles. Faces LEFT. Keep short stature but use consistent sprite scale. 0: hunched walking-stick-like stance with hands curled low, eye glaring; 1: shoulders rise and volcano head tilts, cape shifts; 2: leans far back with both fingers fanned beside volcanic head; 3: thrusts both spread hands low-forward as flame-launch pose, small grounded steps not boxer lunge, no painted fire; 4: raises one gnarled hand skyward to summon volcanic attack, other arm tucked, single eye wide; 5: short stumbling recoil, cape lifts and one foot raised; 6: crouches under cape with forearms protecting volcano head; 7: squats collapsed low with head sagging and legs out, no gore. Never add two eyes or human hair.",
+      "actions": {
+        "melee": {
+          "approach": true,
+          "timing": [
+            0.3,
+            0.63,
+            0.73,
+            0.96,
+            1.24
+          ],
+          "track": [
+            {
+              "frame": 3,
+              "until": 0.3
+            },
+            {
+              "frame": 4,
+              "until": 0.48
+            },
+            {
+              "frame": 5,
+              "until": 0.63
+            },
+            {
+              "frame": 6,
+              "until": 0.73
+            },
+            {
+              "frame": 7,
+              "until": 0.96
+            },
+            {
+              "frame": 8,
+              "until": 1.12
+            },
+            {
+              "frame": 0,
+              "until": 1.24
+            }
+          ]
+        },
+        "fire": {
+          "approach": false,
+          "timing": [
+            0.4,
+            0.8,
+            0.93,
+            1.18,
+            1.48
+          ],
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.4
+            },
+            {
+              "frame": 10,
+              "until": 0.93
+            },
+            {
+              "frame": 11,
+              "until": 1.18
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        },
+        "orb": {
+          "approach": false,
+          "timing": [
+            0.4,
+            0.8,
+            0.93,
+            1.18,
+            1.48
+          ],
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.4
+            },
+            {
+              "frame": 10,
+              "until": 0.93
+            },
+            {
+              "frame": 11,
+              "until": 1.18
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        }
+      },
+      "signature": "fire",
+      "animations": {
+        "idle": {
+          "loop": true,
+          "track": [
+            {
+              "frame": 0,
+              "until": 0.9
+            },
+            {
+              "frame": 1,
+              "until": 1.65
+            },
+            {
+              "frame": 0,
+              "until": 2.4
+            },
+            {
+              "frame": 2,
+              "until": 2.53
+            },
+            {
+              "frame": 0,
+              "until": 3.2
+            }
+          ]
+        },
+        "cast": {
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.4
+            },
+            {
+              "frame": 10,
+              "until": 0.93
+            },
+            {
+              "frame": 11,
+              "until": 1.18
+            },
+            {
+              "frame": 0,
+              "until": 1.48
+            }
+          ]
+        },
+        "domain": {
+          "track": [
+            {
+              "frame": 9,
+              "until": 0.35
+            },
+            {
+              "frame": 15,
+              "until": 1.8
+            },
+            {
+              "frame": 0,
+              "until": 2
+            }
+          ]
+        },
+        "victory": {
+          "track": [
+            {
+              "frame": 0,
+              "until": 2
+            }
+          ]
+        }
+      },
+      "idleRegistration": {
+        "method": "planted-stance-v1",
+        "frames": [
+          0,
+          1,
+          2
+        ]
+      },
+      "pixelArt": true,
+      "headRects": [
+        [
+          129,
+          61,
+          86,
+          84
+        ],
+        [
+          448,
+          58,
+          84,
+          85
+        ],
+        [
+          754,
+          61,
+          86,
+          84
+        ],
+        [
+          1045,
+          63,
+          109,
+          83
+        ],
+        [
+          120,
+          358,
+          113,
+          84
+        ],
+        [
+          417,
+          360,
+          138,
+          83
+        ],
+        [
+          736,
+          385,
+          129,
+          75
+        ],
+        [
+          1042,
+          358,
+          112,
+          84
+        ],
+        [
+          117,
+          651,
+          101,
+          87
+        ],
+        [
+          431,
+          657,
+          122,
+          85
+        ],
+        [
+          740,
+          663,
+          129,
+          83
+        ],
+        [
+          1066,
+          660,
+          99,
+          84
+        ],
+        [
+          117,
+          955,
+          96,
+          84
+        ],
+        [
+          440,
+          946,
+          94,
+          86
+        ],
+        [
+          743,
+          978,
+          97,
+          75
+        ],
+        [
+          1051,
+          951,
+          95,
+          84
+        ]
+      ],
+      "reference": "references/official-jogo.png",
+      "referenceURL": "https://jujutsukaisen.jp/character/index_1st.php",
+      "styleBaseline": "B",
+      "reviewSkill": {
+        "label": "播放火焰释放",
+        "kind": "fire",
+        "variant": "fire"
+      },
+      "maskFile": "battle/pixel-b-v3/jogo-isolation.png",
+      "maskFrames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "poseFiles": [
+        "battle/pixel-b-v3/poster-jogo-0.png",
+        "battle/pixel-b-v3/poster-jogo-1.png",
+        "battle/pixel-b-v3/poster-jogo-2.png",
+        "battle/pixel-b-v3/poster-jogo-3.png",
+        "battle/pixel-b-v3/poster-jogo-4.png",
+        "battle/pixel-b-v3/poster-jogo-5.png",
+        "battle/pixel-b-v3/poster-jogo-6.png",
+        "battle/pixel-b-v3/poster-jogo-7.png",
+        "battle/pixel-b-v3/poster-jogo-8.png",
+        "battle/pixel-b-v3/poster-jogo-9.png",
+        "battle/pixel-b-v3/poster-jogo-10.png",
+        "battle/pixel-b-v3/poster-jogo-11.png",
+        "battle/pixel-b-v3/poster-jogo-12.png",
+        "battle/pixel-b-v3/poster-jogo-13.png",
+        "battle/pixel-b-v3/poster-jogo-14.png",
+        "battle/pixel-b-v3/poster-jogo-15.png"
+      ],
+      "posterFile": "battle/pixel-b-v3/poster-jogo-0.png"
+    }
+  },
+  "revision": "B-nine-characters-and-approved-mahoraga"
+}

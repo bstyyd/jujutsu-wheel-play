@@ -1,0 +1,17 @@
+.player-config{border-top:2px solid var(--color-accent);padding:16px 18px;background:var(--color-paper-2);margin-bottom:16px}
+.config-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}.config-heading p{margin:0}.config-heading .eyebrow{margin-bottom:5px}
+#buildSummary{font-size:14px;color:var(--color-ink)}#randomize{flex-shrink:0;border-color:var(--color-accent);color:var(--color-accent)}
+.config-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+.config-fields label{display:grid;gap:5px;color:var(--color-muted);font-size:11px}.config-fields select{width:100%;min-width:0;padding:9px 8px;min-height:40px;background:var(--color-paper);color:var(--color-ink);border:1px solid var(--color-rule-soft);font-family:inherit}
+.practice-note{font-size:11px;color:var(--color-muted);margin:12px 0 0;line-height:1.65}
+#buildDetails{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}#buildDetails span{font-size:11px}#buildDetails b{display:block;color:var(--color-ink);font-weight:normal}
+.player-battle-card{border-left:2px solid var(--color-accent)}.fighters{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:6px;align-content:start}.fighter{max-width:100%;min-height:80px}.fighter .state{white-space:normal}
+.battle-top #order{overflow:hidden}.battle-top #order span{max-width:65px;overflow:hidden;text-overflow:ellipsis}
+#result{inset:auto 12px 12px;background:var(--color-hud);border:1px solid var(--color-accent);padding:12px}#result h2{font-size:22px}
+.commands{grid-template-columns:repeat(2,minmax(0,1fr))}.commands #domain:not(:disabled){border-color:var(--color-accent)}.commands button{min-height:49px}
+@media(min-width:40rem){.commands{grid-template-columns:1fr}.config-fields{grid-template-columns:repeat(6,minmax(0,1fr))}.battle-body{grid-template-columns:minmax(0,1fr) 245px}.command-deck{padding:16px}.fighter .name{display:block}.fighter .value{display:block}}
+@media(max-width:39.99rem){.player-config{padding:12px}.config-fields{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.config-heading{align-items:flex-start}#randomize{font-size:12px;padding:8px}.arena{height:310px}.teams{padding:8px}.fighters{grid-template-columns:repeat(auto-fit,minmax(80px,1fr));gap:4px}.fighter{padding:6px;min-height:75px}.fighter .name{display:block}.fighter .name strong{font-size:11px}.fighter .value{display:block;font-size:9px;white-space:nowrap}.fighter .state{font-size:9px}.command-deck{padding:12px}#description{min-height:0}}
+.player-style-panel{padding:10px 0;background:transparent}.field{display:flex;flex-direction:column}.field .arena{flex:1;min-height:400px}.fighters .fighter[hidden]{display:none}.intent-row{line-height:1.65}
+.practice-skill{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--color-muted);padding:4px 8px}
+@media(min-width:55rem){.battle-body{grid-template-columns:minmax(0,1fr) 290px}.commands{grid-template-columns:1fr 1fr}.commands button{display:block;min-height:58px}.commands button strong,.commands button small{display:block}.style-command-row{display:grid;grid-template-columns:1fr 1fr}.style-command-row button{padding:8px 7px;font-size:11px}.style-deploy{grid-column:1/-1}.style-deploy select{max-width:none;flex:1}}
+@media(max-width:39.99rem){.field .arena{flex:none;min-height:310px}.command-deck h2{font-size:21px}.command-deck #status{margin-bottom:8px}.style-command-row button{min-height:42px}.player-style-panel{margin-top:5px}.intent-box{margin-top:10px}}

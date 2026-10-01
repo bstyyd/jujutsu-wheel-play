@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#101a23"><title>我的术式 · 随机玩家战斗</title><link rel="stylesheet" href="tokens.css?v=web-20261001T095751Z"><link rel="stylesheet" href="combat-sample.css?v=web-20261001T095751Z"><link rel="stylesheet" href="player-battle.css?v=web-20261001T095751Z"><link rel="stylesheet" href="player-styles.css?v=web-20261001T095751Z"><link rel="stylesheet" href="cursed-tool-training.css?v=web-20261001T095751Z"><link rel="stylesheet" href="player-build.css?v=web-20261001T095751Z"></head>
+<body><main>
+<header><div><p class="eyebrow">PLAYER BATTLE / 我的咒术旅程</p><h1>我的术式<span>八十八桥 · 战斗演练</span></h1></div><a class="back" href="./">返回旅程 ↗</a></header>
+<section class="player-config" aria-label="演练人物配置">
+ <div class="config-heading"><div><p class="eyebrow">每一种命运，都有自己的出手方式</p><p id="buildSummary"></p></div><button id="randomize">随机人物 ↻</button></div>
+ <div class="config-fields">
+  <label>人物形象<select id="profile"></select></label><label>初始身份<select id="identity"></select></label><label>生得术式<select id="technique"></select></label>
+  <label>随身咒具<select id="equipment"><option value="">徒手</option></select></label>
+  <label>训练方向<select id="build"><option value="balanced">均衡</option><option value="brawler">体术</option><option value="channeler">咒力输出</option><option value="precise">咒力操控</option></select></label>
+  <label>构筑样板<select id="loadout"><option value="">自行起步</option><option value="hunter">十影 · 追击调度</option><option value="keeper">十影 · 护卫反击</option><option value="artillery">傀儡 · 炮击连携</option><option value="fortress">傀儡 · 护卫反击</option><option value="counter">通用 · 守势施术</option></select></label><label>术式熟练<select id="mastery"><option value="0">初学 · 0%</option><option value="100" selected>领域领悟 · 100%</option><option value="300">极之番领悟 · 300%</option></select></label>
+ </div><div class="style-presets" aria-label="流派样板"><button id="presetClose" aria-pressed="false">近战 · 连击与破势</button><button id="presetSummon" aria-pressed="false">召唤 · 显现与协攻</button><button id="presetWeapon" aria-pressed="false">持械 · 架势与专属招式</button><button id="presetRanged" aria-pressed="false">远程 · 蓄力与打断</button><button id="presetStory" aria-pressed="true">原战斗配置</button><label class="practice-skill"><input id="learnBlackFlash" type="checkbox">已领悟黑闪</label></div><p class="practice-note" id="practiceNote">独立演练，不读写旅程存档。使用主游戏人物生成、术式和咒具规则；练习实力按训练方向设置。阵营会影响同伴与对手。</p>
+</section>
+<section class="battle" aria-label="随机玩家战斗">
+ <div class="battle-top"><span id="round">准备出战</span><div id="order" aria-label="行动顺序"></div><span class="edition">B · 精致像素</span></div>
+ <div class="battle-body"><div class="field">
+  <div class="arena"><div id="mount"></div><div id="impact" aria-hidden="true"></div><div class="location">八十八桥周边 · 山路</div><div id="targets"></div><div id="numbers" aria-hidden="true"></div><div id="callout" aria-hidden="true"></div>
+   <div id="entry"><p class="eyebrow" id="entryParty">你 ＋ 剧情同伴</p><h2 id="entryTitle">带上自己的术式出战</h2><p id="loadStatus">选择配置，或随机一次人物。</p><button id="start">进入战斗</button></div>
+   <div id="result" hidden><p class="eyebrow" id="resultKicker"></p><h2 id="resultTitle"></h2><p id="resultText"></p><button id="again">再次挑战</button></div>
+  </div>
+  <div class="teams"><div><p class="side-label">我方</p><div id="allies" class="fighters"></div></div><div><p class="side-label enemy-label">敌方 · 点选目标</p><div id="enemies" class="fighters"></div></div></div>
+ </div>
+ <aside class="command-deck"><p class="eyebrow">战斗指令</p><h2 id="actor">你的行动</h2><p id="status" role="status" aria-live="polite">准备出战</p>
+  <div class="target-summary">目标 <strong id="selectedName">—</strong></div>
+  <div class="commands"><button id="attack" disabled><strong>体术</strong><small>徒手出击</small></button><button id="skill" disabled><strong>生得术式</strong><small>咒力消耗</small></button><button id="domain" disabled><strong>领域展开</strong><small>领悟后使用</small></button><button id="guard" disabled><strong>防御</strong><small>恢复 8% 咒力</small></button></div>
+  <section id="stylePanel" class="player-style-panel" aria-label="流派指令"></section><p id="description"></p><div class="intent-box"><p class="eyebrow">敌方预告</p><div id="intent"></div></div>
+  <details class="rules"><summary>我的战斗配置</summary><div id="buildDetails"></div><p id="traitNotes"></p></details>
+ </aside></div>
+ <footer><div class="settings"><button id="sound" aria-pressed="true">音效 · 开</button><label>音量<input id="volume" aria-label="音效音量" type="range" min="0" max="100" value="45"></label><label><input id="reduced" type="checkbox">减少动态</label></div><button id="reset" disabled>重新挑战</button></footer>
+</section>
+<p class="note">原著地点与人物，玩家参与和演练配置属于游戏改编。随机玩家不使用原作人物配音。<a href="summon-review.html">召唤物动作审核 ↗</a> · <a href="combat-sample.html">原作人物战斗样板 ↗</a></p>
+</main><script src="battle-scenes.js?v=web-20261001T095751Z"></script><script src="player-battle-core.js?v=web-20261001T095751Z"></script><script src="combat-presentation.js?v=web-20261001T095751Z"></script><script src="player-presentation.js?v=web-20261001T095751Z"></script><script src="summon-presentation.js?v=web-20261001T095751Z"></script><script src="player-battle-model.js?v=web-20261001T095751Z"></script><script src="combat-audio.js?v=web-20261001T095751Z"></script><script src="player-battle.js?v=web-20261001T095751Z"></script></body></html>

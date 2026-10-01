@@ -1,0 +1,25 @@
+/* 六维雷达图（radar-chart.js 配套） */
+.radar-box{
+  margin:0 0 14px;
+  padding:10px 10px 8px;
+  background:var(--color-hud-soft);
+  border:1px solid var(--color-hud-faint);
+  border-radius:10px;
+}
+.radar-cap{
+  display:flex;align-items:baseline;justify-content:space-between;
+  margin-bottom:2px;padding:0 2px;
+}
+.radar-cap b{
+  font-family:var(--font-display);font-size:14px;letter-spacing:3px;
+  color:var(--color-accent);
+}
+.radar-cap span{font-size:10px;color:var(--txt3);letter-spacing:1px}
+.radar-box canvas{
+  display:block;width:100%;aspect-ratio:1/1.08;
+  max-width:320px;margin:0 auto;
+}
+.radar-note{
+  margin-top:2px;font-size:10.5px;line-height:1.6;color:var(--txt3);
+  text-align:center;letter-spacing:.5px;
+}

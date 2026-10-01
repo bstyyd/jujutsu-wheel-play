@@ -1,0 +1,23 @@
+[
+  {
+    "id": "higuruma_domain",
+    "file": "assets/audio/v5/higuruma_domain.mp3",
+    "actor": "日车宽见",
+    "domain": "诛伏赐死",
+    "sources": [
+      "https://www.animecharactersdatabase.com/quotesbycharacter.php?line_id=492295",
+      "https://www.animecharactersdatabase.com/quotesbycharacter.php?line_id=492296"
+    ],
+    "episode": 56,
+    "sourceTimes": [
+      "01:33",
+      "01:35"
+    ],
+    "processing": "Adjacent lines concatenated without trimming; 120 ms leading and 150 ms trailing silence. Original AAC files preserved. No voice generation or separation.",
+    "durationMs": 3700,
+    "nameAtMs": 1950,
+    "sha256": "8cea86bba8c1873aeeaf4cc11ac542e8a76930a7a7e0d3619cc24840dc6c5146",
+    "verification": "Site character/episode/line attribution plus Japanese ASR. Call transcribed 領域展開, name phonetic ジューブクッシュ; subjective listening pending.",
+    "distribution": "Local prototype review; public redistribution permission not established."
+  }
+]

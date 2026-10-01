@@ -25,7 +25,7 @@
   }
   layer(layer,pan){
    const clip=this.catalog.clips[layer.clip],buffer=this.buffers.get(layer.clip);if(!clip||!buffer)return;
-   const ctx=this.ctx,now=ctx.currentTime,offset=Math.min(layer.offset||0,buffer.duration-.01),duration=Math.min(layer.duration||.3,buffer.duration-offset);
+   const ctx=this.ctx,now=ctx.currentTime+Math.max(0,Math.min(.25,layer.delay||0)),offset=Math.min(layer.offset||0,buffer.duration-.01),duration=Math.min(layer.duration||.3,buffer.duration-offset);
    if(duration<=0)return;
    const source=ctx.createBufferSource(),gain=ctx.createGain(),panner=ctx.createStereoPanner(),nodes=[source,gain,panner];source.buffer=buffer;
    let previous=source;

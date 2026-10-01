@@ -1,0 +1,20 @@
+[
+  {
+    "id": "gojo",
+    "prompt": "Use case: stylized-concept. Asset type: transparent game cinematic pixel portrait. Input image1 is ONLY the approved B refined pixel style reference; image2 is authoritative anime identity/clothing/hand gesture reference, not edit target. Generate ONE single Satoru Gojo EXACTLY as identity reference: lifted black blindfold held at high collar by left hand, luminous blue eyes and spiky white hair. Right hand beside face forms the SAME two finger sign as image2, other fingers curled. Preserve high collar purple-black uniform. Bust to waist, calm confidence, angled three quarters toward right. Style: exquisite hand-crafted pixel art, precise square pixel clusters, restrained palette, crisp stepped silhouettes, chunky readable shapes but refined face and fingers, exactly match image1 pixel rendering. Subject height roughly 320 logical pixels rendered at integer 3x. Genuine alpha transparent background. No scene, text, panel, grid, checkerboard, glow or extra figures. Entire hair and BOTH hands visible with clear margin. Preserve character identity and pose from anime screenshot, no added jewelry/extra fingers. Never duplicate character.",
+    "mode": "built-in imagegen",
+    "file": "gojo.png"
+  },
+  {
+    "id": "sukuna",
+    "prompt": "Use case: stylized-concept. Asset type: transparent game cinematic pixel portrait. Input image1 is ONLY the approved B refined pixel style reference; image2 is authoritative anime identity/clothing/hand gesture reference, not edit target. Generate ONE single Ryomen Sukuna in Yuji vessel EXACTLY as identity reference: short swept pink hair, exact black forehead and cheek tattoos, high collar dark uniform. BOTH hands held vertically together in front of nose form the SAME shrine mudra as image2 with index/middle aligned and other fingers interlocked. Eyes half closed, regal menace. Bust to waist, slight three quarters toward left; tattoo layout not mirrored. Style: exquisite hand-crafted pixel art, precise square pixel clusters, restrained palette, crisp stepped silhouettes, chunky readable shapes but refined face and fingers, exactly match image1 pixel rendering. Subject height roughly 320 logical pixels rendered at integer 3x. Genuine alpha transparent background. No scene, text, panel, grid, checkerboard, glow or extra figures. Entire hair and BOTH hands visible with clear margin. Preserve character identity and pose from anime screenshot, no added jewelry/extra fingers. Never duplicate character.",
+    "mode": "built-in imagegen",
+    "file": "sukuna.png"
+  },
+  {
+    "id": "megumi",
+    "prompt": "Use case: stylized-concept. Asset type: transparent game cinematic pixel portrait. Input image1 is ONLY the approved B refined pixel style reference; image2 is authoritative anime identity/clothing/hand gesture reference, not edit target. Generate ONE single Megumi Fushiguro EXACTLY as identity reference: black spiky hair, dark navy gold button school uniform, both hands tightly clasped in the SAME gesture and orientation as image2, elbows visibly separate. Intensely focused expression with a little blood across brow and cheek as reference. Bust to waist, three quarters toward right. Style: exquisite hand-crafted pixel art, precise square pixel clusters, restrained palette, crisp stepped silhouettes, chunky readable shapes but refined face and fingers, exactly match image1 pixel rendering. Subject height roughly 320 logical pixels rendered at integer 3x. Genuine alpha transparent background. No scene, text, panel, grid, checkerboard, glow or extra figures. Entire hair and BOTH hands visible with clear margin. Preserve character identity and pose from anime screenshot, no added jewelry/extra fingers. Never duplicate character.",
+    "mode": "built-in imagegen",
+    "file": "megumi.png"
+  }
+]

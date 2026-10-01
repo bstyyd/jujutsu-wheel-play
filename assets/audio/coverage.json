@@ -138,7 +138,7 @@
       "level": 8,
       "domain": "诛伏赐死",
       "voice": "higuruma_domain",
-      "status": "原片重新剪取，保留喊招、领域名称及自然收音"
+      "status": "ACDB独立角色台词：第56集相邻的展开喊声与领域名，保留两段完整原音和句尾；自动转写及来源台词核对通过，音色与衔接待人工试听。"
     },
     {
       "name": "秤金次",
@@ -201,182 +201,218 @@
     {
       "name": "无下限术式",
       "domain": "无量空处",
-      "voice": "gojo_void"
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "十种影法术",
       "domain": "嵌合暗翳庭",
-      "voice": "megumi_shadow"
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "御厨子",
       "domain": "伏魔御厨子",
-      "voice": "sukuna_shrine"
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "刍灵咒法",
       "domain": "灵魂共鸣",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "十划咒法",
       "domain": "真视斩击",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "咒言",
       "domain": "真我言灵",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "咒灵操术",
       "domain": "万鬼来朝",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "无为转变",
       "domain": "自闭圆顿裹",
-      "voice": "mahito_domain"
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "不义游戏",
       "domain": "天手力",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "赤血操术",
       "domain": "超红莲真新星",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "黑鸟操术",
       "domain": "百鸟共舞",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "投射咒法",
       "domain": "时胞月宫殿",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "构筑术式",
       "domain": "三重疾苦",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "傀儡操术",
       "domain": "超巨大机甲",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "淀月",
       "domain": "恶毒邪月",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "蚀烂腐术",
       "domain": "暗蚀",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "奇迹",
       "domain": "鸿运齐天",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "雅各布天梯",
       "domain": "天使之息",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "幻兽琥珀",
       "domain": "死门雷兽",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "判决术式",
       "domain": "诛伏赐死",
-      "voice": "higuruma_domain"
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "咒力大炮",
       "domain": "咒力加农炮",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "质量术式",
       "domain": "星之怒",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "鬼臂罗网",
       "domain": "百臂魔神",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "付丧操术",
       "domain": "跑得很快",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "降灵术",
       "domain": "秽土转生",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "天空术式",
       "domain": "虚化神威",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "生长术式",
       "domain": "超高速再生",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "火灾操术",
       "domain": "盖棺铁围山",
-      "voice": "jogo_domain"
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "蛊毒术式",
       "domain": "巫蛊",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "复制术式",
       "domain": "真赝相爱",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "万象拒绝",
       "domain": "我拒绝",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "黄金体验镇魂曲",
       "domain": "万象虚无",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "界王拳",
       "domain": "十倍界王拳",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "超级赛亚人变身",
       "domain": "超级赛亚人变身第二阶段",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "仙人模式",
       "domain": "仙法之术",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     },
     {
       "name": "死而替生",
       "domain": "替死鬼",
-      "voice": null
+      "voice": false,
+      "status": "随机玩家未录制自身领域原声 · 无声演出"
     }
   ],
   "cues": [
@@ -422,11 +458,11 @@
       "match": [
         "诛伏赐死"
       ],
-      "file": "assets/audio/v3/higuruma_domain.mp3",
-      "durationMs": 4200,
-      "nameAtMs": 1880,
-      "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
-      "note": "原片重新剪取，保留喊招、领域名称及自然收音"
+      "file": "assets/audio/v5/higuruma_domain.mp3",
+      "durationMs": 3700,
+      "nameAtMs": 1950,
+      "source": "https://www.animecharactersdatabase.com/quotesbycharacter.php?line_id=492295",
+      "note": "ACDB独立角色台词：第56集相邻的展开喊声与领域名，保留两段完整原音和句尾；自动转写及来源台词核对通过，音色与衔接待人工试听。"
     },
     {
       "id": "sukuna_shrine",
@@ -477,5 +513,5 @@
       "note": "《幻影夜行》花御领域演出原音，含游戏音效；完整喊招台词未核实，按用户选择接入。领域名显字按画面定时，非台词对齐。"
     }
   ],
-  "voicePolicy": "matched-canonical-recordings-only; missing or failed recordings are silent"
+  "voicePolicy": "角色和领域同时匹配才播放；随机玩家和扩展领域静默；原声结束后停留至少1000 ms。"
 }

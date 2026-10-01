@@ -11,7 +11,7 @@ const HD={
 };
 const domainReferences={
  blossom:['domain-roster-v4/hanami-game.jpg','花海 · 参考《幻影夜行》画面'],
- void:['battle-slice-v1/domain-98.webp','动画参考'],shrine:['battle-slice-v1/domain-20.webp','动画参考'],shadow:['battle-slice-v1/domain-210.webp','不完整领域 · 保留战场'],lava:['battle-slice-v1/domain-56.webp','动画参考'],hands:['domain-stage-v2/comp-450.jpg','动画参考'],beach:['domain-stage-v2/comp-365.jpg','动画参考'],court:['domain-stage-v2/comp-518.jpg','动画参考'],
+ void:['battle-slice-v1/domain-98.png','动画参考'],shrine:['battle-slice-v1/domain-20.png','动画参考'],shadow:['battle-slice-v1/domain-210.png','不完整领域 · 保留战场'],lava:['battle-slice-v1/domain-56.png','动画参考'],hands:['domain-stage-v2/comp-450.jpg','动画参考'],beach:['domain-stage-v2/comp-365.jpg','动画参考'],court:['domain-stage-v2/comp-518.jpg','动画参考'],
  love:['domain-roster-v4/love.jpg','漫画第 249 话 · 动画画风改编'],womb:['domain-roster-v4/womb.jpg','漫画第 205 话 · 开放领域'],moon:['domain-roster-v4/moon.jpg','漫画第 198 话 · 动画画风改编'],jackpot:['domain-roster-v4/jackpot.jpg','漫画第 186 话 · 展开场景'],station:['domain-roster-v4/station.jpg','漫画第 264 话 · 展开后的车站，名称未公开']
 };
 const domainReviewItems=BattleScenes.domainRoster;

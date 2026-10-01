@@ -1,1 +1,1 @@
-window.JJKEngineConfig={"args":[],"canvasResizePolicy":0,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"battle","experimentalVK":false,"fileSizes":{"battle.pck":60188,"battle.wasm":39513091},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+window.JJKEngineConfig={"args":[],"canvasResizePolicy":0,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"battle","experimentalVK":false,"fileSizes":{"battle.pck":117260,"battle.wasm":39513091},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};

@@ -171,7 +171,7 @@ class Diorama {
     this.loadBackdrop(kind,buildId);
   }
   async loadBackdrop(kind,buildId) {
-    const selectedFile='scenes/v1/'+(({campus:'campus-dusk.webp',bridge:'bridge-night.webp',colony:'urban-ruins.webp',ruins:'urban-ruins.webp'})[kind]||'shibuya-night.webp');
+    const selectedFile='scenes/v1/'+(({campus:'campus-dusk.png',bridge:'bridge-night.png',colony:'urban-ruins.png',ruins:'urban-ruins.png'})[kind]||'shibuya-night.png');
     try{
       const texture=await this.loadTexture(selectedFile);if(this.buildId!==buildId)return;
       this.backdropMeshes.forEach(m=>m.visible=false);
@@ -207,7 +207,7 @@ class Diorama {
     }
     this.dust=null;this.host?.setAttribute('data-environment',kind);delete this.host?.dataset.backdrop;
     if(kind==='subway'||kind==='detention'){
-      const file='scenes/v2/'+kind+'.webp';this.loadTexture(file).then(map=>{
+      const file='scenes/v2/'+kind+'.png';this.loadTexture(file).then(map=>{
         if(this.buildId!==buildId)return;
         this.environmentGroup.children.forEach(m=>{if(m.position.y>1)m.visible=false;});
         const geo=new THREE.PlaneGeometry(25,7.6),mat=new THREE.MeshBasicMaterial({map,fog:false,toneMapped:false}),mesh=new THREE.Mesh(geo,mat);

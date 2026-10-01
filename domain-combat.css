@@ -18,12 +18,12 @@
 .battle-field[data-domain-clash=true] .hd-battle::after{content:'';position:absolute;left:50%;inset-block:0;width:2px;background:linear-gradient(transparent,#dcc8ed,transparent);box-shadow:0 0 15px #bb9dcc;pointer-events:none;animation:domain-seam 2.6s ease-in-out infinite}
 .domain-fallback{position:absolute;inset:0;display:flex;pointer-events:none;z-index:-1}.domain-fallback i{flex:1;min-width:0;display:block}.domain-fallback .domain-translucent{opacity:.75}
 .battle-field.has-hd .domain-fallback{display:none}
-.battle-field[data-base-environment=subway]{background-image:url('assets/scenes/v2/subway.webp')}
-.battle-field[data-base-environment=detention]{background-image:url('assets/scenes/v2/detention.webp')}
-.battle-field[data-base-environment=campus]{background-image:url('assets/scenes/v1/campus-dusk.webp')}
-.battle-field[data-base-environment=bridge]{background-image:url('assets/scenes/v1/bridge-night.webp')}
-.battle-field[data-base-environment=shibuya]{background-image:url('assets/scenes/v1/shibuya-night.webp')}
-.battle-field[data-base-environment=colony],.battle-field[data-base-environment=ruins]{background-image:url('assets/scenes/v1/urban-ruins.webp')}
+.battle-field[data-base-environment=subway]{background-image:url('assets/scenes/v2/subway.png')}
+.battle-field[data-base-environment=detention]{background-image:url('assets/scenes/v2/detention.png')}
+.battle-field[data-base-environment=campus]{background-image:url('assets/scenes/v1/campus-dusk.png')}
+.battle-field[data-base-environment=bridge]{background-image:url('assets/scenes/v1/bridge-night.png')}
+.battle-field[data-base-environment=shibuya]{background-image:url('assets/scenes/v1/shibuya-night.png')}
+.battle-field[data-base-environment=colony],.battle-field[data-base-environment=ruins]{background-image:url('assets/scenes/v1/urban-ruins.png')}
 @keyframes domain-seam{50%{opacity:.45}}
 @media(max-width:600px){.domain-pair{gap:10px}.domain-meter{display:block}.domain-meter span,.domain-meter small{display:block;font-size:9px}.domain-meter strong{font-size:15px}.domain-meter meter{margin-top:5px}.domain-reaction{grid-template-columns:minmax(0,1fr);padding:12px;gap:10px}.domain-choices{grid-template-columns:1fr 1fr}.domain-reaction h3{font-size:17px}.domain-heading{font-size:10px}.domain-reaction p{font-size:11px}.domain-status{margin-bottom:7px}}
 @media(prefers-reduced-motion:reduce){.battle-field[data-domain-clash=true] .hd-battle::after{animation:none}}

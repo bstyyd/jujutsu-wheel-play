@@ -5,8 +5,9 @@
   const active=(e,u)=>fields(e).find(f=>f.owner===e.units.indexOf(u));
   const opposite=(e,f)=>fields(e).find(g=>g.side!==f.side);
   const cost=u=>u.skills?.sixEyes?0:Math.round(u.maxCp*.30);
+  const upkeep=(u,f)=>u.skills?.sixEyes?0:Math.round(u.maxCp*.05*(f?.barrierCondition==='reinforce'?1.35:f?.barrierCondition==='compact'?1.65:1));
   const ready=(e,u)=>!!u?.alive&&!window.BattleTraits?.blocked(e,u,'domain')&&!e.ended&&u.canDomain&&!(u.domainCd>0)&&u.cp>=cost(u)&&!fields(e).some(f=>f.side===u.side);
-  const snapshot=e=>fields(e).map(f=>({...f}));
+  const snapshot=e=>fields(e).map(f=>({...f,advantage:window.BattleResonance?.advantage(e,f),momentum:window.BattleResonance?.momentum(e.units[f.owner])||0}));
   const emit=(e,ev,type,text,extra={})=>ev.push({type,text,domainSnapshot:snapshot(e),...extra});
   const mastery=u=>/五条悟|宿傩/.test(u.name)?260:/羂索/.test(u.name)?250:/真人/.test(u.name)?185:/漏[壶瑚]/.test(u.name)?180:/伏黑惠/.test(u.name)?110:160;
   const power=(e,u)=>Math.round((u.isPlayer?Math.max(100,Math.min(300,e.cfg.player.prof||100)):mastery(u))*.7+Math.min(120,Math.log2(1+Math.max(0,u.ctl))*7));
@@ -14,7 +15,8 @@
     if(!fields(e).includes(f))return;
     e.domainFields=fields(e).filter(g=>g!==f);
     const owner=e.units[f.owner];if(owner)owner.domainCd=owner.reverse?2:9999;
-    emit(e,ev,'domain_end',`【${f.name}】${reason}，领域崩解。`,{domainName:f.name,actorName:owner?.name});
+    emit(e,ev,'domain_end',`【${f.name}】${reason}，领域崩解。`,{domainName:f.name,actorName:owner?.name,owner:f.owner,side:f.side,domainPhase:'collapse',reason,stabilityBefore:f.stability});
+    if(owner)window.BattleResonance?.onCollapse(e,owner,ev,reason);
   };
   const begin=(e,u,ev)=>{
     const n=scenes.name(u.domainName),p=scenes.profileFor({name:n,actorName:u.name,isPlayer:u.isPlayer});
@@ -22,16 +24,16 @@
     const f={owner:e.units.indexOf(u),actorName:u.name,side:u.side,name:n,key:p?.key||null,open:!!p?.open,incomplete:!!p?.incomplete,nonlethal:!!p?.nonlethal,remaining:3,stability:100,power:power(e,u),born:e.actionsTotal,fresh:true};
     f.traitName=(u.isPlayer||scenes.npcDomain(u.name)===n)&&window.BattleTraits?.rules[n]?n:null;
     (e.domainFields||=[]).push(f);
-    emit(e,ev,'domain',`${u.name} 展开【${n}】！`,{domainName:n,actorName:u.name,side:u.side,isPlayer:!!u.isPlayer});return f;
+    emit(e,ev,'domain',`${u.name} 展开【${n}】！`,{domainName:n,actorName:u.name,owner:f.owner,side:u.side,isPlayer:!!u.isPlayer,domainPhase:'formation'});return f;
   };
   const clash=(e,ev)=>{
     if(fields(e).length<2)return;
-    const [a,b]=fields(e),strong=a.power>=b.power?a:b,weak=strong===a?b:a;
+    const [a,b]=fields(e),strength=f=>window.BattleResonance?.effective(e,f)||f.power,strong=strength(a)>=strength(b)?a:b,weak=strong===a?b:a;
     // An incomplete domain can contest a sure-hit, but cannot overpower a complete one.
-    if(strong.power>=weak.power*1.5&&!strong.incomplete&&!weak.incomplete){
-      emit(e,ev,'domain_clash',`领域对抗！【${strong.name}】的精炼度压过了【${weak.name}】。`);
+    if(strength(strong)>=strength(weak)*1.5&&!strong.incomplete&&!weak.incomplete){
+      emit(e,ev,'domain_clash',`领域对抗！【${strong.name}】的精炼度压过了【${weak.name}】。`,{domainPhase:'engage',outcome:'overpower',winner:strong.owner,loser:weak.owner});
       collapse(e,weak,ev,'在对抗中失守');
-    }else emit(e,ev,'domain_clash','领域对抗僵持：双方必中抵消。攻击施术者，动摇对方领域！');
+    }else emit(e,ev,'domain_clash','领域对抗僵持：双方必中抵消。攻击施术者，动摇对方领域！',{domainPhase:'engage',outcome:'contested'});
   };
   const pulse=(e,f,ev,opening=false)=>{
     if(!fields(e).includes(f)||e.ended)return;
@@ -46,7 +48,7 @@
     }
     const avg=(u.eff[0]+u.eff[1])/2,total=u.isPlayer?avg*6+u.maxCp*.06:avg*(u.side==='enemy'?3.5:5);
     // Spread the old burst over the opening and three upkeep turns.
-    const damage=Math.round(total*(opening?.4:.2));
+    const damage=Math.round(total*(opening?.4:.2)*(f.barrierCondition==='compact'?.85:1));
     emit(e,ev,'domain_state',`【${f.name}】必中生效。`);
     for(const t of targets){if(!fields(e).includes(f)||e.ended)break;e.dealDamage(u,t,damage,1,'domain',ev,`${f.name}·必中`,false,true);}
     e.checkEnd(ev);
@@ -88,29 +90,32 @@
     const f=active(this,u);if(f){
       if(f.fresh){f.fresh=false;return;}
       // Includes a skipped (stunned) turn; keeping a barrier is not a free pause.
-      const upkeep=u.skills?.sixEyes?0:Math.round(u.maxCp*.05);
-      if(u.cp<upkeep){collapse(this,f,ev,'因咒力不足');return;}
-      u.cp-=upkeep;
+      const maintenance=upkeep(u,f);
+      if(u.cp<maintenance){collapse(this,f,ev,'因咒力不足');return;}
+      u.cp-=maintenance;
       const enemy=opposite(this,f);
       if(enemy){
-        const erosion=8+Math.min(20,Math.max(0,(f.power/enemy.power-1)*30))+(f.open&&!enemy.open&&!enemy.incomplete?12:0);
+        const pressure=window.BattleResonance?.pressure(this,f,enemy),external=pressure?.external??(f.open&&!enemy.open&&!enemy.incomplete?12:0);
+        const erosion=pressure?.total??(8+Math.min(20,Math.max(0,(f.power/enemy.power-1)*30))+external);
         enemy.stability=Math.max(0,enemy.stability-erosion);
+        enemy.shellStress=Math.min(100,(enemy.shellStress||0)+external);
         if(f.incomplete)f.stability=Math.max(0,f.stability-12);
-        emit(this,ev,'domain_clash',`领域对攻：【${f.name}】削减对方 ${Math.round(erosion)} 稳定度${f.open&&!enemy.open?'（含开放结界外侧侵蚀）':''}。${f.incomplete?'未完成结界额外损失12稳定度。':''}`);
+        emit(this,ev,'domain_clash',`领域对攻：【${f.name}】削减对方 ${Math.round(erosion)} 稳定度${external>0?`（外侧侵蚀 ${Math.round(external)}）`:''}。${f.incomplete?'未完成结界额外损失12稳定度。':''}`,{domainPhase:'pressure',fromIndex:f.owner,toIndex:enemy.owner,stabilityLoss:erosion,externalPressure:external,upkeepPaid:maintenance,reason:external>0?'开放结界外侧侵蚀':'结界对抗',selfLoss:f.incomplete?12:0});
         if(enemy.stability<=0)collapse(this,enemy,ev,'结界在对攻中破裂');
         if(f.stability<=0)collapse(this,f,ev,'未完成结界无法继续维持');
       }
       if(!fields(this).includes(f))return;
       pulse(this,f,ev);
       if(!fields(this).includes(f))return;
-      f.remaining--;if(f.remaining<=0)collapse(this,f,ev,'维持时间结束');else emit(this,ev,'domain_state',`【${f.name}】剩余 ${f.remaining} 次自身行动。`);
+      if(opposite(this,f))emit(this,ev,'domain_state',`【${f.name}】继续争夺空间；对攻期间持续支付咒力，不结算独占维持时限。`);
+      else{f.remaining--;if(f.remaining<=0)collapse(this,f,ev,'维持时间结束');else emit(this,ev,'domain_state',`【${f.name}】剩余 ${f.remaining} 次自身行动。`);}
     }
   };
   const hit=proto.dealDamage;
   proto.dealDamage=function(u,t,...args){
     const hp=t.hp,ev=args[3],result=hit.call(this,u,t,...args),f=active(this,t);
-    if(f&&t.hp<hp){f.stability=Math.max(0,f.stability-(hp-t.hp)/Math.max(1,t.maxHp)*250);
-      if(f.stability<=0)collapse(this,f,ev,'因施术者受到重创');else emit(this,ev,'domain_state',`【${f.name}】稳定度 ${Math.ceil(f.stability)}%。`);
+    if(f&&t.hp<hp){const loss=(hp-t.hp)/Math.max(1,t.maxHp)*160*(f.barrierCondition==='reinforce'?1.35:1);f.stability=Math.max(0,f.stability-loss);
+      if(f.stability<=0)collapse(this,f,ev,'因施术者受到重创');else emit(this,ev,'domain_state',`【${f.name}】稳定度 ${Math.ceil(f.stability)}%。`,{domainPhase:'damage',owner:f.owner,stabilityLoss:loss,reason:'施术者受击'});
     }return result;
   };
   const kill=proto.kill;
@@ -122,10 +127,12 @@
     if(this.ended)this.pendingDomain=null;return r;
   };
   const forecast=(e,a,b)=>{
-    const pa=power(e,a),pb=power(e,b),incomplete=scenes.profileFor({name:a.domainName,actorName:a.name,isPlayer:a.isPlayer})?.incomplete||scenes.profileFor({name:b.domainName,actorName:b.name,isPlayer:b.isPlayer})?.incomplete;
-    return {a:pa,b:pb,text:!incomplete&&pa>=pb*1.5?'预计我方压过对手':!incomplete&&pb>=pa*1.5?'预计对方压过我方':'预计进入僵持 · 必中抵消'};
+    const rating=u=>window.BattleResonance?.effective(e,{owner:e.units.indexOf(u),power:power(e,u)})||power(e,u);
+    const pa=Math.round(rating(a)),pb=Math.round(rating(b)),incomplete=scenes.profileFor({name:a.domainName,actorName:a.name,isPlayer:a.isPlayer})?.incomplete||scenes.profileFor({name:b.domainName,actorName:b.name,isPlayer:b.isPlayer})?.incomplete;
+    const text=!incomplete&&pa>=pb*1.5?'预计我方压过对手':!incomplete&&pb>=pa*1.5?'预计对方压过我方':'预计进入僵持 · 必中抵消';
+    return {a:pa,b:pb,text,cost:cost(a),cpAfter:Math.max(0,a.cp-cost(a)),upkeep:upkeep(a),incomplete:!!incomplete};
   };
-  window.DomainCombat={fields,active,ready,cost,power,snapshot,collapse,forecast};
+  window.DomainCombat={fields,active,ready,cost,upkeep,power,snapshot,collapse,forecast};
 
   const ui=BattleUI, get=id=>document.getElementById(id),esc=s=>HD.escape(String(s));
   const state=()=>ui.domainShown||[];
@@ -136,7 +143,8 @@
     if(!hud){hud=document.createElement('section');hud.id='domainStatus';hud.className='domain-status';hud.setAttribute('aria-label','战场与领域状态');get('bfActions').closest('.modal').querySelector('.battle-field').before(hud);}
     const fs=[...state()].sort((a,b)=>(a.side==='ally'?0:1)-(b.side==='ally'?0:1)),loc=scenes.battle(ui.eng.cfg,Game.day),contested=fs.length>1;
     const html=`<div class="domain-heading"><span>${esc(loc.place)}</span><b>${fs.length?(contested?'领域对抗 · 必中抵消':fs[0].incomplete?'不完整领域':fs[0].nonlethal?'规则领域':fs[0].open?'开放领域':'领域维持'):'常规战场'}</b></div>`+
-      (fs.length?`<div class="domain-pair">${fs.map(f=>`<div class="domain-meter ${f.side}"><span>${f.side==='ally'?'我方':'敌方'} · ${esc(f.actorName)}</span><strong>${esc(f.name)}</strong><small>稳定 ${Math.ceil(f.stability)}% · 剩余 ${f.remaining} 行动</small>${window.BattleTraits?`<p class="domain-trait"><b>${esc(window.BattleTraits.info(f.traitName).tag)}</b> · ${esc(window.BattleTraits.info(f.traitName).text)}</p>`:''}<meter min="0" max="100" value="${f.stability}" aria-label="${esc(f.name)}稳定度"></meter></div>`).join('')}</div>${contested?'<p class="clash-tactics">必中与附带控制暂停；攻击施术者削弱稳定度，防御可恢复己方领域15稳定度。影域与刀阵增幅保留。</p>':''}`:'');
+      (fs.length?`<div class="domain-pair">${fs.map(f=>`<div class="domain-meter ${f.side}"><span>${f.side==='ally'?'我方':'敌方'} · ${esc(f.actorName)}</span><strong>${esc(f.name)}</strong><small>稳定 ${Math.ceil(f.stability)}% · ${esc(window.BattleResonance?.fieldText(ui.eng,f,contested)||`剩余 ${f.remaining} 行动`)}</small>${window.BattleTraits?`<p class="domain-trait"><b>${esc(window.BattleTraits.info(f.traitName).tag)}</b> · ${esc(window.BattleTraits.info(f.traitName).text)}</p>`:''}<meter min="0" max="100" value="${f.stability}" aria-label="${esc(f.name)}稳定度"></meter></div>`).join('')}</div>${contested?'<p class="clash-tactics">必中与附带控制暂停；攻击施术者动摇结界，防御恢复最多15稳定度。黑闪与连续压制能争取空间优势。</p>':''}`:'')+
+      (window.BattleResonance?`<div class="resonance-status">${esc(window.BattleResonance.status(ui.eng,ui.eng.player).join(' / '))}</div>`+window.BattleResonance.buttons(ui.eng,ui.eng.player,ui.eng.awaitingPlayer&&ui._awaitingInput):'');
     if(hud.innerHTML!==html)hud.innerHTML=html;
     const field=get('bfActions').closest('.modal').querySelector('.battle-field');field.dataset.domainClash=String(contested);field.dataset.baseEnvironment=loc.key;
     let fallback=field.querySelector('.domain-fallback');
@@ -146,7 +154,7 @@
     if(fallback.dataset.key!==fallbackKey){fallback.dataset.key=fallbackKey;fallback.innerHTML=shown.map(f=>{
       const p=f&&scenes.profileFor(f,ui.eng.units);if(!p)return '<i></i>';
       if(p.overlay)return '<i style="background:linear-gradient(transparent 48%,rgba(2,8,10,.86))"></i>';
-      const bg=p.atlas?`url(assets/${p.file||'domains.webp'}) ${p.atlas[0]?'100%':'0%'} ${p.atlas[1]?'0%':'100%'} / 200% 200%`:`url(assets/${p.file}) center / cover`;
+      const bg=p.atlas?`url(assets/${p.file||'domains.png'}) ${p.atlas[0]?'100%':'0%'} ${p.atlas[1]?'0%':'100%'} / 200% 200%`:`url(assets/${p.file}) center / cover`;
       return `<i class="${p.open||p.overlay?'domain-translucent':''}" style="background:${bg}"></i>`;
     }).join('');}
     const b=get('actDomain');if(b){const p=ui.eng.player;b.disabled=!ui.eng.awaitingPlayer||!ready(ui.eng,p);b.textContent=active(ui.eng,p)?'领域维持中':p.domainCd>0?'领域熔断中':p.cp<cost(p)?'领域 · 咒力不足':'领域展开';}
@@ -172,7 +180,7 @@
       if(this.auto||!ready(eng,eng.player))return choose(!!this.auto);
       clearReaction();const n=document.createElement('section');n.id='domainReaction';n.className='domain-reaction';n.setAttribute('role','group');n.setAttribute('aria-label','领域应对');
       const forecast=window.DomainCombat.forecast(eng,eng.player,eng.units[eng.pendingDomain.owner]);
-      n.innerHTML=`<div><span class="eyebrow">领域来袭</span><h3>${esc(request.actorName)} · ${esc(request.domainName)}</h3><p>迎击将立即消耗 ${cost(eng.player)} 咒力。${esc(forecast.text)}（精炼 ${forecast.a} : ${forecast.b}）。</p><p>${esc(window.BattleTraits?.info(request.domainName).text||'')}</p><p>对攻中攻击施术者可削弱结界，防御可稳固自己的领域；败方进入熔断。</p></div><div class="domain-choices"><button class="btn" data-counter>展开领域迎击</button><button class="btn ghost" data-accept>暂不展开</button></div>`;
+      n.innerHTML=`<div><span class="eyebrow">领域来袭</span><h3>${esc(request.actorName)} · ${esc(request.domainName)}</h3><p>${esc(forecast.text)}（精炼 ${forecast.a} : ${forecast.b}）。迎击消耗 ${forecast.cost} 咒力，余量 ${forecast.cpAfter}；每次自身行动维持 ${forecast.upkeep} 咒力。</p><p>${esc(window.BattleTraits?.info(request.domainName).text||'')}</p><p>攻击施术者削弱结界；防御恢复最多15稳定度与8%咒力，维持仍有消耗。暂不展开将承受对方领域特性，保留自己的展开机会。</p></div><div class="domain-choices"><button class="btn" data-counter>展开领域迎击</button><button class="btn ghost" data-accept>保留领域 · 承受来袭</button></div>`;
       get('bfActions').before(n);this._awaitingInput=false;clearTimeout(this._autoTimer);
       this._domainDecision=choose;n.querySelector('[data-counter]').onclick=()=>choose(true);n.querySelector('[data-accept]').onclick=()=>choose(false);n.querySelector('button').focus({preventScroll:true});
       const bounds=n.getBoundingClientRect();if(bounds.bottom>window.innerHeight-110||bounds.top<20)n.scrollIntoView({block:'center',behavior:'instant'});
@@ -180,6 +188,6 @@
     if(idx)animate.call(this,events.slice(0,idx),ask);else ask();
   };
   for(const key of ['finish','_battleFail']){const old=ui[key];ui[key]=function(...args){clearReaction();this.domainShown=[];return old.apply(this,args);};}
-  document.addEventListener('click',e=>{if(e.target?.id==='btnAuto'&&ui.auto&&ui._domainDecision)ui._domainDecision(true);});
+  document.addEventListener('click',e=>{if(e.target?.id==='btnAuto'&&ui.auto&&ui._domainDecision)ui._domainDecision(true);const b=e.target?.closest?.('#domainStatus [data-barrier]');if(b&&!b.disabled&&ui._awaitingInput&&ui.eng?.awaitingPlayer&&!ui.eng.pendingDomain)ui.input('barrier_'+b.dataset.barrier);});
   window.DomainPresentation={draw,state};
 })();

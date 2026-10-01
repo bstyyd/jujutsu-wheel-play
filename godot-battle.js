@@ -43,31 +43,37 @@
    const data=e.data;
    if(data.type==='ready'){clearTimeout(this.timeout);this.ready=true;this.sync();}
    else if(data.type==='error'||data.type==='asset-error')this.fallback(data.message||'场景素材加载失败');
+   else if(this.pendingAction&&data.id===this.pendingAction.id&&data.rosterKey===this.pendingAction.key){
+    if(data.type==='melee-impact'||data.type==='style-start')this.actionImpact();
+    else if(data.type==='melee-complete'||data.type==='melee-rejected'||data.type==='style-complete')this.actionComplete();
+   }
    else if(data.type==='state'&&data.rosterKey===this.key&&this.host){
-    this.points=data.points||[];this.host.dataset.actors=data.actors;this.host.dataset.loadedActors=data.loaded;
-    this.host.dataset.domainTextures=data.domainTextures;this.host.dataset.environment=data.environment;
-    this.present=data.backgroundReady&&data.actors>0&&data.loaded===data.actors&&data.domainTextures===(this.domains?.length||0);
+    this.points=data.points||[];this.domainVisual={seam:data.domainSeam,split:data.domainSplit,reveals:data.domainReveals,casting:data.domainCasting};this.host.dataset.actors=data.actors;this.host.dataset.loadedActors=data.loaded;
+    this.host.dataset.domainThemes=JSON.stringify(data.domainThemes||[]);this.host.dataset.seam=data.domainSeam;this.host.dataset.domainTextures=data.domainTextures;this.host.dataset.environment=data.environment;
+    this.present=data.backgroundReady&&data.actors>0&&data.loaded===data.actors;
     this.layout();
    }
   }
   snapshot(){
    const ui=BattleUI,environment=BattleScenes.battle(ui.eng.cfg,Game.day);
+   if(this.styleRun!==ui.runId){this.styleRun=ui.runId;this.styleRevealed=new Set();}
    const roster=ui.eng.units.map((unit,index)=>{
     const i=unit.isPlayer?HD.silhouette().index:HD.artIndex(unit.name),generic=i<0;
     const domain=(ui.domainShown||[]).find(d=>d.owner===index||d.actorName===unit.name);
     const art=(!unit.isPlayer&&BattleScenes.portrait(unit.name,domain?.name))||this.art[generic?(/咒灵|咒胎/.test(unit.name)?23:2):i];
     const poseKey=unit.isPlayer?('player-'+CombatPresentation.playerKey(Game.player)):CombatPresentation.battleActorKey(i,Game.day,unit.name)||(environment.key==='abandoned'&&/^二级咒灵$/.test(unit.name)?'curse':null);
-    const sprite=poseKey&&this.sprites?.actors[poseKey];
-    return {index,name:unit.name,side:unit.side,alive:unit.alive!==false,guarding:!!unit.buff?.defend,silhouette:!!unit.isPlayer||generic,isPlayer:!!unit.isPlayer,url:sprite?asset(sprite.file):art?asset(art.file):'',rect:art?.rect||[0,0,1,1],height:sprite?sprite.height:/魔虚罗|神武真身/.test(unit.name)?4.1:unit.isPlayer?3.15:3.5,...(sprite?{battleSprite:sprite}:{})};
-   });
-   const domains=(ui.domainShown||[]).filter(d=>BattleScenes.profileFor(d,ui.eng.units)).slice().sort((a,b)=>a.side==='ally'?-1:b.side==='ally'?1:0).slice(0,2).map(d=>{
-    const p=BattleScenes.profileFor(d,ui.eng.units),rect=p.atlas?[p.atlas[0],1-p.atlas[1]-p.atlas[3],p.atlas[2],p.atlas[3]]:[0,0,1,1];
-    return {name:d.name,actorName:d.actorName,key:p.key,side:d.side,open:!!p.open,overlay:!!p.overlay,url:asset(p.file||'domains.webp'),rect,floor:'#'+p.floor.toString(16).padStart(6,'0')};
-   });
-   const key=ui.runId+'/'+roster.map(u=>u.name+u.url).join('|');
-   return {type:'state',rosterKey:key,roster,domains,domainContested:(ui.domainShown||[]).length>1,surfaceAtlas:asset(this.sprites.surfaceAtlas),environment:{key:environment.key,url:BattleScenes.background(environment.key)?asset(BattleScenes.background(environment.key)):'',painted:true},target:ui.selectedTargetIdx??-1,quality:this.quality,reduced:document.body.classList.contains('reduced-motion')||matchMedia('(prefers-reduced-motion: reduce)').matches,active:true};
+    const weaponSealed=!!(unit.isPlayer&&window.BattleTraits?.toolSealed(ui.eng,unit));
+    const sprite=unit.isPlayer?PlayerPresentation.sprite(this.sprites,Game.player,{...unit,weaponSealed}):SummonPresentation.sprite(this.sprites,unit,Game.day)||poseKey&&this.sprites?.actors[poseKey];
+    const tool=unit.isPlayer&&this.sprites?.playerWeapons?.[unit.equipmentId];
+    return {index,name:unit.name,side:unit.side,spawnQueued:!!unit.styleSpawn&&!this.styleRevealed.has(index),alive:unit.alive!==false,guarding:!!unit.buff?.defend,silhouette:!!unit.isPlayer||generic,isPlayer:!!unit.isPlayer,weaponSealed,weaponURL:tool?asset(tool.file):'',maskURL:sprite?.maskFile?asset(sprite.maskFile):'',url:sprite?asset(sprite.file):art?asset(art.file):'',rect:art?.rect||[0,0,1,1],height:sprite?sprite.height:/魔虚罗|神武真身/.test(unit.name)?4.1:unit.isPlayer?3.15:3.5,...(sprite?{battleSprite:sprite}:{})};
+   }).filter(u=>!ui.eng.units[u.index].summonTag||u.alive||!!this.pendingAction);
+   const domains=window.DomainEffects?DomainEffects.stageFields(ui.domainShown,ui.eng.units,asset):[];
+   const key=ui.runId+'/'+roster.map(u=>u.name+u.url+(u.isPlayer?ui.eng.units[u.index].equipmentId||'':'')).join('|');
+   const domainEntities=SummonPresentation.domainEntities(this.sprites,ui.domainShown||[]).map(x=>({...x,url:asset(x.file),maskURL:asset(x.maskFile)}));
+   return {type:'state',battleKey:String(ui.runId),rosterKey:key,roster,domains,domainEntities,domainContested:(ui.domainShown||[]).length>1,surfaceAtlas:asset(this.sprites.surfaceAtlas),environment:{key:environment.key,url:BattleScenes.background(environment.key)?asset(BattleScenes.background(environment.key)):'',painted:true},target:ui.selectedTargetIdx??-1,quality:this.quality,reduced:document.body.classList.contains('reduced-motion')||matchMedia('(prefers-reduced-motion: reduce)').matches,active:true};
   }
   sync(){
+   if(this.pendingAction&&(this.pendingAction.runId!==BattleUI.runId||this.pendingAction.eng!==BattleUI.eng)){clearTimeout(this.actionTimer);this.pendingAction=null;}
    const battle=visible($('modalMask'))&&$('bfActions')&&BattleUI.eng;
    if(!battle){this.present=false;if(this.portal)this.portal.hidden=true;this.send({type:'pause',value:true});return;}
    const field=$('bfActions').closest('.modal').querySelector('.battle-field');
@@ -96,7 +102,7 @@
   }
   layout(){
    if(!this.host||!this.portal)return;
-   const paused=document.hidden||!!document.querySelector('dialog[open]')||visible($('cinema'))||!visible($('modalMask'))||!this.host.isConnected;
+   const paused=document.hidden||!!document.querySelector('dialog[open]')||(visible($('cinema'))&&!$('cinema').classList.contains('domain-realtime'))||!visible($('modalMask'))||!this.host.isConnected;
    const show=this.present&&this.compatible&&!this.failed&&this.quality!=='static';
    const field=this.host.parentElement;if(field.classList.contains('has-hd')!==!!show)field.classList.toggle('has-hd',!!show);field.dataset.renderer=show?'godot':this.failed||this.quality==='static'?'static':'loading';
    const rect=this.host.getBoundingClientRect(),box=$('modalBox').getBoundingClientRect();
@@ -112,12 +118,45 @@
    const target=candidates.sort((a,b)=>Math.hypot(a.x-x,a.y-y)-Math.hypot(b.x-x,b.y-y))[0];
    if(target&&Math.hypot(target.x-x,target.y-y)<.27)$('bfEnemy')?.querySelector(`[data-idx="${target.index}"]`)?.click();
   }
-  event(e){if(this.present&&!this.failed)this.send({type:'event',from:e.from,to:e.to,actorName:e.actorName,eventType:e.type});}
-  float(index,value,cls){
-   if(!this.present||!value||this.portal?.hidden)return false;const point=this.points.find(p=>p.index===index);if(!point)return false;
-   const node=document.createElement('span');node.className='hd-damage '+(cls||'');node.textContent=(cls==='heal'?'+':'−')+Math.round(value);node.style.left=point.x*100+'%';node.style.top=point.y*100+'%';this.portal.append(node);setTimeout(()=>node.remove(),950);return true;
+  playAction(e,onImpact,onComplete){
+   if(!['hit','flash'].includes(e.type)||!e.from||!e.to||!e.dmg||(e.attackKind&&!['melee','tech'].includes(e.attackKind))||/附加|持续|灼烧|中毒/.test(e.text||'')||this.pendingAction||!this.present||this.failed||document.hidden||this.quality==='static'||document.body.classList.contains('reduced-motion')||matchMedia('(prefers-reduced-motion: reduce)').matches)return false;
+   const ui=BattleUI,from=Number.isInteger(e.fromIndex)?e.fromIndex:ui.eng.units.findIndex(u=>u.name===e.from),to=Number.isInteger(e.toIndex)?e.toIndex:ui.eng.units.findIndex(u=>u.name===e.to);
+   if(from<0||to<0||from===to||!ui.eng.units[from]||!ui.eng.units[to]||!this.points.some(p=>p.index===from)||!this.points.some(p=>p.index===to))return false;
+   const unit=ui.eng.units[from],tech=CombatPresentation.techniques[unit.flag];
+   const isMelee=e.attackKind==='melee'||(!e.attackKind&&/体术|拳击|踢击/.test(e.text||''));
+   const earlyYuji=!isMelee&&/^虎杖悠仁/.test(unit.name)&&Game.day<118;
+   const playerMove=unit.isPlayer?PlayerPresentation.action({...unit,battleSprite:PlayerPresentation.sprite(this.sprites,Game.player,{...unit,weaponSealed:!!window.BattleTraits?.toolSealed(ui.eng,unit)})},e):null;
+   const summonMove=SummonPresentation.action(SummonPresentation.sprite(this.sprites,unit,Game.day),e);
+   const kind=playerMove?.kind||summonMove?.kind||(isMelee?'melee':earlyYuji?'heavy':tech?.kind||'orb');
+   const id=this.actionSerial=(this.actionSerial||1000000)+1;
+   this.pendingAction={id,key:this.key,runId:ui.runId,eng:ui.eng,event:e,onImpact,onComplete,impacted:false};
+   this.send({type:'event',eventType:'choreography',presentationOnly:true,id,fromIndex:from,toIndex:to,actionKind:kind,variant:e.type==='flash'?'blackflash':playerMove?.variant||summonMove?.variant||(isMelee?'':earlyYuji?'yuji-cursed':unit.flag||''),speed:ui.speed||1,styleMove:e.styleMove||'',chargeLevel:e.chargeLevel||0,comboIndex:e.comboIndex||0});
+   // A suspended tab or renderer error must never hold the battle indefinitely.
+   this.actionTimer=setTimeout(()=>this.actionComplete(),3500);
+   return true;
   }
-  fallback(message){this.failed=true;this.present=false;clearTimeout(this.timeout);this.send({type:'pause',value:true});this.host?.parentElement.classList.remove('has-hd');if(this.portal)this.portal.hidden=true;if($('sceneStatus'))$('sceneStatus').textContent='此设备使用静态战斗画面';document.documentElement.dataset.hdStage='fallback';console.warn('Battle presentation fallback:',message);}
+  playStyle(e,onImpact,onComplete){
+   if(e.type!=='style'||!this.ready||this.failed||this.pendingAction||document.hidden||this.quality==='static')return false;
+   const ui=BattleUI,id=this.actionSerial=(this.actionSerial||1000000)+1;
+   if(Number.isInteger(e.spawnIndex))this.styleRevealed?.add(e.spawnIndex);
+   this.pendingAction={id,key:this.key,runId:ui.runId,eng:ui.eng,event:e,onImpact,onComplete,impacted:false};
+   this.send({type:'event',eventType:'player-style',id,phase:e.stylePhase,fromIndex:e.fromIndex,spawnIndex:e.spawnIndex??-1,guardIndex:e.guardIndex??-1,toIndex:e.toIndex??-1,summonFamily:e.summonFamily||'',techniqueFlag:ui.eng.player.flag,weaponFamily:window.PlayerArsenal?.family(ui.eng.player)||'',ordered:e.ordered||[]});
+   this.actionTimer=setTimeout(()=>this.actionComplete(),2600);return true;
+  }
+  actionImpact(){
+   const p=this.pendingAction;if(!p||p.impacted)return;p.impacted=true;
+   if(p.runId===BattleUI.runId&&p.eng===BattleUI.eng)p.onImpact();
+  }
+  actionComplete(){
+   const p=this.pendingAction;if(!p)return;clearTimeout(this.actionTimer);this.actionImpact();this.pendingAction=null;
+   if(p.runId===BattleUI.runId&&p.eng===BattleUI.eng)p.onComplete();
+  }
+  event(e){if(Number.isInteger(e.spawnIndex))this.styleRevealed?.add(e.spawnIndex);if(this.present&&!this.failed&&this.pendingAction?.event!==e)this.send(e.type==='style'?{type:'event',eventType:'player-style',phase:e.stylePhase,fromIndex:e.fromIndex,spawnIndex:e.spawnIndex??-1,guardIndex:e.guardIndex??-1,summonFamily:e.summonFamily||''}:{type:'event',from:e.from,to:e.to,actorName:e.actorName,eventType:e.type});}
+  float(index,value,cls,impact={}){
+   if(!this.present||!value||this.portal?.hidden)return false;const point=this.points.find(p=>p.index===index);if(!point)return false;
+   const node=document.createElement('span');node.className='hd-damage '+(cls||'')+(impact.tier&&impact.tier!=='heal'?' fd-'+impact.tier:'');node.textContent=impact.text||((cls==='heal'?'+':'−')+Math.round(value));node.style.left=point.x*100+'%';node.style.top=point.y*100+'%';this.portal.append(node);setTimeout(()=>node.remove(),impact.life||950);return true;
+  }
+  fallback(message){this.failed=true;this.present=false;clearTimeout(this.timeout);this.actionComplete();this.send({type:'pause',value:true});this.host?.parentElement.classList.remove('has-hd');if(this.portal)this.portal.hidden=true;if($('sceneStatus'))$('sceneStatus').textContent='此设备使用静态战斗画面';document.documentElement.dataset.hdStage='fallback';console.warn('Battle presentation fallback:',message);}
  }
  window.HDStage=new BattleStage();
 })();

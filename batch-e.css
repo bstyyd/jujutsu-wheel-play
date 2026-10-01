@@ -1,0 +1,26 @@
+/* Batch E 打磨层样式：E1 支援入场演出 + E2 事件图鉴 */
+
+/* ---- E1 支援单位入场：金色滑入 + 高光 ---- */
+.unit.support-enter{animation:supportEnter .9s var(--ease-out) both}
+@keyframes supportEnter{
+  0%{opacity:0;translate:-24px 0;filter:brightness(2)}
+  35%{opacity:1;filter:brightness(1.9);box-shadow:0 0 18px rgba(255,209,102,.55)}
+  100%{translate:0 0;filter:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .unit.support-enter{animation:none!important}
+}
+
+/* ---- E2 事件图鉴 ---- */
+.codex-btn{display:block;margin:10px auto 0}
+.event-codex .codex-cap{color:var(--color-muted);font-size:12px;margin:6px 0 14px}
+.codex-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;max-height:56vh;overflow-y:auto;padding-right:4px;margin-bottom:16px}
+.codex-card{border:1px solid var(--color-rule);border-radius:8px;padding:12px 14px;background:var(--color-paper-2)}
+.codex-card.locked{opacity:.55;border-style:dashed}
+.codex-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:6px}
+.codex-head b{font-size:14px}
+.codex-head small{color:var(--color-muted);font-size:11px;white-space:nowrap}
+.codex-scene{font-size:12px;line-height:1.7;margin:0 0 8px}
+.codex-hint{font-size:12px;color:var(--color-muted);margin:0}
+.codex-choices{margin:0;padding-left:18px;font-size:12px;color:var(--color-muted)}
+.codex-choices li{margin:2px 0}

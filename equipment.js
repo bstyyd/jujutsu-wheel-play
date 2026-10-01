@@ -1,15 +1,22 @@
 /* Single-slot cursed tools. Bonuses belong to a battle snapshot, never permanent stats. */
 (() => {
  'use strict';
- const catalog=Object.freeze([
+ const catalog=([
   {id:'practice',name:'制式咒刀',tag:'基础咒具',role:'稳定近战',index:0,wins:0,bonus:.10,desc:'注入咒力的制式刀具，作为这段旅程的第一件武器。',effect:'体术伤害 +10%。',source:'本作基础装备'},
   {id:'naginata',name:'薙刀',tag:'长柄咒具',role:'近战进阶',index:1,wins:2,bonus:.20,desc:'红色长柄、宽刃与白色系穗，参考真希使用的长柄咒具。',effect:'体术伤害 +20%。',source:'参考原作咒具造型'},
   {id:'cloud',name:'游云',tag:'特级咒具',role:'纯粹力量',index:2,wins:5,bonus:.35,desc:'以短链连接的三节棍。没有附加术式，以使用者的力量发挥威力。',effect:'体术伤害 +35%；不增加术式或领域伤害。',source:'原作咒具'},
   {id:'spear',name:'天逆鉾',tag:'特级咒具',role:'突破防护',index:3,wins:8,bonus:.10,desc:'具有强制解除术式性质的特殊短刃，适合应对术式防护。',effect:'体术伤害 +10%；近战可突破无下限与天空术式防护。仍受防御、闪避和适应影响，不解除领域。',source:'原作咒具 · 能力按本作规则改编'},
   {id:'soul',name:'释魂刀',tag:'特级咒具',role:'破防利刃',index:4,wins:12,bonus:.20,desc:'白色绒毛刀柄与宽阔刀身。原作中，发挥其力量需要感知灵魂。',effect:'体术伤害 +20%；熟练度达到 100% 时，近战无视「防御」的减伤。不能突破无下限或适应。',source:'原作咒具 · 以熟练度模拟领悟'}
- ].map(Object.freeze));
- const find=id=>catalog.find(t=>t.id===id);
- const Equipment={catalog,find,
+].map(Object.freeze)); // 数组本身保持可扩展：Batch C4 原创咒具经 Equipment.register 追加，单项仍冻结
+const find=id=>catalog.find(t=>t.id===id);
+const Equipment={catalog,find,
+ /** Batch C4：注册原创咒具（equipment-original.js）。id 冲突即拒绝，注册后参与解锁/渲染/装备全流程 */
+ register(tool){
+  if(!tool||typeof tool.id!=='string'||find(tool.id))throw Error('咒具注册失败：id 缺失或重复');
+  for(const k of ['name','tag','role','desc','effect','source'])if(typeof tool[k]!=='string')throw Error('咒具注册失败：缺少字段 '+k);
+  if(!Number.isInteger(tool.index)||!Number.isInteger(tool.wins)||!Number.isFinite(tool.bonus))throw Error('咒具注册失败：数值字段异常');
+  const t=Object.freeze(tool);catalog.push(t);return t;
+ },
   fresh:()=>({version:1,owned:['practice'],equipped:null}),
   validate(e){
    if(e===undefined)return;
@@ -44,17 +51,18 @@
  const run=BattleUI.run;BattleUI.run=function(cfg){Equipment.sync();return run.call(this,{...cfg,equipment:Equipment.current()?.id||null});};
  const make=BattleEngine.prototype.makePlayerUnit;
  BattleEngine.prototype.makePlayerUnit=function(p){const u=make.call(this,p);u.equipmentId=find(this.cfg.equipment)?.id||null;u.equipmentMastered=p.prof>=100;return u;};
- const damage=BattleEngine.prototype.dealDamage;
- BattleEngine.prototype.dealDamage=function(att,tar,base,mult,kind,ev,label,flash,ignoreImmune){
-  const tool=att.isPlayer&&kind==='melee'&&!window.BattleTraits?.toolSealed(this,att)?find(att.equipmentId):null;
-  if(!tool)return damage.call(this,att,tar,base,mult,kind,ev,label,flash,ignoreImmune);
-  const nullify=att.toolNullify,pierce=att.toolPierceGuard,start=ev.length;
-  att.toolNullify=tool.id==='spear';att.toolPierceGuard=tool.id==='soul'&&att.equipmentMastered;
-  try{
-   const amount=damage.call(this,att,tar,base*(1+tool.bonus),mult,kind,ev,`${tool.name} · ${label}`,flash,ignoreImmune);
-   for(const e of ev.slice(start))if(e.from===att.name&&e.dmg)e.equipment=tool.id;
-   return amount;
-  }finally{att.toolNullify=nullify;att.toolPierceGuard=pierce;}
- };
+const damage=BattleEngine.prototype.dealDamage;
+// Batch B 兼容：必须透传第 10 参 pierceCap，否则玩家的机制化真伤会被静默压回 40% 软上限
+BattleEngine.prototype.dealDamage=function(att,tar,base,mult,kind,ev,label,flash,ignoreImmune,pierceCap){
+ const tool=att.isPlayer&&kind==='melee'&&!window.BattleTraits?.toolSealed(this,att)?find(att.equipmentId):null;
+ if(!tool)return damage.call(this,att,tar,base,mult,kind,ev,label,flash,ignoreImmune,pierceCap);
+ const nullify=att.toolNullify,pierce=att.toolPierceGuard,start=ev.length;
+ att.toolNullify=tool.id==='spear';att.toolPierceGuard=tool.id==='soul'&&att.equipmentMastered;
+ try{
+  const amount=damage.call(this,att,tar,base*(1+tool.bonus),mult,kind,ev,`${tool.name} · ${label}`,flash,ignoreImmune,pierceCap);
+  for(const e of ev.slice(start))if(e.from===att.name&&e.dmg)e.equipment=tool.id;
+  return amount;
+ }finally{att.toolNullify=nullify;att.toolPierceGuard=pierce;}
+};
  window.Equipment=Equipment;
 })();

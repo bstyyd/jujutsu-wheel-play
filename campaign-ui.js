@@ -32,7 +32,7 @@ const CampaignUI={
     const custom=$('journeyMode').value==='custom';$('customSetup').hidden=!custom;
     const era=Campaign.eras[Number($('config-era')?.value)||0],r=this.pending,d=Campaign.difficulty(r.cycle);
     $('chapterBrief').textContent=era.brief;
-    const flag=Game.createSteps[5].items[Number($('config-technique')?.value)||0];$('techniqueBrief').textContent=flag.desc;
+    const flag=Game.createSteps[5].items[Number($('config-technique')?.value)||0];$('techniqueBrief').textContent=techniqueDescription(flag);
     $('journeySummary').textContent=`第 ${r.cycle} 周目 · 敌人生命 ×${d.hp.toFixed(2)} / 伤害 ×${d.damage.toFixed(2)}${r.carry?` · 开局继承加成 ${r.carry}% · 继承熟练度 ${r.inheritedProf}%`:''}`;
     $('journeyStart').textContent=custom?'以此配置进入世界':'开始十二项抽取';
   },

@@ -18,22 +18,19 @@
  new ResizeObserver(()=>requestAnimationFrame(resize)).observe(document.documentElement);resize();
  window.addEventListener('error',e=>{if(!e.message.startsWith('ResizeObserver loop'))send({type:'error',message:e.message});});
  window.addEventListener('unhandledrejection',e=>send({type:'error',message:String(e.reason)}));
- // Sites assets have a per-file limit. Decode the unchanged precompressed engine locally.
- const nativeFetch=window.fetch.bind(window);
- const wasmURL=new URL('battle.wasm',location.href).href;
- window.fetch=async function(input,init){
-  const url=new URL(input instanceof Request?input.url:String(input),location.href).href;
-  if(url!==wasmURL)return nativeFetch(input,init);
-  const response=await nativeFetch(new URL('battle.wasm.gz',location.href),init);
-  if(!response.ok)throw new Error('战斗引擎下载失败：'+response.status);
-  const bytes=new Uint8Array(await response.arrayBuffer());
-  let body=bytes;
-  if(bytes[0]===0x1f&&bytes[1]===0x8b){
-   if(typeof DecompressionStream==='undefined')throw new Error('请使用支持解压缩的新版浏览器');
-   body=await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
-  }
-  return new Response(body,{headers:{'Content-Type':'application/wasm','Content-Length':String(body.byteLength)}});
- };
+ // Download the smaller identical gzip on static hosting; retain raw-WASM fallback.
+ if(typeof DecompressionStream==='function'){
+  const nativeFetch=window.fetch.bind(window),wasmURL=new URL('battle.wasm',location.href).href;
+  window.fetch=async(input,init)=>{
+   const url=new URL(input instanceof Request?input.url:String(input),location.href).href;
+   if(url!==wasmURL)return nativeFetch(input,init);
+   const response=await nativeFetch(new URL('battle.wasm.gz',location.href),init);
+   if(!response.ok)return nativeFetch(input,init);
+   const bytes=new Uint8Array(await response.arrayBuffer());
+   const body=bytes[0]===0x1f&&bytes[1]===0x8b?await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer():bytes;
+   return new Response(body,{headers:{'Content-Type':'application/wasm','Content-Length':String(body.byteLength)}});
+  };
+ }
  const engine=new Engine({...window.JJKEngineConfig,canvas,onPrintError:message=>{if(/SCRIPT ERROR|ERROR:|Shader compilation failed/i.test(message))send({type:'error',message});}});
  engine.startGame({onProgress:(done,total)=>{const now=performance.now();if(now-last>300){last=now;send({type:'progress',done,total});}}}).catch(error=>send({type:'error',message:String(error)}));
 })();

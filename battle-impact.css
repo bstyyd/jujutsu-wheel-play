@@ -1,0 +1,95 @@
+/* 战斗打击感增强层（battle-impact.js 配套） */
+
+/* ---- 飘字分级 ----
+ * Batch E：floatNum 合并渲染后，分级样式同时覆盖卡片内（.float-dmg）与战场层（.cinema-damage）。
+ * 共享颜色/光晕/动画；尺寸与定位按容器分别适配（战场层字号更大、居中于内联坐标）。 */
+.float-dmg{z-index:6}
+.float-dmg.fd-heavy,.cinema-damage.fd-heavy{
+  color:#ffb066;
+  text-shadow:0 0 10px rgba(255,120,40,.65),0 0 4px #000;
+  animation:floatUp 1s forwards,fdPop .18s var(--ease-out);
+}
+.float-dmg.fd-heavy{font-size:19px}
+.cinema-damage.fd-heavy{font-size:26px}
+.float-dmg.fd-devastate,.cinema-damage.fd-devastate{
+  color:#ff6b4a;letter-spacing:1px;
+  text-shadow:0 0 16px rgba(255,80,40,.8),0 0 5px #000;
+  animation:floatUpBig 1.5s forwards,fdPop .22s var(--ease-out);
+}
+.float-dmg.fd-devastate{font-size:26px}
+.cinema-damage.fd-devastate{font-size:32px}
+.float-dmg.fd-flash,.cinema-damage.fd-flash{
+  letter-spacing:2px;white-space:nowrap;
+  background:linear-gradient(180deg,#fff6c8,#ffd166 55%,#c98a2e);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 14px rgba(255,209,102,.9)) drop-shadow(0 2px 2px rgba(0,0,0,.8));
+  animation:floatUpBig 1.5s forwards,fdFlashPop .3s cubic-bezier(.2,1.8,.4,1);
+}
+.float-dmg.fd-flash{right:50%;top:-4px;transform:translateX(50%);font-size:30px}
+.cinema-damage.fd-flash{font-size:36px;translate:-50% 0}
+.hd-damage.fd-heavy{color:#ffb066;font-size:26px;text-shadow:0 0 10px #ff782866,0 2px 3px #000}
+.hd-damage.fd-devastate{color:#ff6b4a;font-size:32px;transform:translateX(-50%);animation:floatUpBig 1.5s forwards,fdPop .22s var(--ease-out)}
+.hd-damage.fd-flash{color:#ffd166;font-size:36px;transform:translateX(-50%);white-space:nowrap;text-shadow:0 0 14px #ffd16699,0 2px 3px #000;animation:floatUpBig 1.5s forwards,fdFlashPop .3s cubic-bezier(.2,1.8,.4,1)}
+@keyframes floatUpBig{
+  0%{opacity:0;margin-top:6px}
+  12%{opacity:1}
+  75%{opacity:1}
+  100%{opacity:0;margin-top:-46px}
+}
+@keyframes fdPop{0%{scale:.6}100%{scale:1}}
+@keyframes fdFlashPop{0%{scale:.3;rotate:-6deg}100%{scale:1;rotate:0deg}}
+
+/* ---- 受击抖动 ---- */
+.unit.struck{animation:struckSm .3s linear}
+.unit.struck-hard{animation:struckLg .45s linear}
+@keyframes struckSm{
+  0%,100%{translate:0 0}
+  25%{translate:-3px 1px}50%{translate:3px -1px}75%{translate:-2px 0}
+}
+@keyframes struckLg{
+  0%,100%{translate:0 0;filter:brightness(1)}
+  15%{translate:-7px 2px;filter:brightness(1.8)}
+  30%{translate:6px -2px}
+  45%{translate:-5px 1px;filter:brightness(1.4)}
+  60%{translate:4px -1px}
+  75%{translate:-2px 0}
+}
+
+/* ---- 黑闪/毁灭：战斗窗震屏 + 白闪 ---- */
+.modal{position:relative} /* 为白闪伪元素提供定位上下文，不改变布局 */
+.modal.impact-flash{animation:impactShake .38s linear}
+.modal.impact-flash::after{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:5;
+  background:radial-gradient(90% 70% at 50% 40%,rgba(255,244,200,.5),transparent 70%);
+  animation:impactWhite .38s ease-out forwards;
+}
+@keyframes impactShake{
+  0%,100%{translate:0 0}
+  12%{translate:-6px 3px}24%{translate:5px -3px}
+  36%{translate:-4px 2px}48%{translate:4px -2px}
+  60%{translate:-3px 1px}72%{translate:2px -1px}84%{translate:-1px 0}
+}
+@keyframes impactWhite{0%{opacity:1}100%{opacity:0}}
+
+/* ---- 出手前冲：行动者向敌阵方向压上 ---- */
+.battle-v2 .side-col.ally .unit.acting{animation:lungeR .45s var(--ease-out)}
+.battle-v2 .side-col.enemy .unit.acting{animation:lungeL .45s var(--ease-out)}
+@keyframes lungeR{
+  0%{translate:0 0}
+  35%{translate:16px 0;scale:1.04}
+  100%{translate:0 0}
+}
+@keyframes lungeL{
+  0%{translate:0 0}
+  35%{translate:-16px 0;scale:1.04}
+  100%{translate:0 0}
+}
+
+/* ---- 低动态：全部降级为无动画 ---- */
+@media(prefers-reduced-motion:reduce){
+  .unit.struck,.unit.struck-hard,
+  .modal.impact-flash,
+  .battle-v2 .side-col.ally .unit.acting,
+  .battle-v2 .side-col.enemy .unit.acting{animation:none!important}
+  .modal.impact-flash::after{display:none}
+}

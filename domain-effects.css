@@ -1,0 +1,34 @@
+/* Hallmark · component: domain cinematic · theme: existing ink/brass · P4 H4 E4 S5 R4 V4 */
+:root{--effect-void:var(--color-cyan);--effect-shrine:var(--color-red);--effect-shadow:var(--color-green);--effect-lava:var(--color-accent);--effect-hands:var(--color-muted);--effect-beach:var(--color-cyan);--effect-court:var(--color-accent);--effect-jackpot:var(--color-green);--effect-womb:var(--color-accent);--effect-love:var(--color-ink);--effect-moon:var(--color-muted);--effect-blossom:var(--color-green);--effect-station:var(--color-ink);--effect-mass:var(--color-accent);--effect-sky:var(--color-cyan);--effect-output:var(--color-ink);--effect-orbit:var(--color-accent);--effect-frost:var(--color-cyan);--effect-swarm:var(--color-muted);--effect-barrier:var(--color-cyan)}
+.domain-stage-caption{position:absolute;bottom:7%;left:5%;right:5%;margin:0;text-align:center;z-index:5;font:12px/1.7 var(--font-body);letter-spacing:.13em;color:var(--color-ink);text-shadow:0 2px 6px var(--color-black);pointer-events:none}
+.cinema.domain .cinema-world{animation:domain-iris 2.1s var(--ease-out) both}
+.cinema.domain[data-domain-theme=shrine] .cinema-world,.cinema.domain[data-domain-theme=love] .cinema-world{animation:domain-cut-reveal 2s var(--ease-out) both}
+.cinema.domain[data-domain-theme=shadow] .cinema-world{animation:domain-shadow-reveal 2s var(--ease-out) both}
+.cinema.domain[data-domain-theme=lava] .cinema-world{animation:domain-heat-reveal 2s var(--ease-out) both}
+.cinema.domain[data-domain-theme=moon] .cinema-world{animation:domain-frame-reveal 1.9s steps(12,end) both}
+.cinema.domain[data-domain-theme=court] .cinema-world{animation:domain-verdict-reveal 2s var(--ease-out) both}
+.domain-impact-film{position:absolute;inset:0;z-index:12;pointer-events:none;overflow:hidden;background:var(--color-stage-shadow);animation:domain-film-fade 1.4s var(--ease-out) both}
+.domain-film-world{position:absolute;inset:0 50% 0 0;background-size:cover;background-position:center;opacity:.75;clip-path:polygon(0 0,100% 0,92% 100%,0 100%);animation:domain-left-arrive .45s var(--ease-out) both}
+.domain-film-world.enemy{inset:0 0 0 50%;clip-path:polygon(8% 0,100% 0,100% 100%,0 100%);animation:domain-right-arrive .45s var(--ease-out) both}
+.domain-impact-film.clash:after{content:'';position:absolute;inset:0;left:49.7%;width:.6%;background:var(--color-ink);box-shadow:0 0 22px var(--color-accent);clip-path:polygon(0 0,100% 0,40% 28%,100% 45%,0 69%,100% 100%,0 100%,60% 69%,0 45%,60% 28%)}
+.domain-film-copy{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:15px;text-align:center;z-index:2;text-shadow:0 3px 10px var(--color-black)}
+.domain-film-copy p{font:12px var(--font-display);letter-spacing:.4em;color:var(--color-accent);margin:0 0 6px}
+.domain-film-copy h3{font:500 clamp(28px,5vw,64px)/1.4 var(--font-display);letter-spacing:.14em;margin:0;color:var(--color-ink)}
+.domain-film-copy div{display:flex;gap:16px;align-items:center;margin:8px 0;font:clamp(12px,1.8vw,21px)/1.6 var(--font-display);color:var(--color-ink)}
+.domain-film-copy small{font:11px/1.8 var(--font-body);color:var(--color-ink)}
+.domain-impact-film.collapse{background:var(--color-shade);animation:domain-break-film 1.1s var(--ease-out) both;border:1px solid var(--color-accent)}
+@keyframes domain-iris{from{clip-path:circle(0% at 50% 53%);filter:brightness(.2);scale:1.10}65%{clip-path:circle(85% at 50% 53%);filter:brightness(1)}to{clip-path:circle(100%);filter:brightness(1);scale:1}}
+@keyframes domain-cut-reveal{from{clip-path:polygon(40% 0,43% 0,60% 100%,57% 100%);scale:1.08}to{clip-path:polygon(0 0,100% 0,100% 100%,0 100%);scale:1}}
+@keyframes domain-shadow-reveal{from{clip-path:ellipse(2% 1% at 50% 90%);filter:brightness(.1)}to{clip-path:ellipse(130% 130% at 50% 90%);filter:brightness(1)}}
+@keyframes domain-heat-reveal{from{clip-path:inset(100% 0 0);filter:brightness(.4);scale:1.1}to{clip-path:inset(0);filter:brightness(1);scale:1}}
+@keyframes domain-frame-reveal{from{clip-path:inset(0 48%);filter:brightness(.1)}to{clip-path:inset(0);filter:brightness(1)}}
+@keyframes domain-verdict-reveal{from{clip-path:inset(0 50%);scale:1.07}to{clip-path:inset(0);scale:1}}
+@keyframes domain-film-fade{0%{opacity:0}15%,78%{opacity:1}100%{opacity:0}}
+@keyframes domain-left-arrive{from{translate:-22% 0}to{translate:0 0}}
+@keyframes domain-right-arrive{from{translate:22% 0}to{translate:0 0}}
+@keyframes domain-break-film{0%{opacity:0;clip-path:inset(45% 0)}22%,72%{opacity:1;clip-path:inset(0)}100%{opacity:0;clip-path:inset(0)}}
+@media(max-width:600px){.domain-stage-caption{bottom:9%;font-size:10px;letter-spacing:.06em}.domain-film-copy div{gap:8px}.domain-film-copy small{font-size:10px}.domain-film-copy h3{overflow-wrap:anywhere}}
+.reduced-motion .cinema.domain .cinema-world,.reduce-motion .cinema.domain .cinema-world{animation:none;clip-path:none;filter:none;scale:1}
+.reduced-motion .domain-impact-film,.reduce-motion .domain-impact-film,.reduced-motion .domain-film-world,.reduce-motion .domain-film-world{animation:none}
+@media(prefers-reduced-motion:reduce){.cinema.domain .cinema-world,.domain-impact-film,.domain-film-world{animation:none;clip-path:none;filter:none;scale:1}}
+@media(max-width:600px) and (orientation:portrait){.cinema.domain .cinema-world{background-size:cover!important;background-position:center!important}.domain-stage-caption{left:8%;right:8%;text-align:center}}

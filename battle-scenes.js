@@ -9,7 +9,7 @@
     '荡蕴平线': {key:'beach', color:0x60c4ed, floor:0xf8e7b5},
     '诛伏赐死': {key:'court', color:0x2d1b0b, floor:0x4a3e30, nonlethal:true}
   };
-  for(const p of Object.values(profiles))p.file=`domains/v3/${p.key}.webp`;
+  for(const p of Object.values(profiles))p.file=`domains/v3/${p.key}.png`;
   Object.assign(profiles,{
     '坐杀博徒':{key:'jackpot',color:0x17352e,floor:0x6c7e77},
     '胎藏遍野':{key:'womb',color:0x231f19,floor:0x39332b,open:true},
@@ -17,7 +17,7 @@
     '时胞月宫殿':{key:'moon',color:0x08060e,floor:0x62526c},
     '朵颐光海':{key:'blossom',color:0xcce9e7,floor:0x748849,light:'#f6e3a3',motif:true,referenceKind:'game'}
   });
-  for(const p of Object.values(profiles))p.file ||= `domains/v4/${p.key}.webp`;
+  for(const p of Object.values(profiles))p.file ||= `domains/v4/${p.key}.png`;
   const aliases={'嵌合暗翳廷':'嵌合暗翳庭','荡漾平线':'荡蕴平线','荡蕴平線':'荡蕴平线','自闭圆顿裏':'自闭圆顿裹'};
   const name = n => aliases[n] || n || '领域';
   const profile = n => profiles[name(n)] || null;
@@ -36,7 +36,7 @@
   const npcDomain = actor => npcDomains[actorName(actor)] || null;
   // A shared "unnamed" title is never a shared environment identity.
   const actorProfiles={
-    '虎杖悠仁':{key:'station',file:'domains/v4/station.webp',color:0x53616a,floor:0x737a7a}
+    '虎杖悠仁':{key:'station',file:'domains/v4/station.png',color:0x53616a,floor:0x737a7a}
   };
   const motifs={
     '九十九由基':{key:'mass',light:'#e8c494',note:'质量重压岩场 · 术式主题演绎'},
@@ -46,10 +46,10 @@
     '里梅':{key:'frost',light:'#bfeaff',note:'冰凝街道 · 游戏扩展设定'},
     '黑沐死':{key:'swarm',light:'#bcce8d',note:'虫群巢域 · 游戏扩展设定'}
   };
-  for(const p of Object.values(motifs))Object.assign(p,{file:`domains/v4/${p.key}.webp`,motif:true,cinemaOnly:true});
+  for(const p of Object.values(motifs))Object.assign(p,{file:`domains/v4/${p.key}.png`,motif:true,cinemaOnly:true});
   const neutral={key:'barrier',light:'#b7cadb',note:'游戏扩展领域 · 保留当前战场'};
-  const domainPortraits={'五条悟':{domain:'无量空处',file:'battle/v1/gojo-domain.webp',width:1024,height:1536,rect:[300,9,430,1483]}};
-  const shibuyaSukuna={file:'battle/v1/sukuna-shibuya.webp',width:1024,height:1536,rect:[262,14,546,1504]};
+  const domainPortraits={'五条悟':{domain:'无量空处',file:'battle/v1/gojo-domain.png',width:1024,height:1536,rect:[300,9,430,1483]}};
+  const shibuyaSukuna={file:'battle/v1/sukuna-shibuya.png',width:1024,height:1536,rect:[262,14,546,1504]};
   const characterArt={'15指宿傩':shibuyaSukuna,'16指宿傩':shibuyaSukuna}; // old review/save labels remain readable
   const portrait=(actor,domain)=>{const art=domainPortraits[actor];return art&&art.domain===name(domain)?art:characterArt[actor]||null;};
   const profileFor = (field,units=[]) => {
@@ -81,14 +81,14 @@
   }
   // One registry drives the production stage, static fallback and scene rehearsal.
   const locations={
-    rooftop:{file:'rooftop.webp',place:'杉泽第三高校 · 屋顶'},
-    campus:{file:'scenes/v1/campus-dusk.webp',place:'东京咒术高专'},
-    bridge:{file:'scenes/v1/bridge-night.webp',place:'八十八桥周边 · 山路'},
-    road:{file:'scenes/v1/bridge-night.webp',place:'五条移动途中 · 林间公路'},
-    shibuya:{file:'scenes/v1/shibuya-night.webp',place:'涩谷 · 夜间街区'},
-    detention:{file:'scenes/v2/detention.webp',place:'少年院 · 生得领域'},
-    subway:{file:'scenes/v2/subway.webp',place:'涩谷站 · 地下通道'},
-    passage:{file:'scenes/v2/subway.webp',place:'明治神宫前 · 地下通道'},
+    rooftop:{file:'rooftop.png',place:'杉泽第三高校 · 屋顶'},
+    campus:{file:'scenes/v1/campus-dusk.png',place:'东京咒术高专'},
+    bridge:{file:'scenes/v1/bridge-night.png',place:'八十八桥周边 · 山路'},
+    road:{file:'scenes/v1/bridge-night.png',place:'五条移动途中 · 林间公路'},
+    shibuya:{file:'scenes/v1/shibuya-night.png',place:'涩谷 · 夜间街区'},
+    detention:{file:'scenes/v2/detention.png',place:'少年院 · 生得领域'},
+    subway:{file:'scenes/v2/subway.png',place:'涩谷站 · 地下通道'},
+    passage:{file:'scenes/v2/subway.png',place:'明治神宫前 · 地下通道'},
     abandoned:{place:'废楼内部 · 钉崎初次任务'},
     forest:{place:'交流会 · 森林赛场'},
     'bridge-cave':{place:'八十八桥下 · 咒胎结界'},
@@ -104,7 +104,7 @@
     shinjuku:{place:'新宿 · 决战街道'},
     'shinjuku-ruins':{place:'新宿 · 决战废墟'}
   };
-  for(const [key,p] of Object.entries(locations))p.file ||= `scenes/v3/${key}.webp`;
+  for(const [key,p] of Object.entries(locations))p.file ||= `scenes/v3/${key}.png`;
   const background = key => locations[key]?.file || ({colony:locations.sendai.file,ruins:locations['shinjuku-ruins'].file})[key] || '';
   const location = (key,place) => ({key,...locations[key],...(place?{place}:{})});
   const world = day => {

@@ -15,6 +15,33 @@ const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const sum=a=>a.reduce((x,y)=>x+y,0);
 const deepCopy=o=>JSON.parse(JSON.stringify(o));
 
+/* Batch B 机制化数值表：原「一击定胜负」术式的机制向改造参数。
+   先按交接定稿值填入，Batch D Monte Carlo 模拟后统一在此调平，勿散落修改。 */
+const MECHANIC_TUNING={
+  jacob:{executeP:0.80,trueDmg:0.70,vulnTurns:2,vulnBonus:0.25}, // 雅各布天梯：受肉体80%概率秒杀 / 非受肉体70%最大生命真伤+2回合易伤(+25%)
+  judge:{trueDmg:0.60},                                           // 判决术式：非式神60%最大生命真伤（式神秒杀保留）
+  negate:{trueDmg:0.50},                                          // 万象拒绝：50%最大生命真伤+自身咒力消耗翻倍（仅对咒力上限更低者）
+  mass:{trueDmg:0.45,selfCost:0.50},                              // 星之怒：全体敌人45%最大生命真伤+自身损50%当前生命（近战不再×2）
+  reviveWin:{hpRatio:0.50,cpRatio:0.50,stealProf:30,dmgBoost:0.30}, // 死而替生：半血半咒力复活+随机夺式(熟练30%)+本场伤害+30%（不再自动获胜）
+  requiem:{reduce:0.70,domainBoost:1.5},                          // 黄金体验镇魂曲：减伤70%+自身领域伤害×1.5（不再全免）
+  swap:{min:0.15,max:0.60},                                       // 不义游戏：闪避率 min(0.6, max(0.15, (ctl差)/(ctl和+10)))
+};
+
+// Display current mechanics without changing canonical draw data used by old saves.
+function techniqueDescription(t){
+ if(!t)return '';const m=MECHANIC_TUNING,pct=n=>Math.round(n*100)+'%';
+ const descriptions={
+  negate:`术式攻击咒力上限低于自己的目标时，消耗双倍咒力，造成目标最大生命${pct(m.negate.trueDmg)}的真实伤害；否则正常攻击。`,
+  jacob:`术式攻击受肉体有${pct(m.jacob.executeP)}概率直接击败目标；对其他目标造成最大生命${pct(m.jacob.trueDmg)}的真实伤害，并附加${m.jacob.vulnTurns}次自身行动的易伤（受伤+${pct(m.jacob.vulnBonus)}）。`,
+  judge:`术式攻击直接祓除式神；对其他目标造成最大生命${pct(m.judge.trueDmg)}的真实伤害。`,
+  mass:`术式攻击后追加敌方全体最大生命${pct(m.mass.trueDmg)}的真实伤害，代价为自身当前生命${pct(m.mass.selfCost)}。体术没有额外翻倍。`,
+  reviveWin:`每场首次被击败时恢复${pct(m.reviveWin.hpRatio)}生命与${pct(m.reviveWin.cpRatio)}咒力，随机夺取敌方一项术式（熟练度${m.reviveWin.stealProf}%），本场伤害+${pct(m.reviveWin.dmgBoost)}；战斗继续。`,
+  requiem:`领域以外的攻击伤害减少${pct(m.requiem.reduce)}，自身领域伤害×${m.requiem.domainBoost}。`,
+  swap:`根据双方咒力操控差计算闪避率，最低${pct(m.swap.min)}、最高${pct(m.swap.max)}；不能闪避领域攻击。`
+ };
+ return descriptions[t.flag]?descriptions[t.flag]+(t.domain?'领域：'+t.domain+'。':''):(t.desc||'');
+}
+
 /* ============================ 音效 & 语音（Web Audio 程序化合成，零外部文件；无音频环境自动静默降级） ============================ */
 const SFX={
   muted:false,voiceOn:true,ctx:null,
@@ -62,7 +89,7 @@ const SFX={
   speak(text){
     try{
       if(this.muted||this.voiceOn===false||!G.speechSynthesis||!G.SpeechSynthesisUtterance)return;
-      const u=new SpeechSynthesisUtterance(text);u.lang='zh-CN';u.rate=1.02;u.pitch=.8;u.volume=1;
+      const u=new SpeechSynthesisUtterance(text);u.lang='zh-CN';u.rate=1.02;u.pitch=.8;u.volume=Math.min(1,Math.max(0,G.AnimeVoice?.voiceVolume??1));
       const vs=G.speechSynthesis.getVoices();const zh=vs.find(v=>/zh|chinese/i.test(v.lang));if(zh)u.voice=zh;
       G.speechSynthesis.cancel();G.speechSynthesis.speak(u);return u;
     }catch(e){}
@@ -144,7 +171,7 @@ const GROWTH=[
  /** 固定增量基数表（资质良好 mult=1 时每次修炼/战胜奖励的固定值），索引=综合等级li+2，覆盖li -2~11。
   *  只与等级有关、与玩家已累积属性无关 → 线性可控，后期不膨胀。 */
  const GAIN_BASE={ // 第五版：固定成长值整体翻倍
-  cp:  [2,2,4,8,12,50,60,440,460,180,1100,3000,5200,40000],
+  cp:  [2,2,4,8,12,50,60,440,460,700,1100,3000,5200,40000],
   hp:  [4,4,8,16,30,60,240,520,800,1400,1800,2200,3200,24000],
   dmg: [2,2,2,4,6,8,14,44,60,70,120,280,520,3600],
   ctl: [2,2,2,2,2,4,6,12,20,28,36,44,56,600]
@@ -182,7 +209,7 @@ const WHEEL_TECHNIQUE=[
  {name:'十种影法术',flag:'shadows',domain:'嵌合暗翳庭',desc:'每次自己行动随机召唤一个式神助战，强度继承自身总属性：玉犬5%、脱兔3%、蟾蜍7%、大蛇15%、圆鹿20%、贯牛30%、鵺25%、满象35%、虎杖40%；多个式神在场时融合为「嵌合兽」且强度叠加。领域：嵌合暗翳庭。'},
  {name:'御厨子',flag:'cleave',domain:'伏魔御厨子',desc:'掌握解/捌/开/灶四式：解=咒力效率120%、捌=130%、开=200%、灶=250%伤害，依次轮换。领域：伏魔御厨子。'},
  {name:'刍灵咒法',flag:'straw',domain:'灵魂共鸣',desc:'近战攻击附加自身咒力效率50%的额外伤害（共鸣/簪，可伤及灵魂）。领域：灵魂共鸣。'},
- {name:'十划咒法',flag:'ratio',domain:'真视斩击',desc:'近战伤害+50%；持有该术式时黑闪触发概率+20%（共30%）。领域：真视斩击。'},
+ {name:'十划咒法',flag:'ratio',domain:'真视斩击',desc:'近战伤害+50%；接触攻击更容易触发黑闪，控制力、连击与心流影响成功率。领域：真视斩击。'},
  {name:'咒言',flag:'cursedSpeech',domain:'真我言灵',desc:'辅助型：行动时可强制命令一个对手，使其下回合无法行动；对手总实力越强，固定咒力消耗越高。领域：真我言灵。'},
  {name:'咒灵操术',flag:'spiritControl',domain:'万鬼来朝',desc:'击败的咒灵化为式神（数值固定不成长）；每次自己行动随机召唤已拥有的3个咒灵式神助战。领域：万鬼来朝。'},
  {name:'无为转变',flag:'idleTrans',domain:'自闭圆顿裹',desc:'近战附加咒力效率100%伤害、咒术攻击附加体术100%伤害；每次行动无消耗恢复10%总血量。领域：自闭圆顿裹。'},
@@ -288,6 +315,7 @@ const Player={
       flashCount:0,battleCount:0,huntCount:0,killCount:0,
       eventsDone:[], // 已完成的剧情节点
       notes:[], // 后日谈用关键记录
+      favors:{}, // Batch C2 好感度：{角色名:0-100}，见 favor.js
       allyBoost:[0,0,0,0,0.03,0.05,0.10][faceIdx] // 颜值带来的队友协同（游戏化补全）
     };
     P.levelIndex=Player.evalLevel(P);
@@ -389,7 +417,7 @@ function wheelLegendHtml(items,hitIdx=-1){
   const rows=items.map((it,i)=>{
     const txt=it.label||it.name||'';
     const w=it.weight&&tw>0?`<span class="lg-w">${Math.round(it.weight/tw*100)}%</span>`:'';
-    return `<div class="lg-item${i===hitIdx?' hit':''}" title="${(it.desc||txt).replace(/"/g,'&quot;')}"><span class="lg-dot" style="background:${WHEEL_COLORS[i%WHEEL_COLORS.length]}"></span><span>${txt}</span>${w}</div>`;
+    return `<div class="lg-item${i===hitIdx?' hit':''}" title="${(techniqueDescription(it)||txt).replace(/"/g,'&quot;')}"><span class="lg-dot" style="background:${WHEEL_COLORS[i%WHEEL_COLORS.length]}"></span><span>${txt}</span>${w}</div>`;
   }).join('');
   return `<div class="legend-cap"><b>选项总览（共 ${items.length} 项）</b><span>${tw>0?'数字为权重占比':'等概率'}</span></div>${rows}`;
 }
@@ -502,13 +530,13 @@ class BattleEngine{
     // 反派路线：作为敌方登场的五条悟，血量为正常的5倍（人类最强，是反派必须跨越的高墙）
     if(this.villain)this.units.filter(u=>u.side==='enemy'&&u.name==='五条悟').forEach(u=>{u.maxHp=Math.round(u.maxHp*5);u.hp=u.maxHp;});
     // 开局 5% 领悟反转术式
-    if(!cfg.player.reverse&&Math.random()<0.05){
+    if(!cfg.practiceSkills&&!cfg.player.reverse&&Math.random()<0.05){
       cfg.player.reverse=true;this.player.reverse=true;
       this.events.push({type:'learn',text:'✦ 生死之间灵光乍现——你领悟了被动技能【反转术式】！'});
       cfg.player.notes.push('在战斗中领悟了【反转术式】');
     }
     // 开局 5% 领悟黑闪（另：京都篇战胜东堂葵可100%学会）
-    if(!cfg.player.blackFlash&&Math.random()<0.05){
+    if(!cfg.practiceSkills&&!cfg.player.blackFlash&&Math.random()<0.05){
       cfg.player.blackFlash=true;this.player.blackFlash=true;
       this.events.push({type:'learn',text:'✦ 拳与咒力在刹那同频——你在激战中触到了【黑闪】的门径！'});
       cfg.player.notes.push('在战斗中领悟了【黑闪】');
@@ -587,7 +615,7 @@ class BattleEngine{
   techLabel(flag){const t=WHEEL_TECHNIQUE.find(x=>x.flag===flag);return t?t.name:'咒力';}
   decorate(u){
     u.buff={defend:false,vuln:0,stun:0,seal:0,ssj:5,actCount:0,miracle:0,saved:false,
-            charge:false,poison:0,gu:0,adaptM:0,adaptT:0};
+            charge:false,poison:0,gu:0,adaptM:0,adaptT:0,jacobVuln:0,reviveBoost:false};
     u.flags=u.flags||[];u.skills=u.skills||{};
     u.hasFlag=function(f){return u.flag===f||(u.flags&&u.flags.includes(f));};
     return u;
@@ -675,6 +703,7 @@ class BattleEngine{
     if(this.ended)return this.pack(ev);
     if(!actor.alive){this.checkEnd(ev);return this.pack(ev);} // 回合开始DOT/反噬已将其击倒，不再行动
     actor.buff.defend=false;this.actionsTotal++;actor.buff.actCount++;
+    if(actor.buff.jacobVuln>0)actor.buff.jacobVuln--; // 雅各布天梯·易伤：按受影响方行动次数衰减
     if(actor.isPlayer){this.awaitingPlayer=true;return {events:ev,ended:false,needInput:true};}
     this.npcAct(actor,ev);
     this.afterAction(actor,ev);
@@ -705,10 +734,12 @@ class BattleEngine{
     if(this.hasFlag(actor,'grow')){const h=Math.round(actor.maxHp*.10),c=Math.round(actor.maxCp*.10);actor.hp=Math.min(actor.maxHp,actor.hp+h);actor.cp=Math.min(actor.maxCp,actor.cp+c);if(actor.isPlayer)ev.push({type:'heal',text:`【生长术式】恢复10%生命与咒力。`,heal:h});}
     if(this.hasFlag(actor,'sage')){const h=Math.round(actor.maxHp*.30);actor.hp=Math.min(actor.maxHp,actor.hp+h);if(actor.isPlayer)ev.push({type:'heal',text:`【仙人模式】恢复30%生命（+${h}）。`,heal:h});}
     // 6. 行动时召唤
-    if(this.hasFlag(actor,'shadows'))this.shadowSummon(actor,ev);
-    if(this.hasFlag(actor,'spiritControl')){for(let i=0;i<3;i++)this.summonFromKilled(actor,ev,'咒灵式神');}
-    if(this.hasFlag(actor,'seance'))this.summonFromKilled(actor,ev,'亡灵式神');
-    if(this.hasFlag(actor,'puppet')){const n=this.alive(actor.side).filter(u=>u.summonTag==='傀儡'&&u.ownerName===actor.name).length;if(n<3)this.addSummon(actor,'傀儡',.70,'傀儡');}
+    if(!window.PlayerStyles?.manualSummons(this,actor)){
+      if(this.hasFlag(actor,'shadows'))this.shadowSummon(actor,ev);
+      if(this.hasFlag(actor,'spiritControl')){for(let i=0;i<3;i++)this.summonFromKilled(actor,ev,'咒灵式神');}
+      if(this.hasFlag(actor,'seance'))this.summonFromKilled(actor,ev,'亡灵式神');
+      if(this.hasFlag(actor,'puppet')){const n=this.alive(actor.side).filter(u=>u.summonTag==='傀儡'&&u.ownerName===actor.name).length;if(n<3)this.addSummon(actor,'傀儡',.70,'傀儡');}
+    }
     // 领域熔断恢复：轮到自身行动时，有反转术式者冷却-1（用完间隔自身一次行动即可再开）
     if((actor.domainCd||0)>0&&actor.domainCd<9000)actor.domainCd=Math.max(0,actor.domainCd-1);
   }
@@ -782,11 +813,37 @@ class BattleEngine{
   /** 统一出手（玩家/NPC 共用），kind=melee|tech */
   performStrike(att,target,kind,ev){
     if(!target||!target.alive)return;
-    // —— 即死类（tech）——
+    // —— 原即死类术式（tech）：Batch B 机制化改造 ——
     if(kind==='tech'){
-      if(this.hasFlag(att,'jacob')&&(target.type==='受肉体'||target.name.includes('受肉'))){ev.push({type:'domain',text:`【雅各布天梯】圣光剥离受肉灵魂，${target.name} 被瞬间抹除！`});this.kill(target,ev,att);this.afterStrike(ev);return;}
+      // 雅各布天梯：受肉体 80% 概率剥离秒杀（未触发转为常规打击）；对非受肉体改为 70% 最大生命真伤 + 2 回合易伤
+      if(this.hasFlag(att,'jacob')){
+        const vessel=target.type==='受肉体'||target.name.includes('受肉');
+        if(vessel&&Math.random()<MECHANIC_TUNING.jacob.executeP){ev.push({type:'domain',text:`【雅各布天梯】圣光剥离受肉灵魂，${target.name} 被瞬间抹除！`});this.kill(target,ev,att);this.afterStrike(ev);return;}
+        if(vessel)ev.push({type:'info',text:`【雅各布天梯】圣光未能彻底剥离 ${target.name} 的受肉灵魂，转为常规打击。`});
+        if(!vessel){
+          ev.push({type:'domain',text:`【雅各布天梯】圣光降临，灼烧 ${target.name}（最大生命 ${Math.round(MECHANIC_TUNING.jacob.trueDmg*100)}% 真实伤害），并附加 ${MECHANIC_TUNING.jacob.vulnTurns} 回合易伤！`});
+          this.dealDamage(att,target,Math.round(target.maxHp*MECHANIC_TUNING.jacob.trueDmg),1,'tech',ev,'雅各布天梯·圣光',false,true,true);
+          if(target.alive)target.buff.jacobVuln=Math.max(target.buff.jacobVuln||0,MECHANIC_TUNING.jacob.vulnTurns); // 易伤自下一击起生效
+          if(att.isPlayer&&att.hp<=0)this.guardPlayerDeath(ev);
+          this.afterStrike(ev);return;
+        }
+      }
+      // 判决术式：式神秒杀保留；对非式神改为 60% 最大生命真伤
       if(this.hasFlag(att,'judge')&&(target.type==='式神'||target.summonTag==='式神'||target.name.includes('式神'))){ev.push({type:'domain',text:`【判决术式】定罪完成，式神 ${target.name} 被处刑抹除！`});this.kill(target,ev,att);this.afterStrike(ev);return;}
-      if(this.hasFlag(att,'negate')&&target.maxCp<att.maxCp){ev.push({type:'domain',text:`【万象拒绝】${att.name} 否定了咒力更低的 ${target.name}，将其存在直接拒绝（秒杀）！`});this.kill(target,ev,att);this.afterStrike(ev);return;}
+      if(this.hasFlag(att,'judge')){
+        ev.push({type:'domain',text:`【判决术式】开庭宣判，${target.name} 被判「有罪」，承受最大生命 ${Math.round(MECHANIC_TUNING.judge.trueDmg*100)}% 的真实伤害！`});
+        this.dealDamage(att,target,Math.round(target.maxHp*MECHANIC_TUNING.judge.trueDmg),1,'tech',ev,'判决术式·有罪宣判',false,true,true);
+        if(att.isPlayer&&att.hp<=0)this.guardPlayerDeath(ev);
+        this.afterStrike(ev);return;
+      }
+      // 万象拒绝：对咒力上限更低者改为 50% 最大生命真伤 + 自身咒力消耗翻倍（不再秒杀）
+      if(this.hasFlag(att,'negate')&&target.maxCp<att.maxCp){
+        const extra=this.techCost(att);att.cp=Math.max(0,att.cp-extra);
+        ev.push({type:'domain',text:`【万象拒绝】${att.name} 否定了 ${target.name} 的存在形式，造成最大生命 ${Math.round(MECHANIC_TUNING.negate.trueDmg*100)}% 的真实伤害（咒力消耗翻倍，额外 -${extra}）！`});
+        this.dealDamage(att,target,Math.round(target.maxHp*MECHANIC_TUNING.negate.trueDmg),1,'tech',ev,'万象拒绝',false,true,true);
+        if(att.isPlayer&&att.hp<=0)this.guardPlayerDeath(ev);
+        this.afterStrike(ev);return;
+      }
       // 咒言：控制目标下回合无法行动，消耗随对方实力提高
       if(this.hasFlag(att,'cursedSpeech')){const cost=(att.skills&&att.skills.sixEyes)?0:Math.round(att.maxCp*0.05+target.maxCp*0.02);if(att.cp>=cost){att.cp-=cost;target.buff.stun=Math.max(target.buff.stun,1);ev.push({type:'skill',text:`【咒言】强制命令 ${target.name}，其下回合无法行动（耗咒力${cost}）。`});} }
     }
@@ -803,7 +860,7 @@ class BattleEngine{
     // —— 增伤倍率 ——
     if(kind==='melee'){
       if(this.hasFlag(att,'ratio'))mult*=1.5;            // 十划 近战+50%
-      if(this.hasFlag(att,'mass'))mult*=2.0;            // 质量 近战+100%
+      // 质量术式近战×2 已于 Batch B 移除（机制化：星之怒改为全体真伤，见下方追加段）
     }
     if(kind==='tech'){
       if(this.hasFlag(att,'construct'))mult*=1.5;       // 构筑 效率+50%
@@ -821,16 +878,25 @@ class BattleEngine{
     let amberBonus=0;
     if(kind==='tech'&&this.hasFlag(att,'blood')){const c=Math.round(att.maxHp*.10);att.hp-=c;ev.push({type:'hit',text:`【赤血操术】以血为武，消耗自身10%生命（-${c}）。`,dmg:c});}
     if(this.hasFlag(att,'amber')){const c=Math.round(att.maxHp*.20);att.hp-=c;amberBonus=c;ev.push({type:'hit',text:`【幻兽琥珀】燃烧20%生命（-${c}）化作雷击附加。`,dmg:c});}
-    // —— 黑闪 ——（玩家需学会；NPC 需 bf）
-    let flash=false;const flashP=(att.isPlayer&&this.cfg.player.blackFlash)?0.10:(att.bf?0.10:0)+(this.hasFlag(att,'ratio')?0.20:0);
+    // —— 黑闪 ——（玩家需学会；NPC 需 bf；十划咒法 +20% 与基础概率叠加）
+    let flash=false;
+    const flashBase=((att.isPlayer&&this.cfg.player.blackFlash)||att.bf)?0.10:0;
+    const flashP=window.BattleResonance?window.BattleResonance.flashChance(this,att,kind):flashBase+(this.hasFlag(att,'ratio')?0.20:0);
     if(flashP>0&&Math.random()<flashP){mult*=10;flash=true;}
     const dmg=this.dealDamage(att,target,base,mult,kind,ev,label,flash,false);
+    window.BattleResonance?.onContact(this,att,kind,dmg,flash,ev);
     // —— 附加伤害（命中后追加，不再触发叠层/即死递归）——
     if(target.alive&&dmg>0){
       const bonus=(kind==='melee'?this.meleeBonus(att):0)+(kind==='tech'?this.techBonus(att):0)+amberBonus;
       if(bonus>0)this.dealDamage(att,target,Math.round(bonus),1,kind,ev,att.techName+'·附加',false,true);
-      // 质量术式·星之怒：tech 时与目标同归于尽的毁灭一击（自身承受50%当前血）
-      if(kind==='tech'&&this.hasFlag(att,'mass')){const sd=Math.round((att.eff[0]+att.eff[1])*3);this.dealDamage(att,target,sd,1,'tech',ev,'质量术式·星之怒',false,true);}
+      // 质量术式·星之怒（Batch B 机制化）：tech 命中后质量暴走——全体敌人承受 45% 最大生命真伤，自身损失 50% 当前生命
+      if(kind==='tech'&&this.hasFlag(att,'mass')){
+        const foes=this.alive(att.side==='enemy'?'ally':'enemy');
+        foes.forEach(f=>this.dealDamage(att,f,Math.round(f.maxHp*MECHANIC_TUNING.mass.trueDmg),1,'tech',ev,'质量术式·星之怒',false,true,true));
+        const self=Math.max(1,Math.round(att.hp*MECHANIC_TUNING.mass.selfCost));att.hp-=self;
+        ev.push({type:'hit',text:`【星之怒】质量暴走反噬，${att.name} 失去 ${self} 点生命（当前生命的 ${Math.round(MECHANIC_TUNING.mass.selfCost*100)}%）。`,dmg:self});
+        if(att.hp<=0){if(att.isPlayer)this.guardPlayerDeath(ev);if(att.hp<=0)this.kill(att,ev);}
+      }
     }
     // —— 命中后叠层 / 蚀烂降上限 ——
     if(target.alive&&dmg>0){
@@ -895,18 +961,24 @@ class BattleEngine{
     this.checkEnd(ev);
     return true;
   }
-  dealDamage(att,tar,base,mult,kind,ev,label,flash,ignoreImmune){
+  dealDamage(att,tar,base,mult,kind,ev,label,flash,ignoreImmune,pierceCap){
     if(!tar.alive)return 0;
     let dmg=base*mult*randF(0.9,1.1);
     dmg*=(1+0.10*Math.floor(this.actionsTotal/15)); // 战意升温
+    if(att.buff&&att.buff.reviveBoost)dmg*=(1+MECHANIC_TUNING.reviveWin.dmgBoost); // 死而替生：复活后本场伤害+30%
     if(tar.buff.vuln>0)dmg*=1.30;
+    if(tar.buff.jacobVuln>0)dmg*=(1+MECHANIC_TUNING.jacob.vulnBonus); // 雅各布天梯·易伤（受伤+25%）
     if(att.buff&&att.buff.seal>0)dmg*=0.8;
     if(tar.buff.defend&&!att.toolPierceGuard)dmg*=0.5;
-    // —— 术式免疫 / 闪避（领域与空间斩无视）——
+    if(kind==='domain'&&this.hasFlag(att,'requiem'))dmg*=MECHANIC_TUNING.requiem.domainBoost; // 镇魂曲：自身领域伤害×1.5
+    // —— 术式免疫 / 闪避（领域与空间斩无视；Batch B：镇魂曲改为减伤、不义游戏改为概率闪避）——
     if(!ignoreImmune&&kind!=='domain'){
       if(this.hasFlag(tar,'limitless')&&!att.toolNullify){ev.push({type:'skill',text:`${tar.name} 的【无下限·无穷】将 ${label} 完全化解（免疫非领域攻击）。`});return 0;}
-      if(this.hasFlag(tar,'requiem')){ev.push({type:'skill',text:`${tar.name} 的【黄金体验镇魂曲】令 ${label} 归零无效。`});return 0;}
-      if(this.hasFlag(tar,'swap')&&tar.ctl>att.ctl){ev.push({type:'skill',text:`${tar.name}【不义游戏】操控占优，闪避了 ${label}！`});return 0;}
+      if(this.hasFlag(tar,'requiem')){dmg*=(1-MECHANIC_TUNING.requiem.reduce);ev.push({type:'skill',text:`${tar.name} 的【黄金体验镇魂曲】将 ${label} 的伤害压制 ${Math.round(MECHANIC_TUNING.requiem.reduce*100)}%。`});}
+      if(this.hasFlag(tar,'swap')){
+        const dodgeP=clamp((tar.ctl-att.ctl)/(tar.ctl+att.ctl+10),MECHANIC_TUNING.swap.min,MECHANIC_TUNING.swap.max);
+        if(Math.random()<dodgeP){ev.push({type:'skill',text:`${tar.name}【不义游戏】交换位置，闪避了 ${label}！（闪避率 ${Math.round(dodgeP*100)}%）`});return 0;}
+      }
       if(this.hasFlag(tar,'sky')&&kind==='melee'&&!att.toolNullify){ev.push({type:'skill',text:`${tar.name}【天空术式】扭曲空间，${label}（近战）伤害为0。`});return 0;}
     }
     // —— 魔虚罗·适应：每次承受某类攻击，该类后续-20%（可叠加）——
@@ -914,21 +986,36 @@ class BattleEngine{
       if(kind==='melee'){dmg*=Math.max(0,1-0.20*tar.buff.adaptM);tar.buff.adaptM++;}
       if(kind==='tech'){dmg*=Math.max(0,1-0.20*tar.buff.adaptT);tar.buff.adaptT++;}
     }
+    // —— 单发伤害软上限（按目标最大生命比例，防高数值互秒）——
+    // 普攻/术式 ≤40%，领域 ≤60%，黑闪 ≤75%；附加真伤同样受限。
+    // 低数值战斗不受影响（伤害远低于上限），高数值对抗从「互秒」变「分胜负」。
+    // Batch B：pierceCap=true 的机制化真伤（万象拒绝/雅各布天梯/判决术式/星之怒）穿透此上限。
+    if(tar.maxHp>0&&!pierceCap){
+      const capRatio=kind==='domain'?0.60:(flash?0.75:0.40);
+      const cap=Math.max(1,Math.round(tar.maxHp*capRatio));
+      if(dmg>cap)dmg=cap;
+    }
     dmg=Math.max(1,Math.round(dmg));
     if(flash){
       if(att.isPlayer){
         this.cfg.player.flashCount=(this.cfg.player.flashCount||0)+1;
-        this.cfg.player.statBoost=+((this.cfg.player.statBoost||1)*1.10).toFixed(4);
-        const P=this.cfg.player;
-        P.maxHp=Math.round(P.maxHp*1.10);P.maxCp=Math.round(P.maxCp*1.10);P.ctl=Math.round((P.ctl||0)*1.10);
-        P.melee=P.melee.map(v=>Math.round(v*1.10));P.eff=P.eff.map(v=>Math.round(v*1.10));
-        att.maxHp=Math.round(att.maxHp*1.10);att.maxCp=Math.round(att.maxCp*1.10);att.ctl=Math.round((att.ctl||0)*1.10);
-        att.melee=att.melee.map(v=>Math.round(v*1.10));att.eff=att.eff.map(v=>Math.round(v*1.10));
+        const cur=this.cfg.player.statBoost||1;
+        if(cur<1.5&&!window.BattleResonance){
+          /* 黑闪复利封顶 +50%：按「实际倍率」增幅，避免无上限指数膨胀 */
+          const nxt=Math.min(1.5,cur*1.10),r=nxt/cur;
+          this.cfg.player.statBoost=+nxt.toFixed(4);
+          const P=this.cfg.player;
+          P.maxHp=Math.round(P.maxHp*r);P.maxCp=Math.round(P.maxCp*r);P.ctl=Math.round((P.ctl||0)*r);
+          P.melee=P.melee.map(v=>Math.round(v*r));P.eff=P.eff.map(v=>Math.round(v*r));
+          att.maxHp=Math.round(att.maxHp*r);att.maxCp=Math.round(att.maxCp*r);att.ctl=Math.round((att.ctl||0)*r);
+          att.melee=att.melee.map(v=>Math.round(v*r));att.eff=att.eff.map(v=>Math.round(v*r));
+        }
       }
-      ev.push({type:'flash',actorName:att.name,isPlayer:!!att.isPlayer,text:`★ 黑 闪 ★ 空间被一击扭曲！本次伤害×10${att.isPlayer?'，且你全属性永久+10%':''}！`});
+      ev.push({type:'flash',actorName:att.name,isPlayer:!!att.isPlayer,text:`★ 黑 闪 ★ 空间被一击扭曲！本次伤害×10${window.BattleResonance?'，进入黑闪心流':att.isPlayer?((this.cfg.player.statBoost||1)>=1.5?'，黑闪积累已达上限（+50%）':'，且你全属性永久+10%（上限+50%）'):''}！`});
     }
     tar.hp-=dmg;
-    ev.push({type:flash?'flash':'hit',from:att.name,to:tar.name,text:`${label} → 命中 ${tar.name}，造成 ${dmg} 点伤害。`,dmg});
+    ev.push({type:flash?'flash':'hit',from:att.name,to:tar.name,text:`${label} → 命中 ${tar.name}，造成 ${dmg} 点伤害。`,dmg,attackKind:kind,fromIndex:this.units.indexOf(att),toIndex:this.units.indexOf(tar)});
+    if(flash)window.BattleResonance?.onFlash(this,att,ev);
     // 奇迹：死亡时耗30%咒力复活并回满
     if(tar.hp<=0&&tar.isPlayer&&this.hasFlag(tar,'miracle')){
       const need=Math.round(tar.maxCp*.30);
@@ -1057,21 +1144,26 @@ class BattleEngine{
     const p=this.player,P=this.cfg.player;
     if(p.hp>0||!p.alive)return;
     if(this.hasFlag(p,'reviveWin')&&!p.buff.saved){
-      p.buff.saved=true;p.alive=true;p.hp=Math.round(p.maxHp*0.50);p.cp=Math.round(p.maxCp*0.50);
+      p.buff.saved=true;p.alive=true;
+      p.hp=Math.round(p.maxHp*MECHANIC_TUNING.reviveWin.hpRatio);
+      p.cp=Math.round(p.maxCp*MECHANIC_TUNING.reviveWin.cpRatio);
+      p.buff.reviveBoost=true; // 本场战斗伤害+30%（dealDamage 统一结算）
       ev.push({type:'skillcut',actorName:'你',text:'死而替生 · 替死夺式'});
       if(!P.stolen)P.stolen=[];if(!P.stolenTechs)P.stolenTechs=[];
-      // 被击杀即胜：击溃所有敌人，并夺取其生得术式（多术式并存、各自独立熟练度）
-      this.alive('enemy').forEach(e=>{
-        if(e.flag&&!P.stolenTechs.some(t=>t.flag===e.flag)){
+      // Batch B 机制化：不再自动获胜、不再击溃敌人；改为随机夺取一名存活敌人的生得术式（独立熟练度30%起）
+      const foes=this.alive('enemy').filter(e=>e.flag);
+      if(foes.length){
+        const e=foes[rand(0,foes.length-1)];
+        if(!P.stolenTechs.some(t=>t.flag===e.flag)){
           P.stolenTechs.push({name:e.techName,flag:e.flag,domain:e.domainName,
-            flags:(e.flags||[]).filter(f=>f!==e.flag),prof:30});
+            flags:(e.flags||[]).filter(f=>f!==e.flag),prof:MECHANIC_TUNING.reviveWin.stealProf});
           if(!p.flags.includes(e.flag))p.flags.push(e.flag); // 当场立即生效
           P.notes.push(`死而替生，夺取了【${e.name}】的术式「${e.techName}」`);
           ev.push({type:'skill',text:`你夺取了【${e.name}】的生得术式「${e.techName}」（独立熟练度30%起）。`});
         }
         if(!P.stolen.includes(e.name))P.stolen.push(e.name);
-        this.kill(e,ev);
-      });
+      }
+      ev.push({type:'skill',text:`【死而替生】你从死亡边缘归来（半血半咒力），本场战斗伤害+${Math.round(MECHANIC_TUNING.reviveWin.dmgBoost*100)}%！`});
     }
   }
   /** 鏖战硬上限裁决：按双方存活单位的「剩余血量占比之和」比较，高者胜；保证有限步内必分胜负、绝不平局卡死 */
@@ -1214,7 +1306,7 @@ const STORY={
  63:{chapter:'京都姐妹校交流会篇',title:'第63天 · 东堂葵',
     intro:'“我叫东堂葵，特别一级咒术师！来，让我看看你的实力！”京都校的猛将向你发起单挑。此战即使败北也不会死亡。',
     stages:[{enemies:[E('东堂葵',6,'咒术师')],allies:[],lose:'continue',noFlip:true,
-      winSkill:'blackFlash',winSkillText:'东堂葵认可了你的拳头：“不错嘛！”——在激战中你学会了技能【黑闪】：每次攻击10%概率触发，当次伤害×10，并使全属性永久提升10%。'}]},
+      winSkill:'blackFlash',winSkillText:'东堂葵认可了你的拳头：“不错嘛！”——在激战中你触到了【黑闪】的门径。接触攻击有机会触发，控制力、连击与心流影响成功率；黑闪带来短暂输出强化和领域优势。'}]},
  68:{chapter:'京都姐妹校交流会篇',title:'第68天 · 花御来袭',
     intro:'交流会被突袭打断，标准特级咒灵【花御】降临森林。',
     stages:[
@@ -1311,7 +1403,7 @@ function openWheelModal(opt){
       wv.spin((item,idx)=>{
         $('mWheelLegend').innerHTML=wheelLegendHtml(opt.items,idx);
         const hitEl=$('mWheelLegend').querySelector('.lg-item.hit');/* keep viewport stable */
-        $('mWheelResult').innerHTML=`<span class="hl">${item.label}</span>${item.desc?'<br><small>'+item.desc+'</small>':''}`;
+        $('mWheelResult').innerHTML=`<span class="hl">${item.label}</span>${item.desc?'<br><small>'+techniqueDescription(item)+'</small>':''}`;
         finish(item);
       },opt.selectedIndex);
     };
@@ -1686,19 +1778,27 @@ const BattleUI={
     const next=()=>{
       if(i>=events.length)return cb();
       const e=events[i++];
+      const present=(held=false)=>{
       this.appendLog(e);
       this.sfxFor(e);
       if(e.type==='domain')this.playDomainCut(e);
       else if(e.type==='skillcut'){if(SFX.skill)SFX.skill();Fx.skill(e.actorName,e.text);} // 普通技能：仅音效，不语音播报
       else if(e.type==='ultcut'){if(SFX.ult)SFX.ult();SFX.speak('极之番，'+(e.text||'').replace(/^极之番\s*·\s*/,''));Fx.ult(e.actorName,e.text);} // 极之番：音效+语音念诵
       // 飘字
-      if(e.to){const idx=this.eng.units.findIndex(u=>u.name===e.to);this.floatNum(idx,e.dmg,'');}
+      if(e.to){const idx=Number.isInteger(e.toIndex)?e.toIndex:this.eng.units.findIndex(u=>u.name===e.to);this.floatNum(idx,e.dmg,'');}
       if(e.type==='heal'&&e.from){const idx=this.eng.units.findIndex(u=>u.name===e.from);this.floatNum(idx,e.heal,'heal');}
       this.render();
+      if(held)return;
       // 大字展现（领域/极之番/技能）使用固定时长，不被倍速压缩，保证至少停留约1秒以上
       const bigHold=e.type==='domain'?2200:e.type==='ultcut'?2200:e.type==='skillcut'?1600:null;
       if(bigHold!=null)this.laterFixed(bigHold,next);
       else this.later(e.type==='flash'?420:300,next);
+      };
+      // The rules have already settled. Only the visual/audio event waits for
+      // the renderer's contact frame, then advances after its recovery.
+      if(window.HDStage?.playStyle(e,()=>present(true),next))return;
+      if(window.HDStage?.playAction(e,()=>present(true),next))return;
+      present();
     };
     next();
   },
@@ -1859,7 +1959,7 @@ const Game={
       this.draws[s.key]=picked;
       $('wheelLegend').innerHTML=wheelLegendHtml(s.items,idx);
       const hitEl=$('wheelLegend').querySelector('.lg-item.hit');/* keep viewport stable */
-      $('wheelResult').innerHTML=`<span class="hl">${item.label}</span>${item.desc?'<br><small>'+item.desc+'</small>':''}`;
+      $('wheelResult').innerHTML=`<span class="hl">${item.label}</span>${item.desc?'<br><small>'+techniqueDescription(item)+'</small>':''}`;
       this.renderCreateAttrs();
       const btn=$('btnNextWheel');
       btn.classList.remove('hidden');
@@ -1881,7 +1981,7 @@ const Game={
     if(!got.length){$('createAttrList').innerHTML='<div class="attr-row"><span class="k">尚未抽取</span><span class="v" style="color:var(--txt3)">命运的轮盘尚未开始转动……</span></div>';return;}
     $('createAttrList').innerHTML=got.map(k=>{
       const d=this.draws[k];
-      return `<div class="attr-row"><span class="k">${nameMap[k]}</span><span class="v">${d.label}${d.desc?`<br><small>${d.desc}</small>`:''}</span></div>`;
+      return `<div class="attr-row"><span class="k">${nameMap[k]}</span><span class="v">${d.label}${d.desc?`<br><small>${techniqueDescription(d)}</small>`:''}</span></div>`;
     }).join('');
   },
   finishCreate(){
@@ -1894,7 +1994,7 @@ const Game={
     this.addLog('lp',`════ 你穿越到了《咒术回战》的世界 ════`);
     this.addLog('lg',`时间点：${this.player.eraLabel}（游戏第 ${this.day} 天）。${this.player.eraDesc}`);
     this.addLog('lg',`身份【${this.player.identity}】：${this.player.identityDesc}`);
-    this.addLog('lg',`生得术式【${this.player.technique.name}】：${this.player.technique.desc}`);
+    this.addLog('lg',`生得术式【${this.player.technique.name}】：${techniqueDescription(this.player.technique)}`);
     this.addLog('lgold',`综合评级：${lvName(this.player.levelIndex)}｜成长：${this.player.growthLabel}（固定增量×${this.player.growthMult}）｜${this.player.ageNote}`);
     this.addLog('lg','提示：转动行动转盘度过每一天，剧情日将自动触发战斗；第120天新宿决战后迎来结局。');
     this.render();
@@ -1930,7 +2030,7 @@ const Game={
     sk.push(P.domainLearned?'✔ 领域展开（大招；用后熔断，反转者间隔一回合可再开）':'✘ 领域展开（熟练度100%领悟）');
     sk.push(P.ultimateLearned?'✔ 极之番（熟练度300%领悟：耗半蓝、敌全体500%、回满血，每场一次）':'✘ 极之番（熟练度300%领悟终极奥义）');
     sk.push(P.reverse?'✔ 反转术式（被动：回合耗5%咒力回20%血）':'✘ 反转术式（每场战斗5%几率领悟）');
-    sk.push(P.blackFlash?'✔ 黑闪（10%触发，伤害×10+五维+10%）':'✘ 黑闪（战斗5%自行领悟，或战胜东堂葵学会）');
+    sk.push(P.blackFlash?'✔ 黑闪（接触攻击概率触发 · 连击 / 控制 / 心流影响成功率；心流提升输出与领域优势）':'✘ 黑闪（战斗5%自行领悟，或战胜东堂葵学会）');
     sk.push(`主术式：${P.technique.name}（领域：${P.technique.domain}）`);
     if(P.stolenTechs&&P.stolenTechs.length)P.stolenTechs.forEach(t=>sk.push(`夺取术式：${t.name}（熟练度${Math.round(t.prof)}%${t.domain?'，领域：'+t.domain:''}）`));
     $('skillList').innerHTML=sk.map(s=>'<div>· '+s+'</div>').join('');
@@ -1945,12 +2045,12 @@ const Game={
     showModal(`<h2>详细属性</h2>
       <p style="line-height:2.2">
       <b>穿越档案</b>：${P.identity}，${P.age}岁，${P.gender}，颜值${P.face}；穿越时间点【${P.eraLabel}】（第${P.startDay}天）。<br>
-      <b>生得术式</b>：${P.technique.name}——${P.technique.desc}<br>
+      <b>生得术式</b>：${P.technique.name}——${techniqueDescription(P.technique)}<br>
       <b>成长资质</b>：${P.growthLabel}（每次修炼/战胜按当前等级给<b>固定数值</b>，系数×${P.growthMult}，不随已有属性滚动）。${P.ageNote}。<br>
       <b>体质层级</b>：${HP_TIERS[hpTierIndexOf(P.maxHp)][0]}（最大生命 ${P.maxHp}）<br>
       <b>咒力总量【${lvName(tierIndexOf(P.maxCp,CP_TIERS))}】</b>：${P.maxCp}（综合评级${lvName(Player.evalLevel(P))}）｜<b>咒力操控【${lvName(tierIndexOf(P.ctl,CTL_TIERS))}】</b>：减免 ${P.ctl}<br>
       <b>体术【${lvName(tierIndexOf(P.melee[1],DMG_TIERS))}】</b>：${P.melee[0]}~${P.melee[1]}｜<b>术式伤害【${lvName(tierIndexOf(P.eff[1],DMG_TIERS))}】</b>：${P.eff[0]}~${P.eff[1]}<br>
-      <b>术式熟练度</b>：${Math.round(P.prof)}%｜黑闪累计加成×${P.statBoost}<br>
+      <b>术式熟练度</b>：${Math.round(P.prof)}%｜历史黑闪成长×${P.statBoost}（旧存档保留）<br>
       <b>战绩</b>：剧情/战斗 ${P.battleCount} 场，狩猎 ${P.huntCount} 次，击溃敌人 ${P.killCount}，触发黑闪 ${P.flashCount} 次。
       </p><div class="center"><button class="btn" onclick="closeModal()">闭</button></div>`);
   },
@@ -2122,7 +2222,7 @@ const Game={
         <div class="r-item"><span>最终生命上限</span><b>${P.maxHp}</b></div>
         <div class="r-item"><span>术式伤害区间</span><b>【${lvName(tierIndexOf(P.eff[1],DMG_TIERS))}】${P.eff[0]}~${P.eff[1]}</b></div>
         <div class="r-item"><span>历经战斗 / 狩猎</span><b>${P.battleCount} 场 / ${P.huntCount} 次</b></div>
-        <div class="r-item"><span>黑闪触发</span><b>${P.flashCount} 次（累计加成×${P.statBoost}）</b></div>
+        <div class="r-item"><span>黑闪触发</span><b>${P.flashCount} 次（历史成长×${P.statBoost}）</b></div>
       </div>`;
     const skills=[];
     if(P.domainLearned)skills.push('术式熟练度圆满，展开过自己的领域');

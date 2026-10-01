@@ -1,0 +1,59 @@
+{
+  "date": "2026-09-30",
+  "tool": "built-in imagegen",
+  "reference": "assets/ui/v1/cursed-tools-atlas.png",
+  "items": [
+    {
+      "id": "scissors",
+      "name": "断罪之剪",
+      "source": "C:\\Users\\吴梓瑞\\.codex\\generated_images\\01a08e5c-0cbc-7ed3-a3be-312f55737c04\\exec-536287f0-22a7-4054-85cd-10f859b3e11a.png",
+      "file": "assets/ui/v2/tools/scissors.png",
+      "subject": "One heavy black iron double-bladed ritual pair of shears, elongated sharp silver cutting edges, brass pivot, leather-wrapped handles, opened a little to reveal the two blades, diagonal pose. Dark iron with thin etched cursed markings, no glowing laser.",
+      "style": "Existing anime cel-shaded cursed-tools atlas; blue-black background, restrained brass/cyan highlights; no text",
+      "original": true
+    },
+    {
+      "id": "godBell",
+      "name": "鸣神之铃",
+      "source": "C:\\Users\\吴梓瑞\\.codex\\generated_images\\01a08e5c-0cbc-7ed3-a3be-312f55737c04\\exec-b2c52714-354a-4ed6-9326-3841379df0c1.png",
+      "file": "assets/ui/v2/tools/godBell.png",
+      "subject": "One small antique brass Japanese ritual bell tied by a dark indigo cord to a sword guard. Delicate worn brass with engraved concentric ornament, amber metal highlight, cord loops visible, bell opening and clapper visible, centered closeup. No entire sword.",
+      "style": "Existing anime cel-shaded cursed-tools atlas; blue-black background, restrained brass/cyan highlights; no text",
+      "original": true
+    },
+    {
+      "id": "demonScroll",
+      "name": "百鬼夜行图",
+      "source": "C:\\Users\\吴梓瑞\\.codex\\generated_images\\01a08e5c-0cbc-7ed3-a3be-312f55737c04\\exec-008d42bd-cb8b-427d-a12d-0b1aa9b6c959.png",
+      "file": "assets/ui/v2/tools/demonScroll.png",
+      "subject": "One partially unrolled antique Japanese scroll with dark indigo silk edges and brass-capped wooden rollers, ivory parchment containing subtle small ink silhouettes of wandering curses, centered diagonal floating object, no readable writing, no characters standing outside the scroll.",
+      "style": "Existing anime cel-shaded cursed-tools atlas; blue-black background, restrained brass/cyan highlights; no text",
+      "original": true
+    },
+    {
+      "id": "paradoxRing",
+      "name": "逆理之戒",
+      "source": "C:\\Users\\吴梓瑞\\.codex\\generated_images\\01a08e5c-0cbc-7ed3-a3be-312f55737c04\\exec-f375df5e-7a11-4964-8f7f-2f99ace05b74.png",
+      "file": "assets/ui/v2/tools/paradoxRing.png",
+      "subject": "One heavy antique silver-and-black ritual signet ring, engraved interlocking angular cursed markings, warm brass inset, subtle icy cyan glint along edges, three-quarter view clearly shows ring hoop and signet face, centered large.",
+      "style": "Existing anime cel-shaded cursed-tools atlas; blue-black background, restrained brass/cyan highlights; no text",
+      "original": true
+    },
+    {
+      "id": "sheath",
+      "name": "无铭之鞘",
+      "source": "C:\\Users\\吴梓瑞\\.codex\\generated_images\\01a08e5c-0cbc-7ed3-a3be-312f55737c04\\exec-b8a62370-bc43-40a6-9945-3b11f20c99f0.png",
+      "file": "assets/ui/v2/tools/sheath.png",
+      "subject": "One elegant Japanese white-sheathed sword, matte ivory scabbard and pale wrapped handle, understated aged brass guard and dark cord, sword drawn out a small amount to reveal a short silver blade near guard, entire weapon visible diagonal composition, no multiple blades.",
+      "style": "Existing anime cel-shaded cursed-tools atlas; blue-black background, restrained brass/cyan highlights; no text",
+      "original": true
+    }
+  ],
+  "promptTemplate": {
+    "useCase": "stylized-concept",
+    "reference": "assets/ui/v1/cursed-tools-atlas.png",
+    "assetType": "square equipment illustration",
+    "instructions": "Match the reference's polished anime cel-shaded weapons: precise thin ink lines, two-to-three shading bands, realistic proportions, restrained cyan rim light, warm brass highlights. Generate one individual game-original object specified by each item's subject. Object fills 75% of a square frame, centered, full object inside. Uniform blue-black #0d1720 background with a soft vignette. No grids, borders, text, watermarks, particle clouds, neon auras, photorealism, or people.",
+    "transparentBackground": false
+  }
+}

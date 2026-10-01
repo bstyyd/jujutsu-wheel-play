@@ -3,17 +3,17 @@
 const AnimeVoice={
  cues:[
   {
-  "id": "dagon_domain_name",
-  "actor": 19,
-  "match": [
-    "荡蕴平线"
-  ],
-  "file": "assets/audio/v4/dagon_domain_name.mp3",
-  "durationMs": 4400,
-  "nameAtMs": 1290,
-  "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
-  "note": "动画原声，仅完整领域名；未拼接归属待核实的展开喊声。音色与混音待人工试听"
-},
+    "id": "dagon_domain_name",
+    "actor": 19,
+    "match": [
+      "荡蕴平线"
+    ],
+    "file": "assets/audio/v4/dagon_domain_name.mp3",
+    "durationMs": 4400,
+    "nameAtMs": 1290,
+    "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
+    "note": "动画原声，仅完整领域名；未拼接归属待核实的展开喊声。音色与混音待人工试听"
+  },
   {
     "id": "gojo_void",
     "actor": 0,
@@ -44,11 +44,11 @@ const AnimeVoice={
     "match": [
       "诛伏赐死"
     ],
-    "file": "assets/audio/v3/higuruma_domain.mp3",
-    "durationMs": 4200,
-    "nameAtMs": 1880,
-    "source": "https://www.bilibili.com/video/BV1RVXTB3E2z/",
-    "note": "原片重新剪取，保留喊招、领域名称及自然收音"
+    "file": "assets/audio/v5/higuruma_domain.mp3",
+    "durationMs": 3700,
+    "nameAtMs": 1950,
+    "source": "https://www.animecharactersdatabase.com/quotesbycharacter.php?line_id=492295",
+    "note": "ACDB独立角色台词：第56集相邻的展开喊声与领域名，保留两段完整原音和句尾；自动转写及来源台词核对通过，音色与衔接待人工试听。"
   },
   {
     "id": "sukuna_shrine",
@@ -87,18 +87,29 @@ const AnimeVoice={
     "note": "保留完整展开喊声与原片收音；原片未念出领域名称"
   },
   {
-  "id": "hanami_domain",
-  "actor": 18,
-  "match": [
-    "朵颐光海"
-  ],
-  "file": "assets/audio/v4/hanami_game_domain.mp3",
-  "durationMs": 8650,
-  "nameAtMs": 1500,
-  "source": "https://www.bilibili.com/video/BV1oc41167UZ/",
-  "note": "《幻影夜行》花御领域演出原音，含游戏音效；完整喊招台词未核实，按用户选择接入。领域名显字按画面定时，非台词对齐。"
-}
+    "id": "hanami_domain",
+    "actor": 18,
+    "match": [
+      "朵颐光海"
+    ],
+    "file": "assets/audio/v4/hanami_game_domain.mp3",
+    "durationMs": 8650,
+    "nameAtMs": 1500,
+    "source": "https://www.bilibili.com/video/BV1oc41167UZ/",
+    "note": "《幻影夜行》花御领域演出原音，含游戏音效；完整喊招台词未核实，按用户选择接入。领域名显字按画面定时，非台词对齐。"
+  }
 ],active:null,until:0,originalSpeak:null,voiceJob:null,presentation:null,tailMs:1000,
+ /* 语音音量 0~2（玩家可调至 200%）：>100% 部分经 WebAudio 增益实现，
+  * HTML Audio 自身 volume 封顶 1.0，增益失败时降级为直接设置 volume。 */
+ voiceVolume:1,voiceCtx:null,voiceGain:null,
+ routeVoice(a){
+  const v=Math.max(0,Math.min(2,this.voiceVolume));
+  try{
+   if(!this.voiceCtx){const AC=window.AudioContext||window.webkitAudioContext;if(!AC)throw Error('no webaudio');this.voiceCtx=new AC();this.voiceGain=this.voiceCtx.createGain();this.voiceGain.connect(this.voiceCtx.destination);}
+   if(this.voiceCtx.state==='suspended')this.voiceCtx.resume().catch(()=>{});
+   const src=this.voiceCtx.createMediaElementSource(a);src.connect(this.voiceGain);this.voiceGain.gain.value=v;a._routed=true;
+  }catch{a.volume=Math.min(1,v);}
+ },
  remainingMs(){const a=this.active;if(a&&!a.paused&&Number.isFinite(a.duration))return Math.max(100,(a.duration-a.currentTime)*1000);return Math.max(0,this.until-performance.now());},
  finishVoice(job,cancelled=false){
   if(!job||job.finished)return;job.finished=true;clearTimeout(job.timer);
@@ -117,13 +128,13 @@ const AnimeVoice={
   // A watchdog prevents an unavailable speech engine from blocking the battle.
   clearTimeout(job.timer);job.timer=setTimeout(()=>{if(this.voiceJob!==job||job.finished)return;if(u&&window.speechSynthesis)window.speechSynthesis.cancel();done();},u?20000:estimated);
  },
- select(text,who){let actor=HD.artIndex(who);if(actor===13||actor===14)actor=12;const raw=String(text).replace(/^领域展开[，,:：\s]*/, '').trim(),name=window.BattleScenes?.name(raw)||raw;return this.cues.find(c=>c.file&&(who==='你'||actor===c.actor)&&c.match.includes(name));},
+ select(text,who){if(who==='你')return;let actor=HD.artIndex(who);if(actor===13||actor===14)actor=12;const raw=String(text).replace(/^领域展开[，,:：\s]*/, '').trim(),name=window.BattleScenes?.name(raw)||raw,expected=window.BattleScenes?.npcDomain(who);if(!expected||window.BattleScenes.name(expected)!==name)return;return this.cues.find(c=>c.file&&actor===c.actor&&c.match.includes(name));},
  speak(text,who='',{domain=/^领域展开/.test(String(text))}={}){
   this.stop();if(SFX.muted||SFX.voiceOn===false)return;
   const job={createdAt:performance.now(),finished:false,attached:false,domain};job.done=new Promise(resolve=>job.resolve=resolve);this.voiceJob=job;
   this.attachVoice(job);const cue=this.select(text,who);
   if(!cue||!/^assets\/audio\/[a-zA-Z0-9_./-]+\.(mp3|ogg|wav|m4a)$/.test(cue.file)||cue.file.includes('..')){this.fallback(text);return job.done;}
-  if(window.speechSynthesis)window.speechSynthesis.cancel();const a=new Audio(cue.file);this.active=a;this.until=performance.now()+Math.min(12000,Math.max(1000,cue.durationMs));
+  if(window.speechSynthesis)window.speechSynthesis.cancel();const a=new Audio(cue.file);this.routeVoice(a);this.active=a;this.until=performance.now()+Math.min(12000,Math.max(1000,cue.durationMs));
   a.onended=()=>{if(this.active===a)this.finishVoice(job);};
   a.onplaying=()=>{const p=this.presentation;if(this.active===a&&job.domain&&p?.voice===job)Cinema.el.style.setProperty('--domain-name-delay',Math.max(0,((cue.nameAtMs||1250)+performance.now()-p.startedAt-a.currentTime*1000))/1000+'s');};
   const failed=()=>{if(this.active!==a||job.finished)return;this.active=null;a.pause();clearTimeout(job.timer);this.fallback(text);};
